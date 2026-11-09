@@ -1,0 +1,325 @@
+# Dữ liệu biz_122
+
+File Excel xuất từ phần mềm bán hàng. File đơn hàng mỗi dòng một sản phẩm.
+
+File `DonHang_ChiTiet_1.xlsx`, `DonHang_ChiTiet_2026.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm.
+
+## File
+- `DonHang_ChiTiet_1.xlsx` (xlsx)
+- `DonHang_ChiTiet_2026.xlsx` (xlsx)
+- `DanhSachQuyDoi.xlsx` (xlsx)
+- `DanhSachSanPham.xlsx` (xlsx)
+- `DonNhapHang.xlsx` (xlsx)
+- `DonNhapHang_ChiTiet.xlsx` (xlsx)
+- `DonHang_Lo_1.xlsx` (xlsx)
+- `DonHang_Lo_2.xlsx` (xlsx)
+- `DanhSachThuoc.xlsx` (xlsx)
+
+## Cột trong `DonHang_ChiTiet_1.xlsx`
+- **Mã đơn hàng**: mã đơn
+- **Ngày đặt hàng**: ngày bán
+- **Trạng thái đơn hàng**: trạng thái đơn
+- **Tên khách hàng**: tên khách (Khách lẻ nếu không lưu)
+- **Tên sản phẩm**: tên hàng
+- **Số lượng sản phẩm**: số lượng
+- **Giá sản phẩm**: đơn giá
+- **Tổng tiền**: thành tiền sau giảm
+- **Đơn vị tính**: đơn vị tính
+
+## Cột trong `DonHang_ChiTiet_2026.xlsx`
+- **Mã đơn hàng**: mã đơn
+- **Ngày đặt hàng**: ngày bán
+- **Trạng thái đơn hàng**: trạng thái đơn
+- **Tên khách hàng**: tên khách (Khách lẻ nếu không lưu)
+- **Tên sản phẩm**: tên hàng
+- **Số lượng sản phẩm**: số lượng
+- **Giá sản phẩm**: đơn giá
+- **Tổng tiền**: thành tiền sau giảm
+- **Đơn vị tính**: đơn vị tính
+
+## Cột trong `DanhSachQuyDoi.xlsx`
+- **Tên sản phẩm**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)
+- **Đơn vị quy đổi**: đơn vị lớn (thùng, hộp, tấn...)
+- **Tỉ lệ quy đổi**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn
+- **Đơn vị cơ bản**: đơn vị cơ bản
+
+## Cột trong `DanhSachSanPham.xlsx`
+- **Mã SKU**: mã hàng
+- **Tên sản phẩm**: tên
+- **Đơn vị**: đơn vị cơ bản
+- **Loại sản phẩm**: nhóm hàng
+
+## Cột trong `DonNhapHang.xlsx`
+- **Mã đơn nhập**: mã phiếu nhập
+- **Ngày nhập**: ngày nhập
+- **Mã nhà cung cấp**: mã nhà cung cấp
+
+## Cột trong `DonNhapHang_ChiTiet.xlsx`
+- **Mã đơn nhập**: mã phiếu nhập
+- **Mã SKU**: mã hàng
+- **Mã lô**: số lô
+- **Hạn sử dụng**: hạn sử dụng
+- **Số lượng nhập**: số lượng nhập (đơn vị cơ bản)
+
+## Cột trong `DonHang_Lo_1.xlsx`
+- **Mã đơn hàng**: mã đơn
+- **Mã lô**: số lô
+- **Số lượng**: số lượng bán lấy từ lô (đơn vị cơ bản)
+- **Số lượng trả**: số lượng khách trả lại (đơn vị cơ bản); lớn hơn 0: đơn đó có trả hàng
+
+## Cột trong `DonHang_Lo_2.xlsx`
+- **Mã đơn hàng**: mã đơn
+- **Mã lô**: số lô
+- **Số lượng**: số lượng bán lấy từ lô (đơn vị cơ bản)
+- **Số lượng trả**: số lượng khách trả lại (đơn vị cơ bản); lớn hơn 0: đơn đó có trả hàng
+
+## Cột trong `DanhSachThuoc.xlsx`
+- **Mã SKU**: mã hàng
+- **Hoạt chất**: hoạt chất (trống với thực phẩm chức năng, vật tư)
+- **Thuốc kê đơn**: thuốc kê đơn
+
+## Quy ước
+- Dữ liệu có đến hết 17/07/2026.
+- **Lô, hạn dùng**: mỗi dòng nhập là một lô, số lô không trùng. Một dòng bán có thể lấy từ nhiều lô. Hàng khách trả về lại lô đã bán.
+- **Thuốc**: **Thuốc kê đơn** đúng (TRUE/1) là thuốc kê đơn. Hoạt chất ghi không kèm hàm lượng (hàm lượng ở tên hàng); nhiều chất nối bằng " + ".
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhSachQuyDoi.xlsx`.
+
+
+## DanhSachQuyDoi.xlsx::Sheet1  rows=83
+- Tên sản phẩm (distinct=53, empty=0): Panadol Extra hộp 15 vỉ x 12 viên | Hapacol 250 hộp 24 gói | Panadol 500mg hộp 10 vỉ x 12 viên | Tiffy Dey hộp 25 vỉ x 4 viên
+- Đơn vị quy đổi (distinct=5, empty=0): vỉ | hộp | chai | tuýp
+- Tỉ lệ quy đổi (distinct=19, empty=0): 12 | 180 | 24 | 120
+- Đơn vị cơ bản (distinct=7, empty=0): viên | gói | cái | vỉ
+## DanhSachSanPham.xlsx::Sheet1  rows=75
+- Ghi chú (distinct=0, empty=75): 
+- Mô tả sản phẩm (distinct=0, empty=75): 
+- Tồn lớn nhất (distinct=1, empty=0): 999999999
+- Vị trí (distinct=0, empty=75): 
+- Mã SKU (distinct=75, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Mã HH Liên quan (distinct=0, empty=75): 
+- Thương hiệu (distinct=0, empty=75): 
+- Thuộc tính (distinct=0, empty=75): 
+- Tên sản phẩm (distinct=75, empty=0): Panadol Extra hộp 15 vỉ x 12 viên | Hapacol 250 hộp 24 gói | Panadol 500mg hộp 10 vỉ x 12 viên | Tiffy Dey hộp 25 vỉ x 4 viên
+- Hình ảnh (distinct=0, empty=75): 
+- Trọng lượng (distinct=0, empty=75): 
+- Mã vạch EAN (distinct=33, empty=42): 8938315949139 | 8937489443108 | 8931221137355 | 8933535795856
+- Bảo hành (distinct=0, empty=75): 
+- Đơn vị (distinct=10, empty=0): viên | gói | chai | cái
+- Định mức tồn tối thiểu (distinct=1, empty=0): 0
+- Loại hàng hóa (distinct=1, empty=0): Hàng hóa
+- Mẫu ghi chú (distinct=0, empty=75): 
+- Loại sản phẩm (distinct=11, empty=0): giảm đau hạ sốt | ho cảm cúm | dùng ngoài | tiêu hoá
+## DanhSachThuoc.xlsx::Sheet1  rows=75
+- Mã SKU (distinct=75, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Hoạt chất (distinct=51, empty=12): Paracetamol + Cafein | Paracetamol | Paracetamol + Phenylephrin + Clorphenira | Natri clorid
+- Thuốc kê đơn (distinct=2, empty=0): False | True
+## DonHang_ChiTiet_1.xlsx::T01-2025  rows=5516
+- Mã đơn hàng (distinct=2908, empty=2608): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Ngày đặt hàng (distinct=31, empty=2608): 01/01/2025 | 02/01/2025 | 03/01/2025 | 04/01/2025
+- Trạng thái đơn hàng (distinct=3, empty=2608): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=395, empty=2608): Tăng Hiếu Hương | Khách lẻ | Triệu Hoàng An | Hứa Nhung Chi
+- Tên sản phẩm (distinct=101, empty=0): Lorastad 10mg Stella hộp 10 vỉ x 10 viên | Enterogermina 2 tỷ/5ml hộp 20 ống | Tiffy Dey hộp 25 vỉ x 4 viên | Voltaren Emulgel 1% tuýp 20g
+- Số lượng sản phẩm (distinct=8, empty=0): 2 | 1 | 10 | 4
+- Giá sản phẩm (distinct=218, empty=0): 800 | 9,200 | 1100 | 69000
+- Tổng tiền (distinct=531, empty=0): 1.600đ | 9200 | 2.200đ | 69k
+- Đơn vị tính (distinct=11, empty=0): viên | ống | tuýp | chai
+## DonHang_ChiTiet_1.xlsx::T02-2025  rows=4909
+- Mã đơn hàng (distinct=2593, empty=2316): ORD002909 | ORD002910 | ORD002911 | ORD002912
+- Ngày đặt hàng (distinct=28, empty=2316): 01/02/2025 | 02/02/2025 | 03/02/2025 | 04/02/2025
+- Trạng thái đơn hàng (distinct=3, empty=2316): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=394, empty=2316): Hoàng Giang Quân | Đàm Loan Trang | Dương Khánh Quân | La Đức Phương
+- Tên sản phẩm (distinct=101, empty=0): Gaviscon hộp 24 gói x 10ml | Zyrtec 10mg hộp 1 vỉ x 10 viên | Enterogermina 2 tỷ/5ml hộp 20 ống | Povidine 10% chai 90ml
+- Số lượng sản phẩm (distinct=7, empty=0): 2 | 1 | 4 | 10
+- Giá sản phẩm (distinct=214, empty=0): 8000 | 75000 | 184000 | 18,000
+- Tổng tiền (distinct=517, empty=0): 16000 | 150000 | 184k | 72k
+- Đơn vị tính (distinct=11, empty=0): gói | hộp | chai | viên
+## DonHang_ChiTiet_1.xlsx::T03-2025  rows=5355
+- Mã đơn hàng (distinct=2808, empty=2547): ORD005502 | ORD005503 | ORD005504 | ORD005505
+- Ngày đặt hàng (distinct=31, empty=2547): 01/03/2025 | 02/03/2025 | 03/03/2025 | 04/03/2025
+- Trạng thái đơn hàng (distinct=3, empty=2547): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=391, empty=2547): Khách lẻ | Đinh Hằng Minh | Tống Nam Linh | Triệu Loan Hồng
+- Tên sản phẩm (distinct=101, empty=0): Yumangel hộp 20 gói | Dầu gió xanh Con Ó chai 12ml | Nước muối sinh lý Natri clorid 0,9% Vĩnh | Air-X 80mg viên nhai hộp 10 vỉ x 10 viên
+- Số lượng sản phẩm (distinct=7, empty=0): 10 | 2 | 6 | 4
+- Giá sản phẩm (distinct=209, empty=0): 5,300 | 49,000 | 10000 | 900
+- Tổng tiền (distinct=507, empty=0): 53000 | 98k | 20k | 5.400đ
+- Đơn vị tính (distinct=11, empty=0): gói | chai | viên | tuýp
+## DonHang_ChiTiet_1.xlsx::T04-2025  rows=5080
+- Mã đơn hàng (distinct=2708, empty=2372): ORD008310 | ORD008311 | ORD008312 | ORD008313
+- Ngày đặt hàng (distinct=30, empty=2372): 01/04/2025 | 02/04/2025 | 03/04/2025 | 04/04/2025
+- Trạng thái đơn hàng (distinct=3, empty=2372): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=391, empty=2372): Khách lẻ | Triệu Quang Hoa | Bạch Bình Linh | Tạ Châu Khánh
+- Tên sản phẩm (distinct=100, empty=0): Savi Losartan 50mg hộp 3 vỉ x 10 viên | Viên ngậm Eugica gói 15 viên | Enterogermina 2 tỷ/5ml hộp 20 ống | Plusssz  Max Multivitamin viên sủi tuýp 
+- Số lượng sản phẩm (distinct=8, empty=0): 2 | 1 | 4 | 10
+- Giá sản phẩm (distinct=218, empty=0): 14,000 | 15,000 | 9,700 | 40000
+- Tổng tiền (distinct=534, empty=0): 28k | 30000 | 9.700đ | 40000
+- Đơn vị tính (distinct=11, empty=0): vỉ | gói | ống | tuýp
+## DonHang_ChiTiet_1.xlsx::T05-2025  rows=5600
+- Mã đơn hàng (distinct=2961, empty=2639): ORD011018 | ORD011019 | ORD011020 | ORD011021
+- Ngày đặt hàng (distinct=31, empty=2639): 01/05/2025 | 02/05/2025 | 03/05/2025 | 04/05/2025
+- Trạng thái đơn hàng (distinct=3, empty=2639): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=397, empty=2639): Lê Minh Duy | Khách lẻ | Lâm Sơn Hùng | Lương Hà Bảo
+- Tên sản phẩm (distinct=101, empty=0): Que thử thai Quickstick hộp 1 cái | Povidine 10% chai 90ml | Cao Sao Vàng TW3 hộp 3g | Acyclovir Stella kem 5% tuýp 5g
+- Số lượng sản phẩm (distinct=8, empty=0): 1 | 3 | 2 | 4
+- Giá sản phẩm (distinct=214, empty=0): 25,000 | 18000 | 5000 | 28,000
+- Tổng tiền (distinct=532, empty=0): 25k | 18k | 5000 | 28k
+- Đơn vị tính (distinct=11, empty=0): cái | chai | hộp | tuýp
+## DonHang_ChiTiet_1.xlsx::T06-2025  rows=5427
+- Mã đơn hàng (distinct=2882, empty=2545): ORD013979 | ORD013980 | ORD013981 | ORD013982
+- Ngày đặt hàng (distinct=30, empty=2545): 01/06/2025 | 02/06/2025 | 03/06/2025 | 04/06/2025
+- Trạng thái đơn hàng (distinct=3, empty=2545): Đã hoàn thành | Đã hoàn hàng | Đã hủy
+- Tên khách hàng (distinct=394, empty=2545): Khách lẻ | Hồ Nam Hiếu | Kiều Huy Linh | Đào Hải Hà
+- Tên sản phẩm (distinct=101, empty=0): Povidine 10% chai 90ml | Lorastad 10mg Stella Hộp 10 Vỉ X 10 Viên | Otrivin 0,1% xịt mũi chai 10ml | Decolgen Forte hộp 30 vỉ x 4 viên
+- Số lượng sản phẩm (distinct=8, empty=0): 2 | 1 | 3 | 10
+- Giá sản phẩm (distinct=210, empty=0): 18,000 | 800 | 61000 | 1,300
+- Tổng tiền (distinct=533, empty=0): 36000 | 800 | 122000 | 3900
+- Đơn vị tính (distinct=11, empty=0): chai | viên | hộp | gói
+## DonHang_ChiTiet_1.xlsx::T07-2025  rows=5446
+- Mã đơn hàng (distinct=2901, empty=2545): ORD016861 | ORD016862 | ORD016863 | ORD016864
+- Ngày đặt hàng (distinct=31, empty=2545): 01/07/2025 | 02/07/2025 | 03/07/2025 | 04/07/2025
+- Trạng thái đơn hàng (distinct=3, empty=2545): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=395, empty=2545): Hồ Hồng Hùng | Hà Dũng Tâm | Tạ Duy Ngọc | Khách lẻ
+- Tên sản phẩm (distinct=101, empty=0): Panadol Extra hộp 15 vỉ x 12 viên | Vitamin C 500mg Quapharco hộp 10 vỉ x 10 | Biosubtyl-II hộp 25 gói | Gaviscon hộp 24 gói x 10ml
+- Số lượng sản phẩm (distinct=7, empty=0): 3 | 1 | 10 | 2
+- Giá sản phẩm (distinct=213, empty=0): 1400 | 500 | 2100 | 8,000
+- Tổng tiền (distinct=541, empty=0): 4200 | 500đ | 6.300đ | 8000
+- Đơn vị tính (distinct=11, empty=0): viên | gói | chai | lọ
+## DonHang_ChiTiet_1.xlsx::T08-2025  rows=5437
+- Mã đơn hàng (distinct=2921, empty=2516): ORD019762 | ORD019763 | ORD019764 | ORD019765
+- Ngày đặt hàng (distinct=31, empty=2516): 01/08/2025 | 02/08/2025 | 03/08/2025 | 04/08/2025
+- Trạng thái đơn hàng (distinct=3, empty=2516): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=393, empty=2516): Khách lẻ | Bạch Phúc Bảo | Tăng Thanh Ngân | Cao Thắng Nhung
+- Tên sản phẩm (distinct=100, empty=0): Gaviscon hộp 24 gói x 10ml | Enervon hộp 10 vỉ x 10 viên | Clarityne 10mg hộp 1 vỉ x 10 viên | Savi Losartan 50mg hộp 3 vỉ x 10 viên
+- Số lượng sản phẩm (distinct=6, empty=0): 1 | 4 | 10 | 6
+- Giá sản phẩm (distinct=215, empty=0): 192000 | 23,000 | 6700 | 1,400
+- Tổng tiền (distinct=526, empty=0): 192k | 23k | 26.800đ | 14k
+- Đơn vị tính (distinct=11, empty=0): hộp | vỉ | viên | chai
+## DonHang_ChiTiet_1.xlsx::T09-2025  rows=5635
+- Mã đơn hàng (distinct=2981, empty=2654): ORD022683 | ORD022684 | ORD022685 | ORD022686
+- Ngày đặt hàng (distinct=30, empty=2654): 01/09/2025 | 02/09/2025 | 03/09/2025 | 04/09/2025
+- Trạng thái đơn hàng (distinct=3, empty=2654): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=395, empty=2654): Khách lẻ | Hứa Ngân Khoa | Đàm Hải Ngân | Trương Trung Bảo
+- Tên sản phẩm (distinct=101, empty=0): Siro ăn ngon Ích Nhi Plus chai 100ml | Yumangel hộp 20 gói | Hagifen 400mg DHG hộp 10 vỉ x 10 viên | Plusssz Max Multivitamin viên sủi tuýp 2
+- Số lượng sản phẩm (distinct=9, empty=0): 1 | 2 | 10 | 3
+- Giá sản phẩm (distinct=215, empty=0): 65,000 | 5300 | 600 | 40000
+- Tổng tiền (distinct=560, empty=0): 65000 | 10.600đ | 1.200đ | 40000
+- Đơn vị tính (distinct=11, empty=0): chai | gói | viên | tuýp
+## DonHang_ChiTiet_1.xlsx::T10-2025  rows=5571
+- Mã đơn hàng (distinct=2985, empty=2586): ORD025664 | ORD025665 | ORD025666 | ORD025667
+- Ngày đặt hàng (distinct=31, empty=2586): 01/10/2025 | 02/10/2025 | 03/10/2025 | 04/10/2025
+- Trạng thái đơn hàng (distinct=3, empty=2586): Đã hoàn thành | Đã hoàn hàng | Đã hủy
+- Tên khách hàng (distinct=391, empty=2586): Đặng Đức Chi | Tăng Thanh Ngân | Triệu Hoàng An | Nguyễn Đức Hoàng
+- Tên sản phẩm (distinct=101, empty=0): Bio-acimin Gold men vi sinh hộp 30 gói | Cao Sao Vàng TW3 hộp 3g | Alaxan hộp 25 vỉ x 4 viên | Nurofen for Children hỗn dịch chai 60ml
+- Số lượng sản phẩm (distinct=8, empty=0): 2 | 1 | 3 | 10
+- Giá sản phẩm (distinct=225, empty=0): 5,300 | 5000 | 1300 | 63,000
+- Tổng tiền (distinct=546, empty=0): 10600 | 5k | 1300 | 126k
+- Đơn vị tính (distinct=11, empty=0): gói | hộp | viên | chai
+## DonHang_ChiTiet_1.xlsx::T11-2025  rows=5588
+- Mã đơn hàng (distinct=3003, empty=2585): ORD028649 | ORD028650 | ORD028651 | ORD028652
+- Ngày đặt hàng (distinct=30, empty=2585): 01/11/2025 | 02/11/2025 | 03/11/2025 | 04/11/2025
+- Trạng thái đơn hàng (distinct=3, empty=2585): Đã hoàn thành | Đã hoàn hàng | Đã hủy
+- Tên khách hàng (distinct=397, empty=2585): Lâm Bảo Thắng | Khách lẻ | Trần Trung Khánh | Giang Nhung Hằng
+- Tên sản phẩm (distinct=101, empty=0): Betadine Gargle súc họng chai 125ml | Otrivin 0,1% xịt mũi chai 10ml | Clorpheniramin 4mg DHG hộp 10 vỉ x 20 vi | Cetirizin 10mg Domesco hộp 10 vỉ x 10 vi
+- Số lượng sản phẩm (distinct=7, empty=0): 1 | 4 | 2 | 6
+- Giá sản phẩm (distinct=221, empty=0): 75,000 | 61,000 | 2000 | 6000
+- Tổng tiền (distinct=544, empty=0): 75k | 244k | 2k | 6000
+- Đơn vị tính (distinct=11, empty=0): chai | vỉ | gói | hộp
+## DonHang_ChiTiet_1.xlsx::T12-2025  rows=5698
+- Mã đơn hàng (distinct=3041, empty=2657): ORD031652 | ORD031653 | ORD031654 | ORD031655
+- Ngày đặt hàng (distinct=31, empty=2657): 01/12/2025 | 02/12/2025 | 03/12/2025 | 04/12/2025
+- Trạng thái đơn hàng (distinct=3, empty=2657): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=391, empty=2657): Hà Trang Minh | Phùng Minh Duy | Hứa Phong Sơn | Khách lẻ
+- Tên sản phẩm (distinct=101, empty=0): Pharmaton Essential hộp 30 viên | Decolgen Forte hộp 30 vỉ x 4 viên | Cetirizin 10mg Domesco hộp 10 vỉ x 10 vi | POVIDINE 10% CHAI 90ML
+- Số lượng sản phẩm (distinct=7, empty=0): 1 | 2 | 4 | 10
+- Giá sản phẩm (distinct=222, empty=0): 210000 | 1,300 | 6,000 | 18000
+- Tổng tiền (distinct=553, empty=0): 210k | 1300 | 12k | 72k
+- Đơn vị tính (distinct=11, empty=0): hộp | viên | vỉ | chai
+## DonHang_ChiTiet_1.xlsx::T01-2026  rows=5827
+- Mã đơn hàng (distinct=3084, empty=2743): ORD034693 | ORD034694 | ORD034695 | ORD034696
+- Ngày đặt hàng (distinct=31, empty=2743): 01/01/2026 | 02/01/2026 | 03/01/2026 | 04/01/2026
+- Trạng thái đơn hàng (distinct=3, empty=2743): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=398, empty=2743): Tô Duy Mai | Lương Hà Bảo | Hà Dũng Tâm | Khách lẻ
+- Tên sản phẩm (distinct=101, empty=0): Cao Sao Vàng TW3 hộp 3g | Magne-B6 Corbière hộp 5 vỉ x 10 viên | Enterogermina 2 tỷ/5ml hộp 20 ống | Voltaren Emulgel 1% tuýp 20g
+- Số lượng sản phẩm (distinct=8, empty=0): 1 | 10 | 2 | 3
+- Giá sản phẩm (distinct=225, empty=0): 5,000 | 2,200 | 9700 | 69,000
+- Tổng tiền (distinct=560, empty=0): 5k | 2200 | 97k | 138k
+- Đơn vị tính (distinct=11, empty=0): hộp | viên | ống | tuýp
+## DonHang_ChiTiet_1.xlsx::T02-2026  rows=5552
+- Mã đơn hàng (distinct=2922, empty=2630): ORD037777 | ORD037778 | ORD037779 | ORD037780
+- Ngày đặt hàng (distinct=28, empty=2630): 01/02/2026 | 02/02/2026 | 03/02/2026 | 04/02/2026
+- Trạng thái đơn hàng (distinct=3, empty=2630): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=396, empty=2630): Diệp Minh Linh | Khách lẻ | Tăng Hùng Long | Đàm Tâm Hồng
+- Tên sản phẩm (distinct=101, empty=0): Decolgen Forte hộp 30 vỉ x 4 viên | Siro ho Bổ phế Nam Hà Chỉ Khái Lộ chai 1 | Povidine 10% chai 90ml | Oresol 245 DHG hộp 20 gói
+- Số lượng sản phẩm (distinct=6, empty=0): 1 | 2 | 10 | 3
+- Giá sản phẩm (distinct=222, empty=0): 1,300 | 58000 | 18,000 | 1,400
+- Tổng tiền (distinct=552, empty=0): 1300 | 116000 | 18k | 1400
+- Đơn vị tính (distinct=11, empty=0): viên | chai | gói | lọ
+## DonHang_ChiTiet_1.xlsx::T03-2026  rows=6018
+- Mã đơn hàng (distinct=3148, empty=2870): ORD040699 | ORD040700 | ORD040701 | ORD040702
+- Ngày đặt hàng (distinct=31, empty=2870): 01/03/2026 | 02/03/2026 | 03/03/2026 | 04/03/2026
+- Trạng thái đơn hàng (distinct=3, empty=2870): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=399, empty=2870): Khách lẻ | Trương Hải Thu | Đỗ Trang Hằng | Quách Loan Tâm
+- Tên sản phẩm (distinct=101, empty=0): Fugacar 500mg hộp 1 viên | Phosphalugel hộp 26 gói | Biosubtyl-II hộp 25 gói | Vitamin C 500mg Quapharco hộp 10 vỉ x 10
+- Số lượng sản phẩm (distinct=7, empty=0): 1 | 3 | 6 | 4
+- Giá sản phẩm (distinct=233, empty=0): 22000 | 4,700 | 2,100 | 5,000
+- Tổng tiền (distinct=559, empty=0): 22000 | 14.100đ | 12.600đ | 5k
+- Đơn vị tính (distinct=11, empty=0): viên | gói | vỉ | chai
+## DonHang_ChiTiet_1.xlsx::T04-2026  rows=5815
+- Mã đơn hàng (distinct=3111, empty=2704): ORD043847 | ORD043848 | ORD043849 | ORD043850
+- Ngày đặt hàng (distinct=30, empty=2704): 01/04/2026 | 02/04/2026 | 03/04/2026 | 04/04/2026
+- Trạng thái đơn hàng (distinct=3, empty=2704): Đã hoàn thành | Đã hoàn hàng | Đã hủy
+- Tên khách hàng (distinct=395, empty=2704): Đặng Minh Thắng | Đào Thu Trang | Kiều Phương Ngọc | Vũ Huy Hùng
+- Tên sản phẩm (distinct=101, empty=0): Cetirizin 10mg Domesco hộp 10 vỉ x 10 vi | Berocca Performance viên sủi tuýp 10 viê | Voltaren Emulgel 1% tuýp 20g | Bisolvon 8mg hộp 3 vỉ x 10 viên
+- Số lượng sản phẩm (distinct=7, empty=0): 1 | 10 | 3 | 2
+- Giá sản phẩm (distinct=221, empty=0): 6,000 | 8,300 | 69,000 | 69000
+- Tổng tiền (distinct=558, empty=0): 6000 | 83k | 69000 | 2100
+- Đơn vị tính (distinct=11, empty=0): vỉ | viên | tuýp | lọ
+## DonHang_ChiTiet_1.xlsx::T05-2026  rows=6004
+- Mã đơn hàng (distinct=3209, empty=2795): ORD046958 | ORD046959 | ORD046960 | ORD046961
+- Ngày đặt hàng (distinct=31, empty=2795): 01/05/2026 | 02/05/2026 | 03/05/2026 | 04/05/2026
+- Trạng thái đơn hàng (distinct=3, empty=2795): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=397, empty=2795): Khách lẻ | Mai Hùng Lan | Võ Phúc Đạt | Kiều Chi Bích
+- Tên sản phẩm (distinct=101, empty=0): Prednisolon 5mg Boston chai 500 viên | Siro ăn ngon Ích Nhi Plus chai 100ml | Telfast HD 180mg hộp 3 vỉ x 10 viên | Berocca Performance viên sủi tuýp 10 viê
+- Số lượng sản phẩm (distinct=9, empty=0): 1 | 2 | 3 | 10
+- Giá sản phẩm (distinct=223, empty=0): 500 | 65000 | 9,800 | 8300
+- Tổng tiền (distinct=547, empty=0): 500đ | 130000 | 9.800đ | 16.600đ
+- Đơn vị tính (distinct=11, empty=0): viên | chai | cái | vỉ
+## DonHang_ChiTiet_2026.xlsx::T06-2026  rows=5751
+- Mã đơn hàng (distinct=3100, empty=2651): ORD050167 | ORD050168 | ORD050169 | ORD050170
+- Ngày đặt hàng (distinct=30, empty=2651): 01/06/2026 | 02/06/2026 | 03/06/2026 | 04/06/2026
+- Trạng thái đơn hàng (distinct=3, empty=2651): Đã hoàn thành | Đã hoàn hàng | Đã hủy
+- Tên khách hàng (distinct=393, empty=2651): Khách lẻ | Đào Anh Duy | Bùi Huy Lan | Võ Hải Hồng
+- Tên sản phẩm (distinct=101, empty=0): Amoxicillin 500mg Domesco hộp 10 vỉ x 10 | Efticol 0,9% lốc 10 lọ x 10ml | Fugacar 500mg hộp 1 viên | Cefuroxim 500mg Vidipha hộp 10 vỉ x 10 v
+- Số lượng sản phẩm (distinct=6, empty=0): 10 | 1 | 2 | 6
+- Giá sản phẩm (distinct=223, empty=0): 1000 | 28000 | 22000 | 3600
+- Tổng tiền (distinct=544, empty=0): 10k | 28k | 44k | 3.600đ
+- Đơn vị tính (distinct=11, empty=0): viên | lốc | chai | gói
+## DonHang_ChiTiet_2026.xlsx::T07-2026  rows=3434
+- Mã đơn hàng (distinct=1813, empty=1621): ORD053267 | ORD053268 | ORD053269 | ORD053270
+- Ngày đặt hàng (distinct=17, empty=1621): 01/07/2026 | 02/07/2026 | 03/07/2026 | 04/07/2026
+- Trạng thái đơn hàng (distinct=4, empty=1621): Đã hoàn thành | Đã hủy | Đã hoàn hàng | Đang giao dịch
+- Tên khách hàng (distinct=368, empty=1621): Bạch Thắng Huy | Châu Phong Quân | Khách lẻ | Lý Thu Cường
+- Tên sản phẩm (distinct=101, empty=0): Yumangel hộp 20 gói | Hapacol 250 hộp 24 gói | Tiffy Dey hộp 25 vỉ x 4 viên | Alaxan hộp 25 vỉ x 4 viên
+- Số lượng sản phẩm (distinct=6, empty=0): 1 | 2 | 3 | 10
+- Giá sản phẩm (distinct=211, empty=0): 106000 | 50,400 | 120000 | 130000
+- Tổng tiền (distinct=485, empty=0): 106k | 50.400đ | 120000 | 130k
+- Đơn vị tính (distinct=11, empty=0): hộp | chai | viên | gói
+## DonHang_Lo_1.xlsx::Sheet1  rows=100000
+- Mã đơn hàng (distinct=51553, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Mã lô (distinct=3833, empty=0): J2501674 | X2501549 | W2501411 | O2501555
+- Số lượng (distinct=208, empty=0): 2 | 1 | 10 | 4
+- Số lượng trả (distinct=32, empty=0): 0 | 2 | 1 | 24
+## DonHang_Lo_2.xlsx::Sheet1  rows=5799
+- Mã đơn hàng (distinct=2986, empty=0): ORD052057 | ORD052058 | ORD052059 | ORD052060
+- Mã lô (distinct=350, empty=0): C2605930 | A2606201 | Y2606355 | O2606358
+- Số lượng (distinct=73, empty=0): 2 | 1 | 10 | 4
+- Số lượng trả (distinct=8, empty=0): 0 | 1 | 9 | 3
+## DonNhapHang.xlsx::Sheet1  rows=560
+- Mã đơn nhập (distinct=560, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- Ngày nhập (distinct=560, empty=0): 01/01/2025 | 04/01/2025 | 05/01/2025 | 06/01/2025
+- Mã nhà cung cấp (distinct=5, empty=0): NCC001 | NCC002 | NCC003 | NCC004
+## DonNhapHang_ChiTiet.xlsx::Sheet1  rows=4051
+- Mã đơn nhập (distinct=560, empty=0): PN00101 | PN00441 | PN00066 | PN00082
+- Mã SKU (distinct=75, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Mã lô (distinct=4051, empty=0): B2504124 | B2603530 | C2503471 | C2503513
+- Hạn sử dụng (distinct=1351, empty=0): 18/07/2026 | 20/10/2027 | 01/08/2025 | 25/09/2027
+- Số lượng nhập (distinct=92, empty=0): 360 | 240 | 264 | 288

@@ -1,0 +1,217 @@
+# Dữ liệu biz_102
+
+File Excel xuất từ phần mềm bán hàng, mỗi danh sách một file (danh sách dài tách thành nhiều file, tên thêm đuôi _1, _2… hoặc đuôi năm _2025, _2026…). File đơn hàng mỗi dòng một sản phẩm, thông tin đơn lặp lại ở mọi dòng của đơn; file này không có mã sản phẩm, nối với các danh sách sản phẩm qua tên sản phẩm. Ngày dạng dd/mm/yyyy.
+
+File `DonHang_ChiTiet.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm.
+
+## File
+- `DonHang_ChiTiet.xlsx` (xlsx)
+- `DanhSachQuyDoi.xlsx` (xlsx)
+
+## Cột trong `DonHang_ChiTiet.xlsx`
+- **Mã đơn hàng**: mã đơn
+- **Ngày đặt hàng**: ngày bán
+- **Trạng thái đơn hàng**: trạng thái đơn
+- **Tên khách hàng**: tên khách (Khách lẻ nếu không lưu)
+- **Tên sản phẩm**: tên hàng
+- **Số lượng sản phẩm**: số lượng
+- **Giá sản phẩm**: đơn giá
+- **Tổng tiền**: thành tiền sau giảm
+- **Đơn vị tính**: đơn vị tính
+
+## Cột trong `DanhSachQuyDoi.xlsx`
+- **Tên sản phẩm**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)
+- **Đơn vị quy đổi**: đơn vị lớn (thùng, hộp, tấn...)
+- **Tỉ lệ quy đổi**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn
+- **Đơn vị cơ bản**: đơn vị cơ bản
+
+## Quy ước
+- Dữ liệu có đến hết 16/06/2026.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhSachQuyDoi.xlsx`.
+
+
+## DanhSachQuyDoi.xlsx::Sheet1  rows=77
+- Tên sản phẩm (distinct=59, empty=0): Coca Cola 330ml | Pepsi 330ml | Sting dâu 330ml | Red Bull 250ml
+- Đơn vị quy đổi (distinct=8, empty=0): lốc | thùng | bao | bao 25kg
+- Tỉ lệ quy đổi (distinct=16, empty=0): 6 | 24 | 12 | 4
+- Đơn vị cơ bản (distinct=11, empty=0): lon | chai | hộp | gói
+## DonHang_ChiTiet.xlsx::T01_2025  rows=6674
+- Mã đơn hàng (distinct=2711, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Ngày đặt hàng (distinct=31, empty=0): 01/01/2025 | 02/01/2025 | 03/01/2025 | 04/01/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hoàn hàng | Đã hủy
+- Tên khách hàng (distinct=351, empty=0): Tạ Sơn Hải | lẻ | Hồ Hà Cường | Dương Nam Châu
+- Tên sản phẩm (distinct=60, empty=0): Nước mắm Nam Ngư 750ml | Gạo thơm Jasmine | Sữa TH true MILK 180ml | Dầu ăn Simply 2L
+- Số lượng sản phẩm (distinct=79, empty=0): 1 | 1 bao 25kg | 3 | 2
+- Giá sản phẩm (distinct=159, empty=0): 38,000 | 20000 | 8,500 | 115000
+- Tổng tiền (distinct=373, empty=0): 38,000 | 20000 | 8,500 | 115000
+- Đơn vị tính (distinct=16, empty=0): chai | kg | hộp | bao 25kg
+## DonHang_ChiTiet.xlsx::T02_2025  rows=5960
+- Mã đơn hàng (distinct=2367, empty=0): ORD002712 | ORD002713 | ORD002714 | ORD002715
+- Ngày đặt hàng (distinct=28, empty=0): 01/02/2025 | 02/02/2025 | 03/02/2025 | 04/02/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=347, empty=0): Hứa Minh Linh | Dương Anh Phong | kl | Khách lẻ
+- Tên sản phẩm (distinct=60, empty=0): Bia Heineken 330ml | Sting dâu 330ml | Sữa tươi Vinamilk 180ml | Đường Biên Hòa 1kg
+- Số lượng sản phẩm (distinct=75, empty=0): 3 | 1 chai | 2 | 1
+- Giá sản phẩm (distinct=150, empty=0): 21,000 | 10000 | 8,400 | 26,000
+- Tổng tiền (distinct=342, empty=0): 63000 | 10,000 | 16800 | 26,000
+- Đơn vị tính (distinct=16, empty=0): lon | chai | hộp | gói
+## DonHang_ChiTiet.xlsx::T03_2025  rows=4785
+- Mã đơn hàng (distinct=1887, empty=0): ORD005079 | ORD005080 | ORD005081 | ORD005082
+- Ngày đặt hàng (distinct=31, empty=0): 01/03/2025 | 02/03/2025 | 03/03/2025 | 04/03/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=341, empty=0): Ngô Thảo Quân | Đinh Khánh Bình | khách lẻ | Bạch Nam Trung
+- Tên sản phẩm (distinct=60, empty=0): Dầu ăn Tường An 1L | Trứng gà so | Bánh quy Cosy 200g | Cá hộp 3 Cô Gái 155g
+- Số lượng sản phẩm (distinct=74, empty=0): 2 | 1 | 10 hộp | 1 chai
+- Giá sản phẩm (distinct=149, empty=0): 52000 | 4,000 | 440000 | 22,000
+- Tổng tiền (distinct=345, empty=0): 104,000 | 4000 | 440000 | 220,000
+- Đơn vị tính (distinct=15, empty=0): chai | quả | thùng | hộp
+## DonHang_ChiTiet.xlsx::T04_2025  rows=4587
+- Mã đơn hàng (distinct=1769, empty=0): ORD006966 | ORD006967 | ORD006968 | ORD006969
+- Ngày đặt hàng (distinct=30, empty=0): 01/04/2025 | 02/04/2025 | 03/04/2025 | 04/04/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=340, empty=0): Khách lẻ | Kiều Thanh Giang | kl | Tô Anh Linh
+- Tên sản phẩm (distinct=60, empty=0): Yakult 65ml | Nước suối Aquafina 500ml | Sting dâu 330ml | Bia Sài Gòn Special 330ml
+- Số lượng sản phẩm (distinct=75, empty=0): 4 chai | 1 chai | 1 | 1 hộp
+- Giá sản phẩm (distinct=158, empty=0): 6500 | 5000 | 10,000 | 15000
+- Tổng tiền (distinct=355, empty=0): 26000 | 5,000 | 10,000 | 15000
+- Đơn vị tính (distinct=16, empty=0): chai | lon | hộp | gói
+## DonHang_ChiTiet.xlsx::T05_2025  rows=4575
+- Mã đơn hàng (distinct=1876, empty=0): ORD008735 | ORD008736 | ORD008737 | ORD008738
+- Ngày đặt hàng (distinct=31, empty=0): 01/05/2025 | 02/05/2025 | 03/05/2025 | 04/05/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=340, empty=0): Nguyễn Bảo Đức | Hứa Trang An | lẻ | Vũ Hạnh Hùng
+- Tên sản phẩm (distinct=60, empty=0): Sữa đặc Ông Thọ 380g | Nước mắm Nam Ngư 750ml | Bia Sài Gòn Special 330ml | Gạo ST25
+- Số lượng sản phẩm (distinct=75, empty=0): 1 hộp | 1 | 2 lon | 1 vỉ
+- Giá sản phẩm (distinct=165, empty=0): 25,000 | 38,000 | 15,000 | 160000
+- Tổng tiền (distinct=371, empty=0): 25,000 | 38,000 | 30000 | 152000
+- Đơn vị tính (distinct=16, empty=0): hộp | chai | lon | bao
+## DonHang_ChiTiet.xlsx::T06_2025  rows=4287
+- Mã đơn hàng (distinct=1729, empty=0): ORD010611 | ORD010612 | ORD010613 | ORD010614
+- Ngày đặt hàng (distinct=30, empty=0): 01/06/2025 | 02/06/2025 | 03/06/2025 | 04/06/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hủy | Đã hoàn thành | Đã hoàn hàng
+- Tên khách hàng (distinct=340, empty=0): lẻ | Trương Hiếu Châu | Phạm Thanh Cường | khách lẻ
+- Tên sản phẩm (distinct=60, empty=0): Nước tương Maggi 700ml | Red Bull 250ml | Snack Lay's vị tự nhiên 56g | Thuốc lá Jet
+- Số lượng sản phẩm (distinct=78, empty=0): 3 | 2 | 4 | 1 gói
+- Giá sản phẩm (distinct=160, empty=0): 30,000 | 12500 | 12000 | 30000
+- Tổng tiền (distinct=357, empty=0): 90000 | 25,000 | 24000 | 120,000
+- Đơn vị tính (distinct=16, empty=0): chai | lon | gói | quả
+## DonHang_ChiTiet.xlsx::T07_2025  rows=4568
+- Mã đơn hàng (distinct=1848, empty=0): ORD012340 | ORD012341 | ORD012342 | ORD012343
+- Ngày đặt hàng (distinct=31, empty=0): 01/07/2025 | 02/07/2025 | 03/07/2025 | 04/07/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=342, empty=0): Trịnh Khoa An | kl | Ngô Thu Hồng | Phạm Châu An
+- Tên sản phẩm (distinct=60, empty=0): Mì Hảo Hảo tôm chua cay | Bánh Chocopie 12 cái | Nước mắm Nam Ngư 750ml | Gạo thơm Jasmine
+- Số lượng sản phẩm (distinct=70, empty=0): 2 | 1 | 1 gói | 3 chai
+- Giá sản phẩm (distinct=162, empty=0): 135,000 | 55,000 | 38,000 | 20,000
+- Tổng tiền (distinct=370, empty=0): 270,000 | 55000 | 76000 | 20,000
+- Đơn vị tính (distinct=16, empty=0): thùng | hộp | chai | kg
+## DonHang_ChiTiet.xlsx::T08_2025  rows=4626
+- Mã đơn hàng (distinct=1833, empty=0): ORD014188 | ORD014189 | ORD014190 | ORD014191
+- Ngày đặt hàng (distinct=31, empty=0): 01/08/2025 | 02/08/2025 | 03/08/2025 | 04/08/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hoàn hàng | Đã hủy
+- Tên khách hàng (distinct=341, empty=0): kl | lẻ | Từ Thắng Hạnh | Trần Ngân Châu
+- Tên sản phẩm (distinct=60, empty=0): Kem đánh răng P/S 180g | Nước suối Aquafina 500ml | Red Bull 250ml | Sữa chua Vinamilk có đường
+- Số lượng sản phẩm (distinct=74, empty=0): 1 | 1 lon | 3 lon | 4 chai
+- Giá sản phẩm (distinct=166, empty=0): 30000 | 5000 | 12,500 | 6,000
+- Tổng tiền (distinct=369, empty=0): 30000 | 5000 | 12,500 | 6000
+- Đơn vị tính (distinct=16, empty=0): hộp | chai | lon | gói
+## DonHang_ChiTiet.xlsx::T09_2025  rows=4410
+- Mã đơn hàng (distinct=1755, empty=0): ORD016021 | ORD016022 | ORD016023 | ORD016024
+- Ngày đặt hàng (distinct=30, empty=0): 01/09/2025 | 02/09/2025 | 03/09/2025 | 04/09/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=335, empty=0): kl | Lương Quân Mai | lẻ | khách lẻ
+- Tên sản phẩm (distinct=60, empty=0): Bột giặt OMO 3kg | Khăn giấy Tempo 10 gói | Gạo ST25 | Nước suối Aquafina 500ml
+- Số lượng sản phẩm (distinct=72, empty=0): 1 | 1 lốc | 5 kg | 2
+- Giá sản phẩm (distinct=167, empty=0): 135,000 | 40,000 | 32,000 | 5,000
+- Tổng tiền (distinct=381, empty=0): 135,000 | 40000 | 160000 | 5000
+- Đơn vị tính (distinct=16, empty=0): gói | lốc | kg | chai
+## DonHang_ChiTiet.xlsx::T10_2025  rows=4715
+- Mã đơn hàng (distinct=1869, empty=0): ORD017776 | ORD017777 | ORD017778 | ORD017779
+- Ngày đặt hàng (distinct=31, empty=0): 01/10/2025 | 02/10/2025 | 03/10/2025 | 04/10/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=337, empty=0): kl | Hồ Giang Tâm | Phạm Bình Bình | Đàm Hà Tâm
+- Tên sản phẩm (distinct=60, empty=0): Thuốc lá Vinataba | Bia Tiger 330ml | Hạt nêm Knorr 400g | Nhang Quảng Trí bó
+- Số lượng sản phẩm (distinct=77, empty=0): 1 | 3 | 2 gói | 1 bó
+- Giá sản phẩm (distinct=166, empty=0): 26,000 | 18,000 | 32,000 | 25000
+- Tổng tiền (distinct=394, empty=0): 26000 | 54000 | 64,000 | 25000
+- Đơn vị tính (distinct=16, empty=0): gói | lon | bó | chai
+## DonHang_ChiTiet.xlsx::T11_2025  rows=4605
+- Mã đơn hàng (distinct=1768, empty=0): ORD019645 | ORD019646 | ORD019647 | ORD019648
+- Ngày đặt hàng (distinct=30, empty=0): 01/11/2025 | 02/11/2025 | 03/11/2025 | 04/11/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hoàn hàng | Đã hủy
+- Tên khách hàng (distinct=337, empty=0): khách lẻ | Từ Phong An | Đinh Hạnh Châu | Tăng Phương Đạt
+- Tên sản phẩm (distinct=60, empty=0): Red Bull 250ml | Muối I-ốt 500g | Đường Biên Hòa 1kg | Trứng gà so
+- Số lượng sản phẩm (distinct=77, empty=0): 1 lon | 1 | 1 gói | 3
+- Giá sản phẩm (distinct=164, empty=0): 12500 | 126,000 | 26000 | 4,000
+- Tổng tiền (distinct=379, empty=0): 12500 | 126000 | 26000 | 12000
+- Đơn vị tính (distinct=16, empty=0): lon | thùng | gói | quả
+## DonHang_ChiTiet.xlsx::T12_2025  rows=4436
+- Mã đơn hàng (distinct=1783, empty=0): ORD021413 | ORD021414 | ORD021415 | ORD021416
+- Ngày đặt hàng (distinct=31, empty=0): 01/12/2025 | 02/12/2025 | 03/12/2025 | 04/12/2025
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=334, empty=0): Tạ Hồng Bảo | Giang Huy Hiếu | Dương Phong Anh | Đặng Quang Đạt
+- Tên sản phẩm (distinct=60, empty=0): Đường Biên Hòa 1kg | Yakult 65ml | Nước suối Lavie 1.5L | Snack Oishi tôm cay 40g
+- Số lượng sản phẩm (distinct=74, empty=0): 1 | 1 chai | 1 thùng | 1 gói
+- Giá sản phẩm (distinct=166, empty=0): 26,000 | 6500 | 126,000 | 6,000
+- Tổng tiền (distinct=386, empty=0): 26,000 | 6,500 | 126000 | 6,000
+- Đơn vị tính (distinct=16, empty=0): gói | chai | thùng | bó
+## DonHang_ChiTiet.xlsx::T01_2026  rows=4730
+- Mã đơn hàng (distinct=1870, empty=0): ORD023196 | ORD023197 | ORD023198 | ORD023199
+- Ngày đặt hàng (distinct=31, empty=0): 01/01/2026 | 02/01/2026 | 03/01/2026 | 04/01/2026
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=337, empty=0): Lương Anh Hồng | Lưu Thắng Quân | khách lẻ | Đỗ Hiếu Quân
+- Tên sản phẩm (distinct=60, empty=0): Băng vệ sinh Diana 8 miếng | Gạo ST25 | Pin Panasonic AA | Nước suối Lavie 1.5L
+- Số lượng sản phẩm (distinct=75, empty=0): 4 | 1 kg | 4 vỉ | 1
+- Giá sản phẩm (distinct=173, empty=0): 23000 | 32000 | 20000 | 10500
+- Tổng tiền (distinct=412, empty=0): 92000 | 32,000 | 80000 | 10500
+- Đơn vị tính (distinct=16, empty=0): gói | kg | vỉ | chai
+## DonHang_ChiTiet.xlsx::T02_2026  rows=7256
+- Mã đơn hàng (distinct=2889, empty=0): ORD025066 | ORD025067 | ORD025068 | ORD025069
+- Ngày đặt hàng (distinct=28, empty=0): 01/02/2026 | 02/02/2026 | 03/02/2026 | 04/02/2026
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=351, empty=0): Giang Hoàng Quang | Chung Đức Bích | lẻ | Tống Hạnh Khánh
+- Tên sản phẩm (distinct=60, empty=0): Nước mắm Nam Ngư 750ml | Mì Hảo Hảo tôm chua cay | Đường Biên Hòa 1kg | Nước rửa chén Sunlight 750g
+- Số lượng sản phẩm (distinct=78, empty=0): 2 chai | 1 gói | 1 | 2
+- Giá sản phẩm (distinct=174, empty=0): 40000 | 4,500 | 26,000 | 29,500
+- Tổng tiền (distinct=445, empty=0): 80,000 | 4500 | 26,000 | 59,000
+- Đơn vị tính (distinct=16, empty=0): chai | gói | lon | hộp
+## DonHang_ChiTiet.xlsx::T03_2026  rows=4743
+- Mã đơn hàng (distinct=1825, empty=0): ORD027955 | ORD027956 | ORD027957 | ORD027958
+- Ngày đặt hàng (distinct=31, empty=0): 01/03/2026 | 02/03/2026 | 03/03/2026 | 04/03/2026
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hủy | Đã hoàn thành | Đã hoàn hàng
+- Tên khách hàng (distinct=340, empty=0): Dương Duy Hồng | Bùi Trang Minh | Huỳnh Anh Thảo | khách lẻ
+- Tên sản phẩm (distinct=60, empty=0): Nước rửa chén Sunlight 750g | Sting dâu 330ml | Giấy vệ sinh Pulppy 10 cuộn | Snack Oishi tôm cay 40g
+- Số lượng sản phẩm (distinct=77, empty=0): 1 | 1 lốc | 2 quả | 1 gói
+- Giá sản phẩm (distinct=167, empty=0): 29500 | 10000 | 68,000 | 6,000
+- Tổng tiền (distinct=390, empty=0): 29500 | 10000 | 68000 | 6000
+- Đơn vị tính (distinct=16, empty=0): chai | lốc | gói | quả
+## DonHang_ChiTiet.xlsx::T04_2026  rows=4312
+- Mã đơn hàng (distinct=1732, empty=0): ORD029780 | ORD029781 | ORD029782 | ORD029783
+- Ngày đặt hàng (distinct=30, empty=0): 01/04/2026 | 02/04/2026 | 03/04/2026 | 04/04/2026
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hoàn hàng | Đã hủy
+- Tên khách hàng (distinct=330, empty=0): lẻ | Phùng Long Huy | khách lẻ | kl
+- Tên sản phẩm (distinct=60, empty=0): Trứng gà so | Mì Hảo Hảo tôm chua cay | Nước mắm Nam Ngư 750ml | Sữa đặc Ông Thọ 380g
+- Số lượng sản phẩm (distinct=71, empty=0): 4 quả | 2 | 1 chai | 1
+- Giá sản phẩm (distinct=177, empty=0): 4,000 | 4,500 | 40,000 | 26000
+- Tổng tiền (distinct=402, empty=0): 16,000 | 9,000 | 40000 | 26,000
+- Đơn vị tính (distinct=16, empty=0): quả | gói | chai | hộp
+## DonHang_ChiTiet.xlsx::T05_2026  rows=4395
+- Mã đơn hàng (distinct=1748, empty=0): ORD031512 | ORD031513 | ORD031514 | ORD031515
+- Ngày đặt hàng (distinct=31, empty=0): 01/05/2026 | 02/05/2026 | 03/05/2026 | 04/05/2026
+- Trạng thái đơn hàng (distinct=3, empty=0): Đã hoàn thành | Đã hoàn hàng | Đã hủy
+- Tên khách hàng (distinct=340, empty=0): Tạ Ngân Tâm | lẻ | khách lẻ | Bùi Ngân Hồng
+- Tên sản phẩm (distinct=60, empty=0): Mì Omachi sườn hầm | Trứng gà so | Nước suối Aquafina 500ml | Kem đánh răng P/S 180g
+- Số lượng sản phẩm (distinct=75, empty=0): 10 | 1 quả | 2 chai | 3 hộp
+- Giá sản phẩm (distinct=181, empty=0): 8000 | 4,000 | 5,000 | 31500
+- Tổng tiền (distinct=400, empty=0): 80,000 | 4000 | 10000 | 94,500
+- Đơn vị tính (distinct=16, empty=0): gói | quả | chai | hộp
+## DonHang_ChiTiet.xlsx::T06_2026  rows=2365
+- Mã đơn hàng (distinct=906, empty=0): ORD033260 | ORD033261 | ORD033262 | ORD033263
+- Ngày đặt hàng (distinct=16, empty=0): 01/06/2026 | 02/06/2026 | 03/06/2026 | 04/06/2026
+- Trạng thái đơn hàng (distinct=4, empty=0): Đã hoàn thành | Đã hủy | Đã hoàn hàng | Đang giao dịch
+- Tên khách hàng (distinct=278, empty=0): lẻ | Ông Phúc Quân | kl | Diệp Duy Khánh
+- Tên sản phẩm (distinct=60, empty=0): Giấy vệ sinh Pulppy 10 cuộn | Mì Omachi sườn hầm | Nước tương Maggi 700ml | Gạo ST25
+- Số lượng sản phẩm (distinct=68, empty=0): 1 | 3 | 2 kg | 10 hộp
+- Giá sản phẩm (distinct=147, empty=0): 71,500 | 8000 | 360,000 | 32000
+- Tổng tiền (distinct=331, empty=0): 71,500 | 24,000 | 360000 | 64000
+- Đơn vị tính (distinct=16, empty=0): lốc | gói | thùng | kg

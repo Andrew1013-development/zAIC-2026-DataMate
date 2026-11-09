@@ -1,0 +1,147 @@
+# Dữ liệu biz_124
+
+Chủ tiệm gửi dữ liệu từ ba nguồn: file Excel xuất từ phần mềm bán hàng (tên file bắt đầu BanHang_, mỗi danh sách một file, danh sách dài tách thành nhiều file đánh số _1, _2…), sổ chủ tiệm tự ghi trên Excel (SoTay_), và file tồn kho CSV. Các file nối với nhau qua mã hoá đơn, mã hàng; sổ tay không có mã hàng, nối qua tên hàng. Tên cột mỗi file đặt theo cách của tiệm.
+
+## File
+- `BanHang_HoaDon.xlsx` (xlsx)
+- `BanHang_ChiTietHoaDon.xlsx` (xlsx)
+- `BanHang_PhieuThu.xlsx` (xlsx)
+- `BanHang_HangHoa.xlsx` (xlsx)
+- `BanHang_KhachHang.xlsx` (xlsx)
+- `BanHang_DonViQuyDoi.xlsx` (xlsx)
+- `BanHang_LichSuGia.xlsx` (xlsx)
+- `BanHang_LoHang.xlsx` (xlsx)
+- `BanHang_BanTheoLo.xlsx` (xlsx)
+- `BanHang_Thuoc.xlsx` (xlsx)
+- `SoTay_NhapHang.xlsx` (xlsx)
+- `SoTay_ChiPhi.xlsx` (xlsx)
+- `ton_kho.csv` (csv)
+
+## Quy ước
+- Dữ liệu có đến hết 25/05/2026.
+- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **Số tiền thu** là số tiền trả lần đó; **Tong tien** là số khách phải trả cho cả đơn; **Còn nợ** là số tiền của đơn chưa thu, tính đến hết ngày cuối dữ liệu.
+- **Giá vốn**: **Giá vốn lúc bán** là giá vốn một đơn vị bán.
+- **Sổ chi phí**: các khoản chi vận hành theo tháng (tiền **So tien**).
+- **Tồn kho**: **Ton kho** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản.
+- **Lô, hạn dùng**: mỗi dòng nhập là một lô, số lô không trùng. Một dòng bán có thể lấy từ nhiều lô. Hàng khách trả về lại lô đã bán.
+- **Nhập hàng**: **Giá nhập** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Thành tiền** là tiền nhập của cả dòng.
+- **Giá bán**: **Giá mới** (theo đơn vị cơ bản) áp dụng từ **Ngày áp dụng** đến trước lần đổi giá sau của cùng mặt hàng; dòng đầu mỗi mặt hàng là giá lúc bắt đầu dữ liệu (**Giá cũ** trống).
+- **Thuốc**: **Kê đơn** đúng (TRUE/1) là thuốc kê đơn. Hoạt chất ghi không kèm hàm lượng (hàm lượng ở tên hàng); nhiều chất nối bằng " + ".
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `BanHang_DonViQuyDoi.xlsx`.
+
+
+## BanHang_BanTheoLo.xlsx::Sheet1  rows=97880
+- Lô (distinct=3938, empty=0): H2501745 | Y2501823 | D2501692 | R2501503
+- SL quy ra lẻ (distinct=196, empty=0): 1 | 20 | 10 | 2
+- SL trả (ĐVT cơ bản) (distinct=36, empty=0): 1 | 0 | 2 | 6
+- No. (distinct=4, empty=0): 1 | 2 | 3 | 4
+- Mã hóa đơn (distinct=50544, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+## BanHang_ChiTietHoaDon.xlsx::Sheet1  rows=97033
+- Giá vốn lúc bán (distinct=3219, empty=0): 61,000 | 86,000 | 1,100 | 14,000
+- SL cơ bản (distinct=42, empty=0): 1 | 20 | 10 | 2
+- Khuyến mãi (distinct=57, empty=0): 0 | 17,000 | 2,000 | 19,000
+- Giá niêm yết (distinct=161, empty=0): 75,000 | 106,000 | 1,300 | 18,000
+- Thanh tien (distinct=599, empty=0): 75,000 | 106,000 | 13,000 | 18,000
+- Mã giao dịch (distinct=51044, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Chi tiết hàng (distinct=154, empty=0): Betadine Gargle súc họng chai 125ml | Yumangel Hộp 20 Gói | Decolgen Forte hộp 30 vỉ x 4 viên | Povidine 10% chai 90ml
+- Slg (distinct=10, empty=0): 1 | 10 | 2 | 3
+- TT dòng (distinct=4, empty=0): 1 | 2 | 3 | 4
+- Ma hang (distinct=80, empty=0): SP0063 | SP0017 | SP0010 | SP0019
+- Đ.vị (distinct=11, empty=0): chai | hộp | viên | vỉ
+## BanHang_DonViQuyDoi.xlsx::Sheet1  rows=83
+- Đơn vị (distinct=5, empty=0): hộp | vỉ | chai | tuýp
+- Bằng (distinct=19, empty=0): 180 | 12 | 24 | 120
+- Giá bán theo đơn vị quy đổi (distinct=63, empty=0): 270000 | 18000 | 48000 | 120000
+- Mã sp (distinct=53, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+## BanHang_HangHoa.xlsx::Sheet1  rows=80
+- Định mức tồn tối thiểu (distinct=1, empty=0): 0
+- Giá vốn hiện tại (distinct=65, empty=0): 1100 | 1600 | 800 | 900
+- Thương hiệu (distinct=0, empty=80): 
+- Thuộc tính (distinct=0, empty=80): 
+- Phân loại (distinct=11, empty=0): giảm đau hạ sốt | ho cảm cúm | dùng ngoài | tiêu hoá
+- Món (distinct=80, empty=0): Panadol Extra hộp 15 vỉ x 12 viên | Hapacol 250 hộp 24 gói | Panadol 500mg hộp 10 vỉ x 12 viên | Tiffy Dey hộp 25 vỉ x 4 viên
+- Được bán trực tiếp (distinct=1, empty=0): 1
+- Mã HH Liên quan (distinct=0, empty=80): 
+- ma_sp (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Mô tả sản phẩm (distinct=0, empty=80): 
+- Mẫu ghi chú (distinct=0, empty=80): 
+- Giá (distinct=57, empty=0): 1500 | 2000 | 1000 | 1100
+- Ghi chú (distinct=0, empty=80): 
+- Đơn vị (distinct=10, empty=0): viên | gói | chai | cái
+- Trọng lượng (distinct=0, empty=80): 
+- Loại hàng hóa (distinct=1, empty=0): Hàng hóa
+## BanHang_HoaDon.xlsx::Sheet1  rows=51044
+- Đã thu (distinct=5240, empty=0): 75,000 | 119,000 | 18,000 | 3,200
+- Tên KH (distinct=635, empty=0): Tạ Bảo Duy | Từ Thắng Hải | Khách lẻ | Hồ Minh Đức
+- Trạng thái (distinct=4, empty=0): Đổi trả | Đã giao | Không giao được | Đang vận chuyển
+- Giờ tạo đơn (distinct=50989, empty=0): 2025-01-01 06:09:58 | 2025-01-01 07:00:31 | 2025-01-01 07:26:25 | 2025-01-01 07:29:01
+- Mã NV bán (distinct=3, empty=0): NV002 | NV003 | NV001
+- Phương thức TT (distinct=5, empty=0): Tiền mặt | Chuyển khoản | Ví điện tử | Thu hộ (COD)
+- Ngày bán (distinct=1530, empty=0): 1 thg 1 2025 | 01/01/2025 | 45658 | 2 thg 1 2025
+- Nguồn đơn (distinct=3, empty=0): store | phone | zalo_oa
+- Còn nợ (distinct=41, empty=0): 0 | 12,000 | 2,700 | 43,668
+- Mã KH mua (distinct=380, empty=20620): KH0203 | KH0166 | KH0197 | KH0036
+- Tiền hàng trước giảm (distinct=5295, empty=0): 75,000 | 119,000 | 18,000 | 3,200
+- Tong tien (distinct=5261, empty=0): 75,000 | 119,000 | 18,000 | 3,200
+- Order ID (distinct=51044, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- CK (distinct=2, empty=0): 0 | 10,000
+## BanHang_KhachHang.xlsx::Sheet1  rows=380
+- Điểm tích lũy (distinct=1, empty=0): 0
+- Công ty (distinct=0, empty=380): 
+- Hạng (distinct=3, empty=0): thân thiết | sỉ | lẻ
+- E-mail (distinct=0, empty=380): 
+- MST (distinct=4, empty=376): 0660456526 | 0146833354 | 0611063179 | 0140284775
+- Ngày sinh (distinct=51, empty=329): 13/05/1991 | 13/04/1977 | 11/08/1994 | 20/09/1985
+- CCCD (distinct=0, empty=380): 
+- Trạng thái (distinct=1, empty=0): Đang hoạt động
+- ten_kh (distinct=380, empty=0): Trịnh Phúc Phúc | Quách Loan Bích | Tăng Trung Hạnh | Đỗ Chi Sơn
+- Người tạo (distinct=1, empty=0): admin
+- Ghi chú (distinct=0, empty=380): 
+- Tổng điểm (distinct=1, empty=0): 0
+- Loại hình khách (distinct=1, empty=0): Cá nhân
+- Số điện thoại (distinct=380, empty=0): 0325679681 | 0351870694 | 0910136965 | 0976745940
+- Customer ID (distinct=380, empty=0): KH0001 | KH0002 | KH0003 | KH0004
+## BanHang_LichSuGia.xlsx::Sheet1  rows=114
+- Mã sản phẩm (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Giá mới (distinct=82, empty=0): 1400 | 1500 | 2000 | 1000
+- Ngày áp dụng (distinct=34, empty=0): 2025-01-01 00:00:00 | 2025-12-17 00:00:00 | 2025-08-18 00:00:00 | 2025-04-11 00:00:00
+- Sản phẩm (distinct=80, empty=0): Panadol Extra hộp 15 vỉ x 12 viên | Hapacol 250 hộp 24 gói | Panadol 500mg hộp 10 vỉ x 12 viên | Tiffy Dey hộp 25 vỉ x 4 viên
+- Giá cũ (distinct=31, empty=80): 1400 | 1300 | 1600 | 1700
+## BanHang_LoHang.xlsx::Sheet1  rows=3943
+- HSD (distinct=1296, empty=0): 30/01/2027 | 08/04/2027 | 13/07/2027 | 23/06/2025
+- Mã món (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- SL nhập (ĐVT cơ bản) (distinct=95, empty=0): 360 | 264 | 240 | 216
+- Mã phiếu nhập (distinct=510, empty=0): PN00142 | PN00405 | PN00185 | PN00093
+- Lô (distinct=3943, empty=0): A2505116 | A2602802 | B2507439 | C2504352
+## BanHang_PhieuThu.xlsx::Sheet1  rows=51238
+- Số tiền thu (distinct=5462, empty=0): 75,000 | 119,000 | 18,000 | 3,200
+- Mã bill (distinct=50521, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Phiếu thu (distinct=51238, empty=0): PAY000001 | PAY000002 | PAY000003 | PAY000004
+- Thời gian thu (distinct=51190, empty=0): 2025-01-01 06:09:58 | 2025-01-01 07:00:31 | 2025-01-01 07:26:25 | 2025-01-01 07:29:01
+- PTTT (distinct=4, empty=0): Tiền mặt | Chuyển khoản | Ví điện tử | Thu hộ (COD)
+## BanHang_Thuoc.xlsx::Sheet1  rows=80
+- Mã HH (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Hoạt chất (distinct=51, empty=17): Paracetamol + Cafein | Paracetamol | Paracetamol + Phenylephrin + Clorphenira | Natri clorid
+- Kê đơn (distinct=2, empty=0): False | True
+## SoTay_ChiPhi.xlsx::Sheet1  rows=75
+- Ghi chú (distinct=1, empty=73): thưởng Tết
+- Ngày chi (distinct=65, empty=0): 01/01/2025 | 05/01/2025 | 14/01/2025 | 45679
+- Mục (distinct=6, empty=0): thuê | điện | nước | sửa chữa
+- So tien (distinct=59, empty=0): 25000k | 3950k | 578.000đ | 14541k
+## SoTay_NhapHang.xlsx::Sheet1  rows=3943
+- SL nhập (distinct=98, empty=0): 2 | 11 | 3 | 254
+- Mô tả (distinct=1, empty=3863): nhập đầu kỳ
+- Product (distinct=80, empty=0): Panadol Extra hộp 15 vỉ x 12 viên | Hapacol 250 hộp 24 gói | Panadol 500mg hộp 10 vỉ x 12 viên | Tiffy Dey hộp 25 vỉ x 4 viên
+- Thành tiền (distinct=853, empty=0): 396k | 422.400đ | 288.000đ | 270.000đ
+- Lô (distinct=3943, empty=0): E2501244 | I2501674 | Y2501592 | O2501625
+- HSD (distinct=1296, empty=0): 2025-05-16 00:00:00 | 2025-05-22 00:00:00 | 2026-07-19 00:00:00 | 2027-08-02 00:00:00
+- Ngày nhập (distinct=978, empty=0): 01/01/2025 | 1 thg 1 2025 | 2 thg 1 2025 | 3 thg 1 2025
+- Nhà cung cấp (distinct=5, empty=0): Cty Mai Tâm | Cty Ông Hải | Cty Hồ Lan | Cty Trương Long
+- ĐVT nhập (distinct=8, empty=0): hộp | chai | tuýp | lốc
+- Số phiếu (distinct=510, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- Giá nhập (distinct=352, empty=0): 198k | 38.400đ | 96k | 90.000đ
+## ton_kho.csv  rows=80
+- ID SP (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Đơn vị (distinct=10, empty=0): viên | gói | chai | cái
+- Ton kho (distinct=73, empty=0): 112 | 4 | 279 | 329
+- Hàng hóa (distinct=80, empty=0): Panadol Extra hộp 15 vỉ x 12 viên | Hapacol 250 hộp 24 gói | Panadol 500mg hộp 10 vỉ x 12 viên | Tiffy Dey hộp 25 vỉ x 4 viên

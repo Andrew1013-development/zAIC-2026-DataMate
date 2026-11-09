@@ -1,0 +1,142 @@
+# Dữ liệu dev_010
+
+Dữ liệu bán hàng của tiệm, gồm vài file nối với nhau qua mã.
+
+## File
+- `don_hang.csv` (csv)
+- `chi_tiet_don.csv` (csv)
+- `san_pham.csv` (csv)
+- `khach_hang.csv` (csv)
+- `thanh_toan.csv` (csv)
+
+## Cột trong `don_hang.csv`
+- **Kênh đặt**: kênh bán
+- **Thành tiền**: tổng tiền đơn
+- **Số CT**: mã đơn
+- **Con no**: còn nợ
+- **Date**: ngày bán
+- **Phương thức TT**: hình thức thanh toán của đơn: cash tiền mặt, transfer chuyển khoản, ewallet ví điện tử, cod giao hàng thu tiền, debt ghi nợ
+- **Tiền giảm**: giảm giá
+- **Phí vận chuyển**: phí giao hàng
+- **Khách trả**: đã thanh toán
+- **Mã thẻ**: mã khách (trống nếu khách lẻ)
+- **Xử lý**: trạng thái đơn
+
+## Cột trong `chi_tiet_don.csv`
+- **Mã bill**: mã đơn
+- **Cộng**: thành tiền sau giảm
+- **CK**: giảm giá
+- **SoLuong**: số lượng
+- **Mã H.hóa**: mã hàng
+- **SL quy đổi**: số lượng đã đổi ra đơn vị cơ bản
+- **No.**: số thứ tự dòng trong đơn
+- **Đơn giá (đ)**: đơn giá
+- **dvt**: đơn vị tính
+
+## Cột trong `san_pham.csv`
+- **Đơn vị tính**: đơn vị cơ bản
+- **Nhóm hàng**: nhóm hàng
+- **ten_hang**: tên
+- **Giá bán**: giá bán hiện tại
+- **Mã vạch**: mã hàng
+
+## Cột trong `khach_hang.csv`
+- **Khách lẻ/sỉ**: tên
+- **Loại khách**: nhóm khách
+- **Mã khách**: mã khách
+- **Phone**: số điện thoại
+
+## Cột trong `thanh_toan.csv`
+- **Loại TT**: hình thức thanh toán
+- **Ngay thu**: thời điểm thu
+- **So tien**: số tiền
+- **Mã đơn**: mã đơn
+- **Mã TT**: mã phiếu thu
+
+## Quy ước
+- Dữ liệu có đến hết 06/09/2026.
+- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **So tien** là số tiền trả lần đó; **Thành tiền** là số khách phải trả cho cả đơn.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:
+  - Tã dán Bobby size M 76 miếng: 1 thùng = 4 gói
+  - Tã quần Huggies Dry size L 68 miếng: 1 thùng = 4 gói
+  - Tã dán Merries size M 64 miếng: 1 thùng = 4 gói
+  - Miếng lót sơ sinh Bobby Newborn 1 108 miếng: 1 thùng = 6 gói
+  - Bột ăn dặm Ridielac Gold gạo sữa 200g: 1 thùng = 12 hộp
+  - Khăn ướt Bobby không mùi 100 tờ: 1 lốc = 4 gói
+  - Khăn ướt Bobby không mùi 100 tờ: 1 thùng = 24 gói
+  - Sữa tắm gội Johnson's Baby 500ml: 1 thùng = 12 chai
+  - Sữa tắm Lactacyd BB 250ml: 1 thùng = 12 chai
+  - Nước giặt xả D-nee 3000ml: 1 thùng = 4 can
+  - Váng sữa Monte vani vỉ 4 hộp 55g: 1 thùng = 6 vỉ
+  - Phấn rôm Johnson's Baby 200g: 1 thùng = 24 chai
+  - Tắm gội toàn thân D-nee Pure 380ml: 1 thùng = 12 chai
+  - Nước rửa bình sữa D-nee 620ml: 1 thùng = 12 chai
+  - Tã quần Moony size L 44 miếng: 1 thùng = 4 gói
+  - Tã dán Huggies Dry Newborn 60 miếng: 1 thùng = 6 gói
+  - Tã quần Bobby size XL 62 miếng: 1 thùng = 4 gói
+  - Cháo tươi SG Food Baby gà cà rốt 240g: 1 thùng = 30 gói
+  - Tăm bông trẻ em Sakura hộp 180 que: 1 lốc = 12 hộp
+  - Phô mai Con Bò Cười hộp 8 miếng: 1 thùng = 24 hộp
+  - Sữa pha sẵn GrowPLUS+ đỏ 110ml lốc 4: 1 thùng = 12 lốc
+
+
+## chi_tiet_don.csv  rows=45251
+- Mã bill (distinct=25192, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Cộng (distinct=386, empty=0): 375000 | 65000 | 139000 | 112000
+- CK (distinct=67, empty=0): 0 | 9000 | 28000 | CK
+- SoLuong (distinct=42, empty=0): 1 | 1 chai | 2 hộp | 1 gói
+- Mã H.hóa (distinct=61, empty=0): SP0005 | SP0012 | SP0014 | SP0011
+- SL quy đổi (distinct=11, empty=0): 1 | 2 | 4 | 3
+- No. (distinct=5, empty=0): 1 | 2 | 3 | 4
+- Đơn giá (đ) (distinct=112, empty=0): 375000 | 65000 | 139000 | 56000
+- dvt (distinct=14, empty=0): lon | hộp | chai | gói
+## don_hang.csv  rows=25702
+- Kênh đặt (distinct=3, empty=511): store | zalo_oa | phone
+- Thành tiền (distinct=4747, empty=0): 569.000đ | 112.000đ | 123.000đ | 60000
+- Số CT (distinct=25573, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Con no (distinct=85, empty=0): 0đ | 0 | 194.000đ | 389000
+- Date (distinct=494, empty=511): 2025-05-01 | 2025-05-02 | 2025-05-03 | 2025-05-04
+- Phương thức TT (distinct=5, empty=511): ewallet | cash | transfer | debt
+- Tiền giảm (distinct=66, empty=0): 10000 | 0 | 330000 | 230000
+- Phí vận chuyển (distinct=35, empty=0): 0 | 15000 | 75000 | 45000
+- Khách trả (distinct=4712, empty=0): 569000 | 112.000đ | 123000 | 60.000đ
+- Mã thẻ (distinct=260, empty=10721): KH0206 | KH0189 | KH0159 | KH0229
+- Xử lý (distinct=4, empty=511): completed | returned | cancelled | shipping
+## khach_hang.csv  rows=260
+- Người tạo (distinct=1, empty=0): admin
+- Ghi chú KH (distinct=0, empty=260): 
+- Khách lẻ/sỉ (distinct=260, empty=0): Lý Nhung Dương | Vương Hương Hằng | Hoàng Hùng Trang (0930872831) | Ông Trang Cường - 0799 921 469
+- Loại khách (distinct=3, empty=0): thân thiết | lẻ | sỉ
+- Mã số thuế (distinct=0, empty=260): 
+- Loại hình khách (distinct=1, empty=0): Cá nhân
+- Mã khách (distinct=260, empty=0): KH0001 | KH0002 | KH0003 | KH0004
+- Email (distinct=0, empty=260): 
+- Tổng điểm (distinct=1, empty=0): 0
+- Trạng thái (distinct=1, empty=0): Đang hoạt động
+- Số CMND/CCCD (distinct=0, empty=260): 
+- Phone (distinct=260, empty=0): 0909545691 | 975860510 | 0930872831 | 799921469
+- Công ty (distinct=0, empty=260): 
+## san_pham.csv  rows=60
+- Mô tả chi tiết (distinct=0, empty=60): 
+- Mẫu ghi chú (distinct=0, empty=60): 
+- Loại hàng hóa (distinct=1, empty=0): Hàng hóa
+- Thương hiệu (distinct=0, empty=60): 
+- Đơn vị tính (distinct=12, empty=0): lon | gói | cái | hộp
+- Ghi chú (distinct=0, empty=60): 
+- Bảo hành (distinct=0, empty=60): 
+- Nhóm hàng (distinct=12, empty=0): sữa bột | bỉm tã | bình sữa | ăn dặm
+- Mã vạch EAN (distinct=43, empty=17): 8933954293469 | 8938865077504 | 8932463019102 | 8939754713572
+- Hình ảnh (url1,url2...) (distinct=0, empty=60): 
+- ten_hang (distinct=60, empty=0): Sữa Similac 5G số 1 900g | Sữa Enfamil A+ NeuroPro số 1 830g | Sữa Friso Gold số 3 850g | Sữa Nan Optipro Plus 1 800g
+- Thuộc tính (distinct=0, empty=60): 
+- Trọng lượng (distinct=0, empty=60): 
+- Giá bán (distinct=50, empty=0): 545000 | 588000 | 480000 | 394000
+- Mã vạch (distinct=60, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Được bán trực tiếp (distinct=1, empty=0): 1
+- Mã HH Liên quan (distinct=0, empty=60): 
+## thanh_toan.csv  rows=26246
+- Loại TT (distinct=4, empty=0): ewallet | cash | transfer | cod
+- Ngay thu (distinct=26230, empty=0): 2025-05-01 06:48:23 | 2025-05-01 07:23:09 | 2025-05-01 07:31:13 | 2025-05-01 07:37:22
+- So tien (distinct=3149, empty=0): 569000 | 112000 | 123000 | 60000
+- Mã đơn (distinct=24387, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Mã TT (distinct=26246, empty=0): PAY000001 | PAY000002 | PAY000003 | PAY000004

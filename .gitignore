@@ -1,0 +1,5 @@
+venv/
+__pycache__/
+# competition data (186 MB train + 105 MB public test), kept out of git
+train/
+public_test/

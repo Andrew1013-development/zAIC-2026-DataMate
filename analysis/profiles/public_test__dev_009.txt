@@ -1,0 +1,31 @@
+# Dữ liệu dev_009
+
+Danh sách hoá đơn, một file CSV: mỗi dòng một đơn hàng (hoá đơn), không có chi tiết mặt hàng trong đơn.
+
+## File
+- `danh_sach_hoa_don.csv` (csv)
+
+## Cột trong `danh_sach_hoa_don.csv`
+- **Ngày tháng**: ngày bán
+- **Trạng thái đơn**: trạng thái đơn
+- **TongTien**: số khách phải trả cho cả đơn (đã tính giảm giá của đơn và phí giao)
+- **Mã hóa đơn**: mã đơn
+- **Nợ**: số khách còn nợ của đơn (đơn huỷ: 0)
+- **Đã thu**: đã thanh toán
+- **Đối tác**: tên khách (Khách lẻ nếu không lưu)
+- **Giá trị hàng**: tiền hàng của đơn: cộng thành tiền các mặt hàng, trước giảm giá của đơn, chưa gồm phí giao
+
+## Quy ước
+- Dữ liệu có đến hết 24/06/2026.
+- **Còn nợ**: **Nợ** là số khách còn nợ của đơn, tính đến hết ngày cuối dữ liệu.
+
+
+## danh_sach_hoa_don.csv  rows=23338
+- Ngày tháng (distinct=1080, empty=540): 2025-01-01 00:00:00 | 01/01/2025 | 02/01/2025 | 2025-01-02 00:00:00
+- Trạng thái đơn (distinct=4, empty=540): Xong | trả hàng | hủy đơn | Đang giao dịch
+- TongTien (distinct=4165, empty=0): 32000 | 878000 | 375000 | 880,000
+- Mã hóa đơn (distinct=22490, empty=540): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Nợ (distinct=82, empty=0): 0 | 52666 | 243,500 | 265000
+- Đã thu (distinct=4131, empty=0): 32,000 | 878000 | 375000 | 880,000
+- Đối tác (distinct=589, empty=0): Lý Anh Lan | Phan Ngân Bảo | Hoàng Huy Quang | lẻ
+- Giá trị hàng (distinct=4120, empty=0): 32,000 | 888,000 | 385000 | 890,000

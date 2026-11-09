@@ -1,0 +1,255 @@
+# Dữ liệu dev_013
+
+Sổ sách Excel của tiệm mẹ và bé. `BanHang_<năm>.xlsx`: sổ bán hàng, mỗi tháng một sheet, header gộp 2 dòng (nhóm Hàng hoá, Tiền ở dòng trên). Mỗi dòng một mặt hàng khách mua; một hoá đơn nhiều dòng cùng số HĐ. Ngay sau các dòng hàng của một hoá đơn có thể có dòng không phải hàng, chỉ ghi HĐ, tên và TT: "Voucher" (tiền giảm của hoá đơn từ các chương trình ở sheet KhuyenMai, TT ghi số âm), "Dùng <n> điểm" (khách dùng n điểm thành viên, mỗi điểm trừ 100đ, TT ghi số âm), "Phí ship" (phí giao hàng khách trả thêm). `QuanLy.xlsx`: danh mục hàng (DanhMuc), khách thành viên (KhachHang), sổ nhập hàng (NhapHang), chương trình khuyến mãi (KhuyenMai), mỗi danh sách một sheet. Sổ không có mã hàng, mã khách: nối qua tên hàng, tên khách.
+
+## File
+- `BanHang_2025.xlsx` (xlsx)
+- `BanHang_2026.xlsx` (xlsx)
+- `QuanLy.xlsx` (xlsx)
+
+## Cột trong `BanHang_2025.xlsx`
+- **ĐG**: đơn giá
+- **TT**: thành tiền của dòng; Voucher, Dùng điểm ghi số âm (trừ vào hoá đơn), Phí ship ghi phí giao
+- **SL**: số lượng (trống ở dòng không phải hàng)
+- **ĐVT**: đơn vị tính
+- **Tên hàng**: tên hàng; dòng không phải hàng ghi Voucher, Dùng <n> điểm hoặc Phí ship
+- **HĐ**: số hoá đơn, ghi ở mọi dòng của hoá đơn kể cả dòng Voucher / Dùng điểm / Phí ship
+- **Ngày**: ngày bán (dòng Voucher / Dùng điểm / Phí ship để trống)
+- **Khách**: tên khách thành viên (Khách lẻ nếu không lưu); dòng không phải hàng để trống
+- **Kênh**: kênh bán: Tại tiệm, Zalo (khách nhắn đặt, tiệm giao), Sàn TMĐT (bán trên sàn thương mại điện tử); dòng không phải hàng để trống
+- **Ghi chú**: ghi chú của đơn; đơn huỷ hoặc đang giao được ghi ở đây, không có cột trạng thái riêng
+
+## Cột trong `BanHang_2026.xlsx`
+- **ĐG**: đơn giá
+- **TT**: thành tiền của dòng; Voucher, Dùng điểm ghi số âm (trừ vào hoá đơn), Phí ship ghi phí giao
+- **SL**: số lượng (trống ở dòng không phải hàng)
+- **ĐVT**: đơn vị tính
+- **Tên hàng**: tên hàng; dòng không phải hàng ghi Voucher, Dùng <n> điểm hoặc Phí ship
+- **HĐ**: số hoá đơn, ghi ở mọi dòng của hoá đơn kể cả dòng Voucher / Dùng điểm / Phí ship
+- **Ngày**: ngày bán (dòng Voucher / Dùng điểm / Phí ship để trống)
+- **Khách**: tên khách thành viên (Khách lẻ nếu không lưu); dòng không phải hàng để trống
+- **Kênh**: kênh bán: Tại tiệm, Zalo (khách nhắn đặt, tiệm giao), Sàn TMĐT (bán trên sàn thương mại điện tử); dòng không phải hàng để trống
+- **Ghi chú**: ghi chú của đơn; đơn huỷ hoặc đang giao được ghi ở đây, không có cột trạng thái riêng
+
+## Cột trong `QuanLy.xlsx`, sheet `DanhMuc`
+- **Tên hàng**: tên hàng
+- **Tên gọi khác**: tên gọi khác hay dùng (sữa, bỉm), nhiều cách cách nhau dấu phẩy
+- **Nhóm**: nhóm hàng
+- **Hãng**: hãng
+- **Số / Size**: số của sữa (theo tuổi) hoặc size (bỉm, núm ti); trống nếu không có
+- **ĐVT**: đơn vị cơ bản
+- **Quy đổi**: quy đổi đơn vị lớn ra ĐVT, vd "1 thùng = 4 bịch"; trống nếu chỉ bán theo ĐVT
+
+## Cột trong `QuanLy.xlsx`, sheet `KhachHang`
+- **Tên KH**: tên khách
+- **SĐT**: số điện thoại
+- **Tên bé**: tên ở nhà của bé
+- **Ngày đăng ký**: ngày đăng ký thành viên; chỉ hoá đơn từ ngày này mới tích, dùng điểm
+- **Điểm hiện có**: điểm còn đến hết ngày cuối dữ liệu
+
+## Cột trong `QuanLy.xlsx`, sheet `NhapHang`
+- **Ngày**: ngày nhập
+- **Số phiếu**: mã phiếu nhập
+- **Nhà cung cấp**: nhà cung cấp
+- **Hàng**: tên hàng
+- **SL**: số lượng nhập
+- **ĐVT**: đơn vị nhập
+- **Đơn giá**: giá nhập một đơn vị (theo đơn vị nhập của dòng)
+- **Thành tiền**: tiền nhập của cả dòng
+- **Ghi chú**: ghi chú
+
+## Cột trong `QuanLy.xlsx`, sheet `KhuyenMai`
+- **Chương trình**: tên chương trình
+- **Hàng áp dụng**: hàng áp dụng (Tất cả: mọi hoá đơn đủ điều kiện ghi ở tên)
+- **Từ ngày**: từ ngày
+- **Đến ngày**: đến ngày (tính cả ngày này)
+
+## Quy ước
+- Dữ liệu có đến hết 30/06/2026.
+- **Nhập hàng**: **Đơn giá** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Thành tiền** là tiền nhập của cả dòng.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `QuanLy.xlsx`.
+
+
+## BanHang_2025.xlsx::T05-2025  rows=2210
+- ĐG (distinct=82, empty=749): 305.000đ | 190.000đ | 505.000đ | 130.000đ
+- TT (distinct=173, empty=1): 305.000đ | 190.000đ | -10.000đ | 1,01tr
+- SL (distinct=3, empty=749): 1 | 2 | 3
+- ĐVT (distinct=15, empty=748): bịch | cái | lon | gói
+- Tên hàng (distinct=79, empty=1): Tã quần Bobby size XXL 44 miếng | Nhiệt kế điện tử Microlife MT200 | Voucher | Sữa Enfagrow A+ NeuroPro số 3 830g
+- HĐ (distinct=841, empty=1): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Ngày (distinct=124, empty=749): 1 thg 5 2025 | 1/5 | 45778 | 01/05/2025
+- Khách (distinct=283, empty=749): Đặng Thanh Thắng | Khách lẻ | Ngô Dũng Hà | Cao Quang Bích
+- Kênh (distinct=3, empty=749): Tại tiệm | Zalo | Sàn TMĐT
+- Ghi chú (distinct=2, empty=2178): cancel | Huỷ
+## BanHang_2025.xlsx::T06-2025  rows=2213
+- ĐG (distinct=78, empty=751): 95.000đ | 870.000đ | 45.000đ | 375.000đ
+- TT (distinct=182, empty=1): 95.000đ | 25.000đ | 870.000đ | -190.000đ
+- SL (distinct=3, empty=751): 1 | 2 | 3
+- ĐVT (distinct=15, empty=750): chai | thùng | set | lon
+- Tên hàng (distinct=82, empty=1): Tắm gội toàn thân D-nee Pure 380ml | Phí ship | Miếng lót sơ sinh Bobby Newborn 1 108 mi | Voucher
+- HĐ (distinct=820, empty=1): ORD000842 | ORD000843 | ORD000844 | ORD000845
+- Ngày (distinct=120, empty=751): 1/6 | 1 thg 6 2025 | 45809 | 01/06/2025
+- Khách (distinct=285, empty=751): Lâm Phong An | Chung Bảo Quân | Nguyễn Đạt An | Khách lẻ
+- Kênh (distinct=3, empty=751): Zalo | Sàn TMĐT | Tại tiệm
+- Ghi chú (distinct=2, empty=2172): cancel | Huỷ
+## BanHang_2025.xlsx::T07-2025  rows=2348
+- ĐG (distinct=82, empty=803): 145.000đ | 260.000đ | 240.000đ | 340.000đ
+- TT (distinct=191, empty=1): 145.000đ | 260.000đ | -10.000đ | 25.000đ
+- SL (distinct=3, empty=803): 1 | 2 | 3
+- ĐVT (distinct=15, empty=802): bịch | chai | lọ | hộp
+- Tên hàng (distinct=81, empty=1): Miếng lót sơ sinh Bobby Newborn 1 108 mi | Sữa dưỡng ẩm Cetaphil Baby 400ml | Voucher | Phí ship
+- HĐ (distinct=872, empty=1): ORD001662 | ORD001663 | ORD001664 | ORD001665
+- Ngày (distinct=124, empty=803): 45839 | 1/7 | 1 thg 7 2025 | 01/07/2025
+- Khách (distinct=297, empty=803): Khách lẻ | Lương Dương Minh | Hà Cường Bảo | Nghiêm Minh Mai
+- Kênh (distinct=3, empty=803): Zalo | Tại tiệm | Sàn TMĐT
+- Ghi chú (distinct=2, empty=2300): cancel | Huỷ
+## BanHang_2025.xlsx::T08-2025  rows=2284
+- ĐG (distinct=84, empty=783): 380.000đ | 560.000đ | 63.000đ | 480.000đ
+- TT (distinct=179, empty=2): 380.000đ | 1,12tr | 63.000đ | -10.000đ
+- SL (distinct=3, empty=783): 1 | 2 | 3
+- ĐVT (distinct=16, empty=781): bịch | lon | tuýp | gói
+- Tên hàng (distinct=83, empty=2): Tã quần Moony size L 44 miếng | Sữa Enfamil A+ NeuroPro số 1 830g | Kem EmBé 20g | Voucher
+- HĐ (distinct=848, empty=2): ORD002534 | ORD002535 | ORD002536 | ORD002537
+- Ngày (distinct=124, empty=783): 45870 | 01/08/2025 | 1 thg 8 2025 | 1/8
+- Khách (distinct=291, empty=783): Châu Thu Tâm | La Phúc An | Khách lẻ | Lưu Quang Phương
+- Kênh (distinct=3, empty=783): Sàn TMĐT | Tại tiệm | Zalo
+- Ghi chú (distinct=2, empty=2231): cancel | Huỷ
+## BanHang_2025.xlsx::T09-2025  rows=2071
+- ĐG (distinct=82, empty=733): 380.000đ | 340.000đ | 335.000đ | 139.000đ
+- TT (distinct=179, empty=2): 760.000đ | 340.000đ | -30.000đ | 335.000đ
+- SL (distinct=3, empty=733): 2 | 1 | 3
+- ĐVT (distinct=16, empty=731): bịch | chai | lon | hộp
+- Tên hàng (distinct=82, empty=2): Tã quần Moony size L 44 miếng | Tã quần Huggies Dry size L 68 miếng | Voucher | Tã dán Merries size M 64 miếng
+- HĐ (distinct=769, empty=2): ORD003382 | ORD003383 | ORD003384 | ORD003385
+- Ngày (distinct=120, empty=733): 1 thg 9 2025 | 45901 | 01/09/2025 | 1/9
+- Khách (distinct=264, empty=733): Khách lẻ | Thái Trung Duy | Hà Đạt Hiếu | Mai Cường Phong
+- Kênh (distinct=3, empty=733): Sàn TMĐT | Tại tiệm | Zalo
+- Ghi chú (distinct=2, empty=2044): Huỷ | cancel
+## BanHang_2025.xlsx::T10-2025  rows=2433
+- ĐG (distinct=84, empty=861): 145.000đ | 335.000đ | 380.000đ | 588.000đ
+- TT (distinct=189, empty=1): 145.000đ | 335.000đ | -10.000đ | 380.000đ
+- SL (distinct=3, empty=861): 1 | 2 | 3
+- ĐVT (distinct=15, empty=860): bịch | lon | chai | gói
+- Tên hàng (distinct=83, empty=1): Miếng lót sơ sinh Bobby Newborn 1 108 mi | Tã dán Merries size M 64 miếng | Voucher | Tã quần Moony size L 44 miếng
+- HĐ (distinct=885, empty=1): ORD004151 | ORD004152 | ORD004153 | ORD004154
+- Ngày (distinct=124, empty=861): 1 thg 10 2025 | 01/10/2025 | 45931 | 1/10
+- Khách (distinct=291, empty=861): Doãn Dũng Sơn | Khách lẻ | Doãn Giang Duy | Lý Giang Ngọc
+- Kênh (distinct=3, empty=861): Tại tiệm | Sàn TMĐT | Zalo
+- Ghi chú (distinct=2, empty=2369): Huỷ | cancel
+## BanHang_2025.xlsx::T11-2025  rows=2219
+- ĐG (distinct=77, empty=780): 425.000đ | 505.000đ | 499.000đ | 470.000đ
+- TT (distinct=182, empty=1): 425.000đ | 505.000đ | -10.000đ | 499.000đ
+- SL (distinct=3, empty=780): 1 | 3 | 2
+- ĐVT (distinct=15, empty=779): cái | lon | bộ | bịch
+- Tên hàng (distinct=83, empty=1): Bình sữa Comotomo 250ml | Sữa Enfagrow A+ NeuroPro số 3 830g | Voucher | Sữa Similac IQ số 3 900g
+- HĐ (distinct=812, empty=1): ORD005036 | ORD005037 | ORD005038 | ORD005039
+- Ngày (distinct=120, empty=780): 1/11 | 45962 | 01/11/2025 | 1 thg 11 2025
+- Khách (distinct=283, empty=780): Khách lẻ | Hà Bảo Minh | Đinh Quân Hạnh | Tô Hà Nam
+- Kênh (distinct=3, empty=780): Sàn TMĐT | Tại tiệm | Zalo
+- Ghi chú (distinct=2, empty=2174): Huỷ | cancel
+## BanHang_2025.xlsx::T12-2025  rows=2272
+- ĐG (distinct=88, empty=815): 435.000đ | 395.000đ | 441.000đ | 126.000đ
+- TT (distinct=186, empty=2): 435.000đ | 790.000đ | 441.000đ | 126.000đ
+- SL (distinct=3, empty=815): 1 | 2 | 3
+- ĐVT (distinct=16, empty=813): lon | cái | bịch | gói
+- Tên hàng (distinct=83, empty=2): Sữa Abbott Grow Gold 3+ 900g | Sữa Nan Optipro Plus 3 900g | Bình sữa Pigeon PPSU cổ rộng 240ml | Yếm ăn dặm silicon có máng
+- HĐ (distinct=843, empty=2): ORD005848 | ORD005849 | ORD005850 | ORD005851
+- Ngày (distinct=124, empty=815): 1 thg 12 2025 | 01/12/2025 | 45992 | 1/12
+- Khách (distinct=302, empty=815): Khách lẻ | Hứa Minh Ngân | Bạch Hà Hằng | Vương Hương Ngọc
+- Kênh (distinct=3, empty=815): Zalo | Sàn TMĐT | Tại tiệm
+- Ghi chú (distinct=2, empty=2229): cancel | Huỷ
+## BanHang_2026.xlsx::T01-2026  rows=2256
+- ĐG (distinct=82, empty=825): 150.000đ | 107.000đ | 190.000đ | 395.000đ
+- TT (distinct=178, empty=1): 150.000đ | 107.000đ | 190.000đ | 395.000đ
+- SL (distinct=3, empty=825): 1 | 2 | 3
+- ĐVT (distinct=15, empty=824): hộp | cái | can | lon
+- Tên hàng (distinct=83, empty=1): Nước muối sinh lý Fysoline hồng hộp 40 ố | Bánh ăn dặm Gerber Puffs 42g | Nhiệt kế điện tử Microlife MT200 | Nước giặt xả D-nee 3000ml
+- HĐ (distinct=834, empty=1): ORD006691 | ORD006692 | ORD006693 | ORD006694
+- Ngày (distinct=124, empty=825): 1/1 | 01/01/2026 | 1 thg 1 2026 | 46023
+- Khách (distinct=304, empty=825): Khách lẻ | Trịnh Nhung Quang | Đỗ Giang Huy | Đỗ Nhung Ngọc
+- Kênh (distinct=3, empty=825): Sàn TMĐT | Tại tiệm | Zalo
+- Ghi chú (distinct=2, empty=2211): Huỷ | cancel
+## BanHang_2026.xlsx::T02-2026  rows=2596
+- ĐG (distinct=83, empty=930): 340.000đ | 380.000đ | 345.000đ | 145.000đ
+- TT (distinct=198, empty=1): 340.000đ | -10.000đ | 380.000đ | 345.000đ
+- SL (distinct=3, empty=930): 1 | 2 | 3
+- ĐVT (distinct=15, empty=929): bịch | lon | chai | bộ
+- Tên hàng (distinct=83, empty=1): Tã quần Huggies Dry size L 68 miếng | Voucher | Tã quần Moony size L 44 miếng | Tã quần Huggies Dry size XL 62 miếng
+- HĐ (distinct=928, empty=1): ORD007525 | ORD007526 | ORD007527 | ORD007528
+- Ngày (distinct=112, empty=930): 46054 | 01/02/2026 | 1/2 | 1 thg 2 2026
+- Khách (distinct=312, empty=930): Tô Ngọc Bích | Hoàng Cường Phúc | Khách lẻ | Đào Hiếu Khoa
+- Kênh (distinct=3, empty=930): Tại tiệm | Zalo | Sàn TMĐT
+- Ghi chú (distinct=2, empty=2544): cancel | Huỷ
+## BanHang_2026.xlsx::T03-2026  rows=2343
+- ĐG (distinct=84, empty=851): 435.000đ | 85.000đ | 150.000đ | 540.000đ
+- TT (distinct=177, empty=2): 435.000đ | -10.000đ | 25.000đ | 85.000đ
+- SL (distinct=3, empty=851): 1 | 2 | 3
+- ĐVT (distinct=16, empty=849): lon | chai | hộp | cái
+- Tên hàng (distinct=83, empty=2): Sữa Abbott Grow Gold 3+ 900g | Voucher | Phí ship | Nước rửa bình sữa D-nee 620ml
+- HĐ (distinct=860, empty=2): ORD008453 | ORD008454 | ORD008455 | ORD008456
+- Ngày (distinct=124, empty=851): 01/03/2026 | 1/3 | 1 thg 3 2026 | 46082
+- Khách (distinct=310, empty=851): Hà Hà Hằng | Khách lẻ | Hứa Hoa Hoàng | La Thu Hiếu
+- Kênh (distinct=3, empty=851): Zalo | Tại tiệm | Sàn TMĐT
+- Ghi chú (distinct=2, empty=2299): cancel | Huỷ
+## BanHang_2026.xlsx::T04-2026  rows=2230
+- ĐG (distinct=84, empty=830): 165.500đ | 395.000đ | 252.000đ | 340.000đ
+- TT (distinct=186, empty=2): 331.000đ | 790.000đ | 252.000đ | -10.000đ
+- SL (distinct=3, empty=830): 2 | 1 | 3
+- ĐVT (distinct=16, empty=828): chai | lon | lọ | bịch
+- Tên hàng (distinct=83, empty=2): Dầu tràm Huế Kim Vui 100ml | Sữa Nan Optipro Plus 3 900g | Vitamin D3 Ostelin Kids 20ml | Voucher
+- HĐ (distinct=807, empty=2): ORD009313 | ORD009314 | ORD009315 | ORD009316
+- Ngày (distinct=120, empty=830): 46113 | 01/04/2026 | 1 thg 4 2026 | 1/4
+- Khách (distinct=302, empty=830): Hồ Hằng Thắng | Nguyễn Khoa Hồng | Phạm Cường Hằng | Khách lẻ
+- Kênh (distinct=3, empty=830): Tại tiệm | Zalo | Sàn TMĐT
+- Ghi chú (distinct=2, empty=2201): cancel | Huỷ
+## BanHang_2026.xlsx::T05-2026  rows=2449
+- ĐG (distinct=87, empty=886): 279.000đ | 40.000đ | 556.500đ | 145.000đ
+- TT (distinct=195, empty=2): 279.000đ | 80.000đ | -10.000đ | 556.500đ
+- SL (distinct=3, empty=886): 1 | 2 | 3
+- ĐVT (distinct=16, empty=884): cái | gói | lon | bịch
+- Tên hàng (distinct=83, empty=2): Bình tập uống Richell TLI 200ml | Khăn sữa cotton 2 lớp gói 10 cái | Voucher | Sữa Similac 5G số 2 900g
+- HĐ (distinct=905, empty=2): ORD010120 | ORD010121 | ORD010122 | ORD010123
+- Ngày (distinct=124, empty=886): 01/05/2026 | 1/5 | 1 thg 5 2026 | 46143
+- Khách (distinct=305, empty=886): Khách lẻ | Tạ Bình An | Đào Khánh Châu | Nguyễn Dương Ngọc
+- Kênh (distinct=3, empty=886): Tại tiệm | Sàn TMĐT | Zalo
+- Ghi chú (distinct=2, empty=2414): Huỷ | cancel
+## BanHang_2026.xlsx::T06-2026  rows=2250
+- ĐG (distinct=80, empty=823): 524.000đ | 40.000đ | 120.000đ | 545.000đ
+- TT (distinct=189, empty=2): 1.048.000đ | 40.000đ | -10.000đ | 25.000đ
+- SL (distinct=3, empty=823): 2 | 1 | 3
+- ĐVT (distinct=16, empty=821): lon | gói | bộ | lốc
+- Tên hàng (distinct=83, empty=2): Sữa Similac IQ số 3 900g | Khăn sữa cotton 2 lớp gói 10 cái | Voucher | Phí ship
+- HĐ (distinct=810, empty=2): ORD011025 | ORD011026 | ORD011027 | ORD011028
+- Ngày (distinct=120, empty=823): 1/6 | 01/06/2026 | 46174 | 1 thg 6 2026
+- Khách (distinct=289, empty=823): Khách lẻ | Chung Chi Dương | Ông Cường Ngọc | Tăng Khoa Quang
+- Kênh (distinct=3, empty=823): Zalo | Tại tiệm | Sàn TMĐT
+- Ghi chú (distinct=4, empty=2158): cancel | Huỷ | chưa giao | đang giao
+## QuanLy.xlsx::DanhMuc  rows=77
+- Tên hàng (distinct=77, empty=0): Sữa Similac 5G số 1 900g | Sữa Similac 5G số 2 900g | Sữa Similac IQ số 3 900g | Sữa Enfamil A+ NeuroPro số 1 830g
+- Tên gọi khác (distinct=34, empty=43): similac 1, similac số 1 | similac 2, similac số 2 | similac 3, similac IQ 3 | enfa 1, enfamil 1
+- Nhóm (distinct=12, empty=0): sữa bột | bỉm tã | bình sữa | ăn dặm
+- Hãng (distinct=36, empty=8): Similac | Enfamil | Friso | Nan
+- Số / Size (distinct=11, empty=44): Số 1 | Số 2 | Số 3 | Số 4
+- ĐVT (distinct=13, empty=0): lon | bịch | cái | hộp
+- Quy đổi (distinct=12, empty=48): 1 thùng = 6 bịch | 1 thùng = 4 bịch | 1 thùng = 12 hộp | 1 lốc = 4 gói; 1 thùng = 24 gói
+## QuanLy.xlsx::KhachHang  rows=420
+- Tên KH (distinct=420, empty=0): Châu Thu Tâm | Lê Quang Đạt | Chung Phương Nhung | Lê Nam Lan
+- SĐT (distinct=420, empty=0): 0980590313 | 0977421922 | 0919096077 | 0931993661
+- Tên bé (distinct=20, empty=0): Xoài | Sữa | Bon | Nấm
+- Ngày đăng ký (distinct=344, empty=0): 2024-07-14 00:00:00 | 2025-05-22 00:00:00 | 2026-06-20 00:00:00 | 2025-09-09 00:00:00
+- Điểm hiện có (distinct=263, empty=0): 35 | 232 | 0 | 336
+## QuanLy.xlsx::NhapHang  rows=1503
+- Ngày (distinct=836, empty=0): 45778 | 1 thg 5 2025 | 01/05/2025 | 45787
+- Số phiếu (distinct=402, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- Nhà cung cấp (distinct=5, empty=0): Cty Phạm Giang | Cty Đỗ An | Cty Lý Hiếu | Cty Tăng Thu
+- Hàng (distinct=77, empty=0): Sữa Similac 5G số 1 900g | Sữa Similac 5G số 2 900g | Sữa Similac IQ số 3 900g | Sữa Enfamil A+ NeuroPro số 1 830g
+- SL (distinct=26, empty=0): 29 | 24 | 19 | 15
+- ĐVT (distinct=12, empty=0): lon | thùng | cái | hộp
+- Đơn giá (distinct=477, empty=0): 484k | 482k | 460k | 496k
+- Thành tiền (distinct=850, empty=0): 14036k | 11568k | 8740k | 9424k
+- Ghi chú (distinct=1, empty=1426): nhập đầu kỳ
+## QuanLy.xlsx::KhuyenMai  rows=10
+- Chương trình (distinct=10, empty=0): Giảm 10k cho đơn từ 300k | Giảm 30k mỗi bịch Miếng lót sơ sinh Bobb | Giảm 10k mỗi bịch Tã quần Huggies Dry si | Giảm 20k mỗi bịch Tã quần Huggies Dry si
+- Hàng áp dụng (distinct=10, empty=0): Tất cả | Miếng lót sơ sinh Bobby Newborn 1 108 mi | Tã quần Huggies Dry size XL 62 miếng | Tã quần Huggies Dry size L 68 miếng
+- Từ ngày (distinct=10, empty=0): 2025-05-01 00:00:00 | 2025-05-21 00:00:00 | 2025-07-07 00:00:00 | 2025-08-31 00:00:00
+- Đến ngày (distinct=10, empty=0): 2026-06-30 00:00:00 | 2025-06-01 00:00:00 | 2025-07-22 00:00:00 | 2025-09-09 00:00:00

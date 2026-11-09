@@ -1,0 +1,1800 @@
+3000 questions -> 579 clusters
+
+[99] [('number', 60), ('date', 36), ('unanswerable', 3)]  e.g. 'thang M cua hang ban duoc tong cong nhieu tien'
+      ê tháng 11/2025 cửa hàng bán được tổng cộng nhiêu tiền
+      tháng 9/2025 cuwar hàng bán được tổng coongj nhiêu tiền
+      Tháng 5/2025 cửa hàng bán đc tổng cộng bao nhiêu tiền?
+[77] [('percent', 76), ('unanswerable', 1)]  e.g. 'ti le huy don thang M la nhieu %'
+      tỉ lệ huỷ đơn tháng 6/2025 là nhiêu %
+      tỉ lệ huỷ đơn tháng 9/2025 laf nhiêu %
+      tỉ lệ huỷ đơn tháng 6/2025 là nhiêu %
+[64] [('number', 64)]  e.g. 'doanh thu trung binh tren mot don thang M la bao nhieu'
+      Doanh thu trung bình trên một đơn tháng 3/2025 là bao nhiêu ạ?
+      doanh thu trung bình trên một đơn tháng 5/2025 là bnhiu hả
+      Doanh thu trung bình trên một đơn tháng 3/2026 là bao nhiêu?
+[51] [('number', 50), ('unanswerable', 1)]  e.g. 'tong doanh thu thang N nam Y la bao nhieu'
+      tong dthu thang 8 nam 2025 la bao nhieu
+      Tổng dthu tháng 2 năm 2025 là bao nhiêu?
+      tổng doanh thu tháng 6 năm 2025 là bao nhiêu
+[47] [('number', 47)]  e.g. 'cho toi biet doanh thu hqua.'
+      Cho tôi biết dthu hqua.
+      Cho tôi biết doanh thu hqua.
+      cho toi biet doanh thu bua qua
+[42] [('number', 42)]  e.g. 'gia tri trung binh mot don thang M la nhieu'
+      giá trị trung bình một đơn tháng 4/2026 là nhiêu
+      giá trị trung bình một đơn tuần rồi là nhiêu
+      gias trị trung bình một đơn thangs 4/2026 là bao nhiêu
+[41] [('percent', 23), ('number', 17), ('unanswerable', 1)]  e.g. 'thang M co bao nhieu don bi huy'
+      thang 2/2025 co bn don bi huy ta
+      Tháng 5/2026 có bao nhiêu đơn bị huỷ?
+      Tháng 5/2026 có bao nhiêu đơn bị huỷ?
+[41] [('number', 41)]  e.g. 'hom nay cua hang ban duoc bao nhieu tien'
+      hnay cua hang ban dc bao nhiu tien vay
+      Hôm nay cửa hàng bán được bao nhiêu tiền?
+      hom nay cua hang ban duoc bn tien ta
+[39] [('number', 38), ('unanswerable', 1)]  e.g. 'doanh thu thang M nhieu'
+      doanh thu tháng 6/2025 nhiêu ta
+      Doanh thu tháng 4/2026 bao nhiêu?
+      doanh thu thang 9/2025 bnhiu
+[38] [('number', 38)]  e.g. 'tong doanh thu hom qua la nhieu'
+      tổng dthu hqua là nhiêu
+      Tổng doanh thu hôm qua là bao nhiêu ạ?
+      Tổng dthu hôm qua là bao nhiêu?
+[29] [('date', 29)]  e.g. 'trong thang M, xet theo dthu, ngay nao ban dat nhat'
+      trong thang 5/2026, xet theo dthu, ngay nao ban dat nhat
+      Trong tháng 4/2025, xét theo dthu, ngày nào bán đắt nhất?
+      trong thang 1/2026, xet theo dthu, ngay nao ban dat nhat
+[28] [('number', 27), ('unanswerable', 1)]  e.g. 'dem so don da huy trong thang M'
+      đếm số đơn đã huỷ trong tháng 12/2025
+      ê đếm số đơn đã huỷ trong tháng 10/2025
+      đếm số đơn đã huỷ trong tháng 2/2026
+[28] [('number', 28)]  e.g. 'thang M doanh thu binh quan moi don la nhieu'
+      tháng 1/2026 doanh thu bình quaan mooix đơn là nhiêu
+      Tháng 6/2025 dthu bình quân mỗi đơn là bao nhiêu?
+      Tháng 5/2026 dthu bình quân mỗi đơn là bao nhiêu?
+[28] [('percent', 28)]  e.g. 'thang nay ti le don bi huy la bao nhieu phan tram'
+      Tháng này tỉ lệ đơn bị huỷ là bao nhiêu phần trăm nhỉ?
+      Trong tháng 11/2025, tỉ lệ đơn huỷ là bao nhiêu phần trăm?
+      Trong tháng 8/2025, tỉ lệ đơn huỷ là bao nhiêu phần trăm nhỉ?
+[27] [('date', 27)]  e.g. 'ngay nao trong thang M revenue cao nhat'
+      ngay nao trong thang 9/2025 revenue cao nhat
+      ngay nao trong thang 6/2025 dthu cao nhat
+      ngay nao trong thang 11/2025 doanh thu cao nhat
+[26] [('date', 26)]  e.g. 'doanh thu ngay nao cao nhat trong thang N nam Y'
+      Doanh thu ngày nào cao nhất trong tháng 7 năm 2026?
+      doanh thu ngày nào cao nhất trong tháng 6 năm 2026
+      Doanh thu ngày nào cao nhất trong tháng 9 năm 2025?
+[25] [('number', 25)]  e.g. 'trung binh moi don tuan roi mang ve bao nhieu doanh thu'
+      trung bình mỗi đơn tuần rồi mang veef bao nhiu dthu
+      trung bình mỗi đơn tuần rồi mang về bn doanh thu
+      trung binh moi don tuan roi mang ve bao nhieu dthu
+[25] [('percent', 23), ('unanswerable', 2)]  e.g. 'thang M doanh thu thay doi bao nhieu % so voi thang lien truoc'
+      Tháng 2/2025 doanh thu thay đổi bao nhiêu % so với tháng liền trước?
+      Tháng 5/2026 doanh thu thay đổi bao nhiêu % so với tháng liền trước?
+      thang 10/2025 doanh thu thay doi bnhiu % so vs thang lien trc
+[25] [('percent', 25)]  e.g. 'tu dau thang nay den het hom nay, doanh thu thay doi bao nhieu % so voi cung ky thang truoc'
+      Từ đầu tháng này đến hết hôm nay, doanh thu thay đổi bao nhiêu % so với cùng kỳ tháng trước?
+      từ đầu tháng này đến hết hôm nay, doanh thu thay đổi bnhiu % so vs cùng kỳ th trước
+      Từ đầu tháng này đến hết hôm nay, dthu thay đổi bao nhiêu % so với cùng kỳ tháng trước?
+[24] [('number', 24)]  e.g. 'tinh den het ngay D, co bao nhieu khach con no cua hang'
+      Tính đến hết ngày 19/08/2026, có bao nhiêu khách còn nợ cửa hàng?
+      Tính đến hết ngày 11/12/2025, có bao nhiêu khách còn nợ cửa hàng?
+      tinh den het ngay 04/08/2026, co bao nhiu khach con no cua hang
+[24] [('percent', 24)]  e.g. 'so so ly latte l ban ra trong N ngay ke tu ngay D, ngay tang gia len N d, voi N ngay ngay truoc ngay tang hay giam bao nhieu %'
+      So số ly Latte (L) bán ra trong 30 ngày kể từ ngày 05/02/2026, ngày tăng giá lên 53.500đ, với 30 ngày ngay trước ngày đó: tăng hay giảm bao nhiêu %?
+      So số ly Trà vải (L) bán ra trong 30 ngày kể từ ngày 05/06/2025, ngày tăng giá lên 47.000đ, với 30 ngày ngay trước ngày đó: tăng hay giảm bao nhiêu %?
+      So số ly Sinh tố xoài (L) bán ra trong 30 ngày kể từ ngày 04/09/2025, ngày tăng giá lên 50.500đ, với 30 ngày ngay trước ngày đó: tăng hay giảm bao nhiêu % nhỉ?
+[23] [('number', 23)]  e.g. 'thang M ban ra bao nhieu kg nep cai hoa vang'
+      thang 6/2025 ban ra bnhiu kg nep cai hoa vang
+      Tháng 6/2025 bán ra bao nhiêu kg Nếp cái hoa vàng vậy?
+      Tháng 4/2026 bán ra bao nhiêu kg Nếp cái hoa vàng?
+[23] [('number', 23)]  e.g. 'thang M cac thuoc co hoat chat cetirizin ban duoc bao nhieu tien'
+      Tháng 3/2026 các thuốc có hoạt chất Cetirizin bán được bao nhiêu tiền nhỉ?
+      thang 8/2025 cac thuoc co hoat chat Vitamin C ban dc bao nhieu tien
+      Tháng này các thuốc có hoạt chất Cetirizin bán được bao nhiêu tiền?
+[22] [('number', 22)]  e.g. 'revenue hom nay la bao nhieu'
+      revenue hnay la bao nhiu
+      Doanh thu hôm nay là bao nhiêu?
+      dthu hôm nay là bao nhiêu?
+[22] [('percent', 22)]  e.g. 'doanh thu thang M so voi thang M tang hay giam bao nhieu %'
+      Doanh thu tháng 8/2026 so với tháng 8/2025 tăng hay giảm bao nhiêu %?
+      Doanh thu tháng 8/2026 so với tháng 8/2025 tăng hay giảm bao nhiêu %?
+      Doanh thu tháng 4/2026 so với tháng 4/2025 tăng hay giảm bao nhiêu %?
+[21] [('number', 21)]  e.g. 'tinh rieng ngay hom nay, cua hang ban duoc bao nhieu don'
+      Tính riêng ngày hôm nay, cửa hàng bán đc bao nhiêu đơn?
+      Tính riêng ngày hôm nay, cửa hàng bán được bao nhiêu đơn
+      Tính riêng ngày hôm nay, cửa hàng bán đc bao nhiêu đơn?
+[21] [('percent', 20), ('unanswerable', 1)]  e.g. 'ti trong cua nhom goi trong doanh thu thang M la bao nhieu %'
+      Tỉ trọng của nhóm gỏi trong doanh thu tháng 12/2025 là bao nhiêu %?
+      tỉ trọng của nhóm sữa trong dthu thangs 6/2025 laf bao nhiêu %
+      ti trong cua nhom sua trong dthu thang 1/2026 la bnhiu %
+[21] [('percent', 21)]  e.g. 'tu dau thang nay den het hnay, doanh thu hon hay kem cung ky thang truoc may %'
+      Từ đầu tháng này đến hết hnay, doanh thu hơn hay kém cùng kỳ tháng trước mấy %?
+      tu dau thang nay den het hnay, dthu hon hay kem cung ky thang trc may %
+      Từ đầu tháng này đến hết hôm nay, doanh thu hơn hay kém cùng kỳ tháng trước mấy %?
+[20] [('number', 20)]  e.g. 'so don bi huy trong thang N nam Y la bao nhieu'
+      số đơn bị huỷ trong tháng 1 năm 2025 là bao nhiêu
+      so don bi huy trong thang 7 nam 2026 la bao nhieu
+      so don bi huy trong thang 5 nam 2025 la bao nhieu z
+[19] [('number', 19)]  e.g. 'thang M bi huy may don'
+      thang 10/2025 bi huy may don
+      Tháng 4/2025 bị huỷ mấy đơn?
+      thang 5/2026 bi huy may don
+[19] [('number', 19)]  e.g. 'tong doanh thu quy M la bao nhieu'
+      Tổng doanh thu quý 1/2025 là bao nhiêu?
+      Tổng doanh thu quý 3/2025 là bao nhiêu?
+      tong doanh thu quy 4/2025 la bao nhieu
+[19] [('number', 19)]  e.g. 'cua hang ban duoc bao nhieu don trong quy N nam Y'
+      Cửa hàng bán được bao nhiêu đơn trong quý 1 năm 2026?
+      cửa hàng bán được bao nhiêu đơn trong quý 3 năm 2025
+      cua hang ban duoc bn don trong quy 3 nam 2025
+[19] [('percent', 19)]  e.g. 'doanh thu thang M hon hay kem thang truoc bao nhieu %'
+      ê dthu tháng 2/2025 hơn hay kém th trước bn %
+      doanh thu thang 5/2026 hon hay kem thang trc bao nhiu %
+      dthu tháng 4/2026 hown hay kém th trước bao nhiêu % vậy
+[18] [('number', 18)]  e.g. 'cho toi biet revenue thang M'
+      cho toi biet revenue thang 3/2025
+      cho tôi bieets doanh thu thangs 8/2026
+      cho toi biet dthu thang 11/2025
+[18] [('number', 18)]  e.g. 'nhom cat da thang M ban duoc bao nhieu tien'
+      Nhóm cát đá tháng 3/2025 bán đc bao nhiêu tiền
+      Tháng 6/2026 nhóm đá xay bán đc bao nhiêu tiền?
+      nhóm đá xay tháng 2/2025 bán được bao nhiêu tiền
+[18] [('number', 18)]  e.g. 'trong thang M, cua hang co may don o trang thai huy'
+      trong thang 9/2025, cua hang co may don o trang thai huy
+      Trong tháng 4/2025, cửa hàng có mấy đơn ở trạng thái huỷ nhỉ?
+      trong tháng 8/2025, cửa hàng có mấy đơn ở trạng thái huỷ
+[18] [('number', 18)]  e.g. 'trong quy N nam Y, doanh thu cua cua hang duoc nhieu tien'
+      trong quý 2 năm 2025, dthu của cửa hàng được nhiêu tiền vậy
+      Trong quý 3 năm 2025, doanh thu của cửa hàng được bao nhiêu tiền ạ?
+      trong quy 2 nam 2025, dthu cua cua hang dc bao nhiu tien
+[18] [('percent', 18)]  e.g. 'trong thang M, nhom goi dong gop bao nhieu % doanh thu ca cua hang'
+      trong tháng 6/2026, nhoms gỏi đóng góp bao nhieeu % dthu cả cửa hàng
+      trong thang 4/2025, nhom tieu hoa dong gop bnhiu % doanh thu ca cua hang
+      trong thang 2/2026, nhom chien xao dong gop bao nhiu % doanh thu ca cua hang
+[18] [('percent', 18)]  e.g. 'doanh thu nhom hang sua chiem bao nhieu phan tram tong revenue thang N nam Y'
+      dthu nhóm hangf sữa chiếm bao nhiêu phần trăm tổng revenue tháng 6 năm 2025
+      doanh thu nhom hang tra chiem bao nhiu phan tram tong doanh thu thang 2 nam 2025 z
+      doanh thu nhom hang dien chiem bao nhieu phan tram tong doanh thu thang 6 nam 2025
+[17] [('number', 17)]  e.g. 'thang M nhap hang het bao nhieu tien'
+      thang 3/2026 nhap hang het bao nhieu tien
+      tháng 10/2025 nhập hàng hết bn tiền hả
+      tháng 4/2026 nhaapj hàng hết bnhiu tieenf
+[17] [('boolean', 17)]  e.g. 'doanh thu N thang M, M, M co tang lien tuc khong'
+      Doanh thu 3 tháng 5/2025, 6/2025, 7/2025 có tăng liên tục ko?
+      doanh thu 3 tháng 4/2026, 5/2026, 6/2026 cos tăng liên tục khoong
+      Doanh thu 3 tháng 7/2025, 8/2025, 9/2025 có tăng liên tục ko?
+[17] [('percent', 17)]  e.g. 'so voi thang truoc do, revenue thang M tang hay giam may %'
+      so vs th truoc do, revenue thang 1/2026 tang hay giam may %
+      so vs th trước đó, doanh thu tháng 12/2025 tăng hay giảm mấy %
+      so với th trước đó, doanh thu tháng 6/2025 tăng hay giảm mấy %
+[16] [('number', 16)]  e.g. 'hom qua doanh thu duoc bao nhieu'
+      bua qua dthu duoc bao nhieu
+      hom qua dthu duoc bao nhieu
+      hqua dthu được bao nhiêu
+[16] [('number', 16)]  e.g. 'xem doanh thu hom nay la bao nhieu'
+      xem giup dthu bua nay la bnhiu
+      Tổng doanh thu trong ngày hôm nay là bao nhiêu?
+      tổng dthu trong ngày hôm nay là bao nhiêu vaayj
+[16] [('string', 13), ('list', 3)]  e.g. 'thang M ai mua hang nhieu tien nhat'
+      Tháng 6/2025 ai mua hàng nhiều tiền nhất?
+      thang 3/2025 ai mua hang nhiu tien nhat
+      Tháng 4/2025 ai mua hàng nhiều tiền nhất vậy?
+[16] [('number', 16)]  e.g. 'thang M ca sang ban duoc bao nhieu tien'
+      Tháng 10/2025 ca sáng bán được bao nhiêu tiền vậy?
+      Tháng 4/2026 ca chiều bán được bao nhiêu tiền?
+      thang 8/2025 ca chieu ban dc bao nhiu tien
+[16] [('number', 16)]  e.g. 'N ngay gan nhat doanh thu duoc bao nhieu'
+      7 ngày gần nhất doanh thu đc bao nhiêu?
+      7 ngày gần nhất doanh thu được bao nhiêu?
+      30 ngày gần nhất dthu được bao nhiêu?
+[15] [('number', 15)]  e.g. 'so don hom nay la nhieu'
+      số đơn hoom nay là nhiêu
+      soos đơn hoom nay là bao nhiêu
+      Số đơn hôm qua là bao nhiêu
+[15] [('percent', 15)]  e.g. 'thang M nhom banh chiem bao nhieu % doanh thu'
+      Tháng 6/2026 nhóm bánh chiếm bao nhiêu % doanh thu?
+      thang 9/2025 nhom banh chiem bn % dthu z
+      tháng 2/2025 nhóm điện chiếm bnhiu % doanh thu
+[15] [('list', 11), ('string', 4)]  e.g. 'ai la khach chi tieu nhieu nhat trong thang N nam Y'
+      Ai là khách chi tiêu nhiều nhất trong tháng 4 năm 2026
+      liet ke 5 khach chi tieu nhiu nhat trong thang 10 nam 2025
+      liet ke 5 khach chi tieu nhiu nhat trong thang 9 nam 2025
+[15] [('number', 15)]  e.g. 'tu dau nam den het hom nay cua hang co bao nhieu don'
+      Từ đầu năm đến hết hôm nay cửa hàng có bao nhiêu đơn
+      từ đầu năm đến hết hnay cửa hàng bán được nhiêu tiền
+      Từ đầu năm đến hết hôm nay cửa hàng có bao nhiêu đơn hàng vậy?
+[14] [('number', 14)]  e.g. 'hom qua co tong cong nhieu don'
+      hqua cos tổng cộng nhiêu ddown
+      hom qua co tong cong bao nhiu don
+      hqua có tổng cộng bao nhiêu đơn?
+[14] [('number', 14)]  e.g. 'hom qua cua hang ban duoc may don'
+      e bua qua cua hang ban duoc may don
+      Hôm qua cửa hàng bán được mấy đơn?
+      Hôm qua cửa hàng bán đc mấy đơn?
+[14] [('percent', 14)]  e.g. 'so voi cung thang nam truoc, doanh thu thang N nam Y thay doi may %'
+      so vs cung thang nam truoc, dthu thang 4 nam 2026 thay doi may %
+      So với tháng liền trước, doanh thu tháng 3 năm 2026 thay đổi bao nhiêu %?
+      So với tháng liền trước, doanh thu tháng 6 năm 2026 thay đổi bao nhiêu %?
+[14] [('percent', 14)]  e.g. 'tu ngay D, nuoc ep cam m tang gia len N d. so N ngay ke tu ngay D voi N ngay ngay truoc do, so ly ban ra thay doi bao nhieu %'
+      từ ngày 11/12/2025, Nước ép cam (M) tăng gias lên 41.000đ. So 30 ngày kể từ ngày 11/12/2025 với 30 ngày ngay trc đó, soos ly bán ra thay đổi bnhiu % vậy
+      tu ngay 21/03/2026, sinh to xoai (l) tang gia len 50.500đ. so 7 ngay ke tu ngay 21/03/2026 voi 7 ngay ngay truoc do, so ly ban ra thay doi bao nhieu %
+      tu ngay 20/06/2025, bia tiger 330ml tang gia len 19.000đ. so 14 ngay ke tu ngay 20/06/2025 vs 14 ngay ngay truoc do, so lon ban ra thay doi bao nhieu % ha
+[14] [('percent', 14)]  e.g. 'tra vai l doi gia tu N d len N d vao ngay D. N ngay ke tu ngay ban duoc nhieu hay it hon N ngay lien truoc bao nhieu %, tinh theo ly'
+      trà vải (l) đổi giá từ 45.000đ lên 47.000đ vào ngày 24/05/2026. 30 ngày kể từ ngày đó bán được nhiều hay ít hơn 30 ngày liền trước bn %, tính theo ly nhỉ
+      nước ép cam (l) đổi gias từ 45.000đ lên 47.000đ vào ngày 15/08/2025. 14 ngày kể từ ngày đó bán được nhìu hay ít hơn 14 ngày liền trc bnhiu %, tính theo ly đó
+      Phở Vifon bò đổi giá từ 9.000đ lên 9.400đ vào ngày 29/06/2025. 7 ngày kể từ ngày đó bán đc nhiều hay ít hơn 7 ngày liền trước bao nhiêu %, tính theo gói?
+[13] [('number', 13)]  e.g. 'cho toi biet so don hqua.'
+      Cho tôi biết số đơn hqua.
+      Cho tôi biết số đơn hqua.
+      Cho tôi biết số đơn hqua
+[13] [('list', 13)]  e.g. 'cho toi N khach mua nhieu tien nhat thang M'
+      cho tooi 5 khách mua nhìu tiền nhất thangs 6/2026
+      cho toi 3 khach mua nhieu tien nhat thang 5/2025
+      cho tôi 5 khách mua nhìu tiền nhất tháng 1/2025
+[13] [('number', 13)]  e.g. 'so don tu dau nam toi het hom nay la bao nhieu'
+      so don tu dau nam toi het hnay la bnhiu
+      số đơn từ đầu nawm tới hết bữa nay là bao nhiêu
+      Số đơn từ đầu năm tới hết hôm nay là bao nhiêu?
+[13] [('number', 13)]  e.g. 'thang M quan ban ra total may ly size m, cong tat ca cac mon'
+      tháng 5/2026 quán bán ra total mấy ly size M, cộng tất cả các món
+      thangs 10/2025 quán bán ra total maays ly size L, cộng tất cả các món nhỉ
+      thang 6/2025 quan ban ra tong cong may ly size m, cong tat ca cac mon
+[13] [('number', 12), ('unanswerable', 1)]  e.g. 'doanh thu cua ca phe muoi l trong thang N nam Y la bao nhieu'
+      dthu của cà phê muối (l) trong tháng 1 năm 2025 là bnhiu
+      dthu của nước ép cam (l) trong tháng 12 nawm 2025 là bao nhiêu
+      Doanh thu của Coca Cola 330ml trong tháng 5 năm 2026 là bao nhiêu?
+[12] [('number', 12)]  e.g. 'hom nay cua hang co nhieu don'
+      hnay cửa hangf có nhiêu ddown
+      Hôm nay cửa hàng có bao nhiêu đơn?
+      hom nay cua hang co bao nhieu don
+[12] [('number', 11), ('unanswerable', 1)]  e.g. 'tong tien nhap hang thang nay la bao nhieu'
+      tổng tieenf nhập hàng tháng này là bnhiu
+      toongr tieenf nhập hàng tháng này là bao nhiêu
+      tổng tiền hàng nhập vaof tháng 12/2025 là bao nhiu đó
+[12] [('percent', 12)]  e.g. 'thang nay cua hang co bao nhieu % don bi huy'
+      tháng này cửa hangf có bn % đơn bij huỷ
+      tháng này cửa hangf có bao nhiêu % đơn bị huỷ
+      Tháng này cửa hàng có bao nhiêu % đơn bị huỷ nhỉ?
+[12] [('list', 9), ('string', 3)]  e.g. 'san pham ban duoc nhieu nhat trong thang N nam Y la gi'
+      Sản phẩm bán đc nhiều nhất trong tháng 6 năm 2026 là gì
+      top 3 sp ban nhieu nhat thang 3 nam 2026 la nhung j z
+      top 3 sp bán nhiều nhất tháng 4 năm 2026 là những j
+[12] [('number', 11), ('unanswerable', 1)]  e.g. 'trong thang M, yumangel hop N goi nhap vao gia binh quan mot hop la bao nhieu'
+      trong thang 6/2025, yumangel hop 20 goi nhap vao gia binh quan mot hop la bao nhiu vay
+      Trong tháng 4/2025, Hapacol 250 hộp 24 gói nhập vào giá bình quân một hộp là bao nhiêu?
+      trong tháng 4/2026, Hapacol 250 hộp 24 gói nhập vào giá bình quân một hộp là bao nhiêu
+[12] [('percent', 12)]  e.g. 'ngay D tra chanh l tang gia tu N d len N d. so ly ban duoc trong N ngay ke tu ngay so voi N ngay truoc thay doi bao nhieu %'
+      Ngày 27/03/2025 Trà chanh (L) tăng giá từ 31.000đ lên 32.500đ. Số ly bán được trong 7 ngày kể từ ngày đó so với 7 ngày trước đó thay đổi bao nhiêu %?
+      ngay 21/08/2025 cappuccino (m) tang gia tu 45.000đ len 47.000đ. so ly ban duoc trong 7 ngay ke tu ngay do so vs 7 ngay trc do thay doi bao nhieu %
+      Ngày 23/08/2025 Cà phê muối (M) tăng giá từ 35.000đ lên 37.000đ. Số ly bán được trong 7 ngày kể từ ngày đó so với 7 ngày trước đó thay đổi bao nhiêu %?
+[11] [('string', 10), ('unanswerable', 1)]  e.g. 'thang M khach nao mua nhieu don nhat'
+      thang 8/2026 khach nao mua nhieu don nhat
+      khach nao mua nhieu don nhat thang 12/2025 ha
+      khách nào mua nhìu đơn nhất tháng 11/2025 vậy
+[11] [('number', 11)]  e.g. 'doanh thu nhom hang ca phe thang N nam Y la nhieu'
+      dthu nhóm hàng cà phê tháng 10 năm 2025 là nhiêu
+      doanh thu nhom hang goi thang 4 nam 2025 la bn
+      Doanh thu nhóm hàng gạo tháng 2 năm 2025 là bao nhiêu?
+[11] [('number', 11)]  e.g. 'thang M co bao nhieu don co doanh thu tu N dong tro len'
+      thang 7/2026 co bao nhiu don co dthu tu 55.000 dong tro len
+      tháng 12/2025 có bao nhiu đơn có doanh thu từ 290.000 đồng trở lên hả
+      Tháng 8/2025 có bao nhiêu đơn có doanh thu từ 3.300.000 đồng trở lên?
+[11] [('percent', 10), ('unanswerable', 1)]  e.g. 'bao nhieu % khach hang trong thang M mua tu N don tro len'
+      bao nhiu % khach hang trong thang 9/2025 mua tu 3 don tro len do
+      bao nhieu % khach hang trong thang 4/2025 mua tu 4 don tro len
+      trong số khách đã mua hàng tháng 8/2025, nhiêu % mua từ 4 đơn trở lên
+[11] [('number', 11)]  e.g. 'tinh tu ngay N/N den het hnay, doanh thu nam nay la bao nhieu'
+      e tinh tu ngay 1/1 den het hnay, dthu nam nay la bn
+      Tính từ ngày 1/1 đến hết hnay, doanh thu năm nay là bao nhiêu?
+      tinh tu ngay 1/1 den het hnay, dthu nam nay la bn
+[11] [('number', 11)]  e.g. 'trong thang M, tien khach tra bot no cac don mua chiu duoc bao nhieu'
+      Trong tháng 11/2025, tiền khách trả bớt nợ các đơn mua chịu được bao nhiêu?
+      trong thang 8/2025, tien khach tra bot no cac don mua chiu duoc bao nhiu
+      Trong tháng 5/2025, tiền khách trả bớt nợ các đơn mua chịu được bao nhiêu?
+[10] [('number', 10)]  e.g. 'hom nay ban duoc may don'
+      hom nay ban duoc may don
+      Hôm nay bán đc mấy đơn?
+      Hôm nay bán được mấy đơn hàng?
+[10] [('string', 10)]  e.g. 'thang M hang nao loi nhat'
+      tháng 7/2025 hàng nào lời nhất hả
+      thang 6/2025 hang nao chay nhat
+      ê tháng 7/2025 hàng nào chạy nhất
+[10] [('number', 10)]  e.g. 'thang M quan ban duoc nhieu ly size m'
+      tháng 7/2026 quán bán đươc nhiêu ly size m
+      tháng 8/2025 quán bán đc bn ly size m
+      Tháng 4/2025 quán bán được bao nhiêu ly size M?
+[10] [('number', 9), ('percent', 1)]  e.g. 'doanh thu ca sang thang M la bao nhieu'
+      dthu ca sáng tháng 5/2026 là bao nhiêu?
+      dthu ca sáng tháng 12/2025 là bao nhiêu?
+      dthu ca chieu thang 9/2025 la bn
+[10] [('number', 10)]  e.g. 'trong quy N nam Y co total bao nhieu don'
+      trong quy 2 nam 2025 co total bao nhieu don
+      trong quy 2 nam 2026 co tong cong bnhiu don
+      Trong quý 1 năm 2026 có tổng cộng bao nhiêu đơn ạ?
+[10] [('list', 9), ('unanswerable', 1)]  e.g. 'liet ke N mat hang ban chay nhat thang M.'
+      Liệt kê 5 mặt hàng bán chạy nhất tháng 9/2025.
+      Liệt kê 5 mặt hàng bán chạy nhất tuần rồi.
+      Giúp mình liệt kê 5 mặt hàng bán chạy nhất tháng 7/2025.
+[10] [('number', 10)]  e.g. 'thang M co may ngay doanh thu dat N dong tro len'
+      Tháng 6/2025 có mấy ngày doanh thu đạt 9.800.000 đồng trở lên?
+      tháng 7/2026 có mấy ngày doanh thu đạt 49.000.000 đồng trở lên
+      Tháng 5/2026 có mấy ngày doanh thu đạt 11.000.000 đồng trở lên?
+[10] [('number', 10)]  e.g. 'thang M tong gia tri cac phieu nhap hang la bao nhieu'
+      Tháng 11/2025 tổng giá trị các phiếu nhập hàng là bao nhiêu?
+      Tháng 9/2025 tổng giá trị các phiếu nhập hàng là bao nhiêu?
+      Tháng 6/2025 tổng giá trị các phiếu nhập hàng là bao nhiêu nhỉ?
+[10] [('number', 5), ('percent', 5)]  e.g. 'doanh thu tu khach nhom than thiet thang M la bao nhieu'
+      Doanh thu từ khách nhóm thân thiết tháng 3/2025 là bao nhiêu vậy?
+      Doanh thu từ khách nhóm thân thiết tháng 4/2026 là bao nhiêu?
+      dthu từ khách nhóm thân thiết tháng 6/2026 là bao nhiêu?
+[10] [('number', 10)]  e.g. 'doanh thu thuoc hoat chat loratadin thang M la bao nhieu'
+      dthu thuốc hoạt chất Loratadin tháng 1/2025 là bao nhiêu?
+      Doanh thu thuốc hoạt chất Povidon iod tháng 2/2025 là bao nhiêu?
+      dthu thuốc hoạt chất Paracetamol tháng 10/2025 là bao nhiêu?
+[10] [('number', 10)]  e.g. 'quan ban duoc bao nhieu ly size m trong thang M, cong moi mon'
+      Quán bán được bao nhiêu ly size M trong tháng 7/2025, cộng mọi món?
+      e quan ban dc bao nhieu ly size l trong thang 6/2025, cong moi mon
+      quan ban dc bnhiu ly size m trong thang 10/2025, cong moi mon z
+[10] [('percent', 10)]  e.g. 'revenue thang N nam Y tang truong bao nhieu % so voi thang N nam Y'
+      revenue thang 1 nam 2026 tang truong bnhiu % so vs thang 1 nam 2025
+      Doanh thu tháng 4 năm 2026 tăng trưởng bao nhiêu % so với tháng 4 năm 2025?
+      Doanh thu tháng 3 năm 2026 tăng trưởng bao nhiêu % so với tháng 3 năm 2025?
+[10] [('table', 8), ('unanswerable', 2)]  e.g. 'liet ke N khach no nhieu nhat tinh den het ngay D, kem so tien con no'
+      liet ke 3 khach no nhieu nhat tinh den het ngay 28/06/2026, kem so tien con no
+      liệt kê 3 khách nợ nhìu nhất tính đến hết ngày 07/07/2025, kèm số tiền còn nợ
+      liệt kê 3 khách nợ nhiều nhất tính đến hết ngày 24/06/2026, kèm số tiền còn nợ
+[10] [('percent', 10)]  e.g. 'doanh thu tu dau thang nay den het hom nay tang hay giam bao nhieu phan tram so voi cung ky thang roi'
+      doanh thu tu dau thang nay den het hnay tang hay giam bao nhieu phan tram so vs cung ky thang roi
+      Doanh thu từ đầu tháng này đến hết hôm nay tăng hay giảm bao nhiêu phần trăm so với cùng kỳ tháng trước nhỉ?
+      dthu tu dau thang nay den het bua nay tang hay giam bn phan tram so voi cung ky thang trc
+[9] [('number', 9)]  e.g. 'so don quy M la nhieu'
+      số đơn quys 3/2025 là nhiêu
+      so don quy 2/2025 la bn
+      số đơn quý 1/2026 là bao nhiu
+[9] [('number', 9)]  e.g. 'cho minh biet doanh thu thang M.'
+      Cho mình biết doanh thu tháng 4/2026.
+      Cho mình biết doanh thu tháng 1/2026.
+      Cho mình biết doanh thu tháng 4/2025.
+[9] [('string', 5), ('list', 4)]  e.g. 'thang M mat hang nao ban chay nhat'
+      Tháng 11/2025 mặt hàng nào bán chạy nhất?
+      Tháng 1/2026 mặt hàng nào bán chạy nhất?
+      Tháng 10/2025 mặt hàng nào bán chạy nhất?
+[9] [('list', 9)]  e.g. 'thang M top N hang ban chay nhat la j'
+      tháng 3/2025 top 5 hàng bán chạy nhất là j
+      thang 6/2025 top 5 hang ban chay nhat la j z
+      thang 11/2025 top 5 hang ban chay nhat la j
+[9] [('number', 8), ('unanswerable', 1)]  e.g. 'thang M cua hang lai rong duoc bao nhieu tien'
+      Tháng 7/2025 cửa hàng lãi ròng được bao nhiêu tiền nhỉ?
+      thang 2/2026 cua hang ban dc total bao nhieu tien
+      thang 1/2026 cua hang ban duoc total bao nhiu tien do
+[9] [('number', 9)]  e.g. 'thang M cua hang thu duoc bao nhieu tien khach tra no'
+      thang 5/2025 cua hang thu duoc bao nhieu tien khach tra no
+      tháng 2/2026 cửa hàng thu được bao nhiêu tiền khachs trả nợ ta
+      Tháng 6/2026 cửa hàng thu được bao nhiêu tiền khách trả nợ?
+[9] [('number', 7), ('unanswerable', 2)]  e.g. 'bao nhieu khach mua it nhat N don trong thang N nam Y'
+      bn khach mua it nhat 14 don trong thang 12 nam 2025
+      Bao nhiêu khách mua ít nhất 11 đơn trong tháng 10 năm 2025?
+      bn khách mua ít nhất 3 đơn trong tháng 12 năm 2025 vậy
+[9] [('date', 9)]  e.g. 'check thang M ngay nao cua hang ban duoc nhieu tien nhat'
+      check giùm tháng 7/2025 ngày nào cửa hàng bán được nhìu tiền nhất
+      check giùm tháng 9/2025 ngày nào cửa hàng bán dc nhiều tiền nhất
+      cho hoi thang 2/2026 ngay nao cua hang ban duoc nhiu tien nhat
+[9] [('number', 8), ('unanswerable', 1)]  e.g. 'thang nay thu hoi duoc nhieu tien cong no tu khach mua chiu'
+      tháng này thu hồi được nhiêu tiền công nợ từ khách mua chịu
+      e thang 10/2025 thu hoi dc bn tien cong no tu khach mua chiu
+      Tháng 7/2025 thu hồi được bao nhiêu tiền công nợ từ khách mua chịu?
+[9] [('number', 9)]  e.g. 'trong thang M, so ly size l ban duoc la nhieu, tinh moi loai uong'
+      ê trong tháng 2/2025, soos ly size l bán dc là nhiêu, tính mọi loại ddoof uống ta
+      Trong tháng 5/2026, số ly size L bán đc là bao nhiêu, tính mọi loại đồ uống?
+      Trong tháng 1/2026, số ly size M bán được là bao nhiêu, tính mọi loại đồ uống?
+[9] [('percent', 9)]  e.g. 'trong tong doanh thu thang M, phan cua khach nhom si la may phan tram'
+      Trong tổng dthu tháng 6/2025, phần của khách nhóm sỉ là mấy phần trăm
+      trong tổng dthu tháng 4/2026, phần của khachs nhoms thân thiết là mấy %
+      trong tong doanh thu thang nay, phan cua khach nhom than thiet la may %
+[8] [('number', 8)]  e.g. 'tuan nay doanh thu duoc bao nhieu'
+      tuần nayf dthu đươc bao nhiêu
+      ê tuần rồi dthu được bn
+      tuan nay dthu duoc bao nhiu
+[8] [('number', 7), ('percent', 1)]  e.g. 'thang M co may khach mua tu N don tro len'
+      tháng 1/2026 có mấy khách mua từ 5 đơn trở lên
+      Tháng 7/2025 có mấy khách mua từ 6 đơn trở lên nhỉ?
+      tháng 8/2025 có nhiêu khách mua tuwf 12 đơn trở leen
+[8] [('number', 8)]  e.g. 'thang M mat hang tra da thu ve bao nhieu tien'
+      Tháng 1/2026 mặt hàng Trà đá thu về bao nhiêu tiền?
+      thang 4/2026 mat hang chanh da thu ve bao nhieu tien
+      Tháng 11/2025 mặt hàng Trà vải (L) thu về bao nhiêu tiền?
+[8] [('list', 8)]  e.g. 'thang N nam Y, N khach nao chi tieu nhieu nhat'
+      Tháng 2 năm 2025, 5 khách nào chi tiêu nhiều nhất?
+      Tháng 4 năm 2025, 5 khách nào chi tiêu nhiều nhất?
+      thang 1 nam 2026, 3 khach nao chi tieu nhiu nhat
+[8] [('list', 8)]  e.g. 'N khach co tong tien mua cao nhat thang M la ai'
+      3 khach co tong tien mua cao nhat thang 4/2025 la ai ha
+      5 khach co tong tien mua cao nhat tuan roi la ai
+      3 khach co tong tien mua cao nhat tuan nay la ai
+[8] [('number', 8)]  e.g. 'thang M gia nhap binh quan mot thung bia tige lon la bao nhieu'
+      thang 6/2025 gia nhap binh quan mot thung bia tiger lon la bao nhiu
+      tháng 4/2026 giá nhập bình quân một thùng bia heineken lon là bao nhiu
+      thang 1/2026 cua hang nhap bia tiger bac lon binh quan bao nhieu tien mot thung
+[8] [('number', 8)]  e.g. 'trong giai doan tu D den het D co bao nhieu mat hang khong ban duoc cai nao'
+      Trong giai đoạn từ 01/07/2025 đến hết 07/07/2025 có bao nhiêu mặt hàng ko bán đc cái nào
+      giai đoạn từ 13/03/2026 đến hết 19/03/2026 có tổng cộng mấy mặt hàng ế, bán không đc cái nào
+      Giai đoạn từ 29/11/2025 đến hết 05/12/2025 có tổng cộng mấy mặt hàng ế, bán ko được cái nào?
+[7] [('number', 7)]  e.g. 'hom qua ban duoc bao nhieu ly'
+      Hôm qua bán được bao nhiêu ly?
+      Hôm qua bán được bao nhiêu ly?
+      hom qua cua hang ban duoc bao nhiu tien
+[7] [('number', 7)]  e.g. 'tuan truoc doanh thu binh quan moi bill la bao nhieu'
+      tuần trc dthu bình quân mỗi bill là bao nhiu
+      e tuan roi dthu binh quan moi don hang la bnhiu ha
+      tuần trc doanh thu bình quân mỗi đơn hàng là bao nhiêu
+[7] [('percent', 7)]  e.g. 'so cung ky nam truoc, doanh thu thang M tang/giam may %'
+      so cung ky nam truoc, doanh thu thang 4/2026 tang/giam may %
+      so cùng kỳ năm trước, doanh thu thangs 5/2026 tawng/giamr mấy %
+      So cùng kỳ năm trước, doanh thu tháng 5/2026 tăng/giảm mấy phần trăm vậy?
+[7] [('number', 7)]  e.g. 'thang M nhan vien ma nhan vien N ban duoc bao nhieu tien'
+      Tháng 2/2026 nhân viên mã NV001 bán được bao nhiêu tiền?
+      Tháng 4/2026 nhân viên mã NV003 bán được bao nhiêu tiền?
+      Tháng 1/2026 nhân viên mã NV003 bán được bao nhiêu tiền?
+[7] [('number', 7)]  e.g. 'trong thang N nam Y cua hang ban duoc may ly ca phe sua l'
+      Trong tháng 1 năm 2026 cửa hàng bán đc mấy ly Cà phê sữa (L)?
+      Trong tháng 1 năm 2026 cửa hàng bán được mấy ly Cappuccino (M)?
+      Trong tháng 12 năm 2025 cửa hàng bán đc mấy ly Cà phê muối (M)
+[7] [('percent', 7)]  e.g. 'thang M thuoc ke don chiem bao nhieu % doanh thu cua thuoc'
+      tháng 12/2025 thuốc kê đơn chiếm bao nhiu % dthu của nhà thuoocs ta
+      thang 1/2026 thuoc ke don chiem bao nhieu % doanh thu cua nha thuoc
+      thang 6/2025 thuoc ke don chiem bao nhiu % dthu cua nha thuoc ha
+[7] [('number', 7)]  e.g. 'thang M co may mat hang duoc mua o N don khac nhau tro len'
+      thang 3/2026 co may mat hang dc mua o 84 don khac nhau tro len do
+      thang 2/2025 co may mat hang dc mua o 61 don khac nhau tro len nhi
+      tháng 5/2025 có mấy mặt hàng đc mua ở 78 đơn khác nhau trở lên z
+[7] [('number', 7)]  e.g. 'trong thang N nam Y, so don co doanh thu N dong la bao nhieu'
+      Trong tháng 3 năm 2025, số đơn có dthu ≥ 590.000 đồng là bao nhiêu?
+      trong tháng 7 năm 2026, số đơn có doanh thu ≥ 1.100.000 đồng là bnhiu
+      Trong tháng 5 năm 2025, số đơn có doanh thu ≥ 1.500.000 đồng là bao nhiêu vậy?
+[7] [('number', 6), ('unanswerable', 1)]  e.g. 'thang M gia nhap binh quan mot hop banh tiramisu la bao nhieu'
+      Tháng 2/2025 giá nhập bình quân một hộp Bánh tiramisu là bao nhiêu?
+      Tháng 5/2026 giá nhập bình quân một hộp Bánh croissant là bao nhiêu vậy?
+      Tháng 5/2025 giá nhập bình quân một hộp Smecta hộp 30 gói là bao nhiêu?
+[7] [('number', 7)]  e.g. 'thang M cac mat hang nhom tra sua thu duoc total bao nhieu tien'
+      thang 10/2025 cac mat hang nhom tra sua thu duoc total bn tien
+      tháng 9/2025 các mặt hàng nhóm lẩu thu đc tổng cộng bao nhiêu tiền
+      thang 7/2025 cac mat hang nhom xi mang thu duoc tong cong bao nhieu tien
+[7] [('number', 7)]  e.g. 'trong N ngay gan nhat co bao nhieu mat hang khong ban duoc cai nao'
+      Trong 14 ngày gần nhất có bao nhiêu mặt hàng không bán được cái nào?
+      7 ngày gần nhất có tổng cộng mấy mặt hàng ế, bán không được cái nào?
+      check gium trong 7 ngay gan nhat co bao nhieu mat hang ko ban duoc cai nao ta
+[7] [('percent', 6), ('unanswerable', 1)]  e.g. 'doanh thu nhom hang sat thep chiem nhieu % tong doanh thu thang N nam Y'
+      dthu nhóm hàng sắt thép chiếm nhiêu % toongr doanh thu tháng 10 năm 2025
+      ê doanh thu nhoms hàng sinh tố chiếm bao nhiêu % tổng doanh thu thangs 9 năm 2025
+      dthu nhóm hàng sinh tố chiếm bao nhiêu % tổng doanh thu tháng 6 năm 2025
+[7] [('number', 7)]  e.g. 'thuoc co hoat chat ibuprofen thang nay ban duoc tong cong bao nhieu tien'
+      thuoc co hoat chat ibuprofen thang nay ban duoc tong cong bao nhiu tien
+      thuoc co hoat chat loratadin thang nay ban duoc tong cong bao nhieu tien ta
+      coi gium thuoc co hoat chat Vitamin C thang 8/2026 ban duoc tong cong bao nhieu tien
+[7] [('percent', 5), ('unanswerable', 1), ('list', 1)]  e.g. 'thang M, doanh thu cac don ban qua dien thoai chiem bao nhieu % tong doanh thu'
+      tháng 11/2025, dthu các đơn bán qua điện thoaij chiếm bao nhiêu % tổng doanh thu
+      tháng này, dthu các đơn bán qua điện thoại chiếm bao nhiêu % tổng doanh thu ta
+      dthu các đơn bán qua ddieenj thoại tháng 1/2025 bằng bnhiu % tổng doanh thu tháng 1/2025
+[7] [('list', 7)]  e.g. 'doanh thu N thang lien nhau ket thuc o thang M la bao nhieu moi thang, tu thang cu den thang moi'
+      dthu 3 tháng liền nhau kết thúc ở tháng 6/2025 là bao nhiêu mỗi tháng, từ tháng cũ đến tháng mới
+      dthu 3 tháng liền nhau kết thúc ở tháng 12/2025 là bao nhiêu mỗi tháng, từ tháng cũ đến tháng mới?
+      Doanh thu 3 tháng liền nhau kết thúc ở tháng 3/2026 là bao nhiêu mỗi tháng, từ tháng cũ đến tháng mới?
+[7] [('list', 7)]  e.g. 'thang M khach to phuc huy ghi no them bao nhieu va tra no duoc bao nhieu ghi hai so theo thu tu no them, tra duoc.'
+      Tháng 6/2026 khách Tô Phúc Huy ghi nợ thêm bao nhiêu và trả nợ đc bao nhiêu? Ghi hai số theo thứ tự: nợ thêm, trả được.
+      thang 3/2025 khach To Dung Thao ghi no them bao nhieu va tra no dc bao nhieu? Ghi hai so theo thu tu: no them, tra duoc
+      e thang 7/2026 khach cao thu hanh ghi no them bao nhieu va tra no dc bao nhieu? ghi hai so theo thu tu: no them, tra duoc
+[6] [('number', 6)]  e.g. 'quy M cua hang co bao nhieu don'
+      Quý 1/2025 cửa hàng có bao nhiêu đơn?
+      quý 4/2025 cuwar hàng có bn order ddos
+      Quý 4/2025 cửa hàng có bao nhiêu đơn hàng ạ?
+[6] [('number', 6)]  e.g. 'N ngay gan nhat cua hang ban duoc may don'
+      30 ngày gần nhất cửa hàng bán được mấy đơn
+      7 ngày gần nhất cửa hàng bán được mấy đơn vậy?
+      7 ngày gần nhất cửa hàng bán được nhiêu tiền vậy
+[6] [('number', 5), ('percent', 1)]  e.g. 'doanh thu ca chieu tuan truoc la bao nhieu'
+      dthu ca chieu tuan truoc la bao nhieu
+      Ca chiều tuần trước doanh thu được bao nhiêu?
+      dthu tuan truoc cua cua hang la bnhiu
+[6] [('number', 6)]  e.g. 'thang M doanh thu hang k ke don la bao nhieu'
+      thang 7/2025 doanh thu hang k ke don la bao nhieu
+      tháng 2/2025 dthu hàng hông kê đơn là bao nhiêu
+      tháng 5/2026 dthu hàng hok kê đơn là bn ta
+[6] [('string', 6)]  e.g. 'mat hang hot nhat thang N nam Y la mat hang nao'
+      mat hang hot nhat thang 7 nam 2025 la mat hang nao
+      mat hang hot nhat thang 3 nam 2025 la mat hang nao
+      Mặt hàng bán chạy nhất tháng 3 năm 2025 là mặt hàng nào ạ?
+[6] [('string', 6)]  e.g. 'thang M tien nhap hang tu cung cap nao cao nhat'
+      thangs 3/2025 tiền nhập hàng từ nhà cung cấp nào cao nhất
+      thang 9/2025 tien nhap hang tu nha cung cap nao cao nhat
+      coi giumf nhà cung cấp nào có tổng tiền nhaapj hàng lớn nhất tháng 4/2025
+[6] [('date', 5), ('string', 1)]  e.g. 'trong thang M, nhan vien nao co doanh thu cao nhat'
+      Trong tháng 2/2026, nhân viên nào có doanh thu cao nhất?
+      thang nao doanh thu cao nhat trong ba thang 1/2026, 2/2026, 3/2026
+      thang nao dthu cao nhat trong ba thang 2/2025, 3/2025, 4/2025
+[6] [('number', 6)]  e.g. 'cho toi biet doanh thu cac don cua khach nhom si thang M'
+      cho toi biet doanh thu cac don cua khach nhom si thang 6/2025
+      cho toi biet dthu cac don cua khach nhom si thang 7/2026
+      Cho tôi biết doanh thu các đơn của khách nhóm sỉ tháng 8/2025.
+[6] [('number', 6)]  e.g. 'thang M khach tra no cho cac don da mua chiu total bao nhieu tien'
+      e thang 8/2025 khach tra no cho cac don da mua chiu total bao nhieu tien
+      Tháng 12/2025 khách trả nợ cho các đơn đã mua chịu tổng cộng bao nhiêu tiền?
+      Tháng 6/2026 khách trả nợ cho các đơn đã mua chịu tổng cộng bao nhiêu tiền?
+[6] [('number', 6)]  e.g. 'dem so ngay trong thang N nam Y ma doanh thu ca ngay tu N dong tro len'
+      đếm số ngày trong tháng 10 năm 2025 mà dthu cả ngày từ 13.000.000 đồng trở lên
+      dem so ngay trong thang 9 nam 2025 ma dthu ca ngay tu 7.900.000 dong tro len
+      đếm số ngày trong tháng 9 năm 2025 mà dthu cả ngày từ 59.000.000 đồng trở lên
+[6] [('list', 6)]  e.g. 'cho toi doanh thu cua thang M, thang M va thang M, ghi lan luot theo thu tu'
+      cho tôi dthu của tháng 1/2026, tháng 2/2026 vaf tháng 3/2026, ghi lần luwowtj theo thứ tự đó
+      Cho tôi dthu của tháng 2/2026, tháng 3/2026 và tháng 4/2026, ghi lần lượt theo thứ tự đó
+      cho toi dthu cua thang 10/2025, thang 11/2025 va thang 12/2025, ghi lan luot theo thu tu do
+[6] [('number', 6)]  e.g. 'thang M gia nhap binh quan mot hop zyrtec N mg hop N vi x N vien la bao nhieu'
+      thang 8/2025 gia nhap binh quan mot hop zyrtec 10mg hop 1 vi x 10 vien la bao nhiu
+      Cho hỏi tháng 4/2026 giá nhập bình quân một hộp Panadol Extra hộp 15 vỉ x 12 viên là bao nhiêu?
+      Giá nhập bình quân một hộp Telfast HD 180mg hộp 3 vỉ x 10 viên trong tháng 8 năm 2025 là bao nhiêu nhỉ?
+[6] [('table', 6)]  e.g. 'tinh den het ngay D, N khach nao dang no nhieu nhat, moi nguoi con no bao nhieu'
+      tính đến hết ngày 27/10/2025, 3 khách nào đang nợ nhiều nhất, mỗi người còn nợ bao nhiêu
+      tính đến hết ngày 10/08/2025, 3 khách nào đang nợ nhìu nhất, mỗi người còn nợ bao nhiêu
+      Tính đến hết ngày 28/07/2026, 5 khách nào đang nợ nhiều nhất, mỗi người còn nợ bao nhiêu?
+[6] [('number', 6)]  e.g. 'tinh den het ngay D, tong so tien khach con no o cac don da dat qua N ngay la bao nhieu'
+      Tính đến hết ngày 08/10/2025, tổng số tiền khách còn nợ ở các đơn đã đặt quá 15 ngày là bao nhiêu?
+      Tính đến hết ngày 05/04/2025, tổng số tiền khách còn nợ ở các đơn đã đặt quá 7 ngày là bao nhiêu?
+      tinh den het ngay 01/02/2026, cac don dat da hon 7 ngay ma khach chua tra het con no bn tien
+[6] [('list', 6)]  e.g. 'trong thang M, khach lan nhung mua chiu them bao nhieu va tra bot no duoc bao nhieu tra loi hai so no them, tra duoc.'
+      Trong tháng 1/2025, khách Hà Lan Nhung mua chịu thêm bao nhiêu và trả bớt nợ được bao nhiêu? Trả lời hai số: nợ thêm, trả được.
+      trong tháng 3/2025, khách Giang Phương Thu mua chịu thêm nhiêu và trả bớt nợ được bao nhiêu? Trả lời hai số: nợ thêm, trả được
+      trong tháng này, khách huỳnh nhung đức mua chịu thêm nhiêu và trả bớt nợ đc bao nhieeu? trả lời hai số: nợ thêm, trả được
+[5] [('list', 5)]  e.g. 'liet ke N mat hang hot nhat thang M'
+      liệt kê 3 mặt hàng hot nhất tháng 11/2025
+      liet ke 3 mat hang hot nhat tuan roi
+      liệt kê 5 mặt hangf chạy nhất thangs 2/2025
+[5] [('list', 5)]  e.g. 'cho toi N mat hang ban chay nhat tuan nay.'
+      Cho tôi 3 mặt hàng bán chạy nhất tuần này.
+      Cho mình 3 mặt hàng bán chạy nhất tuần rồi.
+      Cho mình 3 mặt hàng bán chạy nhất tuần này.
+[5] [('number', 5)]  e.g. 'thang M tien ban thuoc ke don la bao nhieu'
+      Tháng 7/2025 tiền bán thuốc kê đơn là bao nhiêu?
+      thang 2/2026 nhom thuoc la ban dc bn tien
+      thang 11/2025 nha thuoc ban thuoc ke don dc bao nhieu tien
+[5] [('number', 5)]  e.g. 'tien ban bia tige N ml thang M la bao nhieu'
+      Tiền bán Bia Tiger 330ml tháng 3/2025 là bao nhiêu?
+      thangs 8/2025 bán Yakult 65ml dduwowcj bao nhiêu tiền
+      tieenf bán Bia Sài Gòn Special 330ml tháng 5/2026 là nhiêu
+[5] [('number', 5)]  e.g. 'thang M ban banh oreo N g duoc bao nhieu tien'
+      Tháng 12/2025 bán Bánh Oreo 133g được bao nhiêu tiền ạ?
+      thang 9/2025 ban dau goi clear 630g dc bao nhieu tien ta
+      thang 12/2025 ban tuong ot chinsu 250g duoc bao nhieu tien
+[5] [('string', 4), ('unanswerable', 1)]  e.g. 'khach nao chi nhieu tien nhat cho cua hang tuan roi'
+      Khách nào chi nhiều tiền nhất cho cửa hàng tuần rồi?
+      Khách nào chi nhiều tiền nhất cho cửa hàng trong tháng 2/2025?
+      Khách nào chi nhiều tiền nhất cho cửa hàng trong tháng 1/2026 ạ?
+[5] [('number', 5)]  e.g. 'thang M ban ra bao nhieu cay thep pomina d N cay N m'
+      Tháng 10/2025 bán ra bao nhiêu cây Thép Pomina D14 cây 11.7m?
+      Tháng 12/2025 bán Thép Pomina D12 cây 11.7m được bao nhiêu tiền?
+      tháng 7/2025 bán ra bao nhiêu cây thép hộp 40x80 dày 1.4mm cây 6m
+[5] [('number', 5)]  e.g. 'trong giai doan tu D den het D, bao nhieu mat hang bi'
+      Trong giai đoạn từ 20/10/2025 đến hết 26/10/2025, bao nhiêu mặt hàng bị ế nhỉ?
+      trong giai đoạn từ 20/06/2026 đến hết 26/06/2026, bnhiu mặt hàng bị ế
+      trong giai đoạn từ 07/10/2025 đến hết 13/10/2025, bao nhiu mặt hàng bị ế
+[5] [('number', 5)]  e.g. 'tong tien ban hang cua ca sang tuan truoc la bao nhieu'
+      Tổng tiền bán hàng của ca sáng tuần trước là bao nhiêu?
+      Tổng tiền bán hàng của ca sáng tuần trước là bao nhiêu?
+      xem giup tong tien ban hang cua ca sang thang 1/2025 la bao nhiu
+[5] [('number', 5)]  e.g. 'tinh doanh thu cac don khach nhom than thiet mua thang M'
+      tinh doanh thu cac don do khach nhom than thiet mua thang 5/2025
+      Tính doanh thu các đơn do khách nhóm thân thiết mua tháng 11/2025.
+      Tính doanh thu các đơn do khách nhóm thân thiết mua tháng 3/2026.
+[5] [('percent', 5)]  e.g. 'so voi ca sang, so don ca chieu thang M chenh bao nhieu %'
+      So với ca sáng, số đơn ca chiều tháng 4/2025 chênh bao nhiêu %?
+      Tháng 9/2025 số đơn ca chiều chênh ca sáng bao nhiêu phần trăm?
+      so vs ca sangs, doanh thu ca chiều tháng 4/2026 chênh bao nhiu % nhỉ
+[5] [('number', 5)]  e.g. 'cong moi mat hang tinh theo ly, hom qua ban ra duoc may ly'
+      cong moi mat hang tinh theo ly, hom qua ban ra dc may ly
+      cộng mọi mặt hàng tính theo lon, bữa qua bán ra được mấy lon
+      Cộng mọi mặt hàng tính theo cây, hôm qua bán ra được mấy cây ạ?
+[5] [('number', 5)]  e.g. 'trong thang M, bao nhieu don co tien hang dat N dong tro len'
+      Trong tháng 6/2025, bao nhiêu đơn có tiền hàng đạt 41.000 đồng trở lên?
+      Trong tháng 7/2026, bao nhiêu đơn có tiền hàng đạt 130.000 đồng trở lên nhỉ?
+      Trong tháng 12/2025, bao nhiêu đơn có tiền hàng đạt 3.100.000 đồng trở lên?
+[5] [('number', 4), ('unanswerable', 1)]  e.g. 'thang M cua hang nhap banh croissant binh quan bao nhieu tien mot hop'
+      thang 6/2025 cua hang nhap banh croissant binh quan bn tien mot hop
+      thang 2/2025 cua hang nhap Hapacol 150 hop 24 goi binh quan bn tien mot hop
+      thang 9/2025 cua hang nhap phosphalugel hop 26 goi binh quan bn tien mot hop
+[5] [('table', 5)]  e.g. 'top N khach co cong no lon nhat den het ngay D va so no cua tung nguoi'
+      top 3 khách có công nợ lớn nhất đến hết ngày 14/09/2026 và số nợ cuar từng nguwowif
+      xem giúp top 5 khách có công nợ lớn nhất đến hết ngày 14/08/2026 và số nợ của từng người
+      Top 3 khách hàng có công nợ lớn nhất đến hết ngày 28/07/2026 và số nợ của từng người?
+[5] [('percent', 5)]  e.g. 'ti le doanh thu thuoc ke don tren tong doanh thu thang M la bao nhieu %'
+      Tỉ lệ doanh thu thuốc kê đơn trên tổng doanh thu tháng 5/2025 là bao nhiêu %?
+      ti le doanh thu thuoc ke don tren tong doanh thu thang 1/2026 la bao nhieu %
+      ti le doanh thu thuoc ke don tren tong doanh thu thang 8/2026 la bao nhieu % vay
+[5] [('percent', 5)]  e.g. 'doanh thu thuoc ke don thang nay bang bao nhieu phan tram tong doanh thu'
+      Doanh thu thuốc kê đơn tháng này bằng bao nhiêu phần trăm tổng doanh thu?
+      trong tổng doanh thu tháng 7/2025, phần của thuốc kê đơn là bao nhiêu phần trăm
+      Trong tổng doanh thu tháng 5/2025, phần của thuốc kê đơn là bao nhiêu phần trăm ạ?
+[5] [('number', 5)]  e.g. 'tru thuoc ke don ra, thang M cac mat hang con lai ban duoc bao nhieu tien'
+      Trừ thuốc kê đơn ra, tháng 8/2026 các mặt hàng còn lại bán được bao nhiêu tiền?
+      trừ thuốc kê đơn ra, tháng 6/2025 các mặt hàng còn lại bán đc bao nhiêu tiền hả
+      Trừ thuốc kê đơn ra, tháng 2/2026 các mặt hàng còn lại bán được bao nhiêu tiền?
+[5] [('number', 5)]  e.g. 'giai doan tu D den het D, cua hang co may mat hang han, khong ai mua cai nao'
+      Giai đoạn từ 05/07/2025 đến hết 11/07/2025, cửa hàng có mấy mặt hàng ế hẳn, không ai mua cái nào ạ?
+      Giai đoạn từ 15/02/2026 đến hết 21/02/2026, cửa hàng có mấy mặt hàng ế hẳn, không ai mua cái nào nhỉ?
+      giai đoạn từ 17/02/2026 đến hết 23/02/2026, cửa hàng có mấy mặt hàng ees hẳn, ko ai mua cái nào
+[5] [('percent', 5)]  e.g. 'trong tong doanh thu thang M, doanh thu cac don tra bang ck chiem bao nhieu %'
+      trong tong dthu thang 4/2025, doanh thu cac don tra bang ck chiem bnhiu %
+      thang 7/2026, dthu cac don tra bang tm chiem bao nhieu phan tram tong doanh thu
+      Doanh thu các đơn trả bằng tiền mặt tháng này bằng bao nhiêu % tổng doanh thu tháng này?
+[5] [('percent', 4), ('unanswerable', 1)]  e.g. 'thang nay, doanh thu tu khach nhom si chiem bao nhieu % tong doanh thu cua cua hang'
+      tháng này, dthu từ khách nhóm sỉ chiếm bn % tổng doanh thu của cửa hàng
+      thang nay, dthu tu khach nhom than thiet chiem bao nhiu % tong doanh thu cua cua hang vay
+      Tháng 3/2026, doanh thu từ khách nhóm thân thiết chiếm bao nhiêu phần trăm tổng doanh thu của cửa hàng?
+[5] [('list', 4), ('unanswerable', 1)]  e.g. 'thang nay, doanh thu cac don ban tai quay la nhieu, doanh thu cac don ban qua zalo oa la bao nhieu'
+      tháng này, dthu các đơn bán tại quầy là nhiêu, doanh thu các đơn bán qua zalo oa là bao nhiêu z
+      Tháng này, dthu các đơn bán tại quầy là bao nhiêu, doanh thu các đơn bán qua điện thoại là bao nhiêu?
+      thang 9/2025, dthu cac don ban qua dien thoai la bao nhieu, doanh thu cac don ban qua zalo oa la bao nhieu
+[5] [('percent', 5)]  e.g. 'coi topping kem chese len gia N d tu ngay D so N ngay ke tu ngay tang gia voi N ngay ngay truoc, luong ban tinh theo phan tang hay giam bao nhieu phan tram'
+      coi giùm Topping Kem cheese lên giá 13.000đ từ ngày 25/11/2025; so 14 ngày kể từ ngày tăng giá vs 14 ngày ngay trước, lượng bán tính theo phần tăng hay giảm bao nhiu phần trăm
+      prospan siro ho chai 100ml len gia 97.500đ tu ngay 29/07/2025; so 7 ngay ke tu ngay tang gia vs 7 ngay ngay trc, luong ban tinh theo chai tang hay giam bnhiu phan tram
+      Sữa tươi trân châu đường đen (M) lên giá 47.000đ từ ngày 11/06/2026; so 7 ngày kể từ ngày tăng giá với 7 ngày ngay trước, lượng bán tính theo ly tăng hay giảm bao nhiêu phần trăm?
+[4] [('number', 4)]  e.g. 'coi cho toi biet doanh thu thang M'
+      coi giùm cho tôi biết doanh thu tháng 10/2025
+      check gium cho toi biet dthu thang 4/2025
+      check giùm cho tôi biết doanh thu tháng 10/2025
+[4] [('number', 4)]  e.g. 'N ngay gan nhat co total bao nhieu don'
+      30 ngay gan nhat co total bnhiu don
+      30 ngày gần nhất có tổng cộng bao nhiêu đơn?
+      30 ngày gần nhất có tổng cộng bao nhiêu đơn?
+[4] [('number', 4)]  e.g. 'cho toi biet doanh thu N ngay gan nhat.'
+      Cho tôi biết doanh thu 7 ngày gần nhất.
+      Cho tôi biết doanh thu 30 ngày gần nhất.
+      Cho tôi biết doanh thu 30 ngày gần nhất.
+[4] [('list', 4)]  e.g. 'tuan roi top N hang ban chay nhat la gi'
+      tuan roi top 5 hang ban chay nhat la gi
+      Tuần rồi top 5 hàng bán chạy nhất là gì?
+      Tuần rồi top 3 hàng bán chạy nhất là gì?
+[4] [('number', 4)]  e.g. 'thang M loi gop cua cua hang la bao nhieu'
+      tháng 10/2025 lời gộp của cửa hàng là bao nhiêu
+      thang 8/2025 lai gop cua cua hang la bao nhiu
+      Tháng 4/2025 lãi gộp của cửa hàng là bao nhiêu?
+[4] [('number', 4)]  e.g. 'thang nay quan ban duoc bao nhieu ly size l'
+      Tháng này quán bán được bao nhiêu ly size L?
+      Cho mình hỏi tháng 2/2025 quán bán được bao nhiêu ly size L?
+      quan ban duoc bn ly size l trong thang 4/2025, cong moi mon nhi
+[4] [('number', 4)]  e.g. 'trong thang M, xe cho duoc bao nhieu dot hang'
+      trong tháng 3/2026, xe chở đươc bn đợt hàng
+      trong thang 7/2025, xe cho duoc bn dot hang
+      trong thang 3/2025, xe cho duoc bao nhiu dot hang
+[4] [('number', 4)]  e.g. 'tien ban dau an simply N l thang M la bao nhieu'
+      tien ban dau an simply 2L thang 1/2026 la bao nhieu
+      tháng 9/2025 bán dầu ăn tường an 1L được bao nhiêu tiền
+      tien ban Son Maxilite trong nha 18L thang 9/2025 la bn do
+[4] [('number', 4)]  e.g. 'thang M doanh thu cac don ban tai quay duoc nhieu'
+      tháng 3/2025 doanh thu các đơn bán tại quầy đươc nhiêu
+      dthu các đơn bán tại quầy tháng 1/2026 là bao nhiêu?
+      thang 5/2026 dthu cac don ban tai quay duoc bao nhieu
+[4] [('number', 4)]  e.g. 'so ly ca phe sua l ban duoc trong thang M la bao nhieu'
+      so ly Ca phe sua (L) ban dc trong thang 2/2025 la bao nhieu
+      Số ly Cà phê muối (M) bán được trong tháng 6/2025 là bao nhiêu?
+      so ly tra sua o long (m) ban duoc trong thang 4/2025 la bao nhieu
+[4] [('number', 4)]  e.g. 'dem so mat hang co mat o N don khac nhau trong thang M'
+      dem so mat hang co mat o ≥ 112 don khac nhau trong thang 10/2025
+      e dem so mat hang co mat o ≥ 187 don hang khac nhau trong thang 7/2026
+      Đếm số mặt hàng có mặt ở ≥ 92 đơn hàng khác nhau trong tháng 2/2025.
+[4] [('number', 4)]  e.g. 'dem so don hang thang M co tien hang tu N dong tro len'
+      đếm số đơn hàng tháng 2/2026 có tiền hàng từ 56.000 đồng trở lên
+      Đếm số đơn hàng tháng 11/2025 có tiền hàng từ 290.000 đồng trở lên.
+      Đếm số đơn hàng tháng 4/2025 có tiền hàng từ 55.000 đồng trở lên.
+[4] [('unanswerable', 3), ('number', 1)]  e.g. 'ton kho bia tige lon cuoi ngay hom nay la bao nhieu lon'
+      tồn kho bia tiger lon cuối ngày hôm nay là bnhiu lon
+      tồn kho red bull 250ml cuối ngày hôm nay là bao nhiêu lon
+      hôm nay kho còn tồn bao nhiêu lon coca-cola lon lúc cuối ngày
+[4] [('number', 4)]  e.g. 'trong thang N nam Y cua hang ban duoc may noi lau ga la'
+      trong thang 1 nam 2025 cua hang ban duoc may noi lau ga la e
+      Trong tháng 2 năm 2025 cửa hàng bán được mấy đĩa Bò lá lốt nướng?
+      trong thang 4 nam 2025 cua hang ban duoc may dia sun ga rang muoi
+[4] [('percent', 4)]  e.g. 'thang M tien ban thuoc ke don chiem may % tong doanh thu'
+      Tháng 3/2025 tiền bán thuốc kê đơn chiếm mấy % tổng doanh thu?
+      tháng 3/2025 tiền bán thuốc kê đơn chiếm mấy % tổng doanh thu
+      tháng 10/2025 tiền bán thuốc kê đơn chiếm mấy % tổng doanh thu hả
+[4] [('string', 3), ('unanswerable', 1)]  e.g. 'thang M ai la khach mua nhieu lan nhat, tinh theo so don'
+      Tháng 1/2026 ai là khách mua nhiều lần nhất, tính theo số đơn?
+      Tháng 6/2025 ai là khách mua nhiều lần nhất, tính theo số đơn?
+      tháng 11/2025 ai là khách mua nhìu lần nhất, tính theo số đơn đó
+[4] [('number', 4)]  e.g. 'trong thang N nam Y cua hang ban duoc may kg kem buoc N mm'
+      trong tháng 6 năm 2025 cửa hàng bán đươc mấy kg kẽm buộc 1mm
+      trong thang 12 nam 2025 cua hang ban duoc may kg Nep cai hoa vang
+      Trong tháng 2 năm 2026 cửa hàng bán được mấy kg Nếp cái hoa vàng?
+[4] [('number', 4)]  e.g. 'tuan truoc rieng ca chieu ban duoc tong cong bao nhieu tien'
+      Tuần trước riêng ca chiều bán được tổng cộng bao nhiêu tiền?
+      Tuần trước riêng ca chiều bán được tổng cộng bao nhiêu tiền nhỉ?
+      Tuần trước riêng ca chiều bán đc tổng cộng bao nhiêu tiền?
+[4] [('number', 4)]  e.g. 'xem gia ban mot chai sting dau N ml vao ngay D la bao nhieu'
+      xem giup gia ban mot chai sting dau 330ml vao ngay 02/05/2026 la bao nhieu
+      e gia ban mot chai nuoc suoi aquafina 500ml vao ngay 09/03/2026 la bnhiu
+      e gia ban mot chai Siro an ngon Ich Nhi Plus chai 100ml vao ngay 09/08/2025 la bao nhieu
+[4] [('number', 4)]  e.g. 'tinh den cuoi ngay hom nay, trong kho con may chai nuoc suoi'
+      tinh den cuoi ngay hom nay, trong kho con may chai nuoc suoi
+      e tinh den cuoi ngay hom nay, trong kho con may lon coca-cola lon
+      tính đến cuối ngày hôm nay, trong kho conf maays lon bia heineken lon
+[4] [('number', 4)]  e.g. 'thang M, cac khach thuoc nhom si mua tong cong bao nhieu tien hang'
+      e thang 12/2025, cac khach thuoc nhom si mua tong cong bao nhiu tien hang
+      tháng 3/2025, các khách thuoocj nhóm thân thiết mua total bao nhieeu tiền hàng
+      thang 7/2025, cac khach thuoc nhom than thiet mua tong cong bao nhiu tien hang
+[4] [('percent', 4)]  e.g. 'tuan truoc ca chieu so voi ca sang thi doanh thu chenh bao nhieu %'
+      Tuần trước ca chiều so với ca sáng thì doanh thu chênh bao nhiêu %?
+      Tuần trước ca chiều so với ca sáng thì dthu chênh bao nhiêu %
+      Cho mình hỏi so với ca sáng, doanh thu ca chiều tuần trước chênh bao nhiêu %?
+[4] [('percent', 4)]  e.g. 'xem tuan roi, so don ca chieu tang hay giam bao nhieu % so voi ca sang'
+      xem giúp tuần rồi, số ddown ca chiều tăng hay giảm bao nhiu % so vs ca sáng
+      tuan truoc, dthu ca chieu tang hay giam bao nhiu % so vs ca sang
+      coi gium tuan trc, doanh thu ca chieu tang hay giam bnhiu % so vs ca sang
+[4] [('date', 4)]  e.g. 'trong cac thang M, M va M, cua hang co doanh thu cao nhat vao thang nao'
+      trong các tháng 11/2025, 12/2025 và 1/2026, cửa hàng có dthu cao nhất vào tháng nào
+      trong các tháng 11/2025, 12/2025 và 1/2026, cửa hàng có dthu cao nhất vào tháng nào
+      Trong các tháng 5/2025, 6/2025 và 7/2025, cửa hàng có doanh thu cao nhất vào tháng nào?
+[4] [('number', 4)]  e.g. 'thang M cac mat hang nhom com mi chao thu duoc tong cong bao nhieu tien'
+      Tháng 6/2026 các mặt hàng nhóm cơm mì cháo thu được tổng cộng bao nhiêu tiền?
+      coi giùm tháng 6/2025 các mặt hàng nhóm dụng cụ y tế thu được tổng cộng bn tiền
+      Tháng 6/2025 các mặt hàng nhóm vitamin khoáng chất thu đc tổng cộng bao nhiêu tiền?
+[4] [('percent', 4)]  e.g. 'xem so voi thang truoc do, doanh thu thang M tang hay giam may phan tram'
+      Xem giúp so với tháng trước đó, doanh thu tháng 2/2025 tăng hay giảm mấy phần trăm?
+      Xem giúp so với tháng trước đó, doanh thu tháng 6/2026 tăng hay giảm mấy phần trăm?
+      Cho hỏi so với tháng trước đó, doanh thu tháng 1/2026 tăng hay giảm mấy phần trăm?
+[4] [('number', 4)]  e.g. 'ton kho gofen N hop N vi x N vien nang cuoi ngay hom nay la bao nhieu vien'
+      ton kho gofen 400 hop 5 vi x 10 vien nang cuoi ngay hom nay la bao nhieu vien
+      Tồn kho Bisolvon 8mg hộp 3 vỉ x 10 viên cuối ngày hôm nay là bao nhiêu viên ạ?
+      Hôm nay kho còn tồn bao nhiêu viên Metformin Stella 500mg hộp 6 vỉ x 10 viên lúc cuối ngày nhỉ?
+[4] [('number', 4)]  e.g. 'thang nay thuoc thu duoc bao nhieu tien tu cac thuoc co hoat chat paracetamol'
+      Tháng này nhà thuốc thu được bao nhiêu tiền từ các thuốc có hoạt chất Paracetamol?
+      tháng này nhà thuốc thu dc bn tiền từ các thuốc có hoạt chất povidon iod
+      Tháng này nhà thuốc thu đc bao nhiêu tiền từ các thuốc có hoạt chất Natri clorid?
+[4] [('boolean', 4)]  e.g. 'tu thang M den thang M, doanh thu thang sau co luon cao hon thang truoc khong'
+      Từ tháng 2/2026 đến tháng 4/2026, doanh thu tháng sau có luôn cao hơn tháng trước không?
+      Từ tháng 8/2025 đến tháng 10/2025, doanh thu tháng sau có luôn cao hơn tháng trước không?
+      tu thang 9/2025 den thang 11/2025, doanh thu thang sau co luon cao hon thang trc khong
+[4] [('percent', 4)]  e.g. 'trong so khach co mua thang N nam Y, ti le khach mua it nhat N don la bao nhieu %'
+      trong số khachs có mua tháng 8 năm 2025, tỉ lệ khách mua ít nhất 4 đơn là bnhiu %
+      trong so khach co mua thang 8 nam 2026, ti le khach mua it nhat 5 don la bnhiu %
+      trong so khach co mua thang 2 nam 2026, ti le khach mua it nhat 6 don la bao nhieu %
+[4] [('list', 4)]  e.g. 'cho toi doanh thu cac don ban tai quay va doanh thu cac don ban qua zalo oa thang M'
+      cho toi dthu cac don ban tai quay va doanh thu cac don ban qua zalo oa thang 9/2025
+      Cho tôi doanh thu các đơn bán qua điện thoại và doanh thu các đơn bán qua Zalo OA tháng 7/2025.
+      Cho hỏi tháng 2/2025, doanh thu các đơn bán qua Zalo OA và các đơn bán tại quầy mỗi loại bao nhiêu?
+[4] [('list', 4)]  e.g. 'tu thang M den thang M, doanh thu moi thang la bao nhieu ghi N so theo thu tu thoi gian.'
+      Từ tháng 4/2025 đến tháng 6/2025, doanh thu mỗi tháng là bao nhiêu? Ghi 3 số theo thứ tự thời gian.
+      Từ tháng 4/2025 đến tháng 6/2025, doanh thu mỗi tháng là bao nhiêu? Ghi 3 số theo thứ tự thời gian.
+      Từ tháng 9/2025 đến tháng 11/2025, doanh thu mỗi tháng là bao nhiêu? Ghi 3 số theo thứ tự thời gian.
+[4] [('percent', 4)]  e.g. 'ti trong doanh thu cac don ban tai quay trong tong doanh thu thang nay la bao nhieu phan tram'
+      ti trong doanh thu cac don ban tai quay trong tong doanh thu thang nay la bao nhieu phan tram
+      Tỉ trọng doanh thu các đơn bán qua Zalo OA trong tổng doanh thu tháng này là bao nhiêu phần trăm ạ?
+      Tỉ trọng dthu các đơn bán qua điện thoại trong tổng doanh thu tháng 2/2026 là bao nhiêu phần trăm?
+[4] [('list', 3), ('unanswerable', 1)]  e.g. 'so doanh thu cac don tra bang cod voi doanh thu cac don tra bang tien mat thang nay moi ben bao nhieu'
+      So doanh thu các đơn trả bằng COD với doanh thu các đơn trả bằng tiền mặt tháng này: mỗi bên bao nhiêu?
+      So dthu các đơn trả bằng COD với doanh thu các đơn trả bằng ví điện tử tháng 10/2025: mỗi bên bao nhiêu?
+      Tháng 7/2026, doanh thu các đơn trả bằng tiền mặt là bao nhiêu, doanh thu các đơn trả bằng COD là bao nhiêu?
+[3] [('number', 3)]  e.g. 'so bill hom qua la nhieu'
+      soos bill hqua là nhiêu đó
+      soos bill hqua là bn
+      số bill hôm qua là bao nhiêu
+[3] [('string', 3)]  e.g. 'tuan roi hang nao chay nhat'
+      tuan roi hang nao chay nhat
+      Hàng nào bán chạy nhất tuần rồi?
+      Mặt hàng bán chạy nhất tuần rồi là mặt hàng nào?
+[3] [('number', 3)]  e.g. 'so don hang hom qua la bao nhieu'
+      Số đơn hàng hqua là bao nhiêu
+      Số đơn hàng hôm nay là bao nhiêu?
+      Cho mình hỏi số đơn hàng hôm qua là bao nhiêu?
+[3] [('list', 3)]  e.g. 'thang M top N hang hot nhat la gi'
+      tháng 5/2025 top 5 hàng hot nhất là gì
+      thangs 2/2026 top 3 hàng chạy nhất laf gì ta
+      tháng 12/2025 top 5 hàng chạy nhất là chi
+[3] [('number', 3)]  e.g. 'ee cho toi biet doanh thu hom qua'
+      ee cho tôi bieets dthu bữa qua
+      ee cho tôi biết dthu thangs 12/2025
+      coi gium cho toi biet dthu hom qua
+[3] [('number', 3)]  e.g. 'dem so dot giao hang trong thang M'
+      ddeems soos đợt giao hàng trong tháng 3/2025
+      Đếm số đợt giao hàng trong tháng 4/2025.
+      Giúp mình đếm số đợt giao hàng trong tháng 1/2026.
+[3] [('number', 3)]  e.g. 'tuan roi ca chieu co bao nhieu bill'
+      tuan roi ca chieu co bao nhiu bill
+      tuần trc ca chiều có bnhiu bill
+      tuan roi ca chieu co bnhiu don hang
+[3] [('number', 3)]  e.g. 'cho toi biet so don N ngay gan nhat'
+      cho tôi biết số ddown 30 ngày gần nhất
+      Cho tôi biết số đơn 30 ngày gần nhất.
+      Cho tôi biết dthu 30 ngày gần nhất
+[3] [('number', 3)]  e.g. 'dem so don ban trong ca sang thang M'
+      đếm số đơn bán trong ca sáng tháng 8/2025
+      Đếm số đơn bán trong ca sáng tháng 9/2025.
+      e dem so don ban trong ca sang tuan roi
+[3] [('string', 3)]  e.g. 'nhan vien ban gioi nhat thang M la ai'
+      Nhân viên bán giỏi nhất tháng 12/2025 là ai?
+      nhan vien ban gioi nhat thang 1/2025 la ai
+      coi giùm nhân viên bán giỏi nhất tháng 7/2025 là ai
+[3] [('number', 3)]  e.g. 'thang M xe da giao total may dot hang'
+      tháng 8/2025 xe ddax giao total mấy đợt hàng
+      Tháng 4/2026 xe đã giao tổng cộng mấy đợt hàng?
+      thang 2/2025 xe da giao tong cong may dot hang
+[3] [('number', 2), ('percent', 1)]  e.g. 'cho minh hoi doanh thu thang M bao nhieu'
+      Cho mình hỏi doanh thu tháng 3/2026 bao nhiêu?
+      Cho mình hỏi tháng 3/2026 nhóm cát đá chiếm bao nhiêu % doanh thu?
+      Cho mình hỏi trung bình mỗi đơn tháng 7/2025 mang về bao nhiêu doanh thu?
+[3] [('string', 3)]  e.g. 'hang nao co tong lai gop cao nhat thang M'
+      Hàng nào có tổng lãi gộp cao nhất tháng 4/2025 vậy?
+      Xem giúp hàng nào có tổng lãi gộp cao nhất tháng 1/2026?
+      thang 4/2026, hang nao co lai gop ca thang cao nhat z
+[3] [('number', 3)]  e.g. 'tuan truoc ca chieu co bao nhieu don hang'
+      Tuần trước ca chiều có bao nhiêu đơn hàng?
+      Ca chiều tuần trước có tổng cộng bao nhiêu đơn?
+      Cho mình hỏi tuần trước ca sáng có bao nhiêu đơn hàng?
+[3] [('list', 2), ('unanswerable', 1)]  e.g. 'N best selle thang M la nhung mat hang nao'
+      5 best seller thang 2/2026 la nhung mat hang nao
+      3 mat hang hot nhat thang 3/2026 la nhung mat hang nao
+      3 mặt hangf chạy nhất tháng 1/2025 là những mặt hàng nào
+[3] [('number', 3)]  e.g. 'revenue tuan roi cua cua hang la bao nhieu'
+      revenue tuần rồi của cuwar hàng laf bnhiu
+      dthu tuần rồi của cửa hàng là bao nhiêu
+      doanh thu tuần rồi của cửa hàng là bao nhiêu hả
+[3] [('string', 2), ('list', 1)]  e.g. 'san pham ban duoc nhieu nhat tuan roi la gi'
+      sp bán dc nhiều nhất tuần rồi là gì
+      san pham ban dc nhiu nhat tuan roi la chi
+      top 5 sp ban nhiu nhat tuan roi la nhung gi ha
+[3] [('number', 3)]  e.g. 'tien ban chan ga nuong thang M la bao nhieu'
+      Tiền bán Chân gà nướng tháng 1/2025 là bao nhiêu nhỉ?
+      Tháng 4/2026 bán Bò lá lốt nướng được bao nhiêu tiền?
+      tiền bán gas petrolimex 12kg tháng 2/2026 là bn
+[3] [('string', 2), ('list', 1)]  e.g. 'cho hoi tuan nay mat hang nao ban chay nhat'
+      Cho hỏi tuần này mặt hàng nào bán chạy nhất?
+      3 mặt hàng bán chạy nhất tuần này là những mặt hàng nào?
+      Cho mình hỏi mặt hàng bán chạy nhất tuần rồi là mặt hàng nào?
+[3] [('number', 3)]  e.g. 'thang M ban ra bao nhieu bo van day ga namilu'
+      thang 8/2025 ban ra bn bo van day gas namilux vay
+      tien ban bo van day gas namilux thang 4/2025 la bao nhieu
+      so bo van day gas namilux ban duoc trong thang 12/2025 la bn
+[3] [('number', 3)]  e.g. 'thang M doanh thu tu khach nhom si duoc nhieu'
+      tháng 8/2025 dthu từ khách nhóm sỉ dc nhiêu
+      dthu từ khách nhóm sỉ tháng 1/2025 là bao nhiu
+      tháng này doanh thu từ khách nhóm sỉ đc bao nhiu đó
+[3] [('number', 3)]  e.g. 'tien ban ma heo nuong nuoc mam thang M la nhieu'
+      tieenf bán má heo nướng nước mắm tháng 9/2025 là nhiêu
+      cho hỏi tháng 3/2026 bán má heo nướng nước mắm dc nhiêu tiền
+      so dia ma heo nuong nuoc mam ban duoc trong thang 11/2025 la bao nhieu
+[3] [('number', 3)]  e.g. 'gia ban mot ly bac xiu m vao ngay D la bao nhieu'
+      Giá bán một ly Bạc xỉu (M) vào ngày 22/08/2025 là bao nhiêu vậy?
+      Giá bán một ly Espresso (single) vào ngày 11/01/2025 là bao nhiêu nhỉ?
+      gia ban mot ly soda chanh day (m) vao ngay 01/12/2025 la bn
+[3] [('number', 3)]  e.g. 'coi tong doanh thu trong ngay hom nay la bao nhieu'
+      coi giumf toongr dthu trong ngày hôm nay là bnhiu
+      xem giúp tổng dthu trong ngày hôm nay là bn
+      cho hoi tong doanh thu trong ngay hom nay la bao nhiu
+[3] [('date', 3)]  e.g. 'xet N thang M, M va M, doanh thu thang nao lon nhat'
+      xét 3 tháng 3/2025, 4/2025 và 5/2025, doanh thu tháng naof lớn nhất
+      Xét 3 tháng 10/2025, 11/2025 và 12/2025, doanh thu tháng nào lớn nhất?
+      Xét 3 tháng 1/2026, 2/2026 và 3/2026, doanh thu tháng nào lớn nhất?
+[3] [('string', 3)]  e.g. 'ai la nguoi ban co doanh thu cao nhat thang N nam Y'
+      Ai là người bán có doanh thu cao nhất tháng 2 năm 2025?
+      ai là người bán có doanh thu cao nhaats tháng 1 năm 2025
+      ai la nguoi ban co doanh thu cao nhat thang 4 nam 2026
+[3] [('number', 1), ('date', 1), ('unanswerable', 1)]  e.g. 'xem N ngay gan nhat cua hang ban duoc bao nhieu tien'
+      xem giup 7 ngay gan nhat cua hang ban dc bnhiu tien
+      Xem giúp tháng 5/2026 ngày nào cửa hàng bán được nhiều tiền nhất?
+      Xem giúp tháng 3/2025 ngày nào cửa hàng bán được nhiều tiền nhất?
+[3] [('number', 3)]  e.g. 'cho hoi nhom nuoc ep thang M ban duoc bao nhieu tien'
+      cho hỏi nhoms nước ép tháng 5/2026 bán dc bao nhiêu tiền
+      Cho hỏi nhóm nước ép tháng 6/2026 bán được bao nhiêu tiền?
+      cho hỏi tháng 8/2026 nhóm sắt thép bán đc bao nhiêu tiền
+[3] [('number', 3)]  e.g. 'ngay D cua hang ban sinh to bo m gia bao nhieu mot ly'
+      Ngày 01/12/2025 cửa hàng bán Sinh tố bơ (M) giá bao nhiêu một ly nhỉ?
+      Xem giúp ngày 11/02/2026 cửa hàng bán Sinh tố xoài (M) giá bao nhiêu một ly?
+      Xem giúp ngày 18/03/2026 cửa hàng bán Sinh tố bơ (M) với đơn giá bao nhiêu một ly?
+[3] [('number', 3)]  e.g. 'tu N/N nam nay den het hom nay da ban duoc bao nhieu don'
+      Từ 1/1 năm nay đến hết hôm nay đã bán đc bao nhiêu đơn?
+      Từ 1/1 năm nay đến hết hnay đã bán đc bao nhiêu đơn?
+      Từ 1/1 năm nay đến hết hôm nay đã bán được bao nhiêu đơn?
+[3] [('number', 3)]  e.g. 'thang M thu duoc bao nhieu tien tu cac thuoc phai ke don'
+      tháng 8/2025 thu được bao nhiêu tiền từ các thuốc phải kê đơn
+      Tháng 5/2025 thu được bao nhiêu tiền từ các thuốc phải kê đơn?
+      Cho hỏi tháng 9/2025 thu được bao nhiêu tiền từ các thuốc phải kê đơn?
+[3] [('number', 3)]  e.g. 'giai doan tu D den het D co may mon e, k ban duoc cai nao'
+      giai đoạn từ 21/07/2025 đến heets 27/07/2025 có mấy món ế, k bán dc cái nào
+      giai đoạn từ 20/02/2026 đến hết 26/02/2026 có total mấy mawtj hàng ế, bán hông dc cái nào
+      giai đoạn từ 19/02/2026 đến hết 25/02/2026 có total mấy mặt hàng ế, bán ko đc cái nào
+[3] [('number', 3)]  e.g. 'thang M co bao nhieu mat hang xuat hien trong it nhat N don'
+      tháng 7/2025 có bao nhiêu mặt hàng xuaats hiện trong its nhất 202 đơn
+      thang 2/2026 co bao nhieu mat hang xuat hien trong it nhat 107 don hang
+      check gium thang 3/2026 co bao nhieu mat hang xuat hien trong it nhat 123 don
+[3] [('unanswerable', 2), ('list', 1)]  e.g. 'nhung san pham nao dang con hang co han dung tu D den het D'
+      những sp nào đang còn hàng có hạn dùng từ 20/05/2026 đến heets 18/08/2026
+      nhung sp nao dang con hang co han dung tu 29/08/2026 den het 27/12/2026
+      nhung san pham nao dang con hang co han dung tu 25/05/2026 den het 22/09/2026
+[3] [('number', 3)]  e.g. 'trong thang N nam Y cua hang ban duoc may dia rau can xao toi'
+      trong thang 4 nam 2025 cua hang ban duoc may dia rau can xao toi
+      trong tháng 2 nawm 2026 cửa hàng bán được maays đĩa Đậu que xào tỏi
+      Cho mình hỏi trong tháng 2 năm 2026 cửa hàng bán được mấy đĩa Rau muống xào tỏi?
+[3] [('number', 3)]  e.g. 'co may ngay trong thang M cua hang ban duoc tu N dong tro len'
+      co may ngay trong thang 2/2026 cua hang ban duoc tu 15.000.000 dong tro len
+      Có mấy ngày trong tháng 2/2025 cửa hàng bán đc từ 10.000.000 đồng trở lên
+      co may ngay trong thang 3/2026 cua hang ban duoc tu 5.000.000 dong tro len z
+[3] [('number', 3)]  e.g. 'thang M mat hang oresol N dhg hop N goi thu ve bao nhieu tien'
+      Tháng 12/2025 mặt hàng Oresol 245 DHG hộp 20 gói thu về bao nhiêu tiền?
+      thang 1/2026 mat hang alaxan hop 25 vi x 4 vien thu ve bao nhieu tien
+      Tháng 3/2026 mặt hàng Gaviscon hộp 24 gói x 10ml thu về bao nhiêu tiền?
+[3] [('list', 3)]  e.g. 'doanh thu tung thang cua N thang M, M, M lan luot la bao nhieu'
+      Doanh thu từng tháng của 3 tháng 11/2025, 12/2025, 1/2026 lần lượt là bao nhiêu?
+      Doanh thu từng tháng của 3 tháng 11/2025, 12/2025, 1/2026 lần lượt là bao nhiêu?
+      cho hỏi dthu từng tháng của 3 tháng 11/2025, 12/2025, 1/2026 lần lượt là bao nhiêu
+[3] [('number', 3)]  e.g. 'doanh thu cua soda chanh day m trong thang N nam Y la bao nhieu'
+      dthu của Soda chanh dây (M) trong tháng 12 năm 2025 là bao nhiêu?
+      Doanh thu của Thép Pomina D10 cây 11.7m trong tháng 6 năm 2025 là bao nhiêu ạ?
+      xem giup doanh thu cua Thep Pomina D10 cay 11.7m trong thang 12 nam 2025 la bao nhieu
+[3] [('number', 3)]  e.g. 'gia ban mot vien fugaca N mg hop N vien vao ngay D la bao nhieu'
+      Giá bán một viên Fugacar 500mg hộp 1 viên vào ngày 11/06/2026 là bao nhiêu?
+      gia ban mot vien strepsils cool hop 2 vi x 12 vien vao ngay 11/11/2025 la bn
+      gia ban mot vien clarityne 10mg hop 1 vi x 10 vien vao ngay 14/06/2026 la bao nhiu do
+[3] [('number', 3)]  e.g. 'coi trong thang N nam Y cua hang ban duoc may kg nep cai hoa vang'
+      coi giùm trong tháng 7 năm 2025 cuwar hàng bán đươc mấy kg nếp cái hoa vàng
+      check gium trong thang 2 nam 2026 cua hang ban dc may kg nep cai hoa vang
+      coi gium trong thang 5 nam 2025 cua hang ban duoc may kg thep cuon phi 6 hoa phat
+[3] [('number', 3)]  e.g. 'check ton kho tra xanh N N ml cuoi ngay hom nay la bao nhieu chai'
+      check giùm toonf kho trà xanh 0 độ 455ml cuối ngày hôm nay là bao nhiêu chai
+      check gium ton kho povidine 10% chai 90ml cuoi ngay hom nay la bao nhiu chai ha
+      ton kho Otrivin 0,1% xit mui chai 10ml cuoi ngay hom nay la bao nhieu chai vay
+[3] [('percent', 3)]  e.g. 'ti trong cua nhom giam dau sot trong revenue thang M la bao nhieu %'
+      ê tỉ trọng cuar nhóm giảm đau hạ sốt trong revenue tháng 2/2026 là bao nhiu % ta
+      ti trong cua nhom giam dau ha sot trong dthu thang 10/2025 la bao nhieu %
+      e ti trong cua nhom vitamin khoang chat trong revenue thang 6/2025 la bn %
+[3] [('number', 3)]  e.g. 'ngay D cua hang ban muc chien nuoc mam voi don gia bao nhieu mot dia'
+      Ngày 17/01/2026 cửa hàng bán Mực chiên nước mắm với đơn giá bao nhiêu một đĩa nhỉ?
+      ngày 16/03/2025 cửa hàng bán Ếch chiên nước mắm với đơn giá bnhiu một đĩa
+      Xem giúp ngày 15/04/2025 cửa hàng bán Ếch chiên nước mắm với đơn giá bao nhiêu một đĩa?
+[3] [('number', 3)]  e.g. 'so goi ban duoc hom qua la bao nhieu, cong moi mat hang tinh theo goi'
+      Số gói bán được hqua là bao nhiêu, cộng mọi mặt hàng tính theo gói?
+      Số lon bán được hôm qua là bao nhiêu, cộng mọi mặt hàng tính theo lon?
+      Số lon bán được hôm qua là bao nhiêu, cộng mọi mặt hàng tính theo lon?
+[3] [('number', 3)]  e.g. 'trong thang N nam Y cua hang ban duoc may cay thep pomina d N cay N m'
+      Trong tháng 4 năm 2026 cửa hàng bán được mấy cây Thép Pomina D16 cây 11.7m?
+      Trong tháng 2 năm 2026 cửa hàng bán được mấy cây Thép Pomina D14 cây 11.7m?
+      trong thang 12 nam 2025 cua hang ban duoc may cay ong pvc binh minh D50 cay 4m
+[3] [('number', 2), ('list', 1)]  e.g. 'cho hoi thang M, doanh thu cac don tra bang chuyen khoan la bao nhieu'
+      cho hoi thang 5/2026, dthu cac don tra bang chuyen khoan la bao nhieu
+      cho hoi dthu cac don tra bang chuyen khoan thang nay la bao nhieu
+      Tháng này, doanh thu các đơn trả bằng COD là bao nhiêu, doanh thu các đơn trả bằng chuyển khoản là bao nhiêu?
+[3] [('number', 3)]  e.g. 'so lo costa omega N N mg lo N vien ban duoc trong thang M la bao nhieu'
+      Số lọ Costar Omega 3 1000mg lọ 100 viên bán được trong tháng 3/2026 là bao nhiêu ạ?
+      Số hộp Doppelherz Ginkgo hộp 30 viên bán đc trong tháng 4/2025 là bao nhiêu?
+      Số hộp Pharmaton Essential hộp 30 viên bán được trong tháng 7/2025 là bao nhiêu?
+[3] [('number', 3)]  e.g. 'tinh theo gia von, tien hang nam trong kho vao cuoi ngay D la bao nhieu'
+      tính theo giá vốn, tiền hàng nằm trong kho vào cuối ngày 14/09/2026 là bao nhieeu
+      tinh theo gia von, tien hang nam trong kho vao cuoi ngay 12/06/2026 la bao nhieu ha
+      Giúp mình tính theo giá vốn, tiền hàng nằm trong kho vào cuối ngày 05/08/2026 là bao nhiêu?
+[3] [('number', 3)]  e.g. 'thang M mat hang clarityne N mg hop N vi x N vien thu ve bao nhieu tien'
+      Tháng 5/2026 mặt hàng Clarityne 10mg hộp 1 vỉ x 10 viên thu về bao nhiêu tiền?
+      tháng 10/2025 mặt hàng Clarityne 10mg hộp 1 vỉ x 10 viên thu veef bao nhiu tiền z
+      thang 1/2025 mat hang telfast hd 180mg hop 3 vi x 10 vien thu ve bn tien
+[3] [('number', 3)]  e.g. 'thang M cua hang nhap tra xanh N N ml binh quan bao nhieu tien mot thung'
+      Tháng 3/2025 cửa hàng nhập Trà xanh 0 độ 455ml bình quân bao nhiêu tiền một thùng?
+      tháng 2/2025 cửa hàng nhập Hạt nêm Knorr 400g bình quân bn tiền một thùng
+      thang 2/2025 cua hang nhap nuoc lau san sunlight 1L binh quan bnhiu tien mot thung z
+[3] [('number', 3)]  e.g. 'cho hoi hom D, gach dac N x N x N ban ra voi don gia bao nhieu tien mot vien'
+      Cho hỏi hôm 02/07/2025, Gạch thẻ đặc 4x8x18 bán ra với đơn giá bao nhiêu tiền một viên?
+      Cho hỏi hôm 17/02/2026, Tương ớt Chinsu 250g bán ra với đơn giá bao nhiêu tiền một chai?
+      Cho mình hỏi hôm 19/03/2026, Fugacar 500mg hộp 1 viên bán ra với đơn giá bao nhiêu tiền một viên?
+[3] [('number', 3)]  e.g. 'nam nay, tinh tu dau nam den het bua nay, doanh thu cua cua hang la bao nhieu'
+      nam nay, tinh tu dau nam den het bua nay, dthu cua cua hang la bao nhiu
+      Năm nay, tính từ đầu năm đến hết hôm nay, dthu của cửa hàng là bao nhiêu?
+      Năm nay, tính từ đầu năm đến hết hôm nay, doanh thu của cửa hàng là bao nhiêu?
+[3] [('number', 3)]  e.g. 'gia nhap binh quan mot thung bot giat omo N kg trong thang N nam Y la bao nhieu'
+      Giá nhập bình quân một thùng Bột giặt OMO 3kg trong tháng 6 năm 2025 là bao nhiêu ạ?
+      Giá nhập bình quân một thùng Bia Heineken 330ml trong tháng 9 năm 2025 là bao nhiêu?
+      Giá nhập bình quân một thùng Nước mắm Nam Ngư 750ml trong tháng 6 năm 2025 là bao nhiêu?
+[3] [('number', 3)]  e.g. 'dem toi so mat hang den muc trong giai doan tu D den het D khong ban duoc lan nao'
+      đếm giúp tôi số mặt hàng ế đến mức trong giai đoạn từ 11/11/2025 đến hết 17/11/2025 không bans dc lần nào
+      đếm giúp tôi số mawtj hàng ế đến mức trong giai đoạn từ 29/07/2025 đến hết 04/08/2025 không bán dc lần nào
+      Đếm giúp tôi số mặt hàng bán chậm đến mức trong giai đoạn từ 06/05/2025 đến hết 12/05/2025 không bán được lần nào.
+[3] [('list', 2), ('unanswerable', 1)]  e.g. 'ton kho sua thang true milk N ml cuoi ngay hom nay duoc may loc chan va may hop le'
+      ton kho Sua TH true MILK 180ml cuoi ngay hom nay duoc may loc chan va may hop le ta
+      ton kho gaviscon hop 24 goi x 10ml cuoi ngay hom nay dc may hop chan va may goi le
+      tồn kho efticol 0,9% lốc 10 lọ x 10ml cuối ngày hôm nay được mấy lốc chẵn và mấy lọ lẻ
+[3] [('list', 3)]  e.g. 'thang nay, doanh thu cac don tra bang cod va cac don tra bang tm moi loai bao nhieu'
+      tháng này, dthu các ddown trả bằng cod và các đơn trả bằng tm mỗi loại bao nhiêu
+      Tháng 4/2026, doanh thu các đơn trả bằng COD và các đơn trả bằng ví điện tử mỗi loại bao nhiêu ạ?
+      check gium thang 10/2025, dthu cac don tra bang chuyen khoan va cac don tra bang tm moi loai bnhiu
+[3] [('number', 3)]  e.g. 'trong thang N nam Y, so san pham xuat hien o tu N don khac nhau tro len la bao nhieu'
+      Trong tháng 8 năm 2025, số sản phẩm xuất hiện ở từ 187 đơn khác nhau trở lên là bao nhiêu
+      Trong tháng 8 năm 2025, số sp xuất hiện ở từ 64 đơn khác nhau trở lên là bao nhiêu
+      Trong tháng 7 năm 2026, số sản phẩm xuất hiện ở từ 140 đơn hàng khác nhau trở lên là bao nhiêu?
+[3] [('list', 3)]  e.g. 'ton kho strepsil col hop N vi x N vien cuoi ngay hom nay duoc may hop chan va may vien le'
+      ton kho strepsils cool hop 2 vi x 12 vien cuoi ngay hom nay dc may hop chan va may vien le
+      tồn kho Telfast HD 180mg hộp 3 vỉ x 10 viên cuoois ngày hôm nay dc mấy hộp chẵn và mấy viên lẻ vậy
+      Tồn kho Air-X 80mg viên nhai hộp 10 vỉ x 10 viên cuối ngày hôm nay được mấy vỉ chẵn và mấy viên lẻ?
+[3] [('list', 3)]  e.g. 'tinh den het ngay D, khach con no bao nhieu o nhom tuoi no N N ngay, N N ngay va tren N ngay'
+      tính đến hết ngày 22/04/2026, khách còn nợ bao nhiêu ở nhóm tuổi nợ 0–7 ngày, 8–15 ngày và trên 15 ngày
+      Giúp mình tính đến hết ngày 26/07/2025, khách còn nợ bao nhiêu ở nhóm tuổi nợ 0–7 ngày, 8–15 ngày và trên 15 ngày?
+      tính đến hết ngày 17/01/2026, phân tuổi nợ còn lại theo 3 nhóm 0–7 ngày, 8–15 ngày, trên 15 ngày: mỗi nhóm bn tiền
+[3] [('percent', 3)]  e.g. 'nuoc ep dua hau l len gia N d tu ngay D so N ngay ke tu ngay tang gia voi N ngay ngay truoc, luong ban tinh theo ly tang hay giam nhieu %'
+      nước ép dưa hấu (l) lên giá 45.000đ từ ngày 25/11/2025; so 7 ngày kể từ ngày tăng giá với 7 ngày ngay trước, lượng bán tính theo ly tăng hay giảm nhiêu %
+      Povidine 10% chai 90ml lên giá 19.000đ từ ngày 14/03/2026; so 7 ngày kể từ ngày tăng giá với 7 ngày ngay trước, lượng bán tính theo chai tăng hay giảm nhiêu %
+      son maxilite trong nha 18L len gia 787.500đ tu ngay 06/04/2025; so 30 ngay ke tu ngay tang gia vs 30 ngay ngay trc, luong ban tinh theo thung tang hay giam bnhiu %
+[3] [('percent', 3)]  e.g. 'cho hoi sun ga rang muoi len gia N d tu ngay D so N ngay ke tu ngay tang gia voi N ngay ngay trc, luong ban tinh theo dia tang hay giam bao nhieu %'
+      cho hỏi Sụn gà rang muối lên giá 103.000đ từ ngayf 14/11/2025; so 7 ngày kể từ ngày tăng giá vowis 7 ngày ngay trc, lượng bán tính theo đĩa tăng hay giảm bn % ta
+      ê pharmaton essential hộp 30 viên lên giá 231.500đ từ ngày 20/05/2025; so 30 ngày kể từ ngày tăng giá với 30 ngày ngay trc, lượng bán tính theo hộp tăng hay giảm bao nhiu %
+      Cho hỏi Bánh croissant lên giá 37.000đ từ ngày 28/07/2025; so 7 ngày kể từ ngày tăng giá với 7 ngày ngay trước, lượng bán tính theo cái tăng hay giảm bao nhiêu phần trăm?
+[3] [('percent', 3)]  e.g. 'ke tu khi prospan siro ho chai N ml len gia N dong/chai, N ngay dau ban duoc nhieu hay it hon N ngay lien truoc bao nhieu phan tram, tinh theo so chai'
+      Kể từ khi Prospan siro ho chai 100ml lên giá 97.500 đồng/chai, 14 ngày đầu bán đc nhiều hay ít hơn 14 ngày liền trước đó bao nhiêu phần trăm, tính theo số chai?
+      Kể từ khi Decolgen Forte hộp 30 vỉ x 4 viên lên giá 1.400 đồng/viên, 14 ngày đầu bán được nhiều hay ít hơn 14 ngày liền trước đó bao nhiêu phần trăm, tính theo số viên?
+      ke tu khi plusssz max multivitamin vien sui tuyp 20 vien len gia 44.000 dong/tuyp, 14 ngay dau ban duoc nhiu hay it hon 14 ngay lien trc do bn phan tram, tinh theo so tuyp
+[2] [('number', 2)]  e.g. 'revenue thang M bao nhieu'
+      revenue thang 10/2025 bn
+      ca sang thang 3/2025 revenue duoc bao nhieu
+[2] [('number', 2)]  e.g. 'cho minh biet so don hom qua.'
+      Cho mình biết số đơn hôm qua.
+      Cho mình biết số đơn hôm qua.
+[2] [('number', 2)]  e.g. 'tuan nay ban duoc bao nhieu ly'
+      tuan nay ban duoc bn ly ha
+      Tuần trước tổng cộng bán được bao nhiêu ly?
+[2] [('number', 2)]  e.g. 'thang M ca sang ban duoc may don'
+      tháng 11/2025 ca sáng bán được mấy đơn
+      tuan roi ca sang ban duoc may don
+[2] [('number', 2)]  e.g. 'cho toi biet lai gop thang N nam Y'
+      cho toi biet lai gop thang 2 nam 2026
+      xem giúp cho tôi biết lời gộp tháng 9 nawm 2025
+[2] [('list', 2)]  e.g. 'cho toi N mon hot nhat trong thang M'
+      cho toi 3 mon hot nhat trong thang 3/2026
+      check gium cho toi 5 mon ban chay nhat trong thang 4/2025
+[2] [('number', 2)]  e.g. 'tuan truoc ca chieu ban duoc may don'
+      Tuần trước ca chiều bán được mấy đơn?
+      Tuần trước ca chiều bán được mấy đơn?
+[2] [('number', 2)]  e.g. 'thang M ban ngheu hap sa duoc nhieu tien'
+      thangs 1/2026 bán nghêu hấp sả đc nhiêu tieenf
+      Xem giúp tiền bán Nghêu hấp sả tháng 12/2025 là bao nhiêu?
+[2] [('number', 2)]  e.g. 'check hom qua cua hang co bao nhieu bill'
+      check giùm bữa qua cuwar hàng có bao nhieeu bill
+      xem giup hom qua cua hang co bao nhieu don hang
+[2] [('number', 2)]  e.g. 'dem so khach da mua N don trong thang M.'
+      Đếm số khách đã mua ≥ 5 đơn trong tháng 5/2026.
+      Giúp mình đếm số khách đã mua ≥ 3 đơn trong tháng 3/2026.
+[2] [('string', 2)]  e.g. 'ai la khach chi tieu nhieu nhat tuan nay'
+      ai la khach chi tieu nhiu nhat tuan nay do
+      ai la khach hang chi tieu nhiu nhat tuan roi
+[2] [('number', 2)]  e.g. 'thang M co total bao nhieu dot giao hang'
+      tháng 2/2025 có total bao nhiu đợt giao hangf
+      cho hỏi tháng 7/2025 có tổng cộng bao nhiu đợt giao hàng z
+[2] [('unanswerable', 2)]  e.g. 'co bao nhieu khach hang o duong tran nao'
+      Có bao nhiêu khách hàng ở đường Trần Não?
+      có bnhiu khách hàng ở đường hậu giang
+[2] [('number', 2)]  e.g. 'thang nay xe da giao tong cong may dot hang'
+      tháng này xe đã giao tổng cộng mấy đợt hàng
+      check gium thang 8/2025 xe da giao tong cong may dot hang
+[2] [('number', 2)]  e.g. 'thang M ban ra bao nhieu ly tra dao cam sa m'
+      tháng 8/2025 bán ra bao nhiêu ly trà đào cam sả (m) ta
+      Xem giúp tháng 4/2025 bán ra bao nhiêu ly Trà đào cam sả (M)?
+[2] [('number', 2)]  e.g. 'thang M ban ra bao nhieu dia so huyet xao me'
+      Tháng 9/2025 bán ra bao nhiêu đĩa Sò huyết xào me vậy?
+      Tháng 8/2025 bán ra bao nhiêu đĩa Lòng mề gà xào sa tế ạ?
+[2] [('unanswerable', 2)]  e.g. 'thang M khach nu mua tong cong bao nhieu tien'
+      e thang 1/2026 khach nu mua tong cong bao nhieu tien
+      Tháng 11/2025 khách nam mua tổng cộng bao nhiêu tiền?
+[2] [('list', 2)]  e.g. 'top N khach mua nhieu tien nhat tuan roi la ai'
+      Top 3 khách mua nhiều tiền nhất tuần rồi là ai
+      Top 5 khách hàng mua nhiều tiền nhất tuần rồi là ai?
+[2] [('number', 2)]  e.g. 'thang M ban topping kem chese duoc bao nhieu tien'
+      Tháng 9/2025 bán Topping Kem cheese được bao nhiêu tiền vậy?
+      tháng 11/2025 bán topping trân châu đen được bnhiu tiền
+[2] [('number', 2)]  e.g. 'check doanh thu hom qua cua cua hang la bao nhieu'
+      check gium dthu hqua cua cua hang la bn
+      check gium dthu bua qua cua cua hang la bnhiu
+[2] [('number', 2)]  e.g. 'thang M nhom dung cu y te ban duoc bao nhieu tien'
+      Tháng 1/2026 nhóm dụng cụ y tế bán được bao nhiêu tiền?
+      check giùm tháng 12/2025 nhóm dùng ngoài bán đươc bn tieenf
+[2] [('number', 2)]  e.g. 'tien ban gio heo muoi chien gion thang M la nhieu'
+      tiền bán giò heo muối chiên giòn thangs 3/2025 là nhiêu
+      tiền bans giò heo muối chiên giòn thangs 4/2025 là bn
+[2] [('number', 1), ('list', 1)]  e.g. 'tinh doanh thu cac don tra bang tien mat thang M.'
+      Tính dthu các đơn trả bằng tiền mặt tháng 10/2025.
+      Cho mình doanh thu các đơn trả bằng tiền mặt và doanh thu các đơn trả bằng COD tháng 4/2026.
+[2] [('number', 2)]  e.g. 'N ngay gan nhat cua hang ban ra tong cong may cay'
+      7 ngay gan nhat cua hang ban ra tong cong may cay
+      Cho mình hỏi 7 ngày gần nhất cửa hàng bán ra tổng cộng mấy m3?
+[2] [('number', 2)]  e.g. 'thang nay cua hang bo ra bao nhieu tien nhap hang'
+      tháng này cửa hàng bỏ ra bao nhiu tiền nhập hàng
+      Xem giúp tháng 1/2026 cửa hàng bỏ ra bao nhiêu tiền nhập hàng?
+[2] [('number', 2)]  e.g. 'revenue cac don tra bang cod thang M la bao nhieu'
+      revenue cac don tra bang cod thang 3/2026 la bn
+      thangs 5/2025 dthu các đơn trả bawngf cod đươc bao nhiêu
+[2] [('number', 2)]  e.g. 'thang M ban ra bao nhieu dia goi khoai mon hai san'
+      tháng 1/2026 bán ra bao nhiu đĩa Gỏi khoai môn hải sản đó
+      thang 11/2025 mat hang goi khoai mon hai san ban duoc tong cong bao nhieu dia
+[2] [('percent', 2)]  e.g. 'tuan roi so don ca chieu chenh ca sang bao nhieu %'
+      tuần rồi số đơn ca chiều chênh ca sáng bao nhiêu % đó
+      Tuần trước số đơn ca chiều chênh ca sáng bao nhiêu phần trăm?
+[2] [('unanswerable', 2)]  e.g. 'trong thang M, khach nu chiem bao nhieu % doanh thu'
+      trong thang 5/2026, khach nu chiem bnhiu % doanh thu
+      cho hỏi trong tháng 12/2025, khách nữ chiếm bao nhiu % doanh thu
+[2] [('number', 1), ('unanswerable', 1)]  e.g. 'den het ngay D, so tien khach con thieu la bao nhieu'
+      Đến hết ngày 11/04/2025, số tiền khách còn thiếu là bao nhiêu?
+      Đến hết ngày 09/07/2026, số tiền khách còn thiếu là bao nhiêu?
+[2] [('number', 2)]  e.g. 'tinh doanh thu cac don tra bang chuyen khoan thang M'
+      tính doanh thu các đơn trả bawngf chuyển khoản tháng 5/2025
+      dthu các đơn trả bằng chuyển khoản tháng 9/2025 là bao nhiêu?
+[2] [('number', 2)]  e.g. 'thang M ban ra bao nhieu kg thep cuon phi N hoa phat'
+      Tháng 1/2026 bán ra bao nhiêu kg Thép cuộn phi 8 Hòa Phát ạ?
+      ê số kg Thép cuộn phi 8 Hòa Phát bán đươc trong tháng 5/2025 là bao nhiêu
+[2] [('number', 2)]  e.g. 'thang M mon com chien duong chau thu ve bao nhieu tien'
+      thangs 3/2026 món cơm chiên dương châu thu về bnhiu tieenf
+      xem giúp tiền bán cơm chiên dương châu tháng 3/2025 laf bao nhiêu z
+[2] [('number', 2)]  e.g. 'thang M ban canh ga chien nuoc mam duoc bao nhieu tien'
+      Tháng 7/2026 bán Cánh gà chiên nước mắm được bao nhiêu tiền?
+      e so dia Canh ga chien nuoc mam ban dc trong thang 1/2025 la bao nhiu
+[2] [('number', 2)]  e.g. 'cuoi ngay hom nay yumangel hop N goi con bao nhieu goi'
+      cuoi ngay hom nay Yumangel hop 20 goi con bao nhieu goi
+      Cuối ngày hôm nay Fugacar 500mg hộp 1 viên còn bao nhiêu viên?
+[2] [('number', 2)]  e.g. 'thang M ban ra bao nhieu cai bon nuoc ino son N l ngang'
+      thang 4/2026 ban ra bn cai bon nuoc inox son ha 1000L ngang z
+      so cai Bon nuoc inox Son Ha 1000L ngang ban dc trong thang 10/2025 la bnhiu
+[2] [('number', 2)]  e.g. 'gia ban mot ly tra sua o long l vao ngay D la bao nhieu'
+      Giá bán một ly Trà sữa ô long (L) vào ngày 30/03/2026 là bao nhiêu?
+      cho hoir giá bán một ly cà phê sữa (l) vào ngày 10/06/2025 laf bnhiu
+[2] [('number', 2)]  e.g. 'cho hoi thang M mat hang lau ga la thu ve bao nhieu tien'
+      Cho hỏi tháng 8/2025 mặt hàng Lẩu gà lá é thu về bao nhiêu tiền?
+      Cho mình hỏi tháng 2/2025 mặt hàng Đinh 5 phân thu về bao nhiêu tiền?
+[2] [('number', 2)]  e.g. 'xem tong tien ban cac mat hang k ke don thang M la nhieu'
+      xem giúp tổng tiền bán các mặt hàng k kê đơn tháng 4/2026 là nhiêu
+      Cho hỏi tổng tiền bán các mặt hàng không kê đơn tháng 10/2025 là bao nhiêu?
+[2] [('number', 2)]  e.g. 'thang M cua hang da cho giao bao nhieu dot hang cho khach'
+      thang 4/2026 cua hang da cho giao bnhiu dot hang cho khach
+      tháng này cửa hàng đã chở giao bao nhiêu đợt hàng cho khách nhỉ
+[2] [('number', 2)]  e.g. 'ngay D cua hang ban bobby m N mieng gia bao nhieu mot goi'
+      Ngày 23/07/2025 cửa hàng bán Tã Bobby M 32 miếng giá bao nhiêu một gói?
+      xem giúp ngày 25/09/2025 cửa hàng bán Kẹo Alpenliebe 100g giá bao nhiêu một gói
+[2] [('number', 2)]  e.g. 'thang M ban hang khong can don bac si duoc bao nhieu tien'
+      thang 3/2026 ban hang khong can don bac si duoc bao nhieu tien z
+      Tháng 9/2025 bán hàng không cần đơn bác sĩ được bao nhiêu tiền?
+[2] [('number', 2)]  e.g. 'thang nay thuoc ban hang khong ke don duoc bao nhieu tien'
+      Tháng này nhà thuốc bán hàng không kê đơn đc bao nhiêu tiền
+      cho hoi thang 11/2025 nha thuoc ban hang k ke don dc bao nhieu tien
+[2] [('number', 2)]  e.g. 'gia ban mot dia oc buou nhoi thit vao ngay D la bao nhieu'
+      giá bán một đĩa ốc bươu nhồi thịt vào ngày 21/10/2025 là bnhiu vậy
+      Giá bán một đĩa Trứng chiên thịt bằm vào ngày 10/10/2025 là bao nhiêu?
+[2] [('number', 2)]  e.g. 'trong thang N nam Y cua hang ban duoc may ly sinh to bo m'
+      trong tháng 8 năm 2025 cửa hàng bán dc mấy ly sinh tố bơ (m)
+      trong tháng 4 năm 2026 cửa hàng bán đc mấy ly sinh tố xoài (m)
+[2] [('number', 2)]  e.g. 'gia ban mot goi banh quy cosy N g vao ngay D la bao nhieu'
+      Giá bán một gói Bánh quy Cosy 200g vào ngày 16/02/2026 là bao nhiêu ạ?
+      gia ban mot goi keo alpenliebe 100g vao ngay 15/04/2025 la bn
+[2] [('list', 2)]  e.g. 'cho hoi N mat hang hot nhat tuan roi la nhung mat hang nao'
+      cho hoi 3 mat hang hot nhat tuan roi la nhung mat hang nao nhi
+      cho hỏi 5 mawtj hangf chạy nhất tháng 12/2025 là những mặt hàng nào
+[2] [('list', 2)]  e.g. 'cuoi ngay hom nay da N x N con may xe N m N chan, may m N le'
+      cuoi ngay hom nay da 4x6 con may xe 4m3 chan, may m3 le
+      cuoi ngay hom nay Da mi bui con may xe 4m3 chan, may m3 le
+[2] [('number', 2)]  e.g. 'so dia com chien hai san ban duoc trong thang M la bao nhieu'
+      so dia Com chien hai san ban duoc trong thang 4/2026 la bao nhiu
+      Số đĩa Gỏi khoai môn hải sản bán đc trong tháng 7/2025 là bao nhiêu?
+[2] [('list', 2)]  e.g. 'cuoi ngay hom nay banh croissant con may hop chan, may cai le'
+      Cuối ngày hôm nay Bánh croissant còn mấy hộp chẵn, mấy cái lẻ?
+      Tồn cuối hôm nay của Bánh croissant là mấy hộp chẵn, mấy cái lẻ?
+[2] [('number', 2)]  e.g. 'hom D, tom sot thai ban ra voi don gia bao nhieu tien mot dia'
+      Hôm 26/12/2025, Tôm sốt Thái bán ra với đơn giá bao nhiêu tiền một đĩa?
+      hom 21/05/2026, Banh croissant ban ra voi don gia bao nhiu tien mot cai
+[2] [('number', 2)]  e.g. 'ngay D cua hang ban bia tige lon voi don gia bao nhieu mot lon'
+      Ngày 01/03/2025 cửa hàng bán Bia Tiger lon với đơn giá bao nhiêu một lon ạ?
+      ngày 25/05/2026 cửa hàng bán khô mực nướng với đơn giá bao nhiu một con
+[2] [('number', 2)]  e.g. 'thang M mat hang ca phe muoi l ban duoc tong cong bao nhieu ly'
+      Tháng 2/2025 mặt hàng Cà phê muối (L) bán được tổng cộng bao nhiêu ly?
+      thang 6/2025 mat hang Espresso (double) ban duoc tong cong bao nhieu ly
+[2] [('percent', 2)]  e.g. 'trong thang M, so don ca chieu hon hay kem ca sang bao nhieu %'
+      trong thangs 5/2025, số đơn ca chiều hơn hay kém ca sáng bao nhiêu % vậy
+      Trong tháng 5/2025, doanh thu ca chiều hơn hay kém ca sáng bao nhiêu phần trăm vậy?
+[2] [('number', 2)]  e.g. 'gia ban mot goi mi hao hao tom chua cay vao ngay D la bao nhieu'
+      gia ban mot goi mi hao hao tom chua cay vao ngay 21/04/2026 la bnhiu ta
+      Ngày 25/05/2025 cửa hàng bán Mì Hảo Hảo tôm chua cay với đơn giá bao nhiêu một gói?
+[2] [('number', 2)]  e.g. 'thang M ban ra bao nhieu bao keo dan gach weber.tai fi xam N kg'
+      tháng 3/2026 bán ra bao nhiêu bao keo dán gạch weber.tai fix xám 25kg
+      Tháng 6/2026 mặt hàng Keo dán gạch Weber.tai fix xám 25kg thu về bao nhiêu tiền vậy?
+[2] [('number', 2)]  e.g. 'check thang M ban ra bao nhieu lon keo dan ong pvc binh minh N g'
+      check gium thang 5/2025 ban ra bao nhiu lon keo dan ong pvc binh minh 200g
+      Tháng 2/2025 mặt hàng Keo dán ống PVC Bình Minh 200g bán được tổng cộng bao nhiêu lon?
+[2] [('number', 2)]  e.g. 'tien ban cong tac N chieu panasonic ide kem mat thang M la nhieu'
+      tiền bán công tắc 1 chiều panasonic wide kèm mặt tháng 2/2026 là nhiêu ta
+      Tháng 12/2025 bán Công tắc 1 chiều Panasonic Wide kèm mặt được bao nhiêu tiền?
+[2] [('number', 2)]  e.g. 'so chai siro tiffy chai N ml ban duoc trong thang M la bao nhieu'
+      so chai siro tiffy chai 30ml ban duoc trong thang 10/2025 la bn
+      so chai siro ho bo phe nam ha chi khai lo chai 125ml ban duoc trong thang 2/2026 la bao nhiu
+[2] [('number', 2)]  e.g. 'tien ban day dien cadivi vcmd N x N cuon N m thang M la bao nhieu'
+      Tiền bán Dây điện Cadivi VCmd 2x2.5 cuộn 100m tháng 2/2025 là bao nhiêu?
+      Xem giúp tháng 3/2025 bán Dây điện Cadivi CV 1.5 cuộn 100m được bao nhiêu tiền?
+[2] [('list', 2)]  e.g. 'khach vu cuong quan thang M no them bao nhieu, tra duoc bao nhieu'
+      Khách Vũ Cường Quân tháng 9/2025 nợ thêm bao nhiêu, trả được bao nhiêu nhỉ?
+      khach Phung Dat Trang thang 2/2025 no them bao nhieu, tra duoc bao nhieu
+[2] [('percent', 2)]  e.g. 'doanh thu tet nam nay so voi tet nam truoc thay doi may phan tram'
+      doanh thu tet nam nay so vs tet nam truoc thay doi may phan tram ha
+      check giumf dthu tết năm nay so vs tết năm trc thay đổi mấy phần trăm
+[2] [('number', 2)]  e.g. 'xem doanh thu cua lau nam hai san trong thang N nam Y la bao nhieu'
+      xem giúp dthu của Lẩu nấm hải sản trong tháng 5 năm 2025 là bn
+      Doanh thu của Gỏi khoai môn hải sản trong tháng 8 năm 2025 là bao nhiêu?
+[2] [('list', 2)]  e.g. 'cho hoi khach doan thao son thang M no them bn, tra duoc bao nhieu'
+      cho hỏi khách đoàn thảo sơn tháng 1/2026 nợ thêm bn, trả được bao nhiêu vaayj
+      cho hoi khach Ha Anh Tam thang 8/2025 no them bao nhiu, tra dc bao nhieu do
+[2] [('number', 2)]  e.g. 'thang M gia nhap binh quan mot thung dau an simply N l la bao nhieu'
+      Tháng 4/2025 giá nhập bình quân một thùng Dầu ăn Simply 2L là bao nhiêu vậy?
+      Tháng 3/2025 giá nhập bình quân một thùng Nước suối Lavie 1.5L là bao nhiêu?
+[2] [('number', 2)]  e.g. 'co bao nhieu khach dang con thieu tien cua hang tinh toi het ngay D'
+      có bao nhiêu khách đang còn thiếu tiền cửa hàng tính tới hết ngày 30/08/2025
+      Có bao nhiêu khách đang còn thiếu tiền cửa hàng tính tới hết ngày 12/04/2025 nhỉ?
+[2] [('number', 2)]  e.g. 'xem ngay D cua hang ban povidine N% chai N ml gia bao nhieu mot chai'
+      Xem giúp ngày 01/05/2026 cửa hàng bán Povidine 10% chai 90ml giá bao nhiêu một chai?
+      ngay 25/07/2025 cua hang ban otrivin 0,1% xit mui chai 10ml voi don gia bnhiu mot chai
+[2] [('number', 2)]  e.g. 'cho minh hoi so ly sinh to xoai m ban duoc trong thang M la bao nhieu'
+      Cho mình hỏi số ly Sinh tố xoài (M) bán được trong tháng 1/2026 là bao nhiêu?
+      Cho mình hỏi số ly Sinh tố xoài (M) bán được trong tháng 8/2025 là bao nhiêu?
+[2] [('number', 2)]  e.g. 'minh tinh den cuoi ngay hom nay, trong kho con may cai banh croissant'
+      Giúp mình tính đến cuối ngày hôm nay, trong kho còn mấy cái Bánh croissant?
+      Giúp mình tính đến cuối ngày hôm nay, trong kho còn mấy lon Bia Tiger Bạc lon?
+[2] [('percent', 2)]  e.g. 'doanh thu cac don ban qua zalo oa chiem may % tong doanh thu thang nay'
+      doanh thu các đơn bán qua zalo oa chiếm mấy % tổng doanh thu tháng nayf đó
+      trong toongr dthu tháng 8/2025, revenue các ddown bán qua zalo oa chiếm nhiêu %
+[2] [('number', 2)]  e.g. 'doanh thu cua nuoc suoi aquafina N ml trong thang N nam Y la bao nhieu'
+      doanh thu cua Nuoc suoi Aquafina 500ml trong thang 4 nam 2025 la bnhiu z
+      Doanh thu của Nước rửa chén Sunlight 750g trong tháng 7 năm 2025 là bao nhiêu?
+[2] [('percent', 2)]  e.g. 'doanh thu thang M so voi cung ky nam ngoai thay doi bao nhieu phan tram'
+      Doanh thu tháng 2/2026 so với cùng kỳ năm ngoái thay đổi bao nhiêu phần trăm?
+      doanh thu tháng 7/2026 so với cùng kỳ năm ngoái thay đổi bao nhiêu phần trăm
+[2] [('number', 2)]  e.g. 'ngay D cua hang ban ong pvc binh minh d N cay N m gia bao nhieu mot cay'
+      Ngày 25/02/2026 cửa hàng bán Ống PVC Bình Minh D32 cây 4m giá bao nhiêu một cây?
+      Cho hỏi giá bán một cây Ống PVC Bình Minh D50 cây 4m vào ngày 15/12/2025 là bao nhiêu?
+[2] [('number', 2)]  e.g. 'het ngay D, so hang con trong kho dang bao nhieu tien, tinh theo gia von'
+      Hết ngày 28/06/2026, số hàng còn trong kho đáng bao nhiêu tiền, tính theo giá vốn?
+      het ngay 25/05/2026, so hang con trong kho dang bao nhieu tien, tinh theo gia von do
+[2] [('number', 2)]  e.g. 'trong thang N nam Y cua hang ban duoc may chai siro ho cam ich chai N ml'
+      trong tháng 5 năm 2026 cuwar hàng bán dduwowcj mấy chai Siro ho cảm Ích Nhi chai 90ml ta
+      trong tháng 7 năm 2025 cửa hàng bán đc mấy chai Siro ho Bổ phế Nam Hà Chỉ Khái Lộ chai 125ml
+[2] [('number', 2)]  e.g. 'khach nhom than thiet thang M mua trung binh bao nhieu tien hang moi don'
+      Khách nhóm thân thiết tháng 6/2025 mua trung bình bao nhiêu tiền hàng mỗi đơn?
+      tháng 5/2025, trung bình mỗi đơn của khách nhóm thân thiết là bao nhiêu tiền hàng
+[2] [('list', 1), ('unanswerable', 1)]  e.g. 'hang nao het han trong N ngay toi, tu D den het D, ma hien van con ton kho'
+      hàng nào hết hạn trong 120 ngày tới, từ 28/06/2026 đến hết 26/10/2026, mà hiện vẫn còn tồn kho
+      Hàng nào hết hạn trong 120 ngày tới, từ 14/09/2026 đến hết 12/01/2027, mà hiện vẫn còn tồn kho vậy?
+[2] [('number', 2)]  e.g. 'gia nhap binh quan mot xe N m N cat xay to trong thang N nam Y la bao nhieu'
+      gia nhap binh quan mot xe 4m3 cat xay to trong thang 1 nam 2026 la bn
+      Giá nhập bình quân một cây Thép Pomina D14 cây 11.7m trong tháng 5 năm 2025 là bao nhiêu nhỉ?
+[2] [('number', 2)]  e.g. 'so thung chong tham kova ct-N tuong N kg ban duoc trong thang M la bao nhieu'
+      so thung Chong tham Kova CT-11A tuong 20kg ban duoc trong thang 9/2025 la bn
+      Xem giúp tháng 1/2026 mặt hàng Chống thấm Kova CT-11A tường 20kg bán được tổng cộng bao nhiêu thùng?
+[2] [('number', 2)]  e.g. 'thang M cua hang ban duoc tong cong bao nhieu vien zyrtec N mg hop N vi x N vien'
+      Tháng 10/2025 cửa hàng bán được tổng cộng bao nhiêu viên Zyrtec 10mg hộp 1 vỉ x 10 viên?
+      Tháng 1/2025 cửa hàng bán được tổng cộng bao nhiêu viên Gofen 400 hộp 5 vỉ x 10 viên nang?
+[2] [('list', 2)]  e.g. 'liet ke doanh thu N thang lien tiep tu thang M den thang M, theo thu tu thoi gian.'
+      Liệt kê doanh thu 3 tháng liên tiếp từ tháng 2/2025 đến tháng 4/2025, theo thứ tự thời gian.
+      Liệt kê doanh thu 3 tháng liên tiếp từ tháng 7/2025 đến tháng 9/2025, theo thứ tự thời gian.
+[2] [('number', 2)]  e.g. 'coi thang M gia nhap binh quan mot tuyp upsa-c N g vien sui tuyp N vien la bao nhieu'
+      coi gium thang 2/2026 gia nhap binh quan mot tuyp upsa-c 1g vien sui tuyp 10 vien la bao nhieu
+      Trong tháng 1/2026, UPSA-C 1g viên sủi tuýp 10 viên nhập vào giá bình quân một tuýp là bao nhiêu?
+[2] [('number', 2)]  e.g. 'ton kho plusssz ma multivitamin vien sui tuyp N vien cuoi ngay hom nay la bao nhieu tuyp'
+      Tồn kho Plusssz Max Multivitamin viên sủi tuýp 20 viên cuối ngày hôm nay là bao nhiêu tuýp vậy?
+      Cho hỏi cuối ngày hôm nay Plusssz Max Multivitamin viên sủi tuýp 20 viên còn bao nhiêu tuýp?
+[2] [('number', 2)]  e.g. 'thang M cua hang nhap salonpa cao dan hop N goi x N mieng binh quan bao nhieu tien mot hop'
+      Tháng 3/2025 cửa hàng nhập Salonpas cao dán hộp 24 gói x 10 miếng bình quân bao nhiêu tiền một hộp nhỉ?
+      Giá nhập bình quân một hộp Salonpas cao dán hộp 24 gói x 10 miếng trong tháng 3 năm 2025 là bao nhiêu?
+[2] [('boolean', 2)]  e.g. 'xu huong doanh thu N thang M M M co phai thang M cao hon thang M va thang M cao hon thang M'
+      Xu hướng doanh thu 3 tháng 9/2025 → 10/2025 → 11/2025: có phải tháng 10/2025 cao hơn tháng 9/2025 và tháng 11/2025 cao hơn tháng 10/2025 ạ?
+      Xu hướng doanh thu 3 tháng 6/2025 → 7/2025 → 8/2025: có phải tháng 7/2025 cao hơn tháng 6/2025 và tháng 8/2025 cao hơn tháng 7/2025 nhỉ?
+[2] [('percent', 2)]  e.g. 'cho minh hoi trong thang M, nhom khai vi dong gop bao nhieu phan tram doanh thu ca cua hang'
+      Cho mình hỏi trong tháng 7/2026, nhóm khai vị đóng góp bao nhiêu phần trăm doanh thu cả cửa hàng?
+      Cho mình hỏi trong tháng 1/2026, nhóm ống nước đóng góp bao nhiêu phần trăm doanh thu cả cửa hàng?
+[2] [('list', 2)]  e.g. 'cho hoi cuoi ngay hom nay savi losartan N mg hop N vi x N vien con may hop chan, may vien le'
+      Cho hỏi cuối ngày hôm nay Savi Losartan 50mg hộp 3 vỉ x 10 viên còn mấy hộp chẵn, mấy viên lẻ?
+      Cho mình hỏi cuối ngày hôm nay Cetirizin 10mg Domesco hộp 10 vỉ x 10 viên trong kho còn bao nhiêu vỉ chẵn, lẻ bao nhiêu viên?
+[2] [('list', 1), ('unanswerable', 1)]  e.g. 'doanh thu cac don tra bang cod va doanh thu cac don tra bang vi dien tu thang M lan luot la bao nhieu'
+      Doanh thu các đơn trả bằng COD và doanh thu các đơn trả bằng ví điện tử tháng 10/2025 lần lượt là bao nhiêu?
+      dthu các đơn trả bằng COD và doanh thu các đơn trả bằng tiền mặt tháng này lần lượt là bao nhiêu
+[2] [('list', 2)]  e.g. 'so doanh thu cac don ban qua dien thoai voi doanh thu cac don ban tai quay thang nay moi ben bao nhieu'
+      So doanh thu các đơn bán qua điện thoại với doanh thu các đơn bán tại quầy tháng này: mỗi bên bao nhiêu nhỉ?
+      check gium dthu cac don ban qua dien thoai va doanh thu cac don ban tai quay thang nay lan luot la bao nhieu
+[2] [('percent', 2)]  e.g. 'acemuc kid N mg hop N goi tang gia len N d so N ngay ke tu ngay tang voi N ngay ngay truoc thi so goi ban ra tang hay giam bao nhieu %'
+      Acemuc Kids 200mg hộp 30 gói tăng giá lên 3.200đ: so 7 ngày kể từ ngày tăng với 7 ngày ngay trước thì số gói bán ra tăng hay giảm bao nhiêu % nhỉ?
+      coi giùm Cefuroxim 500mg Vidipha hộp 10 vỉ x 10 viên tăng giá lên 3.600đ: so 30 ngày kể từ ngày tăng vs 30 ngày ngay trc thì số viên bán ra tăng hay giảm bao nhiêu %
+[2] [('percent', 2)]  e.g. 'cho hoi tu ngay D, thep cuon phi N hoa phat tang gia len N d. so N ngay ke tu ngay D voi N ngay ngay truoc do, so kg ban ra thay doi bao nhieu phan tram'
+      Cho hỏi từ ngày 31/05/2026, Thép cuộn phi 6 Hòa Phát tăng giá lên 17.500đ. So 14 ngày kể từ ngày 31/05/2026 với 14 ngày ngay trước đó, số kg bán ra thay đổi bao nhiêu phần trăm?
+      Từ ngày 17/06/2026, Clarityne 10mg hộp 1 vỉ x 10 viên tăng giá lên 7.800đ. So 7 ngày kể từ ngày 17/06/2026 với 7 ngày ngay trước đó, số viên bán ra thay đổi bao nhiêu phần trăm nhỉ?
+[1] [('number', 1)]  e.g. 'tinh lai gop thang M'
+      tinh lai gop thang 12/2025
+[1] [('number', 1)]  e.g. 'cho minh biet doanh thu hom qua.'
+      Cho mình biết doanh thu hôm qua.
+[1] [('number', 1)]  e.g. 'check cho toi biet so don hom qua'
+      check giùm cho tooi biết soos đơn hqua
+[1] [('number', 1)]  e.g. 'cho minh biet doanh thu tuan nay.'
+      Cho mình biết doanh thu tuần này.
+[1] [('number', 1)]  e.g. 'tuan nay co tong cong bao nhieu don'
+      Tuần này có tổng cộng bao nhiêu đơn vậy?
+[1] [('string', 1)]  e.g. 'dip tet Y, mat hang nao ban chay nhat'
+      Dịp Tết 2026, mặt hàng nào bán chạy nhất ạ?
+[1] [('list', 1)]  e.g. 'coi tuan roi top N hang hot nhat la j'
+      coi giùm tuần rồi top 3 hàng hot nhất là j
+[1] [('string', 1)]  e.g. 'tuan roi khach nao mua nhieu tien nhat'
+      Tuần rồi khách nào mua nhiều tiền nhất?
+[1] [('number', 1)]  e.g. 'thang M ban ra bao nhieu noi lau ga la'
+      Tháng 11/2025 bán ra bao nhiêu nồi Lẩu gà lá é?
+[1] [('number', 1)]  e.g. 'thang M ban ra bao nhieu ly cold bre l'
+      Tháng 5/2025 bán ra bao nhiêu ly Cold brew (L)?
+[1] [('unanswerable', 1)]  e.g. 'check khach hay khen nhan vien nao nhat'
+      check giùm khách hay khen nhân viên nào nhất
+[1] [('unanswerable', 1)]  e.g. 'nhan vien nao co tay nghe cao nhat tiem'
+      nhân viên nào có tay nghề cao nhất tiệm
+[1] [('number', 1)]  e.g. 'coi tong doanh thu tuan roi la bao nhieu'
+      coi gium tong dthu tuan roi la bao nhieu
+[1] [('number', 1)]  e.g. 'loi nhuan rong thang N nam Y la bao nhieu'
+      Lợi nhuận ròng tháng 6 năm 2025 là bao nhiêu?
+[1] [('unanswerable', 1)]  e.g. 'ai trong cua hang duoc khach quy men nhat'
+      Ai trong cửa hàng đc khách quý mến nhất?
+[1] [('number', 1)]  e.g. 'hom qua cua hang ban ra tong cong may goi'
+      hqua cửa hàng bán ra tổng cộng mấy gói?
+[1] [('unanswerable', 1)]  e.g. 'cua hang co may khach o duong hai ba trung'
+      cửa hàng có mấy khách nhà ở đường Hai Bà Trưng
+[1] [('number', 1)]  e.g. 'N ngay gan nhat cua hang co bao nhieu bill'
+      7 ngày gần nhất cửa hàng có bnhiu bill
+[1] [('number', 1)]  e.g. 'minh dem so don ban trong ca chieu thang M.'
+      Giúp mình đếm số đơn bán trong ca chiều tháng 8/2025.
+[1] [('number', 1)]  e.g. 'ca chieu thang M co tong cong bao nhieu don'
+      Ca chiều tháng 10/2025 có tổng cộng bao nhiêu đơn?
+[1] [('number', 1)]  e.g. 'tien ban kem buoc N mm thang M la bao nhieu'
+      Tiền bán Kẽm buộc 1mm tháng 6/2026 là bao nhiêu vậy?
+[1] [('number', 1)]  e.g. 'tuan truoc cua hang ban ra tong cong may ly'
+      Tuần trước cửa hàng bán ra tổng cộng mấy ly?
+[1] [('number', 1)]  e.g. 'cho hoi so don N ngay gan nhat la bao nhieu'
+      cho hỏi số đơn 7 ngày gaanf nhất là bnhiu hả
+[1] [('number', 1)]  e.g. 'check tuan roi ca chieu ban duoc nhieu tien'
+      check giùm tuần rồi ca chiều bán dc nhiêu tiền
+[1] [('unanswerable', 1)]  e.g. 'coi tien ban tra vai l thang M la bao nhieu'
+      coi giumf tieenf bán Trà vải (L) tháng 3/2025 là bao nhiêu
+[1] [('number', 1)]  e.g. 'thang M ban ra bao nhieu dia rau cu kho quet'
+      thang 4/2025 ban ra bao nhieu dia rau cu kho quet ha
+[1] [('number', 1)]  e.g. 'cho toi biet doanh thu thuoc ke don thang M.'
+      Cho tôi biết dthu thuốc kê đơn tháng 3/2025.
+[1] [('number', 1)]  e.g. 'thang M nhom com mi chao ban duoc nhieu tien'
+      thangs 7/2025 nhóm cơm mì cháo bán dduwowcj nhiêu tiền
+[1] [('unanswerable', 1)]  e.g. 'ai la nguoi lanh nghe nhat trong so nhan vien'
+      Ai là người lành nghề nhất trong số nhân viên?
+[1] [('list', 1)]  e.g. 'liet ke N khach chi tieu nhieu nhat tuan roi.'
+      Liệt kê 3 khách chi tiêu nhiều nhất tuần rồi.
+[1] [('number', 1)]  e.g. 'thang M hang banh croissant thu ve nhieu tien'
+      tháng 3/2026 hàng Bánh croissant thu về nhiêu tiền đó
+[1] [('number', 1)]  e.g. 'thang M ban kho muc nuong duoc bao nhieu tien'
+      e thang 5/2025 ban kho muc nuong duoc bnhiu tien ta
+[1] [('unanswerable', 1)]  e.g. 'le phuc dat co le phep, nay dao voi khach hong'
+      lê phúc đạt có lễ phép, chu đáo với khách hông
+[1] [('number', 1)]  e.g. 'tien ban ban chai colgate thang M la bao nhieu'
+      Tiền bán Bàn chải Colgate tháng 9/2025 là bao nhiêu ạ?
+[1] [('number', 1)]  e.g. 'thang M ban ra nhieu phan topping thach ca phe'
+      tháng 2/2026 bán ra nhiêu phần topping thạch cà phê
+[1] [('number', 1)]  e.g. 'thang M mon tom nuong moi thu ve bao nhieu tien'
+      thang 7/2026 mon tom nuong moi thu ve bao nhieu tien
+[1] [('number', 1)]  e.g. 'thang N nam Y ban ra bao nhieu cai banh tiramisu'
+      Tháng 8 năm 2025 bán ra bao nhiêu cái Bánh tiramisu?
+[1] [('number', 1)]  e.g. 'thang M ban ra bao nhieu m ton lanh hoa sen N mm'
+      Tháng 8/2025 bán ra bao nhiêu m Tôn lạnh Hoa Sen 0.4mm?
+[1] [('number', 1)]  e.g. 'coi thang M ban ra bao nhieu dia dau que xao toi'
+      coi giùm tháng 1/2025 bán ra bn đĩa Đậu que xào tỏi
+[1] [('percent', 1)]  e.g. 'thang M nhom chien xao chiem bao nhieu % revenue'
+      thang 4/2026 nhom chien xao chiem bao nhiu % revenue
+[1] [('number', 1)]  e.g. 'thang M ban bay tho ho total N mm duoc nhieu tien'
+      ê tháng 4/2026 bán bay thợ hồ total 160mm được nhiêu tiền
+[1] [('number', 1)]  e.g. 'cuoi ngay hom nay banh tiramisu con bao nhieu cai'
+      Cuối ngày hôm nay Bánh tiramisu còn bao nhiêu cái vậy?
+[1] [('number', 1)]  e.g. 'thang M ban ra bao nhieu goi keo cha ron ebe N kg'
+      tháng 7/2025 bán ra bn gói keo chà ron weber 1kg
+[1] [('number', 1)]  e.g. 'tien ban goi xoai kho ca sac thang M la bao nhieu'
+      tiền bán gỏi xoài khô cá sặc tháng 5/2025 là bao nhiu
+[1] [('number', 1)]  e.g. 'het hnay, banh croissant con lai may cai trong kho'
+      het hnay, banh croissant con lai may cai trong kho ha
+[1] [('list', 1)]  e.g. 'top N san pham ban nhieu nhat tuan nay la nhung gi'
+      Top 5 sp bán nhiều nhất tuần này là những gì?
+[1] [('number', 1)]  e.g. 'cho hoi thang M ban ra bao nhieu ly sinh to xoai l'
+      Cho hỏi tháng 3/2025 bán ra bao nhiêu ly Sinh tố xoài (L)?
+[1] [('number', 1)]  e.g. 'thang M mon com trang ban duoc total bao nhieu phan'
+      thang 11/2025 mon com trang ban dc total bnhiu phan
+[1] [('number', 1)]  e.g. 'thang M hang pin panasonic aa thu ve bao nhieu tien'
+      thang 7/2025 hang Pin Panasonic AA thu ve bnhiu tien
+[1] [('number', 1)]  e.g. 'den cuoi ngay D, shop co may mat hang dang het hang'
+      Đến cuối ngày 12/06/2026, shop có mấy mặt hàng đang hết hàng?
+[1] [('number', 1)]  e.g. 'gia ban mot m N cat san lap vao ngay D la bao nhieu'
+      gia ban mot m3 Cat san lap vao ngay 21/06/2025 la bao nhieu z
+[1] [('number', 1)]  e.g. 'thang M hang nuoc ep dua hau l thu ve bao nhieu tien'
+      thang 3/2026 hang nuoc ep dua hau (l) thu ve bao nhieu tien ha
+[1] [('percent', 1)]  e.g. 'ee tuan roi doanh thu ca chieu chenh ca sang nhieu %'
+      ee tuần rồi dthu ca chiều chênh ca sangs nhiêu %
+[1] [('unanswerable', 1)]  e.g. 'het hom nay, bia tige N ml con lai may lon trong kho'
+      het hom nay, bia tiger 330ml con lai may lon trong kho ha
+[1] [('number', 1)]  e.g. 'thang M ban xuc xich vissan N cay duoc bao nhieu tien'
+      Tháng 5/2026 bán Xúc xích Vissan 5 cây được bao nhiêu tiền?
+[1] [('number', 1)]  e.g. 'gia ban mot phan ngheu hap sa vao ngay D la bao nhieu'
+      gia ban mot phan Ngheu hap sa vao ngay 16/11/2025 la bao nhieu
+[1] [('number', 1)]  e.g. 'ngay D cua hang ban tom nuong moi gia bao nhieu mot dia'
+      ngay 27/04/2026 cua hang ban Tom nuong moi gia bao nhieu mot dia
+[1] [('number', 1)]  e.g. 'so ly nuoc ep cam m ban duoc trong thang M la bao nhieu'
+      Số ly Nước ép cam (M) bán đc trong tháng 9/2025 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'thang M ban mi hao hao tom chua cay duoc bao nhieu tien'
+      thang 5/2026 ban mi hao hao tom chua cay dc bn tien
+[1] [('number', 1)]  e.g. 'thang M nhom thuc pham chuc nang ban duoc bao nhieu tien'
+      Tháng 10/2025 nhóm thực phẩm chức năng bán được bao nhiêu tiền?
+[1] [('number', 1)]  e.g. 'ton kho banh oreo N g cuoi ngay hom nay la bao nhieu goi'
+      ton kho banh oreo 133g cuoi ngay hom nay la bao nhieu goi
+[1] [('number', 1)]  e.g. 'ngay D cua hang ban rau cu kho quet gia bao nhieu mot dia'
+      Ngày 14/11/2025 cửa hàng bán Rau củ kho quẹt giá bao nhiêu một đĩa?
+[1] [('number', 1)]  e.g. 'thang M ban ong pvc binh minh d N cay N m duoc nhieu tien'
+      tháng 4/2025 bans ống pvc bình minh D50 cây 4m được nhiêu tieenf
+[1] [('number', 1)]  e.g. 'thang M ban gach ong N x N x N tuynel duoc bao nhieu tien'
+      Tháng 5/2025 bán Gạch ống 8x8x18 Tuynel đc bao nhiêu tiền?
+[1] [('number', 1)]  e.g. 'gia ban mot goi thuoc la vinataba vao ngay D la bao nhieu'
+      Giá bán một gói Thuốc lá Vinataba vào ngày 28/07/2025 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'xem tru het chi phi roi thi thang M con lai rong bao nhieu'
+      Xem giúp trừ hết chi phí rồi thì tháng 1/2025 còn lãi ròng bao nhiêu?
+[1] [('number', 1)]  e.g. 'coi revenue thuoc hoat chat ibuprofen thang M la bao nhieu'
+      coi gium revenue thuoc hoat chat ibuprofen thang 3/2025 la bnhiu nhi
+[1] [('unanswerable', 1)]  e.g. 'het hom nay, gach dac N x N x N con lai may vien trong kho'
+      hết hôm nay, gạch thẻ đặc 4x8x18 còn laij mấy viên trong kho
+[1] [('unanswerable', 1)]  e.g. 'cuoi ngay hom nay cb panasonic mcb N p N con bao nhieu cai'
+      Cuối ngày hôm nay CB Panasonic MCB 2P 20A còn bao nhiêu cái?
+[1] [('number', 1)]  e.g. 'so dia goi bo bop thau ban duoc trong thang M la bao nhieu'
+      số đĩa gỏi bò bóp thấu bán đươc trong tháng 12/2025 là bn
+[1] [('number', 1)]  e.g. 'coi thang N nam Y ban ra bao nhieu cuc xa bong lifebuoy N g'
+      coi gium thang 7 nam 2026 ban ra bao nhiu cuc xa bong lifebuoy 90g vay
+[1] [('number', 1)]  e.g. 'cho toi biet doanh thu cac don tra bang tien tuoi thang nay'
+      cho toi biet dthu cac don tra bang tien tuoi thang nay
+[1] [('number', 1)]  e.g. 'cho hoi thang M ban ra bao nhieu dia ba chi chien chay canh'
+      Cho hỏi tháng 1/2025 bán ra bao nhiêu đĩa Ba chỉ chiên cháy cạnh?
+[1] [('number', 1)]  e.g. 'thang M ban ra bao nhieu lo v.rohto vitamin nho mat lo N ml'
+      Tháng 5/2025 bán ra bao nhiêu lọ V.Rohto Vitamin nhỏ mắt lọ 13ml?
+[1] [('number', 1)]  e.g. 'het bua nay, xa bong lifebuoy N g con lai may cuc trong kho'
+      het bua nay, Xa bong Lifebuoy 90g con lai may cuc trong kho
+[1] [('number', 1)]  e.g. 'so dia rau muong xao toi ban duoc trong thang M la bao nhieu'
+      Số đĩa Rau muống xào tỏi bán được trong tháng 3/2025 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'het hom nay, ga saigon petro N kg con lai may binh trong kho'
+      Hết hôm nay, Gas Saigon Petro 12kg còn lại mấy bình trong kho?
+[1] [('number', 1)]  e.g. 'tong cong no khach hang chua thu den het ngay D la bao nhieu'
+      tong cong no khach hang chua thu den het ngay 24/08/2025 la bao nhieu
+[1] [('number', 1)]  e.g. 'thang M mat hang tra sua o long l ban duoc total bao nhieu ly'
+      tháng 11/2025 mặt hàng trà sữa ô long (l) bán đc total bn ly
+[1] [('number', 1)]  e.g. 'thang M ban xi mang inse power-s bao N kg duoc bao nhieu tien'
+      Tháng 2/2026 bán Xi măng INSEE Power-S bao 50kg được bao nhiêu tiền?
+[1] [('unanswerable', 1)]  e.g. 'nhan vien phung thu trang lam viec co tan tam voi khach khong'
+      Nhân viên Phùng Thu Trang làm việc có tận tâm với khách không?
+[1] [('number', 1)]  e.g. 'xem gia ban mot con ca loc nuong trui vao ngay D la bao nhieu'
+      Xem giúp giá bán một con Cá lóc nướng trui vào ngày 12/06/2025 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'trong thang M, bao nhieu san pham co mat trong it nhat N bill'
+      trong tháng 11/2025, bao nhiêu sp có mặt trong ít nhất 145 bill
+[1] [('number', 1)]  e.g. 'thang M ban ra bao nhieu tuyp acyclovi stella kem N% tuyp N g'
+      Tháng 2/2025 bán ra bao nhiêu tuýp Acyclovir Stella kem 5% tuýp 5g vậy?
+[1] [('number', 1)]  e.g. 'toi het ngay D, cua hang con bao nhieu tien khach no chua thu'
+      tới hết ngày 17/10/2025, cửa hàng còn bn tiền khách nợ chưa thu
+[1] [('number', 1)]  e.g. 'ngay D cua hang ban bo van day ga namilu gia bao nhieu mot bo'
+      e ngay 01/01/2026 cua hang ban bo van day gas namilux gia bnhiu mot bo
+[1] [('number', 1)]  e.g. 'ngay D cua hang ban ca phe muoi l voi don gia bao nhieu mot ly'
+      Ngày 14/07/2025 cửa hàng bán Cà phê muối (L) với đơn giá bao nhiêu một ly?
+[1] [('string', 1)]  e.g. 'cung cap nao duoc cua hang nhap hang nhieu tien nhat thang nay'
+      Nhà cung cấp nào được cửa hàng nhập hàng nhiều tiền nhất tháng này vậy?
+[1] [('number', 1)]  e.g. 'cho minh hoi doanh thu tu dau nam toi het hom nay la bao nhieu'
+      Cho mình hỏi doanh thu từ đầu năm tới hết hôm nay là bao nhiêu?
+[1] [('number', 1)]  e.g. 'check cong moi mon tinh theo ly, tuan truoc ban ra duoc may ly'
+      check gium cong moi mon tinh theo ly, tuan trc ban ra dc may ly ha
+[1] [('date', 1)]  e.g. 'lo oresol N dhg hop N goi gan het han nhat co han dung ngay nao'
+      Lô Oresol 245 DHG hộp 20 gói gần hết hạn nhất có hạn dùng ngày nào?
+[1] [('number', 1)]  e.g. 'thang M ban thep hop N x N day N mm cay N m duoc bao nhieu tien'
+      tháng 2/2026 bán thép hộp 40x80 dày 1.4mm cây 6m dc bao nhiêu tiền
+[1] [('number', 1)]  e.g. 'so dia long me ga xao sa te ban duoc trong thang M la bao nhieu'
+      số đĩa Lòng mề gà xào sa tế bán dc trong tháng 6/2025 là bao nhiu
+[1] [('number', 1)]  e.g. 'nhan vien bui dung lan thang M ban duoc tong cong bao nhieu tien'
+      nhan vien Bui Dung Lan thang 1/2026 ban duoc tong cong bao nhieu tien ha
+[1] [('number', 1)]  e.g. 'het hom nay, efticol N% loc N lo x N ml con lai may lo trong kho'
+      het hom nay, Efticol 0,9% loc 10 lo x 10ml con lai may lo trong kho
+[1] [('number', 1)]  e.g. 'thang M mat hang nuoc tinh khiet vihaa N l thu ve bao nhieu tien'
+      thang 12/2025 mat hang nuoc tinh khiet vihawa 20L thu ve bn tien
+[1] [('number', 1)]  e.g. 'thang M gia nhap binh quan mot bo van day ga namilu la bao nhieu'
+      Tháng 4/2026 giá nhập bình quân một Bộ van dây gas Namilux là bao nhiêu?
+[1] [('number', 1)]  e.g. 'thang M hang nuoc khoang lavie N l ban duoc tong cong nhieu binh'
+      tháng 5/2025 hàng nước khoáng lavie 19L bán được tổng cộng nhiêu bình
+[1] [('string', 1)]  e.g. 'cho hoi ai la khach co so don mua nhieu nhat trong thang N nam Y'
+      Cho hỏi ai là khách có số đơn mua nhiều nhất trong tháng 1 năm 2026?
+[1] [('number', 1)]  e.g. 'gia ban mot hop sua thang true milk N ml vao ngay D la bao nhieu'
+      Giá bán một hộp Sữa TH true MILK 180ml vào ngày 08/07/2026 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'check doanh thu nhom hang giam dau sot thang N nam Y la bao nhieu'
+      check giùm doanh thu nhóm hàng giảm đau hạ sốt tháng 12 năm 2025 là bn
+[1] [('number', 1)]  e.g. 'ngay D cua hang ban thep cuon phi N hoa phat gia bao nhieu mot kg'
+      Ngày 01/07/2025 cửa hàng bán Thép cuộn phi 6 Hòa Phát giá bao nhiêu một kg?
+[1] [('number', 1)]  e.g. 'ngay D cua hang ban dau phong rang muoi N g gia bao nhieu mot goi'
+      Ngày 27/03/2026 cửa hàng bán Đậu phộng rang muối 200g giá bao nhiêu một gói?
+[1] [('number', 1)]  e.g. 'trong thang N nam Y cua hang ban duoc may dia com chien duong chau'
+      trong tháng 5 năm 2026 cửa hàng bán được mấy đĩa cơm chiên dương châu z
+[1] [('number', 1)]  e.g. 'den het ngay D, cac khoan no co tuoi qua N ngay con bao nhieu tien'
+      đến hết ngày 25/04/2026, các khoản nợ có tuổi quá 15 ngày còn bao nhiu tiền
+[1] [('string', 1)]  e.g. 'san pham mang lai loi nhuan gop lon nhat trong thang N nam Y la gi'
+      Sản phẩm mang lại lợi nhuận gộp lớn nhất trong tháng 3 năm 2025 là gì vậy?
+[1] [('unanswerable', 1)]  e.g. 'thang M, tra hang vi loi va tra vi mua nham, ben nao nhieu don hon'
+      thang 3/2026, tra hang vi loi va tra vi mua nham, ben nao nhieu don hon
+[1] [('number', 1)]  e.g. 'cho minh hoi so kg dinh N phan ban duoc trong thang M la bao nhieu'
+      Cho mình hỏi số kg Đinh 5 phân bán được trong tháng 9/2025 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'cho hoi doanh thu cua nhan vien ma nhan vien N thang M la bao nhieu'
+      cho hoi dthu cua nhan vien ma NV001 thang 4/2025 la bao nhieu
+[1] [('number', 1)]  e.g. 'gia ban mot bao xi mang tien pcb N bao N kg vao ngay D la bao nhieu'
+      giá bán một bao Xi măng Hà Tiên PCB40 bao 50kg vào ngày 17/09/2025 là bao nhiêu
+[1] [('number', 1)]  e.g. 'N ngay gan nhat, cua hang co may mat hang han, khong ai mua cai nao'
+      7 ngày gần nhất, cửa hàng có mấy mặt hàng ế hẳn, ko ai mua cái nào?
+[1] [('number', 1)]  e.g. 'trong thang N nam Y cua hang ban duoc may dia ma heo nuong nuoc mam'
+      Trong tháng 12 năm 2025 cửa hàng bán được mấy đĩa Má heo nướng nước mắm vậy?
+[1] [('number', 1)]  e.g. 'doanh thu cua ton lanh hoa sen N mm trong thang N nam Y la bao nhieu'
+      Doanh thu của Tôn lạnh Hoa Sen 0.4mm trong tháng 7 năm 2025 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'gia ban mot bao bot tret jotun noi that N kg vao ngay D la bao nhieu'
+      Giá bán một bao Bột trét Jotun nội thất 40kg vào ngày 03/05/2026 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'ngay D cua hang ban vu heo nuong sa te voi don gia bao nhieu mot dia'
+      Ngày 03/05/2026 cửa hàng bán Vú heo nướng sa tế với đơn giá bao nhiêu một đĩa?
+[1] [('number', 1)]  e.g. 'so cai bep ga doi rinnai rv-N sw ban duoc trong thang M la bao nhieu'
+      so cai bep gas doi rinnai rv-375SW ban duoc trong thang 9/2025 la bn z
+[1] [('number', 1)]  e.g. 'coi thang M ban decolgen forte hop N vi x N vien duoc bao nhieu tien'
+      coi gium thang 5/2025 ban decolgen forte hop 30 vi x 4 vien duoc bn tien nhi
+[1] [('unanswerable', 1)]  e.g. 'thuoc co hoat chat nhom phosphat nguoi lon nen uong moi lan may vien'
+      thuốc có hoạt chất nhôm phosphat người lớn nên uống mỗi lần mấy viên
+[1] [('number', 1)]  e.g. 'thang M mat hang chan ga ngam sa tac ban duoc tong cong bao nhieu dia'
+      thang 9/2025 mat hang Chan ga ngam sa tac ban duoc tong cong bao nhiu dia
+[1] [('number', 1)]  e.g. 'thang M mat hang sua tuoi tran chau duong den m thu ve bao nhieu tien'
+      Tháng 3/2026 mặt hàng Sữa tươi trân châu đường đen (M) thu về bao nhiêu tiền?
+[1] [('number', 1)]  e.g. 'xem thang M mat hang dau que xao toi ban duoc tong cong bao nhieu dia'
+      Xem giúp tháng 9/2025 mặt hàng Đậu que xào tỏi bán được tổng cộng bao nhiêu đĩa?
+[1] [('number', 1)]  e.g. 'coi thang M ban enterogermina N ty/N ml hop N ong duoc bao nhieu tien'
+      coi giùm tháng 11/2025 bans Enterogermina 2 tỷ/5ml hộp 20 ống đc bn tieenf
+[1] [('number', 1)]  e.g. 'het hnay, enterogermina N ty/N ml hop N ong con lai may ong trong kho'
+      hết hnay, Enterogermina 2 tỷ/5ml hộp 20 ống còn lại mấy ống trong kho
+[1] [('number', 1)]  e.g. 'cho hoi trong thang N nam Y cua hang ban duoc may to canh chua ca loc'
+      Cho hỏi trong tháng 3 năm 2025 cửa hàng bán được mấy tô Canh chua cá lóc?
+[1] [('date', 1)]  e.g. 'lo dau gio xanh con o chai N ml gan het han nhat co han dung ngay nao'
+      lo dau gio xanh con o chai 12ml gan het han nhat co han dung ngay nao
+[1] [('number', 1)]  e.g. 'hom nay kho con ton bao nhieu hop kem danh rang p/s N g luc cuoi ngay'
+      hôm nay kho còn tồn bao nhiu hộp Kem đánh răng P/S 180g lúc cuối ngày
+[1] [('number', 1)]  e.g. 'thang M ban o cam doi N chau panasonic ide ev N sw duoc bao nhieu tien'
+      tháng 8/2025 bán ổ cắm đôi 3 chấu panasonic wide WEV1582SW dc bao nhiêu tiền
+[1] [('number', 1)]  e.g. 'thang M ban ra bao nhieu thung son lot jotun jotashield chong kiem N l'
+      Tháng 2/2026 bán ra bao nhiêu thùng Sơn lót Jotun Jotashield chống kiềm 5L vậy?
+[1] [('number', 1)]  e.g. 'cho hoi den het ngay D, so khach con cong no voi cua hang la bao nhieu'
+      Cho hỏi đến hết ngày 21/06/2025, số khách còn công nợ với cửa hàng là bao nhiêu?
+[1] [('number', 1)]  e.g. 'cong moi mat hang tinh theo binh, N ngay gan nhat ban ra duoc may binh'
+      Cộng mọi mặt hàng tính theo bình, 7 ngày gần nhất bán ra đc mấy bình?
+[1] [('unanswerable', 1)]  e.g. 'xem thang M khach o duong nguyen van linh mua tong cong bao nhieu tien'
+      Xem giúp tháng 4/2026 khách ở đường Nguyễn Văn Linh mua tổng cộng bao nhiêu tiền?
+[1] [('number', 1)]  e.g. 'cho hoi thang M mat hang thep pomina d N cay N m thu ve bao nhieu tien'
+      Cho hỏi tháng 9/2025 mặt hàng Thép Pomina D16 cây 11.7m thu về bao nhiêu tiền?
+[1] [('number', 1)]  e.g. 'coi trong thang N nam Y cua hang ban duoc may dia goi ngo sen tom thit'
+      coi gium trong thang 5 nam 2025 cua hang ban duoc may dia goi ngo sen tom thit do
+[1] [('number', 1)]  e.g. 'ngay D cua hang ban nuoc tinh khiet bidrico N l gia bao nhieu mot binh'
+      ngày 23/05/2025 cửa hàng bán nước tinh khiết bidrico 20L giá bao nhiu một bình
+[1] [('percent', 1)]  e.g. 'dip tet am lich Y co doanh thu hon hay kem N ngay truoc tet bao nhieu %'
+      Dịp Tết âm lịch 2026 có doanh thu hơn hay kém 17 ngày trước Tết bao nhiêu %?
+[1] [('number', 1)]  e.g. 'thang M mat hang ma heo nuong nuoc mam ban duoc tong cong bao nhieu dia'
+      thang 5/2025 mat hang ma heo nuong nuoc mam ban duoc tong cong bao nhieu dia
+[1] [('number', 1)]  e.g. 'ngay D cua hang ban kem danh rang p/s N g voi don gia bao nhieu mot hop'
+      Ngày 01/11/2025 cửa hàng bán Kem đánh răng P/S 180g với đơn giá bao nhiêu một hộp?
+[1] [('number', 1)]  e.g. 'cho hoi ngay D cua hang ban ngheu hap sa voi don gia bao nhieu mot phan'
+      Cho hỏi ngày 26/05/2026 cửa hàng bán Nghêu hấp sả với đơn giá bao nhiêu một phần?
+[1] [('number', 1)]  e.g. 'tien ban efferalgan N mg vien sui hop N vi x N vien thang M la bao nhieu'
+      Tiền bán Efferalgan 500mg viên sủi hộp 4 vỉ x 4 viên tháng 12/2025 là bao nhiêu?
+[1] [('date', 1)]  e.g. 'lo acyclovi stella kem N% tuyp N g gan het han nhat co han dung ngay nao'
+      lô acyclovir stella kem 5% tuýp 5g gần hết hạn nhất có hạn dùng ngày nào
+[1] [('number', 1)]  e.g. 'thang M mat hang tam thach cao gyproc N mm N x N m thu ve bao nhieu tien'
+      thang 6/2025 mat hang Tam thach cao Gyproc 9mm 1.2x2.4m thu ve bnhiu tien vay
+[1] [('list', 1)]  e.g. 'xem khach thai nhung hai thang nay no them bao nhieu, tra duoc bao nhieu'
+      Xem giúp khách Thái Nhung Hải tháng này nợ thêm bao nhiêu, trả được bao nhiêu?
+[1] [('number', 1)]  e.g. 'trong thang N nam Y cua hang ban duoc may cai thuoc thuy nhom total N cm'
+      Trong tháng 5 năm 2025 cửa hàng bán được mấy cái Thước thủy nhôm Total 60cm?
+[1] [('number', 1)]  e.g. 'thang M hang siro ho cam ich chai N ml ban duoc tong cong bao nhieu chai'
+      thang 3/2026 hang Siro ho cam Ich Nhi chai 90ml ban dc tong cong bao nhieu chai do
+[1] [('number', 1)]  e.g. 'thang M gia nhap binh quan mot cay bang keo dien nano N yard la bao nhieu'
+      tháng 1/2025 giá nhập bình quân một cây băng keo điện nano 20 yard là bao nhiu
+[1] [('number', 1)]  e.g. 'thang M gia nhap binh quan mot thung mi hao hao tom chua cay la bao nhieu'
+      Tháng 4/2026 giá nhập bình quân một thùng Mì Hảo Hảo tôm chua cay là bao nhiêu?
+[1] [('percent', 1)]  e.g. 'cho minh hoi tuan truoc so don ca chieu chenh ca sang bao nhieu phan tram'
+      Cho mình hỏi tuần trước số đơn ca chiều chênh ca sáng bao nhiêu phần trăm?
+[1] [('number', 1)]  e.g. 'cho hoi doanh thu cua vu heo nuong sa te trong thang N nam Y la bao nhieu'
+      cho hoi dthu cua vu heo nuong sa te trong thang 12 nam 2025 la bao nhiu
+[1] [('list', 1)]  e.g. 'cuoi ngay hom nay luoi b N ma kem kho N m con may cuon N m chan, may m le'
+      cuối ngày hoom nay lưới B40 mạ kẽm khổ 1.5m còn mấy cuộn 10m chẵn, maays m lẻ
+[1] [('number', 1)]  e.g. 'tien von dang nam o cac lo con ton co han dung tu D den het D la bao nhieu'
+      tiền vốn đang nằm ở các lô còn tồn có hạn dùng từ 28/06/2026 đến hết 26/09/2026 là bnhiu vậy
+[1] [('number', 1)]  e.g. 'trong thang N nam Y cua hang ban duoc may hop doppelherz ginkgo hop N vien'
+      Trong tháng 6 năm 2026 cửa hàng bán được mấy hộp Doppelherz Ginkgo hộp 30 viên?
+[1] [('number', 1)]  e.g. 'cho minh hoi doanh thu cua sinh to xoai l trong thang N nam Y la bao nhieu'
+      Cho mình hỏi doanh thu của Sinh tố xoài (L) trong tháng 12 năm 2025 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'check trong thang N nam Y cua hang ban duoc may phan topping tran chau den'
+      check gium trong thang 8 nam 2025 cua hang ban duoc may phan topping tran chau den
+[1] [('number', 1)]  e.g. 'cho hoi trong thang N nam Y cua hang ban duoc may dia goi khoai mon hai san'
+      Cho hỏi trong tháng 3 năm 2025 cửa hàng bán được mấy đĩa Gỏi khoai môn hải sản?
+[1] [('number', 1)]  e.g. 'trong thang N nam Y cua hang ban duoc may tuyp voltaren emulgel N% tuyp N g'
+      trong thang 4 nam 2025 cua hang ban dc may tuyp voltaren emulgel 1% tuyp 20g
+[1] [('number', 1)]  e.g. 'theo ton kho ngay D, co may lo hang con ton se het han tu nay den het ngay D'
+      Theo tồn kho ngày 25/05/2026, có mấy lô hàng còn tồn sẽ hết hạn từ nay đến hết ngày 22/09/2026?
+[1] [('number', 1)]  e.g. 'ngay D cua hang ban enervon hop N vi x N vien voi don gia bao nhieu mot vien'
+      Ngày 18/02/2025 cửa hàng bán Enervon hộp 10 vỉ x 10 viên với đơn giá bao nhiêu một viên?
+[1] [('number', 1)]  e.g. 'ngay D cua hang ban giay ve sinh pulppy N cuon voi don gia bao nhieu mot loc'
+      ngay 08/04/2026 cua hang ban giay ve sinh pulppy 10 cuon voi don gia bao nhieu mot loc
+[1] [('percent', 1)]  e.g. 'trong tuan truoc, doanh thu ca chieu hon hay kem ca sang bao nhieu phan tram'
+      Trong tuần trước, dthu ca chiều hơn hay kém ca sáng bao nhiêu phần trăm?
+[1] [('number', 1)]  e.g. 'dem toi so mon ban cham den muc trong N ngay gan nhat khong ban duoc lan nao'
+      dem giup toi so mon ban cham den muc trong 7 ngay gan nhat khong ban dc lan nao
+[1] [('number', 1)]  e.g. 'doanh thu cua sua tuoi tran chau duong den l trong thang N nam Y la bao nhieu'
+      dthu cuar Sữa tươi trân châu đường đen (L) trong thangs 6 năm 2025 là bao nhiêu
+[1] [('list', 1)]  e.g. 'thang M, vo thao khanh ghi no them bao nhieu tien va da tra no duoc bao nhieu'
+      Tháng 7/2025, Võ Thảo Khánh ghi nợ thêm bao nhiêu tiền và đã trả nợ được bao nhiêu?
+[1] [('number', 1)]  e.g. 'het hnay, amlodipin N mg domesco hop N vi x N vien con lai may vien trong kho'
+      Hết hnay, Amlodipin 5mg Domesco hộp 3 vỉ x 10 viên còn lại mấy viên trong kho
+[1] [('number', 1)]  e.g. 'thang M cua hang nhap thep pomina d N cay N m binh quan bao nhieu tien mot cay'
+      tháng 8/2025 cửa hàng nhập thép pomina D10 cây 11.7m bình quân bao nhiêu tieenf một cây
+[1] [('number', 1)]  e.g. 'giai doan tu D den het D co tong cong may mat hang ees, ban khong duoc mon nao'
+      giai đoạn từ 25/06/2026 đến heets 01/07/2026 có tổng cộng mấy mặt hàng ees, bán ko dc món nào hả
+[1] [('number', 1)]  e.g. 'hom D, sua tuoi tran chau duong den m ban ra voi don gia bao nhieu tien mot ly'
+      hôm 09/05/2026, sữa tươi trân châu đường đen (m) bán ra vowis ddown giá bnhiu tiền một ly
+[1] [('number', 1)]  e.g. 'hom D, ong pvc binh minh d N cay N m ban ra voi don gia bao nhieu tien mot cay'
+      Hôm 04/10/2025, Ống PVC Bình Minh D50 cây 4m bán ra với đơn giá bao nhiêu tiền một cây?
+[1] [('number', 1)]  e.g. 'tinh den cuoi ngay hom nay, trong kho con may bao bot tret jotun noi that N kg'
+      tính đến cuối ngày hôm nay, trong kho còn mấy bao Bột trét Jotun nội thất 40kg
+[1] [('number', 1)]  e.g. 'thang M mat hang otrivin N% xit mui chai N ml ban duoc tong cong bao nhieu chai'
+      Tháng 7/2025 mặt hàng Otrivin 0,1% xịt mũi chai 10ml bán được tổng cộng bao nhiêu chai?
+[1] [('number', 1)]  e.g. 'trong thang M, mi omachi suon ham nhap vao gia binh quan mot thung la bao nhieu'
+      Trong tháng 1/2025, Mì Omachi sườn hầm nhập vào giá bình quân một thùng là bao nhiêu ạ?
+[1] [('number', 1)]  e.g. 'hom nay kho con ton bao nhieu chai siro an ngon ich plu chai N ml luc cuoi ngay'
+      hnay kho còn tồn bao nhiêu chai Siro ăn ngon Ích Nhi Plus chai 100ml lúc cuối ngày?
+[1] [('percent', 1)]  e.g. 'cho hoi doanh thu dip tet nam nay thay doi bao nhieu % so voi dip tet nam ngoai'
+      Cho hỏi doanh thu dịp Tết năm nay thay đổi bao nhiêu % so với dịp Tết năm ngoái?
+[1] [('number', 1)]  e.g. 'cho hoi hom nay kho con ton bao nhieu goi dau phong rang muoi N g luc cuoi ngay'
+      cho hỏi hnay kho còn tồn bao nhiu gói đậu phộng rang muối 200g lúc cuối ngày
+[1] [('unanswerable', 1)]  e.g. 'cuoi ngay D, tong gia tri hang con trong kho tinh theo gia von la bao nhieu tien'
+      Cuối ngày 09/07/2026, tổng giá trị hàng còn trong kho tính theo giá vốn là bao nhiêu tiền?
+[1] [('number', 1)]  e.g. 'tinh den cuoi ngay hom nay, trong kho con may lo v.rohto vitamin nho mat lo N ml'
+      tính đến cuối ngày hôm nay, trong kho còn mấy lọ V.Rohto Vitamin nhỏ mắt lọ 13ml vậy
+[1] [('unanswerable', 1)]  e.g. 'thang nay, bach hung ngan ghi no them bao nhieu tien va da tra no duoc bao nhieu'
+      tháng này, bạch hùng ngân ghi nợ thêm bn tiền và đã trả nợ được bao nhiêu
+[1] [('number', 1)]  e.g. 'xem thang M tien hang cac don nhan vien ma nhan vien N ban cong lai la bao nhieu'
+      Xem giúp tháng 2/2026 tiền hàng các đơn do nhân viên mã NV002 bán cộng lại là bao nhiêu?
+[1] [('unanswerable', 1)]  e.g. 'het hom nay trong kho con bao nhieu hop banh croissant nguyen va bao nhieu cai le'
+      Hết hôm nay trong kho còn bao nhiêu hộp Bánh croissant nguyên và bao nhiêu cái lẻ?
+[1] [('number', 1)]  e.g. 'xem gia ban mot bo cong tac N chieu panasonic ide kem mat vao ngay D la bao nhieu'
+      Xem giúp giá bán một bộ Công tắc 1 chiều Panasonic Wide kèm mặt vào ngày 09/05/2026 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'chenh lech nhap tru ban cua smecta hop N goi trong thang N nam Y la bao nhieu goi'
+      Chênh lệch nhập trừ bán của Smecta hộp 30 gói trong tháng 4 năm 2026 là bao nhiêu gói?
+[1] [('number', 1)]  e.g. 'cho minh hoi thang M ban ra bao nhieu chai nurofen fo children hon dich chai N ml'
+      Cho mình hỏi tháng 12/2025 bán ra bao nhiêu chai Nurofen for Children hỗn dịch chai 60ml?
+[1] [('number', 1)]  e.g. 'doanh thu cua may bom nuoc panasonic gp-N jxk N w trong thang N nam Y la bao nhieu'
+      dthu của Máy bơm nước Panasonic GP-129JXK 125W trong tháng 12 năm 2025 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'xem hom D, xi mang inse power-s bao N kg ban ra voi don gia bao nhieu tien mot bao'
+      Xem giúp hôm 19/08/2025, Xi măng INSEE Power-S bao 50kg bán ra với đơn giá bao nhiêu tiền một bao?
+[1] [('number', 1)]  e.g. 'cho hoi thang M gia nhap binh quan mot loc efticol N% loc N lo x N ml la bao nhieu'
+      cho hỏi tháng 11/2025 giá nhập bình quân một lốc efticol 0,9% lốc 10 lọ x 10ml là bn
+[1] [('number', 1)]  e.g. 'cho minh hoi tien ban berocca performance vien sui tuyp N vien thang M la bao nhieu'
+      Cho mình hỏi tiền bán Berocca Performance viên sủi tuýp 10 viên tháng 2/2025 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'thang M, so nhap tru so ban cua telfast hd N mg hop N vi x N vien la bao nhieu vien'
+      Tháng 3/2025, số nhập trừ số bán của Telfast HD 180mg hộp 3 vỉ x 10 viên là bao nhiêu viên?
+[1] [('number', 1)]  e.g. 'coi ton kho bio-acimin gold men vi sinh hop N goi cuoi ngay hom nay la bao nhieu goi'
+      coi gium ton kho bio-acimin gold men vi sinh hop 30 goi cuoi ngay hom nay la bn goi
+[1] [('number', 1)]  e.g. 'hom D, betadine gargle suc hong chai N ml ban ra voi don gia bao nhieu tien mot chai'
+      hom 25/11/2025, betadine gargle suc hong chai 125ml ban ra voi don gia bnhiu tien mot chai
+[1] [('list', 1)]  e.g. 'cuoi ngay hom nay cat xay to trong kho con bao nhieu xe N m N chan, le bao nhieu m N'
+      cuoi ngay hom nay Cat xay to trong kho con bao nhiu xe 4m3 chan, le bao nhieu m3
+[1] [('list', 1)]  e.g. 'den het ngay D, so tien con no chia theo tuoi no N N, N N va tren N ngay la bao nhieu'
+      Đến hết ngày 04/12/2025, số tiền còn nợ chia theo tuổi nợ 0–7, 8–15 và trên 15 ngày là bao nhiêu?
+[1] [('number', 1)]  e.g. 'xem thang M mat hang blackmore bio c N mg hop N vien ban duoc tong cong bao nhieu hop'
+      Xem giúp tháng 8/2025 mặt hàng Blackmores Bio C 1000mg hộp 31 viên bán được tổng cộng bao nhiêu hộp?
+[1] [('number', 1)]  e.g. 'thang M mat hang may bom nuoc panasonic gp-N jxk N w ban duoc tong cong bao nhieu cai'
+      Tháng 4/2026 mặt hàng Máy bơm nước Panasonic GP-129JXK 125W bán được tổng cộng bao nhiêu cái?
+[1] [('number', 1)]  e.g. 'thang M gia nhap binh quan mot hop calcium corbiere extra N ml hop N ong la bao nhieu'
+      thang 7/2025 gia nhap binh quan mot hop calcium corbiere extra 10ml hop 30 ong la bao nhieu
+[1] [('number', 1)]  e.g. 'trong thang N nam Y cua hang ban duoc may thung gach lat nen prime N x N thung N vien'
+      trong tháng 5 năm 2026 cửa hàng bán dc mấy thùng gạch lát nền prime 60x60 thùng 4 viên ddos
+[1] [('unanswerable', 1)]  e.g. 'thang M, khach duong le trong tan va khach duong tran nao, ben nao mua nhieu tien hon'
+      Tháng 2/2025, khách đường Lê Trọng Tấn và khách đường Trần Não, bên nào mua nhiều tiền hơn nhỉ?
+[1] [('number', 1)]  e.g. 'cho minh hoi ngay D cua hang ban nuoc kiem ion life N l voi don gia bao nhieu mot binh'
+      Cho mình hỏi ngày 19/03/2026 cửa hàng bán Nước kiềm Ion Life 19L với đơn giá bao nhiêu một bình?
+[1] [('number', 1)]  e.g. 'xem het hom nay, bang ca nhan urgo transparent hop N mieng con lai may mieng trong kho'
+      Xem giúp hết hôm nay, Băng cá nhân Urgo Transparent hộp 100 miếng còn lại mấy miếng trong kho?
+[1] [('number', 1)]  e.g. 'minh tinh den cuoi ngay hom nay, trong kho con may vien strepsil col hop N vi x N vien'
+      Giúp mình tính đến cuối ngày hôm nay, trong kho còn mấy viên Strepsils Cool hộp 2 vỉ x 12 viên?
+[1] [('number', 1)]  e.g. 'so cay ong luon day dien sino san pham d N cay N m ban duoc trong thang M la bao nhieu'
+      Số cây Ống luồn dây điện Sino SP D20 cây 2.92m bán đc trong tháng 6/2025 là bao nhiêu
+[1] [('number', 1)]  e.g. 'coi trong thang N nam Y cua hang ban duoc may cuon day dien cadivi vcmd N x N cuon N m'
+      coi giùm trong tháng 8 năm 2025 cửa hàng bán được mấy cuộn Dây điện Cadivi VCmd 2x2.5 cuộn 100m z
+[1] [('number', 1)]  e.g. 'xem trong thang M, nuoc kiem ion life N l nhap vao gia binh quan mot binh la bao nhieu'
+      xem giúp trong tháng 4/2026, nước kiềm ion life 19L nhập vào giá bình quân một bình là bn hả
+[1] [('number', 1)]  e.g. 'trong thang M, giay ve sinh pulppy N cuon nhap vao gia binh quan mot thung la bao nhieu'
+      Trong tháng 11/2025, Giấy vệ sinh Pulppy 10 cuộn nhập vào giá bình quân một thùng là bao nhiêu?
+[1] [('number', 1)]  e.g. 'cho minh hoi hom D, bep ga doi rinnai rv-N sw ban ra voi don gia bao nhieu tien mot cai'
+      Cho mình hỏi hôm 30/01/2026, Bếp gas đôi Rinnai RV-375SW bán ra với đơn giá bao nhiêu tiền một cái?
+[1] [('number', 1)]  e.g. 'trong thang M, nuoc rua chen sunlight N g nhap vao gia binh quan mot thung la bao nhieu'
+      trong tháng 2/2025, Nước rửa chén Sunlight 750g nhập vào giá bình quân một thùng là bao nhiu
+[1] [('number', 1)]  e.g. 'cho hoi thang M mat hang day dien cadivi cv N cuon N m ban duoc tong cong bao nhieu cuon'
+      Cho hỏi tháng 4/2026 mặt hàng Dây điện Cadivi CV 2.5 cuộn 100m bán được tổng cộng bao nhiêu cuộn?
+[1] [('list', 1)]  e.g. 'cho toi doanh thu cac don tra bang vi dien tu va doanh thu cac don tra bang cod thang M.'
+      Cho tôi doanh thu các đơn trả bằng ví điện tử và doanh thu các đơn trả bằng COD tháng 8/2025.
+[1] [('number', 1)]  e.g. 'doanh thu cua bo den tuyp led thang N N m N w rang dong trong thang N nam Y la bao nhieu'
+      doanh thu của bộ đèn tuýp led T8 1.2m 18W rạng đông trong tháng 4 năm 2025 là bao nhiêu
+[1] [('number', 1)]  e.g. 'den het ngay D, nhung don dat cach hon N ngay ma chua tra het con no tong cong bao nhieu'
+      den het ngay 30/10/2025, nhung don dat cach do hon 15 ngay ma chua tra het con no tong cong bn
+[1] [('number', 1)]  e.g. 'thang M mat hang nurofen fo children hon dich chai N ml ban duoc tong cong bao nhieu chai'
+      tháng 1/2025 mặt hàng Nurofen for Children hỗn dịch chai 60ml bán đươc tổng cộng bao nhiêu chai nhỉ
+[1] [('number', 1)]  e.g. 'hom nay kho con ton bao nhieu mieng bang ca nhan urgo transparent hop N mieng luc cuoi ngay'
+      hnay kho còn tồn bnhiu miếng băng cá nhân urgo transparent hộp 100 miếng lúc cuối ngày
+[1] [('number', 1)]  e.g. 'cho minh hoi lay so nhap tru so ban cua banh croissant trong thang M thi duoc bao nhieu cai'
+      Cho mình hỏi lấy số nhập trừ số bán của Bánh croissant trong tháng 10/2025 thì được bao nhiêu cái?
+[1] [('number', 1)]  e.g. 'cho hoi so tuyp kudo vitamin c N mg vien sui tuyp N vien ban duoc trong thang M la bao nhieu'
+      cho hoi so tuyp kudos vitamin c 1000mg vien sui tuyp 20 vien ban duoc trong thang 6/2026 la bn
+[1] [('list', 1)]  e.g. 'thang nay, doanh thu cac don ban qua dien thoai va cac don ban qua zalo oa moi loai bao nhieu'
+      thang nay, doanh thu cac don ban qua dien thoai va cac don ban qua zalo oa moi loai bn do
+[1] [('number', 1)]  e.g. 'coi hom nay kho con ton bao nhieu tuyp kudo vitamin c N mg vien sui tuyp N vien luc cuoi ngay'
+      coi giùm hôm nay kho còn tồn bn tuýp kudos vitamin c 1000mg viên sủi tuýp 20 viên lúc cuối ngayf
+[1] [('unanswerable', 1)]  e.g. 'het hom nay trong kho con bao nhieu cay bang keo dien nano N yard nguyen va bao nhieu cuon le'
+      heets hoom nay trong kho còn bnhiu cây băng keo điện nano 20 yard nguyên và bao nhiêu cuộn lẻ đó
+[1] [('list', 1)]  e.g. 'cho toi biet thang nay khach le bao hoang no them bao nhieu tien, da tra bot no duoc bao nhieu'
+      Cho tôi biết tháng này khách Lê Bảo Hoàng nợ thêm bao nhiêu tiền, đã trả bớt nợ đc bao nhiêu
+[1] [('list', 1)]  e.g. 'xem ton cuoi hom nay cua amoxicillin N mg domesco hop N vi x N vien la may vi chan, may vien le'
+      xem giúp tồn cuối bữa nay của amoxicillin 500mg domesco hộp 10 vỉ x 10 viên là mấy vỉ chẵn, mấy viên lẻ z
+[1] [('unanswerable', 1)]  e.g. 'cho minh hoi gia nhap binh quan mot cay thep pomina d N cay N m trong thang N nam Y la bao nhieu'
+      Cho mình hỏi giá nhập bình quân một cây Thép Pomina D12 cây 11.7m trong tháng 6 năm 2025 là bao nhiêu?
+[1] [('number', 1)]  e.g. 'ton kho nuoc muoi sinh ly natri clorid N% vinh phuc chai N ml cuoi ngay hom nay la bao nhieu chai'
+      ton kho nuoc muoi sinh ly natri clorid 0,9% vinh phuc chai 500ml cuoi ngay hom nay la bnhiu chai
+[1] [('list', 1)]  e.g. 'thang M, doanh thu cac don tra bang vi dien tu va cac don tra bang chuyen khoan moi loai bao nhieu'
+      thang 3/2025, dthu cac don tra bang vi dien tu va cac don tra bang chuyen khoan moi loai bnhiu
+[1] [('number', 1)]  e.g. 'lay so nhap tru so ban cua salonpa cao dan hop N goi x N mieng trong thang M thi duoc bao nhieu goi'
+      lay so nhap tru so ban cua salonpas cao dan hop 24 goi x 10 mieng trong thang 1/2026 thi dc bnhiu goi
+[1] [('list', 1)]  e.g. 'cuoi ngay hom nay salonpa cao dan hop N goi x N mieng trong kho con bao nhieu hop chan, le bao nhieu goi'
+      cuoi ngay hom nay salonpas cao dan hop 24 goi x 10 mieng trong kho con bao nhieu hop chan, le bao nhieu goi
+[1] [('unanswerable', 1)]  e.g. 'so tien mua hang thang M cua khach o duong nguyen tat thanh voi khach o duong bach dang ben nao nhieu hon'
+      So tiền mua hàng tháng 11/2025 của khách ở đường Nguyễn Tất Thành với khách ở đường Bạch Đằng: bên nào nhiều hơn?
+[1] [('number', 1)]  e.g. 'tinh den het ngay D, co may mat hang con lo ton sap het han trong N ngay toi, tuc han dung tu D den het D'
+      tinh den het ngay 28/06/2026, co may mat hang con lo ton sap het han trong 90 ngay toi, tuc han dung tu 28/06/2026 den het 26/09/2026
+[1] [('date', 1)]  e.g. 'tinh den het ngay D, lo keo ngam bo phe nam candy hop N vi x N vien gan het han nhat co han dung ngay nao'
+      Tính đến hết ngày 28/06/2026, lô Kẹo ngậm Bổ phế Nam Hà Candy hộp 10 vỉ x 8 viên gần hết hạn nhất có hạn dùng ngày nào?
+[1] [('percent', 1)]  e.g. 'cho hoi thang M, doanh thu tu khach nhom than thiet chiem bao nhieu phan tram tong doanh thu cua cua hang'
+      cho hoi thang 6/2025, dthu tu khach nhom than thiet chiem bao nhiu phan tram tong doanh thu cua cua hang
+[1] [('list', 1)]  e.g. 'tuoi no khach den het ngay D so tien con no cua nhom N N ngay, N N ngay, tren N ngay lan luot la bao nhieu'
+      tuoi no khach den het ngay 24/10/2025: so tien con no cua nhom 0–7 ngay, 8–15 ngay, tren 15 ngay lan luot la bao nhieu
+[1] [('date', 1)]  e.g. 'cho minh hoi theo ton kho ngay D, lo siro an ngon ich plu chai N ml gan het han nhat co han dung la ngay nao'
+      Cho mình hỏi theo tồn kho ngày 25/05/2026, lô Siro ăn ngon Ích Nhi Plus chai 100ml gần hết hạn nhất có hạn dùng là ngày nào?
+[1] [('list', 1)]  e.g. 'xem het hom nay trong kho con bao nhieu hop clorpheniramin N mg dhg hop N vi x N vien nguyen va bao nhieu vi le'
+      Xem giúp hết hôm nay trong kho còn bao nhiêu hộp Clorpheniramin 4mg DHG hộp 10 vỉ x 20 viên nguyên và bao nhiêu vỉ lẻ?
+[1] [('list', 1)]  e.g. 'cuoi ngay hom nay keo ngam bo phe nam candy hop N vi x N vien trong kho con bao nhieu vi chan, le bao nhieu vien'
+      cuoi ngay hom nay keo ngam bo phe nam ha candy hop 10 vi x 8 vien trong kho con bao nhieu vi chan, le bao nhieu vien
+[1] [('percent', 1)]  e.g. 'tu hoi prospan siro ho chai N ml len gia N d, so N ngay ke tu ngay doi gia voi N ngay truoc do, trung binh moi ngay so chai ban ra tang hay giam bao nhieu %'
+      Từ hồi Prospan siro ho chai 100ml lên giá 97.500đ, so 30 ngày kể từ ngày đổi giá với 30 ngày trước đó, trung bình mỗi ngày số chai bán ra tăng hay giảm bao nhiêu %?
+[1] [('percent', 1)]  e.g. 'plusssz ma multivitamin vien sui tuyp N vien len gia N d tu ngay D so N ngay ke tu ngay tang gia voi N ngay ngay truwowcs, luong ban tinh theo tuyp tang hay giam bao nhieu %'
+      Plusssz Max Multivitamin viên sủi tuýp 20 viên lên giá 44.000đ từ ngày 20/11/2025; so 7 ngày kể từ ngày tăng giá vs 7 ngày ngay truwowcs, lượng bán tính theo tuýp tăng hay giảm bnhiu % z
+
+
+=== families ===
+revenue_or_units          1054  compare= 190  [('number', 813), ('percent', 190), ('boolean', 23), ('list', 20), ('unanswerable', 8)]
+ranking_topk               254  compare=   4  [('list', 106), ('string', 74), ('number', 59), ('unanswerable', 11), ('percent', 4)]
+order_count                236  compare=   7  [('number', 200), ('list', 20), ('percent', 12), ('unanswerable', 4)]
+group_share_or_sales       185  compare=  63  [('percent', 107), ('number', 75), ('unanswerable', 3)]
+avg_order_value            167  compare=   0  [('number', 167)]
+best_day_or_month          142  compare=   0  [('date', 140), ('unanswerable', 2)]
+cancel_rate                140  compare=  90  [('percent', 139), ('unanswerable', 1)]
+debt                       117  compare=   0  [('number', 71), ('list', 23), ('table', 19), ('unanswerable', 4)]
+import                     115  compare=   2  [('number', 103), ('string', 7), ('unanswerable', 5)]
+cancel_count               112  compare=   0  [('number', 106), ('list', 5), ('unanswerable', 1)]
+pharma_rx_ingredient        87  compare=  14  [('number', 65), ('percent', 21), ('unanswerable', 1)]
+shift                       77  compare=  24  [('number', 53), ('percent', 24)]
+price_change_effect         70  compare=  56  [('percent', 70)]
+inventory_batch             68  compare=   6  [('number', 38), ('list', 16), ('unanswerable', 9), ('date', 5)]
+unit_price_on_day           51  compare=   1  [('number', 51)]
+other                       47  compare=   1  [('number', 40), ('unanswerable', 4), ('list', 3)]
+customer_counts             37  compare=  11  [('unanswerable', 15), ('percent', 11), ('number', 11)]
+profit                      25  compare=   0  [('number', 16), ('string', 7), ('unanswerable', 2)]
+delivery                    16  compare=   0  [('number', 16)]
+  other: Trong giai đoạn từ 20/10/2025 đến hết 26/10/2025, bao nhiêu mặt hàng bị ế nhỉ?
+  other: hnay kho còn tồn bnhiu miếng băng cá nhân urgo transparent hộp 100 miếng lúc cuối ngày
+  other: Tổng số lon Bia Tiger 330ml bán trong tháng 4/2026 là bao nhiêu?
+  other: Ngày 01/12/2025 cửa hàng bán Sinh tố bơ (M) giá bao nhiêu một ly nhỉ?
+  other: Cuối ngày hôm nay Fugacar 500mg hộp 1 viên còn bao nhiêu viên?
+  other: xem giúp ngày 25/09/2025 cửa hàng bán Kẹo Alpenliebe 100g giá bao nhiêu một gói
+  other: Ngày 23/07/2025 cửa hàng bán Tã Bobby M 32 miếng giá bao nhiêu một gói?
+  other: Giai đoạn từ 05/07/2025 đến hết 11/07/2025, cửa hàng có mấy mặt hàng ế hẳn, không ai mua cái nào ạ?
+  other: giai đoạn từ 25/06/2026 đến heets 01/07/2026 có tổng cộng mấy mặt hàng ees, bán ko dc món nào hả
+  other: ngay 27/04/2026 cua hang ban Tom nuong moi gia bao nhieu mot dia
+  other: trong giai đoạn từ 20/06/2026 đến hết 26/06/2026, bnhiu mặt hàng bị ế
+  other: giai đoạn từ 13/03/2026 đến hết 19/03/2026 có tổng cộng mấy mặt hàng ế, bán không đc cái nào
+  other: xem giúp trong giai đoạn từ 05/10/2025 đến hết 11/10/2025, bnhiu mặt hàng bị ế
+  other: hnay kho còn tồn bao nhiêu chai Siro ăn ngon Ích Nhi Plus chai 100ml lúc cuối ngày?
+  other: Ngày 01/07/2025 cửa hàng bán Thép cuộn phi 6 Hòa Phát giá bao nhiêu một kg?

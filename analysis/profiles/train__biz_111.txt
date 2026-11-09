@@ -1,0 +1,121 @@
+# Dữ liệu biz_111
+
+Dữ liệu bán hàng của tiệm, gồm vài file nối với nhau qua mã.
+
+## File
+- `don_hang.csv` (csv)
+- `chi_tiet_don.csv` (csv)
+- `san_pham.csv` (csv)
+- `khach_hang.csv` (csv)
+- `thanh_toan.csv` (csv)
+
+## Cột trong `don_hang.csv`
+- **Số KH**: mã khách (trống nếu khách lẻ)
+- **Xử lý**: trạng thái đơn
+- **NgayBan**: ngày bán
+- **Bán qua**: kênh bán
+- **Còn lại**: còn nợ
+- **Khách trả**: đã thanh toán
+- **Tổng bill**: tổng tiền đơn
+- **Phương thức TT**: hình thức thanh toán của đơn: cash tiền mặt, transfer chuyển khoản, ewallet ví điện tử, cod giao hàng thu tiền, debt ghi nợ
+- **Mã chứng từ**: mã đơn
+
+## Cột trong `chi_tiet_don.csv`
+- **SL quy đổi**: số lượng đã đổi ra đơn vị cơ bản
+- **Thứ tự**: số thứ tự dòng trong đơn
+- **Giá đơn vị**: đơn giá
+- **SL**: số lượng
+- **T.Tiền**: thành tiền sau giảm
+- **ID SP**: mã hàng
+- **Ma don**: mã đơn
+- **Đơn vị (tính)**: đơn vị tính
+
+## Cột trong `san_pham.csv`
+- **SKU**: mã hàng
+- **Giá**: giá bán hiện tại
+- **Đơn vị**: đơn vị cơ bản
+- **Nhom hang**: nhóm hàng
+- **Sản phẩm**: tên
+
+## Cột trong `khach_hang.csv`
+- **ma_kh**: mã khách
+- **Nhóm**: nhóm khách
+- **Phone**: số điện thoại
+- **Addr**: địa chỉ
+- **Khách lẻ/sỉ**: tên
+
+## Cột trong `thanh_toan.csv`
+- **Thời gian thu**: thời điểm thu
+- **Phương thức**: hình thức thanh toán
+- **Tiền**: số tiền
+- **Mã phiếu thu**: mã phiếu thu
+- **Số HĐ**: mã đơn
+
+## Quy ước
+- Dữ liệu có đến hết 19/08/2026.
+- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **Tiền** là số tiền trả lần đó; **Tổng bill** là số khách phải trả cho cả đơn.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:
+  - Bánh croissant: 1 hộp = 6 cái
+  - Bánh tiramisu: 1 hộp = 6 cái
+
+
+## chi_tiet_don.csv  rows=106585
+- SL quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+- Thứ tự (distinct=3, empty=0): 1 | 2 | 3
+- Giá đơn vị (distinct=33, empty=0): 7000 | 32000 | 42000 | 25000
+- SL (distinct=13, empty=0): 1 | 1 ly | 2 ly | 1 phần
+- T.Tiền (distinct=118, empty=0): 7000 | 32000 | 42000 | 25000
+- ID SP (distinct=50, empty=0): SP0046 | SP0005 | SP0021 | SP0027
+- Ma don (distinct=66469, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Đơn vị (tính) (distinct=4, empty=0): phần | ly | cái | hộp
+## don_hang.csv  rows=66469
+- Số KH (distinct=200, empty=26734): KH0114 | KH0078 | KH0065 | KH0029
+- Xử lý (distinct=4, empty=0): completed | cancelled | returned | shipping
+- NgayBan (distinct=1788, empty=0): 1 thg 1 2025 | 45658 | 01/01/2025 | 02/01/2025
+- Bán qua (distinct=3, empty=0): zalo_oa | store | phone
+- Còn lại (distinct=47, empty=0): 0 | 28500 | 10966 | 26750
+- Khách trả (distinct=630, empty=0): 22000 | 32000 | 67000 | 102000
+- Tổng bill (distinct=626, empty=0): 22000 | 32000 | 67000 | 102000
+- Phương thức TT (distinct=5, empty=0): transfer | ewallet | cash | cod
+- Mã chứng từ (distinct=66469, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+## khach_hang.csv  rows=200
+- ma_kh (distinct=200, empty=0): KH0001 | KH0002 | KH0003 | KH0004
+- Điểm tích lũy (distinct=1, empty=0): 0
+- Nhóm (distinct=3, empty=0): thân thiết | lẻ | sỉ
+- Trạng thái (distinct=1, empty=0): Đang hoạt động
+- Email (distinct=0, empty=200): 
+- Ghi chú KH (distinct=0, empty=200): 
+- Mã số thuế (distinct=1, empty=199): 0185121074
+- Loại hình khách (distinct=1, empty=0): Cá nhân
+- Ngày sinh (distinct=21, empty=179): 10/02/2001 | 29/04/1981 | 03/08/1992 | 02/06/1994
+- CCCD (distinct=0, empty=200): 
+- Phone (distinct=200, empty=0): 0328548455 | 0799064476 | 0913885954 | 0972270673
+- Người tạo (distinct=1, empty=0): admin
+- Addr (distinct=199, empty=0): 264 Lương Định Của | 243 Nguyễn Tất Thành | 93 Nguyễn Huệ | 328 Lê Quang Định
+- Khách lẻ/sỉ (distinct=200, empty=0): Dương Hùng Trung - 0328 548 455 | Chung Hương Nam - 0799 064 476 | Đặng Hải Nhung (0913885954) | Phùng Thu Phong
+- Tổng điểm (distinct=1, empty=0): 0
+## san_pham.csv  rows=50
+- Thuộc tính (distinct=0, empty=50): 
+- Được bán trực tiếp (distinct=1, empty=0): 1
+- Mã barcode (distinct=20, empty=30): 8934789659628 | 8933790321616 | 8934789197205 | 8931066194896
+- SKU (distinct=50, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Hình ảnh (distinct=0, empty=50): 
+- Giá (distinct=25, empty=0): 25000 | 31000 | 29000 | 35000
+- Đơn vị (distinct=3, empty=0): ly | phần | cái
+- Loại hàng hóa (distinct=1, empty=0): Hàng hóa
+- Thương hiệu (distinct=0, empty=50): 
+- Nhom hang (distinct=9, empty=0): cà phê | trà | trà sữa | sinh tố
+- Trọng lượng (distinct=0, empty=50): 
+- Vị trí (distinct=0, empty=50): 
+- Mẫu ghi chú (distinct=0, empty=50): 
+- Mô tả sản phẩm (distinct=0, empty=50): 
+- Bảo hành (distinct=0, empty=50): 
+- Tồn nhỏ nhất (distinct=1, empty=0): 0
+- Mã HH Liên quan (distinct=0, empty=50): 
+- Sản phẩm (distinct=50, empty=0): Cà phê đen (M) | Cà phê đen (L) | Cà phê sữa (M) | Cà phê sữa (L)
+## thanh_toan.csv  rows=66195
+- Thời gian thu (distinct=66134, empty=0): 2025-01-01 06:03:59 | 2025-01-01 06:56:27 | 2025-01-01 07:04:26 | 2025-01-01 07:07:43
+- Phương thức (distinct=4, empty=0): transfer | ewallet | cash | cod
+- Tiền (distinct=823, empty=0): 22000 | 32000 | 67000 | 102000
+- Mã phiếu thu (distinct=66195, empty=0): PAY000001 | PAY000002 | PAY000003 | PAY000004
+- Số HĐ (distinct=65113, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004

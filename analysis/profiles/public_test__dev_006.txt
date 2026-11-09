@@ -1,0 +1,208 @@
+# Dữ liệu dev_006
+
+File máy POS xuất ra.
+
+## File
+- `pos.sqlite` (sqlite)
+
+## Bảng
+`chi_nhanh`, `nhan_vien`, `khach_hang`, `nha_cung_cap`, `san_pham`, `don_vi_sp`, `phieu_nhap`, `chi_tiet_nhap`, `don_hang`, `chi_tiet_don`, `thanh_toan`, `tra_hang`, `the_kho`, `lich_su_gia`, `lo_hang`, `chi_tiet_don_lo`, `thong_tin_thuoc`
+
+Mã đơn nối `don_hang` với `chi_tiet_don`. Ngày giờ dạng text.
+
+## Quy ước
+- Dữ liệu có đến hết 08/08/2026.
+- **Dòng hàng**: `chi_tiet_don.TriGia` là thành tiền của dòng (đã trừ giảm giá dòng); `chi_tiet_don.SLQuyDoi` là số lượng đã đổi ra đơn vị cơ bản.
+- **Mã tham chiếu**: `don_hang.MaCaLam` là mã ca bán hàng; `don_hang.MaKhuyenMai` là mã khuyến mãi áp cho đơn (trống: không áp); `the_kho.KieuChungTu`, `the_kho.MaChungTu` là loại và số của chứng từ gốc của dòng thẻ kho (đơn bán, phiếu nhập hoặc phiếu khách trả).
+- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, `thanh_toan.SoTienThu` là số tiền trả lần đó; `don_hang.TongThanhToan` là số khách phải trả cho cả đơn.
+- **Giá vốn**: `chi_tiet_don.GiaVonLucBan` là giá vốn một đơn vị bán.
+- **Tồn kho**: mỗi dòng `the_kho.TonCuoi` là tồn sau lần nhập/bán/trả đó, theo đơn vị cơ bản; tồn tại một thời điểm là tồn ở dòng cuối của sản phẩm tính đến thời điểm đó.
+- **Lô, hạn dùng**: mỗi dòng nhập là một lô, số lô không trùng. Một dòng bán có thể lấy từ nhiều lô. Hàng khách trả về lại lô đã bán.
+- **Nhập hàng**: `chi_tiet_nhap.DonGiaNhap` là giá nhập một đơn vị, theo đơn vị nhập của dòng; `phieu_nhap.TongGiaTriNhap` là tổng tiền của cả phiếu nhập.
+- **Giá bán**: `lich_su_gia.GiaBanLe` (theo đơn vị cơ bản) áp dụng từ `lich_su_gia.NgayApDung` đến trước lần đổi giá sau của cùng mặt hàng; dòng đầu mỗi mặt hàng là giá lúc bắt đầu dữ liệu.
+- **Thuốc**: `thong_tin_thuoc.BanTheoDon` đúng (TRUE/1) là thuốc kê đơn. Hoạt chất ghi không kèm hàm lượng (hàm lượng ở tên hàng); nhiều chất nối bằng " + ".
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở bảng `don_vi_sp`.
+
+
+## pos.sqlite::chi_nhanh  rows=1
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaChiNhanh (distinct=1, empty=0): CN1
+- TenGoi (distinct=1, empty=0): Nhà thuốc Khánh
+- DiaChiLienHe (distinct=1, empty=0): 334 Quang Trung
+- NgayKhaiTruong (distinct=1, empty=0): 2023-06-28
+## pos.sqlite::nhan_vien  rows=3
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaNhanVien (distinct=3, empty=0): NV001 | NV002 | NV003
+- TenGoi (distinct=3, empty=0): Võ Trung Hoa | Từ Hùng Hằng | Đinh Đạt Đức
+- MaChiNhanh (distinct=1, empty=0): CN1
+- ChucVu (distinct=3, empty=0): owner | cashier | sales
+- NgayNhanViec (distinct=3, empty=0): 2023-06-08 | 2024-09-22 | 2024-04-03
+- NgayThoiViec (distinct=0, empty=3): 
+## pos.sqlite::khach_hang  rows=320
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaKhachHang (distinct=320, empty=0): KH0001 | KH0002 | KH0003 | KH0004
+- TenGoi (distinct=320, empty=0): Đoàn Huy Khoa | Dương Đạt Lan | Phùng Mai Khoa | Lê Hùng Anh
+- trang_thai_kh (distinct=1, empty=0): Đang hoạt động
+- tong_diem (distinct=1, empty=0): 0
+- diem_hien_tai (distinct=1, empty=0): 0
+- loai_hinh_kh (distinct=1, empty=0): Cá nhân
+- cccd (distinct=0, empty=320): 
+- SoDienThoai (distinct=320, empty=0): 0354537025 | 0988055021 | 0979159799 | 0325735026
+- email (distinct=0, empty=320): 
+- ghi_chu_kh (distinct=0, empty=320): 
+- NamNu (distinct=0, empty=320): 
+- LoaiKhachHang (distinct=3, empty=0): lẻ | thân thiết | sỉ
+- cong_ty (distinct=0, empty=320): 
+- TaoLuc (distinct=244, empty=0): 2024-12-11 | 2023-03-24 | 2022-11-27 | 2023-03-22
+- ma_so_thue (distinct=4, empty=316): 0756583064 | 0491630316 | 0708908803 | 0263267727
+- DiaChiLienHe (distinct=318, empty=0): 386 Lê Trọng Tấn | 186 Đinh Bộ Lĩnh | 39 Lê Đức Thọ | 2 Phạm Văn Đồng
+- nguoi_tao (distinct=1, empty=0): admin
+## pos.sqlite::nha_cung_cap  rows=5
+- email (distinct=0, empty=5): 
+- IDCuaHang (distinct=1, empty=0): dev_006
+- nhom_ncc (distinct=0, empty=5): 
+- MaNhaCungCap (distinct=5, empty=0): NCC001 | NCC002 | NCC003 | NCC004
+- ma_so_thue (distinct=0, empty=5): 
+- nguoi_tao (distinct=1, empty=0): admin
+- trang_thai_ncc (distinct=1, empty=0): Đang hoạt động
+- TenGoi (distinct=5, empty=0): Cty Giang Thanh | Cty Diệp Đức | Cty Trương Hoa | Cty Trịnh Giang
+- SoDienThoai (distinct=5, empty=0): 0798551890 | 0904763719 | 0904395211 | 0973126679
+- DiaChiLienHe (distinct=5, empty=0): 504 Bình Long | 963 Kinh Dương Vương | 579 Khánh Hội | 687 An Dương Vương
+## pos.sqlite::san_pham  rows=80
+- mo_ta (distinct=0, empty=80): 
+- ghi_chu_hh (distinct=0, empty=80): 
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaHangHoa (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- ma_hh_lien_quan (distinct=0, empty=80): 
+- thuoc_tinh (distinct=0, empty=80): 
+- ban_truc_tiep (distinct=1, empty=0): 1
+- mau_ghi_chu (distinct=0, empty=80): 
+- vi_tri (distinct=0, empty=80): 
+- trong_luong (distinct=0, empty=80): 
+- ton_nho_nhat (distinct=1, empty=0): 0
+- TenGoi (distinct=80, empty=0): Panadol Extra hộp 15 vỉ x 12 viên | Hapacol 250 hộp 24 gói | Panadol 500mg hộp 10 vỉ x 12 viên | Tiffy Dey hộp 25 vỉ x 4 viên
+- ma_vach_ean (distinct=30, empty=50): 8933564034063 | 8933232206747 | 8934036222711 | 8931574263435
+- DanhMuc (distinct=11, empty=0): giảm đau hạ sốt | ho cảm cúm | dùng ngoài | tiêu hoá
+- DonViCoSo (distinct=10, empty=0): viên | gói | chai | cái
+- GiaBanLe (distinct=59, empty=0): 1500 | 2100 | 1000 | 1100
+- hinh_anh (distinct=0, empty=80): 
+- GiaVonHang (distinct=68, empty=0): 1100 | 1509 | 800 | 900
+- ton_lon_nhat (distinct=1, empty=0): 999999999
+- TyLeThue (distinct=3, empty=0): 0 | 8 | 10
+- bao_hanh (distinct=0, empty=80): 
+- thuong_hieu (distinct=0, empty=80): 
+- loai_hang_hoa (distinct=1, empty=0): Hàng hóa
+- ConKinhDoanh (distinct=1, empty=0): 1
+- TaoLuc (distinct=71, empty=0): 2024-11-02 | 2024-10-23 | 2024-10-27 | 2024-02-27
+## pos.sqlite::don_vi_sp  rows=83
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaHangHoa (distinct=53, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- DonViTinh (distinct=5, empty=0): hộp | vỉ | chai | tuýp
+- HeSoQuyDoi (distinct=19, empty=0): 180 | 12 | 24 | 120
+- GiaDonVi (distinct=65, empty=0): 270000 | 18000 | 50400 | 120000
+## pos.sqlite::phieu_nhap  rows=494
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaPhieuNhap (distinct=494, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- MaNhaCungCap (distinct=5, empty=0): NCC003 | NCC005 | NCC001 | NCC004
+- MaChiNhanh (distinct=1, empty=0): CN1
+- NgayNhapKho (distinct=494, empty=0): 2025-04-01 | 2025-04-02 | 2025-04-04 | 2025-04-05
+- TinhTrang (distinct=1, empty=0): received
+- TongGiaTriNhap (distinct=487, empty=0): 185863400 | 200000 | 415000 | 180000
+- DienGiai (distinct=1, empty=493): nhập đầu kỳ
+## pos.sqlite::chi_tiet_nhap  rows=3234
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaPhieuNhap (distinct=494, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- SoThuTu (distinct=80, empty=0): 1 | 2 | 3 | 4
+- MaHangHoa (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- DonViTinh (distinct=8, empty=0): hộp | chai | tuýp | lốc
+- SL (distinct=85, empty=0): 2 | 9 | 3 | 209
+- DonGiaNhap (distinct=220, empty=0): 198000 | 38400 | 96000 | 90000
+- MaLo (distinct=3234, empty=0): D2504828 | G2504735 | M2504926 | L2504514
+- HanSuDung (distinct=1220, empty=0): 2026-09-15 | 2025-09-24 | 2028-02-03 | 2026-12-20
+## pos.sqlite::don_hang  rows=37833
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaHoaDon (distinct=37833, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- MaChiNhanh (distinct=1, empty=0): CN1
+- MaKhachHang (distinct=320, empty=15200): KH0210 | KH0160 | KH0144 | KH0237
+- MaNhanVien (distinct=3, empty=0): NV002 | NV003 | NV001
+- MaCaLam (distinct=990, empty=0): CA202504011 | CA202504012 | CA202504021 | CA202504022
+- KenhBanHang (distinct=3, empty=0): store | phone | zalo_oa
+- ThoiGianLap (distinct=37808, empty=0): 2025-04-01 06:00:39 | 2025-04-01 06:19:45 | 2025-04-01 07:25:46 | 2025-04-01 07:28:36
+- NgayLap (distinct=990, empty=0): 45748 | 01/04/2025 | 45749 | 02/04/2025
+- TinhTrang (distinct=4, empty=0): cancelled | completed | returned | shipping
+- TongTienHang (distinct=4581, empty=0): 15600 | 51200 | 1400 | 41400
+- ChietKhau (distinct=2, empty=0): 0 | 10000
+- PhiVanChuyen (distinct=2, empty=0): 0 | 15000
+- ThueGTGT (distinct=1, empty=0): 0
+- TongThanhToan (distinct=4578, empty=0): 15600 | 51200 | 1400 | 41400
+- KhachDaTra (distinct=4562, empty=0): 0 | 51200 | 1400 | 41400
+- ConPhaiThu (distinct=26, empty=0): 0 | 27000 | 297000 | 146200
+- PhuongThucTT (distinct=5, empty=0): transfer | cash | debt | ewallet
+- SoHoaDonDienTu (distinct=0, empty=37833): 
+- TinhTrangHDDT (distinct=0, empty=37833): 
+- MaKhuyenMai (distinct=1, empty=34194): KM01
+- DienGiai (distinct=0, empty=37833): 
+## pos.sqlite::chi_tiet_don  rows=72411
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaHoaDon (distinct=37833, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- SoThuTu (distinct=4, empty=0): 1 | 2 | 3 | 4
+- MaHangHoa (distinct=80, empty=0): SP0074 | SP0013 | SP0001 | SP0049
+- DonViTinh (distinct=11, empty=0): viên | hộp | vỉ | gói
+- SL (distinct=10, empty=0): 6 | 1 | 2 | 10
+- SLQuyDoi (distinct=41, empty=0): 6 | 16 | 1 | 2
+- GiaDonVi (distinct=161, empty=0): 2600 | 51200 | 1400 | 600
+- ChietKhau (distinct=50, empty=0): 0 | 1000 | 5000 | 13000
+- TriGia (distinct=565, empty=0): 15600 | 51200 | 1400 | 2800
+- GiaVonLucBan (distinct=2960, empty=0): 1700 | 40000 | 1100 | 500
+## pos.sqlite::thanh_toan  rows=37939
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaPhieuThu (distinct=37939, empty=0): PAY000001 | PAY000002 | PAY000003 | PAY000004
+- MaHoaDon (distinct=37418, empty=0): ORD000002 | ORD000003 | ORD000004 | ORD000005
+- NgayGioThu (distinct=37913, empty=0): 2025-04-01 06:19:45 | 2025-04-01 07:25:46 | 2025-04-01 07:28:36 | 2025-04-01 07:36:45
+- SoTienThu (distinct=4767, empty=0): 51.200đ | 1.400đ | 41.400đ | 30.000đ
+- PhuongThuc (distinct=4, empty=0): cash | transfer | ewallet | cod
+- DienGiai (distinct=0, empty=37939): 
+## pos.sqlite::tra_hang  rows=352
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaPhieuTra (distinct=352, empty=0): TH00001 | TH00002 | TH00003 | TH00004
+- MaHoaDon (distinct=352, empty=0): ORD000158 | ORD000085 | ORD000140 | ORD000068
+- NgayGioTra (distinct=352, empty=0): 2025-04-03 20:12:33 | 2025-04-04 19:27:27 | 2025-04-06 18:18:15 | 2025-04-07 10:36:49
+- NguyenNhan (distinct=3, empty=86): mua nhầm | gần hết hạn | hàng lỗi
+- TienHoanTra (distinct=143, empty=0): 14800 | 1600 | 1400 | 1500
+- CachHoanTien (distinct=1, empty=0): cash
+## pos.sqlite::the_kho  rows=73901
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaGiaoDichKho (distinct=73901, empty=0): MV0000001 | MV0000002 | MV0000003 | MV0000004
+- MaHangHoa (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- MaChiNhanh (distinct=1, empty=0): CN1
+- NgayGioPhatSinh (distinct=38260, empty=0): 2025-04-01 06:00:00 | 2025-04-01 06:19:45 | 2025-04-01 07:25:46 | 2025-04-01 07:28:36
+- LoaiGiaoDich (distinct=3, empty=0): in_purchase | out_sale | in_return
+- SLQuyDoi (distinct=152, empty=0): 360 | 216 | 240 | 300
+- KieuChungTu (distinct=3, empty=0): purchase | order | return
+- MaChungTu (distinct=38284, empty=0): PN00001 | ORD000002 | ORD000003 | ORD000004
+- TonCuoi (distinct=503, empty=0): 360 | 216 | 240 | 300
+## pos.sqlite::lich_su_gia  rows=120
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaHangHoa (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- NgayApDung (distinct=40, empty=0): 2025-04-01 | 2026-03-26 | 2026-02-13 | 2025-06-09
+- GiaBanLe (distinct=82, empty=0): 1400 | 1500 | 2000 | 2100
+## pos.sqlite::lo_hang  rows=3234
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaHangHoa (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- MaLo (distinct=3234, empty=0): B2504172 | B2505387 | B2506788 | B2606501
+- MaPhieuNhap (distinct=494, empty=0): PN00019 | PN00051 | PN00064 | PN00433
+- HanSuDung (distinct=1220, empty=0): 2027-06-30 | 2025-10-09 | 2027-07-15 | 2026-12-05
+- SLNhapQuyDoi (distinct=86, empty=0): 360 | 216 | 192 | 240
+- DonGiaNhap (distinct=183, empty=0): 1000 | 1100 | 1500 | 1600
+## pos.sqlite::chi_tiet_don_lo  rows=72710
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaHoaDon (distinct=37438, empty=0): ORD000002 | ORD000003 | ORD000004 | ORD000005
+- SoThuTu (distinct=4, empty=0): 1 | 2 | 3 | 4
+- MaLo (distinct=3230, empty=0): U2504390 | D2504828 | M2504604 | F2504785
+- SLQuyDoi (distinct=166, empty=0): 16 | 1 | 2 | 10
+- SLTraQuyDoi (distinct=29, empty=0): 0 | 3 | 2 | 1
+## pos.sqlite::thong_tin_thuoc  rows=80
+- IDCuaHang (distinct=1, empty=0): dev_006
+- MaHangHoa (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- ThanhPhanChinh (distinct=51, empty=17): Paracetamol + Cafein | Paracetamol | Paracetamol + Phenylephrin + Clorphenira | Natri clorid
+- BanTheoDon (distinct=2, empty=0): 0 | 1

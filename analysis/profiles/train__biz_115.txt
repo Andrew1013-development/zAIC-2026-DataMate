@@ -1,0 +1,272 @@
+# Dữ liệu biz_115
+
+File Excel xuất từ phần mềm bán hàng, mỗi báo cáo, danh sách một file. Sổ chi tiết bán hàng: mỗi dòng một dòng hàng, thông tin đơn lặp lại ở mọi dòng của đơn; sổ không có mã hàng, nối với danh sách hàng hóa qua tên hàng hóa. Ngày dạng dd/mm/yyyy.
+
+File `So_chi_tiet_ban_hang.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm.
+
+## File
+- `So_chi_tiet_ban_hang.xlsx` (xlsx)
+- `Danh sách hàng hóa.xlsx` (xlsx)
+- `Bảng kê phiếu giao hàng.xlsx` (xlsx)
+- `Chi tiết công nợ theo hạn.xlsx` (xlsx)
+
+## Cột trong `So_chi_tiet_ban_hang.xlsx`
+- **Ngày**: ngày bán
+- **Mã đơn hàng**: mã đơn
+- **Tên hàng hóa**: tên hàng
+- **Đơn vị tính**: đơn vị tính
+- **Số lượng**: số lượng
+- **Đơn giá**: đơn giá
+- **Thành tiền**: thành tiền sau giảm
+- **Trạng thái**: trạng thái đơn
+- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản
+- **Khách hàng**: tên khách (Khách lẻ nếu không lưu)
+
+## Cột trong `Danh sách hàng hóa.xlsx`
+- **Mã hàng hóa**: mã hàng
+- **Tên hàng hóa**: tên
+- **Nhóm hàng hóa**: nhóm hàng
+- **Đơn vị tính**: đơn vị cơ bản
+- **Giá vốn**: giá vốn
+
+## Cột trong `Bảng kê phiếu giao hàng.xlsx`
+- **Ngày giao hàng**: ngày giao
+- **Mã đơn hàng**: mã đơn
+- **Lần giao**: đợt giao (1, 2, 3)
+- **Tên hàng hóa**: tên hàng
+- **Đơn vị tính**: đơn vị cơ bản
+- **Số lượng giao**: số lượng đã đổi ra đơn vị cơ bản
+- **Biển số xe**: biển số xe
+- **Người giao hàng**: tài xế
+
+## Cột trong `Chi tiết công nợ theo hạn.xlsx`
+- **Mã đơn hàng**: mã đơn
+- **Số ngày được nợ**: số ngày được nợ
+- **Hạn thanh toán**: hạn thanh toán
+
+## Quy ước
+- Dữ liệu có đến hết 16/05/2026.
+- **Hạn thanh toán**: chỉ đơn bán nợ có hạn. **Hạn thanh toán** là ngày khách phải trả hết đơn; **Số ngày được nợ** là số ngày được nợ, tính từ ngày đặt.
+- **Giao hàng**: đơn không huỷ có ít nhất một mặt hàng nhóm cát đá, gạch, sắt thép, xi măng thì được giao tận nơi mọi mặt hàng của đơn, 1–3 đợt (**Lần giao**); đơn khác khách tự chở, không có trong sổ giao; đơn đặt mấy ngày cuối dữ liệu có thể chưa giao. **Số lượng giao** tính theo đơn vị cơ bản.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:
+  - Xi măng Hà Tiên PCB40 bao 50kg: 1 tấn = 20 bao
+  - Xi măng INSEE Power-S bao 50kg: 1 tấn = 20 bao
+  - Cát xây tô: 1 xe 4m3 = 4 m3
+  - Cát bê tông: 1 xe 4m3 = 4 m3
+  - Cát san lấp: 1 xe 4m3 = 4 m3
+  - Đá 1x2: 1 xe 4m3 = 4 m3
+  - Đá 4x6: 1 xe 4m3 = 4 m3
+  - Đá mi bụi: 1 xe 4m3 = 4 m3
+  - Gạch ống 8x8x18 Tuynel: 1 thiên = 1000 viên
+  - Gạch thẻ đặc 4x8x18: 1 thiên = 1000 viên
+  - Băng keo điện Nano 20 yard: 1 cây = 10 cuộn
+  - Lưới B40 mạ kẽm khổ 1.5m: 1 cuộn 10m = 10 m
+  - Ngói Đồng Nai 22 viên/m2: 1 thiên = 1000 viên
+  - Bạt xanh cam khổ 4m: 1 cuộn 4x50m = 200 m2
+
+
+## Bảng kê phiếu giao hàng.xlsx::Sheet1  rows=24877
+- Ngày giao hàng (distinct=470, empty=0): 01/02/2025 | 03/02/2025 | 08/02/2025 | 02/02/2025
+- Mã đơn hàng (distinct=8580, empty=0): ORD000001 | ORD000003 | ORD000004 | ORD000005
+- Lần giao (distinct=3, empty=0): 1 | 2 | 3
+- Tên hàng hóa (distinct=60, empty=0): Thép Pomina D10 cây 11.7m | Dây điện Cadivi CV 1.5 cuộn 100m | Sơn Dulux Weathershield Powerflexx 5L | Keo dán ống PVC Bình Minh 200g
+- Đơn vị tính (distinct=15, empty=0): cây | cuộn | thùng | lon
+- Số lượng giao (distinct=50, empty=0): 1 | 10 | 2 | 1000
+- Biển số xe (distinct=3, empty=0): 61C-750.95 | 51D-663.78 | 51C-410.47
+- Người giao hàng (distinct=3, empty=0): Hồ Linh | Vương Dũng | Kiều Thắng
+## Chi tiết công nợ theo hạn.xlsx::Sheet1  rows=2304
+- Mã đơn hàng (distinct=2304, empty=0): ORD000001 | ORD000011 | ORD000019 | ORD000035
+- Số ngày được nợ (distinct=2, empty=0): 30 | 60
+- Hạn thanh toán (distinct=487, empty=0): 03/03/2025 | 02/04/2025 | 04/03/2025 | 04/04/2025
+## Danh sách hàng hóa.xlsx::Sheet1  rows=60
+- Mã hàng hóa (distinct=60, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Được bán trực tiếp (distinct=1, empty=0): 1
+- Thương hiệu (distinct=0, empty=60): 
+- Tên hàng hóa (distinct=60, empty=0): Xi măng Hà Tiên PCB40 bao 50kg | Xi măng INSEE Power-S bao 50kg | Cát xây tô | Cát bê tông
+- Nhóm hàng hóa (distinct=10, empty=0): xi măng | cát đá | gạch | sắt thép
+- Vị trí (distinct=0, empty=60): 
+- Mẫu ghi chú (distinct=0, empty=60): 
+- Loại hàng hóa (distinct=1, empty=0): Hàng hóa
+- Ghi chú (distinct=0, empty=60): 
+- Đơn vị tính (distinct=15, empty=0): bao | m3 | viên | thùng
+- Bảo hành (distinct=0, empty=60): 
+- Giá vốn (distinct=60, empty=0): 92,286.0000 | 86,320.0000 | 250,505.0000 | 286,918.0000
+- Mô tả sản phẩm (distinct=0, empty=60): 
+- Định mức tồn tối thiểu (distinct=1, empty=0): 0
+- Trọng lượng (distinct=0, empty=60): 
+## So_chi_tiet_ban_hang.xlsx::02.2025  rows=1538
+- Ngày (distinct=28, empty=0): 01/02/2025 | 02/02/2025 | 03/02/2025 | 04/02/2025
+- Mã đơn hàng (distinct=684, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Tên hàng hóa (distinct=60, empty=0): Thép Pomina D10 cây 11.7m | Dây điện Cadivi CV 1.5 cuộn 100m | Sơn Dulux Weathershield Powerflexx 5L | Ống PVC Bình Minh D50 cây 4m
+- Đơn vị tính (distinct=19, empty=0): cây | cuộn | thùng | lon
+- Số lượng (distinct=83, empty=0): 1 cây | 1 | 1 m3 | 10
+- Đơn giá (distinct=63, empty=0): 115,000.0000 | 790,000.0000 | 1,550,000.0000 | 125,000.0000
+- Thành tiền (distinct=232, empty=0): 115,000.0000 | 790,000.0000 | 1,550,000.0000 | 125,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã trả hàng
+- Số lượng quy đổi (distinct=14, empty=0): 1 | 10 | 2 | 1000
+- Khách hàng (distinct=173, empty=0): Đinh Huy Huy | kl | khách lẻ | Lương Phương Bình
+## So_chi_tiet_ban_hang.xlsx::03.2025  rows=2055
+- Ngày (distinct=31, empty=0): 01/03/2025 | 02/03/2025 | 03/03/2025 | 04/03/2025
+- Mã đơn hàng (distinct=923, empty=0): ORD000685 | ORD000686 | ORD000687 | ORD000688
+- Tên hàng hóa (distinct=60, empty=0): Gạch ống 8x8x18 Tuynel | Gas Petrolimex 12kg | Dây điện Cadivi CV 2.5 cuộn 100m | Nước kiềm Ion Life 19L
+- Đơn vị tính (distinct=18, empty=0): viên | bình | cuộn | m3
+- Số lượng (distinct=81, empty=0): 5 viên | 2 bình | 1 | 1 bình
+- Đơn giá (distinct=61, empty=0): 1,300.0000 | 520,000.0000 | 1,270,000.0000 | 72,000.0000
+- Thành tiền (distinct=233, empty=0): 6,500.0000 | 1,040,000.0000 | 1,270,000.0000 | 72,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã trả hàng
+- Số lượng quy đổi (distinct=13, empty=0): 5 | 2 | 1 | 3
+- Khách hàng (distinct=190, empty=0): khách lẻ | Triệu Hoa Khoa | Khách lẻ | La Linh Bảo
+## So_chi_tiet_ban_hang.xlsx::04.2025  rows=1996
+- Ngày (distinct=30, empty=0): 01/04/2025 | 02/04/2025 | 03/04/2025 | 04/04/2025
+- Mã đơn hàng (distinct=888, empty=0): ORD001608 | ORD001609 | ORD001610 | ORD001611
+- Tên hàng hóa (distinct=60, empty=0): Đá 1x2 | Băng keo điện Nano 20 yard | Nước tinh khiết Bidrico 20L | Gạch ốp tường Viglacera 30x60 thùng 8 vi
+- Đơn vị tính (distinct=18, empty=0): m3 | cuộn | bình | thùng
+- Số lượng (distinct=80, empty=0): 5 | 2 | 1 bình | 1 thùng
+- Đơn giá (distinct=61, empty=0): 380,000.0000 | 9,000.0000 | 45,000.0000 | 280,000.0000
+- Thành tiền (distinct=225, empty=0): 1,900,000.0000 | 18,000.0000 | 45,000.0000 | 280,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã trả hàng
+- Số lượng quy đổi (distinct=12, empty=0): 5 | 2 | 1 | 10
+- Khách hàng (distinct=194, empty=0): Đoàn Thanh Duy | Nguyễn Phương Hoa | Tống Thảo Hoàng | Chung Duy Sơn
+## So_chi_tiet_ban_hang.xlsx::05.2025  rows=1994
+- Ngày (distinct=31, empty=0): 01/05/2025 | 02/05/2025 | 03/05/2025 | 04/05/2025
+- Mã đơn hàng (distinct=906, empty=0): ORD002496 | ORD002497 | ORD002498 | ORD002499
+- Tên hàng hóa (distinct=60, empty=0): Keo dán ống PVC Bình Minh 200g | Ống PVC Bình Minh D32 cây 4m | Gas Petrolimex 12kg | Thép Pomina D12 cây 11.7m
+- Đơn vị tính (distinct=18, empty=0): lon | cây | bình | gói
+- Số lượng (distinct=85, empty=0): 1 | 2 | 10 | 1 cây
+- Đơn giá (distinct=59, empty=0): 35,000.0000 | 65,000.0000 | 520,000.0000 | 165,000.0000
+- Thành tiền (distinct=233, empty=0): 35,000.0000 | 130,000.0000 | 5,200,000.0000 | 165,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã trả hàng | Đã hủy
+- Số lượng quy đổi (distinct=14, empty=0): 1 | 2 | 10 | 3
+- Khách hàng (distinct=197, empty=0): khách lẻ | Lương Hằng Thắng | Lý Chi Anh | Thân Quân Ngọc
+## So_chi_tiet_ban_hang.xlsx::06.2025  rows=1924
+- Ngày (distinct=30, empty=0): 01/06/2025 | 02/06/2025 | 03/06/2025 | 04/06/2025
+- Mã đơn hàng (distinct=848, empty=0): ORD003402 | ORD003403 | ORD003404 | ORD003405
+- Tên hàng hóa (distinct=60, empty=0): Sơn lót Jotun Jotashield chống kiềm 5L | Xi măng INSEE Power-S bao 50kg | Thép Pomina D10 cây 11.7m | Cát bê tông
+- Đơn vị tính (distinct=18, empty=0): thùng | bao | cây | m3
+- Số lượng (distinct=80, empty=0): 1 | 3 | 5 | 3 m3
+- Đơn giá (distinct=64, empty=0): 720,000.0000 | 100,000.0000 | 115,000.0000 | 330,000.0000
+- Thành tiền (distinct=242, empty=0): 720,000.0000 | 300,000.0000 | 575,000.0000 | 990,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã trả hàng
+- Số lượng quy đổi (distinct=11, empty=0): 1 | 3 | 5 | 2
+- Khách hàng (distinct=182, empty=0): khách lẻ | Ngô Thu Khoa | Từ Khoa Dũng | Tăng Châu Giang
+## So_chi_tiet_ban_hang.xlsx::07.2025  rows=1910
+- Ngày (distinct=31, empty=0): 01/07/2025 | 02/07/2025 | 03/07/2025 | 04/07/2025
+- Mã đơn hàng (distinct=873, empty=0): ORD004250 | ORD004251 | ORD004252 | ORD004253
+- Tên hàng hóa (distinct=60, empty=0): Xi măng Hà Tiên PCB40 bao 50kg | Đinh 5 phân | Công tắc 1 chiều Panasonic Wide kèm mặt | Cát xây tô
+- Đơn vị tính (distinct=19, empty=0): bao | kg | bộ | xe 4m3
+- Số lượng (distinct=81, empty=0): 1 bao | 1 | 3 | 2
+- Đơn giá (distinct=63, empty=0): 105,000.0000 | 20,000.0000 | 35,000.0000 | 1,200,000.0000
+- Thành tiền (distinct=245, empty=0): 105,000.0000 | 20,000.0000 | 35,000.0000 | 3,600,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã trả hàng
+- Số lượng quy đổi (distinct=15, empty=0): 1 | 12 | 3 | 2
+- Khách hàng (distinct=190, empty=0): Khách lẻ | Quách Châu Hà | Kiều Linh Lan | Nguyễn Phương Hoa
+## So_chi_tiet_ban_hang.xlsx::08.2025  rows=1861
+- Ngày (distinct=31, empty=0): 01/08/2025 | 02/08/2025 | 03/08/2025 | 04/08/2025
+- Mã đơn hàng (distinct=847, empty=0): ORD005123 | ORD005124 | ORD005125 | ORD005126
+- Tên hàng hóa (distinct=60, empty=0): Ống PVC Bình Minh D32 cây 4m | Bộ van dây gas Namilux | Lưới B40 mạ kẽm khổ 1.5m | Ổ cắm đôi 3 chấu Panasonic Wide WEV1582S
+- Đơn vị tính (distinct=18, empty=0): cây | bộ | m | cái
+- Số lượng (distinct=77, empty=0): 1 | 5 | 2 | 1 bình
+- Đơn giá (distinct=62, empty=0): 65,000.0000 | 250,000.0000 | 50,500.0000 | 68,000.0000
+- Thành tiền (distinct=239, empty=0): 65,000.0000 | 1,250,000.0000 | 101,000.0000 | 340,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã trả hàng
+- Số lượng quy đổi (distinct=11, empty=0): 1 | 5 | 2 | 10
+- Khách hàng (distinct=183, empty=0): khách lẻ | lẻ | kl | Hà Cường Lan
+## So_chi_tiet_ban_hang.xlsx::09.2025  rows=1940
+- Ngày (distinct=30, empty=0): 01/09/2025 | 02/09/2025 | 03/09/2025 | 04/09/2025
+- Mã đơn hàng (distinct=885, empty=0): ORD005970 | ORD005971 | ORD005972 | ORD005973
+- Tên hàng hóa (distinct=60, empty=0): Máy bơm nước Panasonic GP-129JXK 125W | Bóng LED bulb Rạng Đông A60 9W | Bộ van dây gas Namilux | Bạt xanh cam khổ 4m
+- Đơn vị tính (distinct=19, empty=0): cái | bộ | m2 | m3
+- Số lượng (distinct=82, empty=0): 1 cái | 1 | 2 | 3 m3
+- Đơn giá (distinct=61, empty=0): 1,250,000.0000 | 45,000.0000 | 250,000.0000 | 12,500.0000
+- Thành tiền (distinct=244, empty=0): 1,250,000.0000 | 45,000.0000 | 500,000.0000 | 25,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã trả hàng
+- Số lượng quy đổi (distinct=14, empty=0): 1 | 2 | 3 | 5
+- Khách hàng (distinct=190, empty=0): kl | khách lẻ | Lưu Linh Thảo | Quách Châu Hà
+## So_chi_tiet_ban_hang.xlsx::10.2025  rows=1889
+- Ngày (distinct=31, empty=0): 01/10/2025 | 02/10/2025 | 03/10/2025 | 04/10/2025
+- Mã đơn hàng (distinct=879, empty=0): ORD006855 | ORD006856 | ORD006857 | ORD006858
+- Tên hàng hóa (distinct=60, empty=0): Gạch ống 8x8x18 Tuynel | Bột trét Jotun nội thất 40kg | Công tắc 1 chiều Panasonic Wide kèm mặt | Xi măng INSEE Power-S bao 50kg
+- Đơn vị tính (distinct=18, empty=0): viên | bao | bộ | thùng
+- Số lượng (distinct=77, empty=0): 2 | 3 | 1 bao | 1
+- Đơn giá (distinct=60, empty=0): 1,300.0000 | 315,000.0000 | 35,000.0000 | 100,000.0000
+- Thành tiền (distinct=237, empty=0): 2,600.0000 | 945,000.0000 | 70,000.0000 | 100,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã trả hàng
+- Số lượng quy đổi (distinct=12, empty=0): 2 | 3 | 1 | 20
+- Khách hàng (distinct=187, empty=0): Đặng Thắng Quân | Nguyễn Bình Nhung | lẻ | Đinh Hải Hoàng
+## So_chi_tiet_ban_hang.xlsx::11.2025  rows=1824
+- Ngày (distinct=30, empty=0): 01/11/2025 | 02/11/2025 | 03/11/2025 | 04/11/2025
+- Mã đơn hàng (distinct=860, empty=0): ORD007734 | ORD007735 | ORD007736 | ORD007737
+- Tên hàng hóa (distinct=60, empty=0): Thước thủy nhôm Total 60cm | Băng keo điện Nano 20 yard | Bộ đèn tuýp LED T8 1.2m 18W Rạng Đông | Thép Pomina D10 cây 11.7m
+- Đơn vị tính (distinct=18, empty=0): cái | cuộn | bộ | cây
+- Số lượng (distinct=81, empty=0): 1 | 2 cuộn | 2 | 10 cây
+- Đơn giá (distinct=62, empty=0): 100,000.0000 | 9,000.0000 | 155,000.0000 | 121,000.0000
+- Thành tiền (distinct=251, empty=0): 100,000.0000 | 18,000.0000 | 294,000.0000 | 1,210,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã trả hàng
+- Số lượng quy đổi (distinct=14, empty=0): 1 | 2 | 10 | 4
+- Khách hàng (distinct=182, empty=0): Lý Hoàng Thắng | Triệu Phong Hằng | Lương Hằng Thắng | Lưu Phong Ngân
+## So_chi_tiet_ban_hang.xlsx::12.2025  rows=1935
+- Ngày (distinct=31, empty=0): 01/12/2025 | 02/12/2025 | 03/12/2025 | 04/12/2025
+- Mã đơn hàng (distinct=898, empty=0): ORD008594 | ORD008595 | ORD008596 | ORD008597
+- Tên hàng hóa (distinct=60, empty=0): Ổ cắm đôi 3 chấu Panasonic Wide WEV1582S | Thép Pomina D10 cây 11.7m | Keo chà ron Weber 1kg | Tôn lạnh Hoa Sen 0.4mm
+- Đơn vị tính (distinct=19, empty=0): cái | cây | gói | m
+- Số lượng (distinct=81, empty=0): 1 cái | 3 | 2 gói | 10
+- Đơn giá (distinct=63, empty=0): 68,000.0000 | 121,000.0000 | 40,000.0000 | 89,000.0000
+- Thành tiền (distinct=248, empty=0): 68,000.0000 | 363,000.0000 | 80,000.0000 | 890,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã trả hàng | Đã hủy
+- Số lượng quy đổi (distinct=11, empty=0): 1 | 3 | 2 | 10
+- Khách hàng (distinct=195, empty=0): Khách lẻ | lẻ | Đặng Sơn Hoa | kl
+## So_chi_tiet_ban_hang.xlsx::01.2026  rows=1895
+- Ngày (distinct=31, empty=0): 01/01/2026 | 02/01/2026 | 03/01/2026 | 04/01/2026
+- Mã đơn hàng (distinct=855, empty=0): ORD009492 | ORD009493 | ORD009494 | ORD009495
+- Tên hàng hóa (distinct=60, empty=0): Kẽm buộc 1mm | Gas Saigon Petro 12kg | Nước khoáng Lavie 19L | Đá 1x2
+- Đơn vị tính (distinct=19, empty=0): kg | bình | xe 4m3 | bộ
+- Số lượng (distinct=81, empty=0): 1 | 2 | 1 bình | 5 xe 4m3
+- Đơn giá (distinct=61, empty=0): 22,000.0000 | 560,000.0000 | 68,000.0000 | 1,596,000.0000
+- Thành tiền (distinct=248, empty=0): 22,000.0000 | 1,064,000.0000 | 68,000.0000 | 7,980,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy | Đã trả hàng
+- Số lượng quy đổi (distinct=14, empty=0): 1 | 2 | 20 | 3
+- Khách hàng (distinct=185, empty=0): Nguyễn Bình Nhung | Lương Phương Bình | lẻ | khách lẻ
+## So_chi_tiet_ban_hang.xlsx::02.2026  rows=1252
+- Ngày (distinct=28, empty=0): 01/02/2026 | 02/02/2026 | 03/02/2026 | 04/02/2026
+- Mã đơn hàng (distinct=567, empty=0): ORD010347 | ORD010348 | ORD010349 | ORD010350
+- Tên hàng hóa (distinct=60, empty=0): Sơn Maxilite trong nhà 18L | Gas Saigon Petro 12kg | Xi măng Hà Tiên PCB40 bao 50kg | Kẽm buộc 1mm
+- Đơn vị tính (distinct=18, empty=0): thùng | bình | bao | kg
+- Số lượng (distinct=75, empty=0): 3 thùng | 1 | 5 | 3 bình
+- Đơn giá (distinct=60, empty=0): 827,000.0000 | 560,000.0000 | 105,000.0000 | 22,000.0000
+- Thành tiền (distinct=213, empty=0): 2,481,000.0000 | 560,000.0000 | 105,000.0000 | 110,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã trả hàng | Đã hủy
+- Số lượng quy đổi (distinct=10, empty=0): 3 | 1 | 5 | 20
+- Khách hàng (distinct=171, empty=0): Bạch Đạt Phong | Lý Hoa Thắng | Vũ Chi Quang | Huỳnh Thu Trung
+## So_chi_tiet_ban_hang.xlsx::03.2026  rows=1970
+- Ngày (distinct=31, empty=0): 01/03/2026 | 02/03/2026 | 03/03/2026 | 04/03/2026
+- Mã đơn hàng (distinct=849, empty=0): ORD010914 | ORD010915 | ORD010916 | ORD010917
+- Tên hàng hóa (distinct=60, empty=0): Băng keo điện Nano 20 yard | Nước tinh khiết Bidrico 20L | Keo dán gạch Weber.tai fix xám 25kg | Thép cuộn phi 8 Hòa Phát
+- Đơn vị tính (distinct=18, empty=0): cuộn | bình | bao | kg
+- Số lượng (distinct=77, empty=0): 2 | 3 bình | 2 bao | 3
+- Đơn giá (distinct=61, empty=0): 9,000.0000 | 47,000.0000 | 331,000.0000 | 16,000.0000
+- Thành tiền (distinct=233, empty=0): 18,000.0000 | 141,000.0000 | 662,000.0000 | 48,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã trả hàng | Đã hủy
+- Số lượng quy đổi (distinct=11, empty=0): 2 | 3 | 1 | 5
+- Khách hàng (distinct=191, empty=0): Tạ Linh Khánh | kl | Phan Hoàng Phong | Huỳnh An Hương
+## So_chi_tiet_ban_hang.xlsx::04.2026  rows=1759
+- Ngày (distinct=30, empty=0): 01/04/2026 | 02/04/2026 | 03/04/2026 | 04/04/2026
+- Mã đơn hàng (distinct=791, empty=0): ORD011763 | ORD011764 | ORD011765 | ORD011766
+- Tên hàng hóa (distinct=60, empty=0): Nước kiềm Ion Life 19L | Cát xây tô | Keo dán gạch Weber.tai fix xám 25kg | Sơn Maxilite trong nhà 18L
+- Đơn vị tính (distinct=18, empty=0): bình | xe 4m3 | bao | thùng
+- Số lượng (distinct=87, empty=0): 1 bình | 1 | 2 | 5
+- Đơn giá (distinct=62, empty=0): 72,000.0000 | 1,200,000.0000 | 331,000.0000 | 827,000.0000
+- Thành tiền (distinct=257, empty=0): 72,000.0000 | 1,200,000.0000 | 662,000.0000 | 4,135,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã trả hàng | Đã hủy
+- Số lượng quy đổi (distinct=14, empty=0): 1 | 4 | 2 | 5
+- Khách hàng (distinct=186, empty=0): khách lẻ | Đặng Đức Hoàng | lẻ | Hoàng Hiếu Minh
+## So_chi_tiet_ban_hang.xlsx::05.2026  rows=979
+- Ngày (distinct=16, empty=0): 01/05/2026 | 02/05/2026 | 03/05/2026 | 04/05/2026
+- Mã đơn hàng (distinct=456, empty=0): ORD012554 | ORD012555 | ORD012556 | ORD012557
+- Tên hàng hóa (distinct=60, empty=0): Gạch ốp tường Viglacera 30x60 thùng 8 vi | Ổ cắm đôi 3 chấu Panasonic Wide WEV1582S | Gas Petrolimex 12kg | Bộ đèn tuýp LED T8 1.2m 18W Rạng Đông
+- Đơn vị tính (distinct=18, empty=0): thùng | cái | bình | bộ
+- Số lượng (distinct=72, empty=0): 1 | 2 | 3 bình | 1 cái
+- Đơn giá (distinct=62, empty=0): 280,000.0000 | 68,000.0000 | 520,000.0000 | 155,000.0000
+- Thành tiền (distinct=210, empty=0): 280,000.0000 | 136,000.0000 | 1,560,000.0000 | 68,000.0000
+- Trạng thái (distinct=4, empty=0): Đã hoàn thành | Đã hủy | Đã trả hàng | Đang giao hàng
+- Số lượng quy đổi (distinct=11, empty=0): 1 | 2 | 3 | 20
+- Khách hàng (distinct=146, empty=0): Khách lẻ | lẻ | Huỳnh Giang Trung | Kiều Duy Dũng

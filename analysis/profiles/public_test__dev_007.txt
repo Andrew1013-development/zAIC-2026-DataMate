@@ -1,0 +1,139 @@
+# Dữ liệu dev_007
+
+File xuất từ phần mềm bán hàng, 3 danh sách: chi tiết hoá đơn (mỗi dòng một mặt hàng trong đơn; thông tin đơn, khách lặp lại ở mọi dòng của đơn), danh mục hàng kèm tồn kho, chi tiết nhập hàng (thông tin phiếu nhập lặp lại ở mọi dòng của phiếu). Các file nối với nhau qua mã hàng.
+
+## File
+- `chi_tiet_hoa_don.csv` (csv)
+- `danh_muc_hang.csv` (csv)
+- `chi_tiet_nhap_hang.csv` (csv)
+
+## Cột trong `chi_tiet_hoa_don.csv`
+- **Bàn**: bàn
+- **Thành tiền**: thành tiền sau giảm
+- **Nhóm khách hàng**: nhóm khách
+- **Mặt hàng**: tên hàng
+- **Khu vực**: khu vực của bàn
+- **Nguồn**: kênh bán
+- **Nội dung**: cột trống, không có dữ liệu
+- **Giờ bán**: thời điểm đặt đơn (ngày giờ)
+- **Giới tính**: cột trống, không có dữ liệu
+- **No.**: số thứ tự dòng trong đơn
+- **Ngày giao dịch**: ngày bán
+- **Tiến độ**: trạng thái đơn
+- **Trạng thái HĐĐT**: cột trống, không có dữ liệu
+- **Mã vạch**: mã hàng
+- **Khách trả**: khách đã trả cho cả đơn (lặp lại ở mọi dòng của đơn); tiền của đơn có phí giao gồm cả phí giao (file này không có cột phí giao riêng)
+- **Họ tên khách**: tên khách (Khách lẻ nếu không lưu)
+- **Mã khách mua**: mã khách (trống nếu khách lẻ)
+- **Còn nợ**: khách còn nợ của cả đơn (lặp lại ở mọi dòng của đơn)
+- **Tiền giảm**: tiền giảm của cả dòng
+- **Mã bill**: mã đơn
+- **Số khách**: số khách của đơn
+- **Sluong**: số lượng
+- **Nhân viên bán**: mã nhân viên bán
+- **Phone**: số điện thoại
+- **Tổng tiền hàng**: tổng tiền hàng của cả đơn, trước giảm giá của đơn (lặp lại ở mọi dòng của đơn)
+- **Giảm giá HĐ**: giảm giá của cả đơn (lặp lại ở mọi dòng của đơn)
+- **Addr**: địa chỉ
+- **Phân loại**: nhóm hàng
+- **Số lượng lẻ**: số lượng đã đổi ra đơn vị cơ bản
+- **Đơn giá (đ)**: đơn giá
+
+## Cột trong `danh_muc_hang.csv`
+- **Đang kinh doanh**: còn kinh doanh (True/False)
+- **ĐVT**: đơn vị cơ bản
+- **Giá vốn**: giá vốn
+- **Hàng bán**: tên hàng
+- **Nhóm**: nhóm hàng
+- **Giá**: giá bán hiện tại
+- **Tồn cuối**: tồn kho (đơn vị cơ bản)
+- **Mã SKU**: mã hàng
+
+## Cột trong `chi_tiet_nhap_hang.csv`
+- **Mã NCC**: mã nhà cung cấp
+- **Tổng tiền phiếu**: tổng tiền phiếu nhập
+- **SL nhập**: số lượng nhập
+- **Hàng hóa**: tên hàng
+- **STT**: số thứ tự dòng trong phiếu nhập
+- **ĐVT nhập**: đơn vị nhập
+- **Mã hàng bán**: mã hàng
+- **Giá nhập**: giá nhập một đơn vị (theo đơn vị nhập của dòng)
+- **Note**: ghi chú
+- **Ngày nhập**: ngày nhập
+- **Thành tiền**: tiền nhập của cả dòng
+- **Mã phiếu nhập**: mã phiếu nhập
+- **Trạng thái phiếu**: trạng thái phiếu nhập
+
+## Quy ước
+- Dữ liệu có đến hết 19/09/2026.
+- **Còn nợ**: **Còn nợ** là số khách còn nợ của đơn, tính đến hết ngày cuối dữ liệu.
+- **Tồn kho**: **Tồn cuối** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản.
+- **Bàn**: đơn ăn tại quán có đúng một bàn (**Bàn**), kể cả đơn huỷ; đơn giao đi không có bàn. **Số khách** là số khách của đơn; một bàn có nhiều đơn trong ngày.
+- **Phí phục vụ**: đơn ngồi phòng lạnh (không huỷ, không ghi nợ) có thêm dòng hàng "Phí phục vụ": phí phục vụ phòng lạnh của đơn, tính theo tiền món, đã ghi sẵn thành tiền.
+- **Nhập hàng**: **Giá nhập** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Thành tiền** là tiền nhập của cả dòng; **Tổng tiền phiếu** là tổng tiền của cả phiếu nhập.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:
+  - Bia Tiger lon: 1 thùng = 24 lon
+  - Bia Sài Gòn Special lon: 1 thùng = 24 lon
+  - Coca-Cola lon: 1 thùng = 24 lon
+  - Bia Tiger Bạc lon: 1 thùng = 24 lon
+  - Nước suối: 1 thùng = 24 chai
+  - Bia Heineken lon: 1 thùng = 24 lon
+  - Bia Sài Gòn Lager chai: 1 két = 20 chai
+  - 7Up lon: 1 thùng = 24 lon
+
+
+## chi_tiet_hoa_don.csv  rows=121067
+- Bàn (distinct=42, empty=12226): Bàn 05 | B01 | B07 | B13
+- Thành tiền (distinct=1466, empty=0): 79k | 50k | 158k | 69.000đ
+- Nhóm khách hàng (distinct=3, empty=49850): lẻ | sỉ | thân thiết
+- Mặt hàng (distinct=110, empty=616): Cơm chiên hải sản | Rau  muống xào tỏi | Cánh gà chiên nước mắm | Lòng mề gà xào sa tế
+- Khu vực (distinct=3, empty=12226): trong nhà | sân | phòng lạnh
+- Nguồn (distinct=3, empty=616): store | phone | zalo_oa
+- Nội dung (distinct=0, empty=121067): 
+- Giờ bán (distinct=31993, empty=616): 2025-02-01 08:54:32 | 2025-02-01 09:27:53 | 2025-02-01 09:30:09 | 2025-02-01 09:30:15
+- Giới tính (distinct=0, empty=121067): 
+- No. (distinct=7, empty=616): 1 | 2 | 3 | 4
+- Ngày giao dịch (distinct=1192, empty=616): 01/02/2025 | 45689 | 02/02/2025 | 45690
+- Tiến độ (distinct=4, empty=616): Xong | Đã hủy đơn | Đã trả hàng | Đang xử lý
+- Trạng thái HĐĐT (distinct=0, empty=121067): 
+- Mã vạch (distinct=61, empty=616): SP0021 | SP0001 | SP0003 | SP0040
+- Khách trả (distinct=3378, empty=616): 129 000 | 0 | 706 000 | 720 000
+- Họ tên khách (distinct=1546, empty=0): kl | Khách lẻ | lẻ | khách lẻ
+- Mã khách mua (distinct=190, empty=49850): KH0174 | KH0050 | KH0155 | KH0066
+- Còn nợ (distinct=13, empty=616): 0 | 531 500 | 25 500 | 45 000
+- Tiền giảm (distinct=45, empty=616): 0 | 3000 | 4000 | 5000
+- Mã bill (distinct=32022, empty=616): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Số khách (distinct=8, empty=12226): 1 | 2 | 5 | 6
+- Sluong (distinct=10, empty=616): 1 | 2 | 3 | 6
+- Nhân viên bán (distinct=5, empty=616): NV004 | NV005 | NV001 | NV002
+- Phone (distinct=190, empty=49850): 0706347212 | 0906041347 | 0796867250 | 0904782869
+- Tổng tiền hàng (distinct=3409, empty=616): 129 000 | 524 000 | 716 000 | 730 000
+- Giảm giá HĐ (distinct=2, empty=616): 0 | 10 000
+- Addr (distinct=190, empty=49850): 34 Lê Văn Sỹ | 302 Nguyễn Văn Linh | 23 Nguyễn Huệ | 122 Lê Văn Sỹ
+- Phân loại (distinct=11, empty=616): cơm mì cháo | rau | chiên xào | khai vị
+- Số lượng lẻ (distinct=12, empty=616): 1 | 2 | 3 | 24
+- Đơn giá (đ) (distinct=287, empty=616): 79k | 50.000đ | 79.000đ | 69.000đ
+## chi_tiet_nhap_hang.csv  rows=1731
+- Mã NCC (distinct=5, empty=0): NCC001 | NCC003 | NCC002 | NCC005
+- Tổng tiền phiếu (distinct=526, empty=0): 248870400 | 4538000 | 2880000 | 11352000
+- SL nhập (distinct=119, empty=0): 240 | 10 | 216 | 192
+- Hàng hóa (distinct=60, empty=0): Rau muống xào tỏi | Bia Tiger lon | Cánh gà chiên nước mắm | Lẩu Thái tôm cá (nhỏ)
+- STT (distinct=60, empty=0): 1 | 2 | 3 | 4
+- ĐVT nhập (distinct=8, empty=0): đĩa | thùng | nồi | phần
+- Mã hàng bán (distinct=60, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Giá nhập (distinct=130, empty=0): 17000 | 384000 | 33000 | 79000
+- Note (distinct=1, empty=1671): nhập đầu kỳ
+- Ngày nhập (distinct=891, empty=0): 01/02/2025 | 45689 | 15/02/2025 | 45703
+- Thành tiền (distinct=783, empty=0): 4080000 | 3840000 | 7128000 | 17064000
+- Mã phiếu nhập (distinct=544, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- Trạng thái phiếu (distinct=1, empty=0): Đã nhập hàng
+## danh_muc_hang.csv  rows=61
+- Tra cứu thông tin bổ sung (distinct=2, empty=54): #VALUE! | #N/A
+- Đang kinh doanh (distinct=1, empty=0): True
+- ĐVT (distinct=9, empty=0): đĩa | lon | nồi | phần
+- Giá vốn (distinct=60, empty=0): 15,044 | 16,004 | 31,051 | 74,357
+- Hàng bán (distinct=61, empty=0): Rau muống xào tỏi | Bia Tiger lon | Cánh gà chiên nước mắm | Lẩu Thái tôm cá (nhỏ)
+- Nhóm (distinct=11, empty=0): rau | bia | chiên xào | lẩu
+- Giá (distinct=39, empty=0): 50,000 | 22,000 | 79,000 | 189,000
+- Tồn cuối (distinct=51, empty=1): 85 | 150 | 23 | 160
+- Mã SKU (distinct=61, empty=0): SP0001 | SP0002 | SP0003 | SP0004

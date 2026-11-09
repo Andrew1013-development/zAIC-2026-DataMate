@@ -1,0 +1,109 @@
+# Dữ liệu biz_109
+
+File máy POS xuất ra.
+
+Các danh sách `DanhSachHoaDon`, `DanhSachSanPham`, `DanhSachKhachHang`, `BaoCaoTonKho`, `DanhSachNhapHang`, `DanhSachChiTietNhapHang`, `SoQuy`, `DanhSachDonViTinh` nằm chung file `DuLieuBanHang.xlsx`, mỗi danh sách một sheet.
+
+## File
+- `DuLieuBanHang.xlsx` (xlsx)
+- `DanhSachHoaDonChiTiet.xlsx` (xlsx)
+
+## Quy ước
+- Dữ liệu có đến hết 05/08/2026.
+- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **Giá trị** là số tiền trả lần đó; **Tổng sau giảm giá** là số khách phải trả cho cả đơn.
+- **Giá vốn**: **Giá vốn** là giá vốn một đơn vị bán.
+- **Tồn kho**: **Tồn cuối kỳ** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản.
+- **Nhập hàng**: **Đơn giá** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Cần trả NCC** là tổng tiền của cả phiếu nhập.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DuLieuBanHang.xlsx`.
+
+
+## DanhSachHoaDonChiTiet.xlsx::Sheet1  rows=83284
+- Mã hóa đơn (distinct=33065, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- STT (distinct=8, empty=0): 1 | 2 | 3 | 4
+- Mã hàng (distinct=60, empty=0): SP0006 | SP0014 | SP0009 | SP0002
+- Tên hàng (distinct=131, empty=0): Nước suối Aquafina 500ml | Sữa Chua Vinamilk Có Đường | Bia Sài Gòn Special 330ml | Pepsi 330ml
+- Đơn vị tính (distinct=16, empty=0): thùng | hộp | lon | gói
+- Số lượng (distinct=10, empty=0): 2 | 1 | 5 | 3
+- Đơn giá (distinct=151, empty=0): 120,000 | 6,000 | 15,000 | 10,000
+- Giảm giá (distinct=66, empty=0): 0 | 1,000 | 20,000 | 32,000
+- Thành tiền (distinct=508, empty=0): 240,000 | 6,000 | 15,000 | 20,000
+- Số lượng quy đổi (distinct=33, empty=0): 48 | 1 | 2 | 30
+- Giá vốn (distinct=3714, empty=0): 88,800 | 4,900 | 13,000 | 8,400
+## DuLieuBanHang.xlsx::DanhSachHoaDon  rows=33065
+- Mã hóa đơn (distinct=33065, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Thời gian (distinct=1164, empty=0): 45658 | 01/01/2025 | 45659 | 02/01/2025
+- Mã KH (distinct=320, empty=13091): KH0058 | KH0160 | KH0135 | KH0274
+- Khách hàng (distinct=455, empty=0): kl | lẻ | Giang Thu Cường | Hồ Tâm Quang
+- Tổng tiền hàng (distinct=4827, empty=0): 301,000 | 400,500 | 106,000 | 824,000
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Tổng sau giảm giá (distinct=4815, empty=0): 291,000 | 390,500 | 106,000 | 814,000
+- Khách đã trả (distinct=4759, empty=0): 291,000 | 390,500 | 106,000 | 814,000
+- Phương thức thanh toán (distinct=5, empty=0): Chuyển khoản | Tiền mặt | Ghi nợ | Ví điện tử
+- Trạng thái (distinct=7, empty=0): đã lấy | hủy đơn | trả hàng | Hoàn thành
+- Thời gian tạo (distinct=33038, empty=0): 2025-01-01 06:09:10 | 2025-01-01 06:13:15 | 2025-01-01 07:34:18 | 2025-01-01 07:48:26
+- Kênh bán (distinct=3, empty=0): store | phone | zalo_oa
+- Người bán (distinct=3, empty=0): NV002 | NV003 | NV001
+- Trạng thái HĐĐT (distinct=0, empty=33065): 
+## DuLieuBanHang.xlsx::DanhSachSanPham  rows=60
+- Tồn lớn nhất (distinct=1, empty=0): 999999999
+- Nhóm hàng(3 Cấp) (distinct=13, empty=0): nước giải khát | bia | sữa | mì gói
+- Vị trí (distinct=0, empty=60): 
+- Mã hàng (distinct=60, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Trọng lượng (distinct=0, empty=60): 
+- Thuộc tính (distinct=0, empty=60): 
+- Tên hàng (distinct=60, empty=0): Coca Cola 330ml | Pepsi 330ml | Sting dâu 330ml | Red Bull 250ml
+- Mẫu ghi chú (distinct=0, empty=60): 
+- Giá bán (distinct=40, empty=0): 10000 | 10500 | 13000 | 5500
+- Hình ảnh (url1,url2...) (distinct=0, empty=60): 
+- Bảo hành (distinct=0, empty=60): 
+- Định mức tồn tối thiểu (distinct=1, empty=0): 0
+- Giá vốn (distinct=59, empty=0): 8272 | 7816 | 8402 | 10142
+- Thương hiệu (distinct=0, empty=60): 
+- Được bán trực tiếp (distinct=1, empty=0): 1
+- ĐVT (distinct=11, empty=0): lon | chai | hộp | gói
+- Đang kinh doanh (distinct=1, empty=0): True
+- Thời gian tạo (distinct=58, empty=0): 2024-10-29 00:00:00 | 2024-04-06 00:00:00 | 2024-09-09 00:00:00 | 2024-05-11 00:00:00
+## DuLieuBanHang.xlsx::DanhSachKhachHang  rows=320
+- Mã khách hàng (distinct=320, empty=0): KH0001 | KH0002 | KH0003 | KH0004
+- Tổng điểm (distinct=1, empty=0): 0
+- Tên khách hàng (distinct=320, empty=0): Đinh Khoa Châu | Lê Bảo Ngọc | Kiều Trang Phúc | Từ Trang Khoa
+- Điện thoại (distinct=320, empty=0): 0918010418 | 0359041900 | 0700175052 | 0934281241
+- MST (distinct=2, empty=318): 0974131600 | 0733153733
+- Trạng thái (distinct=1, empty=0): Đang hoạt động
+- Loại hình khách (distinct=1, empty=0): Cá nhân
+- Người tạo (distinct=1, empty=0): admin
+- Ghi chú KH (distinct=0, empty=320): 
+- Tên công ty (distinct=0, empty=320): 
+- Nhóm khách hàng (distinct=3, empty=0): lẻ | thân thiết | sỉ
+- Ngày tạo (distinct=234, empty=0): 2024-05-03 00:00:00 | 2025-01-13 00:00:00 | 2023-05-12 00:00:00 | 2024-09-26 00:00:00
+- Sinh nhật (distinct=67, empty=253): 23/05/1991 | 07/01/1972 | 02/04/1975 | 02/11/1966
+## DuLieuBanHang.xlsx::BaoCaoTonKho  rows=60
+- Mã hàng (distinct=60, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Tên hàng (distinct=60, empty=0): Coca Cola 330ml | PEPSI 330ML | Sting Dâu 330ml | Red Bull 250ml
+- ĐVT (distinct=11, empty=0): lon | chai | hộp | gói
+- Tồn cuối kỳ (distinct=50, empty=0): 145 | 76 | 89 | 86
+## DuLieuBanHang.xlsx::DanhSachNhapHang  rows=561
+- Mã nhập hàng (distinct=561, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- Thời gian (distinct=561, empty=0): 01/01/2025 | 03/01/2025 | 05/01/2025 | 06/01/2025
+- Mã NCC (distinct=5, empty=0): NCC004 | NCC001 | NCC005 | NCC002
+- Cần trả NCC (distinct=535, empty=0): 145,823,000 | 1,200,000 | 1,280,000 | 2,125,200
+- Trạng thái (distinct=1, empty=0): Đã nhập hàng
+- Ghi chú (distinct=1, empty=560): nhập đầu kỳ
+## DuLieuBanHang.xlsx::DanhSachChiTietNhapHang  rows=2225
+- Mã nhập hàng (distinct=561, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- STT (distinct=60, empty=0): 1 | 2 | 3 | 4
+- Mã hàng (distinct=60, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- ĐVT (distinct=7, empty=0): thùng | bao 25kg | kg | hộp 30
+- Số lượng (distinct=28, empty=0): 8 | 7 | 5 | 10
+- Đơn giá (distinct=236, empty=0): 204,000 | 201,600 | 240,000 | 189,600
+## DuLieuBanHang.xlsx::SoQuy  rows=36974
+- Mã phiếu (distinct=36974, empty=0): PAY000001 | PAY000002 | PAY000003 | PAY000004
+- Thời gian (distinct=36939, empty=0): 2025-01-01 06:09:10 | 2025-01-01 06:13:15 | 2025-01-01 07:48:26 | 2025-01-01 08:11:47
+- Mã hóa đơn (distinct=31942, empty=0): ORD000001 | ORD000002 | ORD000004 | ORD000006
+- Phương thức thanh toán (distinct=4, empty=0): Chuyển khoản | Tiền mặt | Ví điện tử | Thu hộ (COD)
+- Giá trị (distinct=5728, empty=0): 291000 | 390500 | 814000 | 53000
+## DuLieuBanHang.xlsx::DanhSachDonViTinh  rows=77
+- Mã hàng (distinct=59, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- ĐVT (distinct=8, empty=0): lốc | thùng | bao | bao 25kg
+- Quy đổi (distinct=16, empty=0): 6 | 24 | 12 | 4
+- Giá bán (distinct=60, empty=0): 60000 | 240000 | 63000 | 252000

@@ -1,0 +1,284 @@
+# Dữ liệu biz_105
+
+Sổ bán hàng ghi tay chuyển sang Excel, mỗi tháng một sheet.
+
+## File
+- `SoBanHang_1.xlsx` (xlsx)
+- `SoBanHang_2026.xlsx` (xlsx)
+- `DanhMuc.xlsx` (xlsx)
+- `TonKho.xlsx` (xlsx)
+- `SoNhapHang.xlsx` (xlsx)
+- `BangGia.xlsx` (xlsx)
+
+## Cột trong `SoBanHang_1.xlsx`
+- **Hàng**: tên hàng
+- **so_luong**: số lượng
+- **Unit**: đơn vị tính
+- **Trị giá**: thành tiền sau giảm
+- **Status**: trạng thái đơn
+- **Giá lẻ**: đơn giá
+- **Giờ**: giờ đặt đơn (dòng trả hàng: lúc trả)
+- **Mã hóa đơn**: mã đơn
+- **Ngày giao dịch**: ngày bán
+- **Khách**: tên khách (Khách lẻ nếu không lưu)
+
+## Cột trong `SoBanHang_2026.xlsx`
+- **Hàng**: tên hàng
+- **so_luong**: số lượng
+- **Unit**: đơn vị tính
+- **Trị giá**: thành tiền sau giảm
+- **Status**: trạng thái đơn
+- **Giá lẻ**: đơn giá
+- **Giờ**: giờ đặt đơn (dòng trả hàng: lúc trả)
+- **Mã hóa đơn**: mã đơn
+- **Ngày giao dịch**: ngày bán
+- **Khách**: tên khách (Khách lẻ nếu không lưu)
+
+## Cột trong `DanhMuc.xlsx`
+- **Tên món**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)
+- **Đơn vị gốc**: đơn vị cơ bản
+- **ĐV nhập**: đơn vị lớn (thùng, hộp, tấn...)
+- **Hệ số**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn
+
+## Cột trong `TonKho.xlsx`
+- **Hàng hóa**: tên hàng
+- **Đơn vị tính**: đơn vị cơ bản
+- **Tồn cuối**: tồn kho (đơn vị cơ bản)
+
+## Cột trong `SoNhapHang.xlsx`
+- **Số phiếu**: mã phiếu nhập
+- **Ngày nhập**: ngày nhập
+- **Ghi chu**: ghi chú
+- **Thành tiền**: tiền nhập của cả dòng
+- **Nhà cung cấp**: nhà cung cấp
+- **Tên mặt hàng**: tên hàng
+- **Giá nhập**: giá nhập một đơn vị (theo đơn vị nhập của dòng)
+- **ĐVT**: đơn vị nhập
+- **SL nhập**: số lượng nhập
+
+## Cột trong `BangGia.xlsx`
+- **Ngày áp dụng**: ngày bắt đầu áp dụng giá
+- **ten_hang**: tên hàng
+- **Giá mới**: giá bán áp dụng từ ngày đó (đơn vị cơ bản)
+- **Giá cũ**: giá trước lần đổi (trống ở dòng đầu mỗi mặt hàng)
+
+## Quy ước
+- Dữ liệu có đến hết 24/06/2026.
+- **Trả hàng**: hàng trả ghi số lượng âm, cùng mã đơn với đơn đã bán: đơn có dòng số lượng âm là đơn có trả hàng.
+- **Tồn kho**: **Tồn cuối** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản.
+- **Nhập hàng**: **Giá nhập** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Thành tiền** là tiền nhập của cả dòng.
+- **Giá bán**: **Giá mới** (theo đơn vị cơ bản) áp dụng từ **Ngày áp dụng** đến trước lần đổi giá sau của cùng mặt hàng; dòng đầu mỗi mặt hàng là giá lúc bắt đầu dữ liệu (**Giá cũ** trống).
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhMuc.xlsx`.
+
+
+## BangGia.xlsx::Sheet1  rows=78
+- Ngày áp dụng (distinct=29, empty=0): 2025-02-01 00:00:00 | 2025-03-23 00:00:00 | 2025-09-21 00:00:00 | 2026-04-06 00:00:00
+- ten_hang (distinct=50, empty=0): Cà phê đen (M) | Cà phê đen (L) | Cà phê sữa (M) | Cà phê sữa (L)
+- Giá mới (distinct=33, empty=0): 25.000đ | 31.000đ | 29.000đ | 30.500đ
+- Giá cũ (distinct=17, empty=50): 29.000đ | 35.000đ | 41.000đ | 37.000đ
+## DanhMuc.xlsx::Sheet1  rows=2
+- Tên món (distinct=2, empty=0): Bánh croissant | Bánh tiramisu
+- Đơn vị gốc (distinct=1, empty=0): cái
+- ĐV nhập (distinct=1, empty=0): hộp
+- Hệ số (distinct=1, empty=0): 6
+## SoBanHang_1.xlsx::Thang 02 2025  rows=6490
+- Hàng (distinct=52, empty=0): Đá xay cookie (M) | Cà phê đen (M) | Nước ép dưa hấu (L) | Nước ép cam (M)
+- so_luong (distinct=5, empty=2): 1 | 3 | 2 | -1
+- Unit (distinct=4, empty=2): ly | phần | cái | hộp
+- Trị giá (distinct=141, empty=1): 55.000đ | 25.000đ | 41.000đ | 117.000đ
+- Status (distinct=8, empty=2): đã lấy | đã xong | Đã hủy đơn | hủy
+- Giá lẻ (distinct=38, empty=2): 55.000đ | 25k | 41k | 39.000đ
+- Giờ (distinct=3986, empty=2): 2025-02-01 06:00:25 | 2025-02-01 06:46:58 | 2025-02-01 07:05:24 | 2025-02-01 07:07:41
+- Mã hóa đơn (distinct=3981, empty=2): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Ngày giao dịch (distinct=56, empty=2): 01/02/2025 | 45689 | 02/02/2025 | 45690
+- Khách (distinct=258, empty=2): Vương Sơn Thảo | Khách lẻ | Cao Giang Duy | Phùng Trung Sơn
+## SoBanHang_1.xlsx::Thang 03 2025  rows=8139
+- Hàng (distinct=52, empty=0): Espresso (single) | Cà phê sữa (M) | Trà chanh (L) | Trà đào cam sả (L)
+- so_luong (distinct=6, empty=2): 1 | 3 | 2 | -1
+- Unit (distinct=4, empty=2): ly | phần | cái | hộp
+- Trị giá (distinct=157, empty=1): 35.000đ | 29.000đ | 31k | 45.000đ
+- Status (distinct=8, empty=2): đã lấy | đã xong | Đổi trả | Đã hủy đơn
+- Giá lẻ (distinct=42, empty=2): 35.000đ | 29.000đ | 31.000đ | 45k
+- Giờ (distinct=5005, empty=2): 2025-03-01 06:01:04 | 2025-03-01 06:03:07 | 2025-03-01 06:07:53 | 2025-03-01 06:18:52
+- Mã hóa đơn (distinct=4994, empty=2): ORD003982 | ORD003983 | ORD003984 | ORD003985
+- Ngày giao dịch (distinct=62, empty=2): 45717 | 01/03/2025 | 02/03/2025 | 45718
+- Khách (distinct=258, empty=2): Đàm Hoa Dũng | Dương Thảo Hải | Doãn Thắng Giang | Khách lẻ
+## SoBanHang_1.xlsx::Thang 04 2025  rows=7763
+- Hàng (distinct=52, empty=0): Bạc xỉu (L) | Trà vải (M) | Trà chanh (L) | Cà phê đen (M)
+- so_luong (distinct=6, empty=2): 1 | 2 | 3 | -1
+- Unit (distinct=4, empty=2): ly | phần | cái | hộp
+- Trị giá (distinct=158, empty=1): 38.000đ | 78.000đ | 32.500đ | 25k
+- Status (distinct=8, empty=2): đã xong | đã lấy | hủy | Đã hủy đơn
+- Giá lẻ (distinct=44, empty=2): 38.000đ | 39.000đ | 32.500đ | 25.000đ
+- Giờ (distinct=4762, empty=2): 2025-04-01 06:06:05 | 2025-04-01 06:30:43 | 2025-04-01 06:34:43 | 2025-04-01 06:50:14
+- Mã hóa đơn (distinct=4758, empty=2): ORD008975 | ORD008976 | ORD008977 | ORD008978
+- Ngày giao dịch (distinct=60, empty=2): 01/04/2025 | 45748 | 45749 | 02/04/2025
+- Khách (distinct=258, empty=2): Khách lẻ | Đàm Phong Loan | Đặng Lan Hằng | Đàm Nam Hùng
+## SoBanHang_1.xlsx::Thang 05 2025  rows=8072
+- Hàng (distinct=52, empty=0): Matcha latte (M) | Trà chanh (M) | Latte (M) | Cà phê sữa (L)
+- so_luong (distinct=5, empty=2): 1 | 3 | 2 | -1
+- Unit (distinct=4, empty=2): ly | phần | cái | hộp
+- Trị giá (distinct=166, empty=1): 49k | 24.000đ | 45k | 33.000đ
+- Status (distinct=8, empty=2): đã xong | đã lấy | hủy | Đã hủy đơn
+- Giá lẻ (distinct=44, empty=2): 49.000đ | 25.000đ | 45.000đ | 35.000đ
+- Giờ (distinct=4998, empty=2): 2025-05-01 06:03:16 | 2025-05-01 06:05:50 | 2025-05-01 06:12:42 | 2025-05-01 06:14:49
+- Mã hóa đơn (distinct=4987, empty=2): ORD013732 | ORD013733 | ORD013734 | ORD013735
+- Ngày giao dịch (distinct=62, empty=2): 01/05/2025 | 45778 | 45779 | 02/05/2025
+- Khách (distinct=258, empty=2): Đoàn Hạnh Hoàng | Phùng Thảo Khánh | Lý Bảo Ngọc | Khách lẻ
+## SoBanHang_1.xlsx::Thang 06 2025  rows=8040
+- Hàng (distinct=53, empty=0): Sinh tố bơ (M) | Nước ép cam (L) | Cà phê đen (M) | Nước ép cam (M)
+- so_luong (distinct=4, empty=3): -1 | 1 | 2 | 3
+- Unit (distinct=4, empty=3): ly | phần | cái | hộp
+- Trị giá (distinct=157, empty=2): -45k | 45k | 25.000đ | 39.000đ
+- Status (distinct=8, empty=3): Đổi trả | đã xong | đã lấy | hủy
+- Giá lẻ (distinct=43, empty=3): 45.000đ | 25.000đ | 39.000đ | 35k
+- Giờ (distinct=4956, empty=3): 2025-06-01 16:09:26 | 2025-06-01 06:06:50 | 2025-06-01 06:06:54 | 2025-06-01 06:13:17
+- Mã hóa đơn (distinct=4948, empty=3): ORD018046 | ORD018716 | ORD018717 | ORD018718
+- Ngày giao dịch (distinct=60, empty=3): 45809 | 01/06/2025 | 02/06/2025 | 45810
+- Khách (distinct=258, empty=3): Khách lẻ | Bạch Phương Long | Đỗ Giang Dương | Châu Thanh Hồng
+## SoBanHang_1.xlsx::Thang 07 2025  rows=8307
+- Hàng (distinct=53, empty=0): Cà phê sữa (M) | Trà đào cam sả (M) | Matcha latte (M) | Trà đào cam sả (L)
+- so_luong (distinct=4, empty=3): -1 | 1 | 2 | 3
+- Unit (distinct=4, empty=3): ly | cái | phần | hộp
+- Trị giá (distinct=168, empty=2): -30.500đ | 39.000đ | 49.000đ | 45.000đ
+- Status (distinct=8, empty=3): hàng trả về | đã lấy | đã xong | hủy
+- Giá lẻ (distinct=48, empty=3): 30.500đ | 39.000đ | 49.000đ | 45.000đ
+- Giờ (distinct=5101, empty=3): 2025-07-01 10:05:37 | 2025-07-01 06:04:41 | 2025-07-01 06:16:32 | 2025-07-01 06:19:40
+- Mã hóa đơn (distinct=5095, empty=3): ORD023162 | ORD023660 | ORD023661 | ORD023662
+- Ngày giao dịch (distinct=62, empty=3): 01/07/2025 | 45839 | 02/07/2025 | 45840
+- Khách (distinct=258, empty=3): Khách lẻ | Phùng Minh Dũng | Chung Hoàng Phúc | Hà Duy Tâm
+## SoBanHang_1.xlsx::Thang 08 2025  rows=8702
+- Hàng (distinct=52, empty=0): Cà phê đen (L) | Topping Trân châu đen | Bạc xỉu (M) | Espresso (single)
+- so_luong (distinct=5, empty=2): 1 | 3 | 2 | -1
+- Unit (distinct=4, empty=2): ly | phần | cái | hộp
+- Trị giá (distinct=159, empty=1): 31k | 7.000đ | 32.000đ | 39.000đ
+- Status (distinct=8, empty=2): đã xong | đã lấy | hủy | Đã hủy đơn
+- Giá lẻ (distinct=44, empty=2): 31.000đ | 7k | 32.000đ | 39k
+- Giờ (distinct=5325, empty=2): 2025-08-01 06:05:00 | 2025-08-01 06:13:30 | 2025-08-01 06:44:12 | 2025-08-01 06:50:56
+- Mã hóa đơn (distinct=5324, empty=2): ORD028751 | ORD028752 | ORD028753 | ORD028754
+- Ngày giao dịch (distinct=62, empty=2): 01/08/2025 | 45870 | 02/08/2025 | 45871
+- Khách (distinct=258, empty=2): Khách lẻ | Lý Phong Hoa | Lý Minh Ngọc | Ngô Giang Cường
+## SoBanHang_1.xlsx::Thang 09 2025  rows=8208
+- Hàng (distinct=52, empty=0): Cà phê đen (L) | Trà sữa trân châu (M) | Cà phê muối (M) | Latte (M)
+- so_luong (distinct=5, empty=2): 1 | 2 | 3 | -1
+- Unit (distinct=4, empty=2): ly | phần | cái | hộp
+- Trị giá (distinct=172, empty=1): 31.000đ | 42k | 35.000đ | 45.000đ
+- Status (distinct=8, empty=2): đã lấy | đã xong | Đã hủy đơn | hủy
+- Giá lẻ (distinct=45, empty=2): 31.000đ | 42.000đ | 35.000đ | 45.000đ
+- Giờ (distinct=5059, empty=2): 2025-09-01 06:11:34 | 2025-09-01 06:20:15 | 2025-09-01 06:40:15 | 2025-09-01 06:42:10
+- Mã hóa đơn (distinct=5047, empty=2): ORD034075 | ORD034076 | ORD034077 | ORD034078
+- Ngày giao dịch (distinct=60, empty=2): 45901 | 01/09/2025 | 45902 | 02/09/2025
+- Khách (distinct=258, empty=2): Khách lẻ | Đinh Bích Trung | Lương Phương Hoa | Hoàng Đạt Long
+## SoBanHang_1.xlsx::Thang 10 2025  rows=8853
+- Hàng (distinct=52, empty=0): Cà phê sữa (M) | Cappuccino (L) | Trà sữa ô long (M) | Cà phê đen (M)
+- so_luong (distinct=5, empty=2): -1 | 1 | 2 | 3
+- Unit (distinct=4, empty=2): ly | phần | cái | hộp
+- Trị giá (distinct=174, empty=1): -30.500đ | 53.500đ | 47.000đ | 25.000đ
+- Status (distinct=8, empty=2): Trả hàng | đã lấy | đã xong | Đã hủy đơn
+- Giá lẻ (distinct=47, empty=2): 30.500đ | 53.500đ | 47.000đ | 25.000đ
+- Giờ (distinct=5474, empty=2): 2025-10-01 14:10:46 | 2025-10-01 06:10:04 | 2025-10-01 06:12:16 | 2025-10-01 06:34:32
+- Mã hóa đơn (distinct=5468, empty=2): ORD038783 | ORD039118 | ORD039119 | ORD039120
+- Ngày giao dịch (distinct=62, empty=2): 01/10/2025 | 45931 | 45932 | 02/10/2025
+- Khách (distinct=258, empty=2): Khách lẻ | Bùi Hương Hùng | Trịnh Hạnh Giang | Đặng Trung Hồng
+## SoBanHang_1.xlsx::Thang 11 2025  rows=8443
+- Hàng (distinct=53, empty=0): Trà chanh (M) | Sinh tố bơ (M) | Topping Thạch cà phê | Cà phê đen (M)
+- so_luong (distinct=5, empty=3): 1 | 2 | 3 | -1
+- Unit (distinct=4, empty=3): ly | phần | cái | hộp
+- Trị giá (distinct=166, empty=2): 25.000đ | 45k | 7.400đ | 42.000đ
+- Status (distinct=8, empty=3): đã xong | đã lấy | Đã hủy đơn | hủy
+- Giá lẻ (distinct=47, empty=3): 25.000đ | 45.000đ | 7.400đ | 42.000đ
+- Giờ (distinct=5236, empty=3): 2025-11-01 06:01:54 | 2025-11-01 06:12:46 | 2025-11-01 06:13:55 | 2025-11-01 06:25:41
+- Mã hóa đơn (distinct=5224, empty=3): ORD044583 | ORD044584 | ORD044585 | ORD044586
+- Ngày giao dịch (distinct=60, empty=3): 45962 | 01/11/2025 | 45963 | 02/11/2025
+- Khách (distinct=258, empty=3): Lương Quân Thắng | Khách lẻ | Lý Bảo Ngọc | Trịnh Cường Thắng
+## SoBanHang_1.xlsx::Thang 12 2025  rows=8828
+- Hàng (distinct=52, empty=0): Hồng trà sữa (M) | Trà sữa trân châu (L) | Trà vải (L) | Espresso (single)
+- so_luong (distinct=5, empty=2): 2 | 1 | 3 | -1
+- Unit (distinct=4, empty=2): ly | phần | cái | hộp
+- Trị giá (distinct=173, empty=1): 78.000đ | 48k | 45.000đ | 41.000đ
+- Status (distinct=8, empty=2): đã lấy | đã xong | hủy | Hoàn trả
+- Giá lẻ (distinct=47, empty=2): 39.000đ | 48k | 45.000đ | 41k
+- Giờ (distinct=5407, empty=2): 2025-12-01 06:05:06 | 2025-12-01 06:06:07 | 2025-12-01 06:08:24 | 2025-12-01 06:16:34
+- Mã hóa đơn (distinct=5393, empty=2): ORD049804 | ORD049805 | ORD049806 | ORD049807
+- Ngày giao dịch (distinct=62, empty=2): 01/12/2025 | 45992 | 02/12/2025 | 45993
+- Khách (distinct=258, empty=2): Khách lẻ | Đỗ Phương Hải | Quách Lan Hoa | Cao Ngọc Đức
+## SoBanHang_1.xlsx::Thang 01 2026  rows=9059
+- Hàng (distinct=52, empty=0): Cà phê sữa (M) | Cà phê đen (M) | Espresso (single) | Trà chanh (M)
+- so_luong (distinct=4, empty=2): -1 | 1 | 2 | 3
+- Unit (distinct=4, empty=2): ly | cái | phần | hộp
+- Trị giá (distinct=161, empty=1): -30.500đ | 25k | 82.000đ | 25.000đ
+- Status (distinct=7, empty=2): hàng trả về | đã xong | đã lấy | Đã hủy đơn
+- Giá lẻ (distinct=43, empty=2): 30.500đ | 25k | 41k | 25.000đ
+- Giờ (distinct=5617, empty=2): 2026-01-01 14:58:08 | 2026-01-01 06:03:16 | 2026-01-01 06:03:53 | 2026-01-01 06:22:45
+- Mã hóa đơn (distinct=5613, empty=2): ORD054396 | ORD055193 | ORD055194 | ORD055195
+- Ngày giao dịch (distinct=62, empty=2): 46023 | 01/01/2026 | 02/01/2026 | 46024
+- Khách (distinct=258, empty=2): Tăng Đức Giang | Tô Hương Anh | Đàm Nam Hùng | Khách lẻ
+## SoBanHang_2026.xlsx::Thang 02 2026  rows=6299
+- Hàng (distinct=52, empty=0): Cappuccino (L) | Trà chanh (M) | Trà đào cam sả (L) | Latte (M)
+- so_luong (distinct=5, empty=2): -1 | 3 | 1 | 2
+- Unit (distinct=4, empty=2): ly | phần | cái | hộp
+- Trị giá (distinct=161, empty=1): -53.500đ | 75.000đ | 24.000đ | 86k
+- Status (distinct=8, empty=2): Đổi trả | đã xong | đã lấy | Đã hủy đơn
+- Giá lẻ (distinct=46, empty=2): 53.500đ | 25.000đ | 45.000đ | 7.000đ
+- Giờ (distinct=3865, empty=2): 2026-02-01 08:47:28 | 2026-02-01 06:04:33 | 2026-02-01 06:05:17 | 2026-02-01 06:09:08
+- Mã hóa đơn (distinct=3852, empty=2): ORD059865 | ORD060804 | ORD060805 | ORD060806
+- Ngày giao dịch (distinct=56, empty=2): 01/02/2026 | 46054 | 46055 | 02/02/2026
+- Khách (distinct=258, empty=2): Đinh Tâm Khoa | Khách lẻ | Trương Hạnh Hồng | Thân Sơn An
+## SoBanHang_2026.xlsx::Thang 03 2026  rows=9240
+- Hàng (distinct=53, empty=0): Hồng trà sữa (M) | Topping Pudding trứng | Cold brew (M) | Trà đào cam sả (M)
+- so_luong (distinct=4, empty=3): -1 | 1 | 3 | 2
+- Unit (distinct=4, empty=3): ly | phần | cái | hộp
+- Trị giá (distinct=183, empty=2): -39.000đ | 10.500đ | 45.000đ | 41.000đ
+- Status (distinct=8, empty=3): Trả hàng | đã lấy | đã xong | Đã hủy đơn
+- Giá lẻ (distinct=48, empty=3): 39k | 10.500đ | 45k | 41.000đ
+- Giờ (distinct=5675, empty=3): 2026-03-01 19:10:13 | 2026-03-01 06:03:00 | 2026-03-01 06:05:40 | 2026-03-01 06:13:21
+- Mã hóa đơn (distinct=5650, empty=3): ORD063794 | ORD064652 | ORD064653 | ORD064654
+- Ngày giao dịch (distinct=62, empty=3): 46082 | 01/03/2026 | 46083 | 02/03/2026
+- Khách (distinct=258, empty=3): Khách lẻ | Trương Thảo Thảo | Võ Minh Thắng | Lưu Phúc Hoàng
+## SoBanHang_2026.xlsx::Thang 04 2026  rows=8947
+- Hàng (distinct=52, empty=0): Hồng trà sữa (L) | Cà phê đen (M) | Trà sữa ô long (L) | Topping Thạch cà phê
+- so_luong (distinct=5, empty=2): -1 | 1 | 2 | 3
+- Unit (distinct=4, empty=2): ly | phần | cái | hộp
+- Trị giá (distinct=178, empty=1): -45.000đ | 25.000đ | 102.000đ | 7.400đ
+- Status (distinct=8, empty=2): hàng trả về | đã lấy | đã xong | Đã hủy đơn
+- Giá lẻ (distinct=47, empty=2): 45k | 25k | 51.000đ | 7.400đ
+- Giờ (distinct=5520, empty=2): 2026-04-01 15:00:37 | 2026-04-01 06:01:03 | 2026-04-01 06:18:13 | 2026-04-01 06:30:51
+- Mã hóa đơn (distinct=5501, empty=2): ORD070246 | ORD070299 | ORD070300 | ORD070301
+- Ngày giao dịch (distinct=60, empty=2): 01/04/2026 | 46113 | 46114 | 02/04/2026
+- Khách (distinct=258, empty=2): Đặng Đạt Trang | Khách lẻ | Lý Bình Dũng | Thân Sơn An
+## SoBanHang_2026.xlsx::Thang 05 2026  rows=9531
+- Hàng (distinct=53, empty=0): Cà phê sữa (M) | Bánh croissant | Cà phê sữa (L) | Cappuccino (M)
+- so_luong (distinct=6, empty=3): 1 | 2 | 3 | -3
+- Unit (distinct=4, empty=3): ly | cái | phần | hộp
+- Trị giá (distinct=178, empty=2): 30.500đ | 37.000đ | 49.500đ | 7.400đ
+- Status (distinct=8, empty=3): đã xong | đã lấy | hủy | Đã hủy đơn
+- Giá lẻ (distinct=48, empty=3): 30.500đ | 37.000đ | 49.500đ | 7.400đ
+- Giờ (distinct=5931, empty=3): 2026-05-01 06:07:33 | 2026-05-01 06:12:05 | 2026-05-01 06:22:54 | 2026-05-01 06:24:39
+- Mã hóa đơn (distinct=5924, empty=3): ORD075794 | ORD075795 | ORD075796 | ORD075797
+- Ngày giao dịch (distinct=62, empty=3): 46143 | 01/05/2026 | 46144 | 02/05/2026
+- Khách (distinct=258, empty=3): Tạ Minh Minh | Khách lẻ | Doãn Phong Thanh | Hứa Đạt Bình
+## SoBanHang_2026.xlsx::Thang 06 2026  rows=7324
+- Hàng (distinct=53, empty=0): Trà đào cam sả (L) | Trà đào cam sả (M) | Cà phê đen (M) | Hồng trà sữa (M)
+- so_luong (distinct=5, empty=3): -1 | 1 | 2 | 3
+- Unit (distinct=4, empty=3): ly | phần | cái | hộp
+- Trị giá (distinct=169, empty=2): -45k | 45k | 39.000đ | 25.000đ
+- Status (distinct=10, empty=3): Trả hàng | đã xong | đã lấy | hủy
+- Giá lẻ (distinct=47, empty=3): 45.000đ | 41k | 25.000đ | 39.000đ
+- Giờ (distinct=4436, empty=3): 2026-06-01 10:50:42 | 2026-06-01 06:21:35 | 2026-06-01 06:21:57 | 2026-06-01 06:33:23
+- Mã hóa đơn (distinct=4431, empty=3): ORD080911 | ORD081718 | ORD081719 | ORD081720
+- Ngày giao dịch (distinct=48, empty=3): 01/06/2026 | 46174 | 02/06/2026 | 46175
+- Khách (distinct=258, empty=3): Khách lẻ | Doãn Dương Hải | Phạm Đức Dũng | Triệu Phong Hoa
+## SoNhapHang.xlsx::Sheet1  rows=1373
+- Số phiếu (distinct=441, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- Ngày nhập (distinct=441, empty=0): 2025-02-01 00:00:00 | 2025-02-18 00:00:00 | 2025-02-19 00:00:00 | 2025-02-20 00:00:00
+- Ghi chu (distinct=1, empty=1323): nhập đầu kỳ
+- Thành tiền (distinct=534, empty=0): 2131200 | 1317200 | 3219000 | 2035000
+- Nhà cung cấp (distinct=5, empty=0): Cty Hoàng Bình | Cty Dương An | Cty Vũ Tâm | Cty Thân Ngọc
+- Tên mặt hàng (distinct=50, empty=0): Cà phê đen (M) | Cà phê đen (L) | Cà phê sữa (M) | Cà phê sữa (L)
+- Giá nhập (distinct=70, empty=0): 7200 | 8900 | 8700 | 11000
+- ĐVT (distinct=3, empty=0): ly | phần | hộp
+- SL nhập (distinct=131, empty=0): 296 | 148 | 370 | 185
+## TonKho.xlsx::Sheet1  rows=50
+- Hàng hóa (distinct=50, empty=0): Cà phê đen (M) | Cà phê đen (L) | Cà phê sữa (M) | Cà phê sữa (L)
+- Đơn vị tính (distinct=3, empty=0): ly | phần | cái
+- Tồn cuối (distinct=43, empty=0): 197 | 132 | 173 | 16

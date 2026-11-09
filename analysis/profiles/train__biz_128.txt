@@ -1,0 +1,390 @@
+# Dữ liệu biz_128
+
+File Excel xuất từ phần mềm bán hàng, mỗi danh sách một file (danh sách dài tách thành nhiều file, tên thêm đuôi _1, _2… hoặc đuôi năm _2025, _2026…), nối với nhau qua mã. Ngày dạng dd/mm/yyyy.
+
+File `DanhSachHoaDon.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm.
+
+## File
+- `DanhSachHoaDon.xlsx` (xlsx)
+- `DanhSachHoaDonChiTiet.xlsx` (xlsx)
+- `DanhSachSanPham.xlsx` (xlsx)
+- `DanhSachKhachHang.xlsx` (xlsx)
+- `BaoCaoTonKho.xlsx` (xlsx)
+- `DanhSachNhapHang.xlsx` (xlsx)
+- `DanhSachChiTietNhapHang.xlsx` (xlsx)
+- `DanhSachHoaDonPhongBan.xlsx` (xlsx)
+
+## Cột trong `DanhSachHoaDon.xlsx`
+- **Mã hóa đơn**: mã đơn
+- **Thời gian**: ngày bán
+- **Mã KH**: mã khách (trống nếu khách lẻ)
+- **Khách hàng**: tên khách (Khách lẻ nếu không lưu)
+- **Tổng tiền hàng**: tổng tiền hàng của đơn (cộng thành tiền các dòng), trước giảm giá của đơn
+- **Giảm giá**: giảm giá
+- **Khách đã trả**: đã thanh toán
+- **Trạng thái**: trạng thái đơn
+- **Thời gian tạo**: thời điểm đặt đơn (ngày giờ)
+- **Tổng sau giảm giá**: tổng tiền đơn
+- **Còn nợ**: còn nợ
+
+## Cột trong `DanhSachHoaDonChiTiet.xlsx`
+- **Mã hóa đơn**: mã đơn
+- **Mã hàng**: mã hàng
+- **Tên hàng**: tên hàng
+- **Số lượng**: số lượng
+- **Đơn giá**: đơn giá
+- **Giảm giá**: giảm giá
+- **Thành tiền**: thành tiền sau giảm
+- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản
+- **STT**: số thứ tự dòng trong đơn
+
+## Cột trong `DanhSachSanPham.xlsx`
+- **Mã hàng**: mã hàng
+- **Tên hàng**: tên
+- **Nhóm hàng(3 Cấp)**: nhóm hàng
+- **Giá bán**: giá bán hiện tại
+- **ĐVT**: đơn vị cơ bản
+- **Thời gian tạo**: ngày tạo mặt hàng trên phần mềm
+
+## Cột trong `DanhSachKhachHang.xlsx`
+- **Mã khách hàng**: mã khách
+- **Tên khách hàng**: tên
+- **Điện thoại**: số điện thoại
+- **Nhóm khách hàng**: nhóm khách
+- **Địa chỉ**: địa chỉ
+- **Giới tính**: cột trống, không có dữ liệu
+
+## Cột trong `BaoCaoTonKho.xlsx`
+- **Mã hàng**: mã hàng
+- **Tên hàng**: tên hàng
+- **ĐVT**: đơn vị cơ bản
+- **Tồn cuối kỳ**: tồn kho (đơn vị cơ bản)
+
+## Cột trong `DanhSachNhapHang.xlsx`
+- **Mã nhập hàng**: mã phiếu nhập
+- **Thời gian**: ngày nhập
+- **Mã NCC**: mã nhà cung cấp
+- **Cần trả NCC**: tổng tiền phiếu nhập
+- **Trạng thái**: trạng thái phiếu nhập
+- **Ghi chú**: ghi chú
+
+## Cột trong `DanhSachChiTietNhapHang.xlsx`
+- **Mã nhập hàng**: mã phiếu nhập
+- **STT**: số thứ tự dòng trong phiếu nhập
+- **Mã hàng**: mã hàng
+- **ĐVT**: đơn vị tính
+- **Số lượng**: số lượng
+- **Đơn giá**: giá nhập một đơn vị (theo đơn vị nhập của dòng)
+
+## Cột trong `DanhSachHoaDonPhongBan.xlsx`
+- **Mã hóa đơn**: mã đơn
+- **Phòng/Bàn**: bàn
+- **Khu vực**: khu vực của bàn
+- **Số khách**: số khách của đơn
+
+## Quy ước
+- Dữ liệu có đến hết 07/09/2026.
+- **Còn nợ**: **Còn nợ** là số khách còn nợ của đơn, tính đến hết ngày cuối dữ liệu.
+- **Tồn kho**: **Tồn cuối kỳ** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản.
+- **Bàn**: đơn ăn tại quán có đúng một bàn (**Phòng/Bàn**), kể cả đơn huỷ; đơn giao đi không có bàn. **Số khách** là số khách của đơn; một bàn có nhiều đơn trong ngày.
+- **Phí phục vụ**: đơn ngồi phòng lạnh (không huỷ, không ghi nợ) có thêm dòng hàng "Phí phục vụ": phí phục vụ phòng lạnh của đơn, tính theo tiền món, đã ghi sẵn thành tiền.
+- **Nhập hàng**: **Đơn giá** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Cần trả NCC** là tổng tiền của cả phiếu nhập.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:
+  - Bia Tiger lon: 1 thùng = 24 lon
+  - Bia Sài Gòn Special lon: 1 thùng = 24 lon
+  - Coca-Cola lon: 1 thùng = 24 lon
+  - Bia Tiger Bạc lon: 1 thùng = 24 lon
+  - Nước suối: 1 thùng = 24 chai
+  - Bia Heineken lon: 1 thùng = 24 lon
+  - Bia Sài Gòn Lager chai: 1 két = 20 chai
+  - 7Up lon: 1 thùng = 24 lon
+
+
+## BaoCaoTonKho.xlsx::Sheet1  rows=55
+- Mã hàng (distinct=55, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Tên hàng (distinct=55, empty=0): Rau muống xào tỏi | Bia Tiger lon | Cánh gà chiên nước mắm | Lẩu Thái tôm cá (nhỏ)
+- ĐVT (distinct=8, empty=0): đĩa | lon | nồi | phần
+- Tồn cuối kỳ (distinct=46, empty=0): 204 | 43 | 192 | 34
+## DanhSachChiTietNhapHang.xlsx::Sheet1  rows=1454
+- Mã nhập hàng (distinct=479, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- STT (distinct=55, empty=0): 1 | 2 | 3 | 4
+- Mã hàng (distinct=55, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- ĐVT (distinct=8, empty=0): đĩa | thùng | nồi | phần
+- Số lượng (distinct=111, empty=0): 223 | 10 | 201 | 179
+- Đơn giá (distinct=128, empty=0): 16,000 | 360,000 | 33,000 | 75,000
+## DanhSachHoaDon.xlsx::04.2025  rows=1537
+- Mã hóa đơn (distinct=1537, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Thời gian (distinct=30, empty=0): 01/04/2025 | 02/04/2025 | 03/04/2025 | 04/04/2025
+- Mã KH (distinct=180, empty=613): KH0128 | KH0027 | KH0081 | KH0165
+- Khách hàng (distinct=181, empty=0): Khách lẻ | Tăng Phương Hoa | Mai Sơn Hương | Ông Thảo Hùng
+- Tổng tiền hàng (distinct=815, empty=0): 196,000 | 69,000 | 160,000 | 1,487,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=804, empty=0): 196,000 | 69,000 | 160,000 | 1,492,000
+- Trạng thái (distinct=3, empty=0): xong | hủy | hàng trả về
+- Thời gian tạo (distinct=1534, empty=0): 2025-04-01 07:27:11 | 2025-04-01 07:34:11 | 2025-04-01 07:52:07 | 2025-04-01 09:35:12
+- Tổng sau giảm giá (distinct=811, empty=0): 196,000 | 69,000 | 160,000 | 1,492,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::05.2025  rows=1524
+- Mã hóa đơn (distinct=1524, empty=0): ORD001538 | ORD001539 | ORD001540 | ORD001541
+- Thời gian (distinct=31, empty=0): 01/05/2025 | 02/05/2025 | 03/05/2025 | 04/05/2025
+- Mã KH (distinct=179, empty=622): KH0073 | KH0085 | KH0120 | KH0147
+- Khách hàng (distinct=180, empty=0): Trương Hạnh Ngọc | Hồ Nhung Thảo | Giang Nam Châu | Khách lẻ
+- Tổng tiền hàng (distinct=800, empty=0): 238,000 | 338,000 | 434,000 | 724,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=798, empty=0): 238,000 | 328,000 | 424,000 | 714,000
+- Trạng thái (distinct=3, empty=0): xong | hàng trả về | hủy
+- Thời gian tạo (distinct=1523, empty=0): 2025-05-01 07:38:01 | 2025-05-01 07:38:10 | 2025-05-01 07:57:00 | 2025-05-01 08:33:46
+- Tổng sau giảm giá (distinct=804, empty=0): 238,000 | 328,000 | 424,000 | 714,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::06.2025  rows=1389
+- Mã hóa đơn (distinct=1389, empty=0): ORD003062 | ORD003063 | ORD003064 | ORD003065
+- Thời gian (distinct=30, empty=0): 01/06/2025 | 02/06/2025 | 03/06/2025 | 04/06/2025
+- Mã KH (distinct=179, empty=542): KH0113 | KH0005 | KH0072 | KH0073
+- Khách hàng (distinct=180, empty=0): Đoàn Đức Thu | Khách lẻ | Huỳnh Phương Dũng | Triệu Tâm Thảo
+- Tổng tiền hàng (distinct=746, empty=0): 79,000 | 588,000 | 299,000 | 319,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=736, empty=0): 79,000 | 578,000 | 299,000 | 309,000
+- Trạng thái (distinct=2, empty=0): xong | hủy
+- Thời gian tạo (distinct=1388, empty=0): 2025-06-01 08:27:05 | 2025-06-01 08:38:39 | 2025-06-01 09:07:29 | 2025-06-01 10:06:36
+- Tổng sau giảm giá (distinct=746, empty=0): 79,000 | 578,000 | 299,000 | 309,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::07.2025  rows=1575
+- Mã hóa đơn (distinct=1575, empty=0): ORD004451 | ORD004452 | ORD004453 | ORD004454
+- Thời gian (distinct=31, empty=0): 01/07/2025 | 02/07/2025 | 03/07/2025 | 04/07/2025
+- Mã KH (distinct=179, empty=666): KH0150 | KH0104 | KH0103 | KH0094
+- Khách hàng (distinct=180, empty=0): Khách lẻ | Lâm Giang Tâm | Lương Loan Bảo | Phùng Đức Hoa
+- Tổng tiền hàng (distinct=828, empty=0): 646,000 | 198,000 | 822,000 | 692,000
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Khách đã trả (distinct=805, empty=0): 636,000 | 198,000 | 812,000 | 682,000
+- Trạng thái (distinct=3, empty=0): xong | hủy | hàng trả về
+- Thời gian tạo (distinct=1574, empty=0): 2025-07-01 07:47:35 | 2025-07-01 08:57:10 | 2025-07-01 09:35:24 | 2025-07-01 11:01:42
+- Tổng sau giảm giá (distinct=811, empty=0): 636,000 | 198,000 | 812,000 | 682,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::08.2025  rows=1555
+- Mã hóa đơn (distinct=1555, empty=0): ORD006026 | ORD006027 | ORD006028 | ORD006029
+- Thời gian (distinct=31, empty=0): 01/08/2025 | 02/08/2025 | 03/08/2025 | 04/08/2025
+- Mã KH (distinct=180, empty=625): KH0111 | KH0028 | KH0065 | KH0086
+- Khách hàng (distinct=181, empty=0): Quách Minh Minh | Khách lẻ | Vũ Hà Minh | Bùi Ngân Quang
+- Tổng tiền hàng (distinct=805, empty=0): 717,000 | 350,000 | 1,103,000 | 456,000
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Khách đã trả (distinct=799, empty=0): 707,000 | 340,000 | 1,093,000 | 461,000
+- Trạng thái (distinct=3, empty=0): xong | hủy | hàng trả về
+- Thời gian tạo (distinct=1555, empty=0): 2025-08-01 07:17:24 | 2025-08-01 09:29:47 | 2025-08-01 10:24:12 | 2025-08-01 10:27:02
+- Tổng sau giảm giá (distinct=802, empty=0): 707,000 | 340,000 | 1,093,000 | 461,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::09.2025  rows=1539
+- Mã hóa đơn (distinct=1539, empty=0): ORD007581 | ORD007582 | ORD007583 | ORD007584
+- Thời gian (distinct=30, empty=0): 01/09/2025 | 02/09/2025 | 03/09/2025 | 04/09/2025
+- Mã KH (distinct=177, empty=603): KH0020 | KH0171 | KH0041 | KH0113
+- Khách hàng (distinct=178, empty=0): Khách lẻ | Tống Phúc Bình | Chung Linh Hương | La Hoàng Ngân
+- Tổng tiền hàng (distinct=806, empty=0): 173,000 | 425,000 | 559,000 | 483,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=798, empty=0): 173,000 | 415,000 | 549,000 | 473,000
+- Trạng thái (distinct=3, empty=0): xong | hủy | hàng trả về
+- Thời gian tạo (distinct=1538, empty=0): 2025-09-01 08:06:38 | 2025-09-01 08:07:12 | 2025-09-01 08:13:06 | 2025-09-01 08:16:12
+- Tổng sau giảm giá (distinct=800, empty=0): 173,000 | 415,000 | 549,000 | 473,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::10.2025  rows=1596
+- Mã hóa đơn (distinct=1596, empty=0): ORD009120 | ORD009121 | ORD009122 | ORD009123
+- Thời gian (distinct=31, empty=0): 01/10/2025 | 02/10/2025 | 03/10/2025 | 04/10/2025
+- Mã KH (distinct=179, empty=631): KH0168 | KH0063 | KH0045 | KH0009
+- Khách hàng (distinct=180, empty=0): Khách lẻ | Bùi Thắng Phương | Huỳnh Trung Minh | Huỳnh Giang Duy
+- Tổng tiền hàng (distinct=880, empty=0): 380,000 | 22,000 | 292,000 | 336,000
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Khách đã trả (distinct=874, empty=0): 370,000 | 22,000 | 292,000 | 326,000
+- Trạng thái (distinct=3, empty=0): xong | hàng trả về | hủy
+- Thời gian tạo (distinct=1596, empty=0): 2025-10-01 08:08:25 | 2025-10-01 08:56:39 | 2025-10-01 08:58:23 | 2025-10-01 10:02:32
+- Tổng sau giảm giá (distinct=887, empty=0): 370,000 | 22,000 | 292,000 | 326,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::11.2025  rows=1457
+- Mã hóa đơn (distinct=1457, empty=0): ORD010716 | ORD010717 | ORD010718 | ORD010719
+- Thời gian (distinct=30, empty=0): 01/11/2025 | 02/11/2025 | 03/11/2025 | 04/11/2025
+- Mã KH (distinct=177, empty=576): KH0021 | KH0076 | KH0137 | KH0178
+- Khách hàng (distinct=178, empty=0): Khách lẻ | Hứa Quân Hoa | Hồ Bình Mai | Ngô Phương Duy
+- Tổng tiền hàng (distinct=897, empty=0): 84,000 | 104,000 | 446,000 | 540,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=883, empty=0): 84,000 | 104,000 | 436,000 | 530,000
+- Trạng thái (distinct=3, empty=0): xong | hàng trả về | hủy
+- Thời gian tạo (distinct=1456, empty=0): 2025-11-01 08:02:28 | 2025-11-01 08:26:02 | 2025-11-01 08:37:33 | 2025-11-01 09:41:37
+- Tổng sau giảm giá (distinct=898, empty=0): 84,000 | 104,000 | 436,000 | 530,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::12.2025  rows=1573
+- Mã hóa đơn (distinct=1573, empty=0): ORD012173 | ORD012174 | ORD012175 | ORD012176
+- Thời gian (distinct=31, empty=0): 01/12/2025 | 02/12/2025 | 03/12/2025 | 04/12/2025
+- Mã KH (distinct=180, empty=651): KH0126 | KH0017 | KH0132 | KH0013
+- Khách hàng (distinct=181, empty=0): Khách lẻ | Vương Trang Lan | Châu Giang Bình | Đinh Dương Nam
+- Tổng tiền hàng (distinct=994, empty=0): 661,500 | 176,000 | 89,000 | 109,000
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Khách đã trả (distinct=979, empty=0): 651,500 | 176,000 | 89,000 | 109,000
+- Trạng thái (distinct=3, empty=0): xong | hủy | hàng trả về
+- Thời gian tạo (distinct=1571, empty=0): 2025-12-01 07:46:04 | 2025-12-01 09:54:20 | 2025-12-01 10:07:27 | 2025-12-01 10:20:12
+- Tổng sau giảm giá (distinct=990, empty=0): 651,500 | 176,000 | 89,000 | 109,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::01.2026  rows=1615
+- Mã hóa đơn (distinct=1615, empty=0): ORD013746 | ORD013747 | ORD013748 | ORD013749
+- Thời gian (distinct=31, empty=0): 01/01/2026 | 02/01/2026 | 03/01/2026 | 04/01/2026
+- Mã KH (distinct=178, empty=628): KH0065 | KH0094 | KH0053 | KH0058
+- Khách hàng (distinct=179, empty=0): Bùi Ngân Quang | Khách lẻ | Quách Hoa Thảo | Diệp Quân Nhung
+- Tổng tiền hàng (distinct=1027, empty=0): 317,000 | 606,000 | 616,000 | 373,000
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Khách đã trả (distinct=1007, empty=0): 307,000 | 596,000 | 606,000 | 363,000
+- Trạng thái (distinct=5, empty=0): xong | hủy | hàng trả về | Thành công
+- Thời gian tạo (distinct=1614, empty=0): 2026-01-01 09:32:37 | 2026-01-01 10:31:08 | 2026-01-01 10:32:10 | 2026-01-01 10:37:35
+- Tổng sau giảm giá (distinct=1015, empty=0): 307,000 | 596,000 | 606,000 | 363,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::02.2026  rows=1001
+- Mã hóa đơn (distinct=1001, empty=0): ORD015361 | ORD015362 | ORD015363 | ORD015364
+- Thời gian (distinct=28, empty=0): 01/02/2026 | 02/02/2026 | 03/02/2026 | 04/02/2026
+- Mã KH (distinct=171, empty=373): KH0066 | KH0114 | KH0138 | KH0166
+- Khách hàng (distinct=172, empty=0): Hứa Bình Sơn | Triệu Thanh Dương | Khách lẻ | Doãn Phong Dương
+- Tổng tiền hàng (distinct=718, empty=0): 2,910,000 | 444,000 | 118,000 | 383,000
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Khách đã trả (distinct=710, empty=0): 2,900,000 | 434,000 | 118,000 | 388,000
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đổi trả
+- Thời gian tạo (distinct=1001, empty=0): 2026-02-01 09:44:55 | 2026-02-01 10:46:19 | 2026-02-01 10:47:01 | 2026-02-01 11:24:11
+- Tổng sau giảm giá (distinct=719, empty=0): 2,900,000 | 434,000 | 118,000 | 388,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::03.2026  rows=1611
+- Mã hóa đơn (distinct=1611, empty=0): ORD016362 | ORD016363 | ORD016364 | ORD016365
+- Thời gian (distinct=31, empty=0): 01/03/2026 | 02/03/2026 | 03/03/2026 | 04/03/2026
+- Mã KH (distinct=178, empty=660): KH0177 | KH0068 | KH0086 | KH0069
+- Khách hàng (distinct=179, empty=0): Bùi Hương Dương | Khách lẻ | Hoàng Hùng Trung | Tống Nhung Phong
+- Tổng tiền hàng (distinct=1023, empty=0): 226,000 | 222,000 | 101,000 | 465,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1004, empty=0): 226,000 | 222,000 | 101,000 | 455,000
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đổi trả
+- Thời gian tạo (distinct=1609, empty=0): 2026-03-01 07:44:39 | 2026-03-01 08:58:01 | 2026-03-01 10:05:57 | 2026-03-01 10:37:14
+- Tổng sau giảm giá (distinct=1023, empty=0): 226,000 | 222,000 | 101,000 | 455,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::04.2026  rows=1602
+- Mã hóa đơn (distinct=1602, empty=0): ORD017973 | ORD017974 | ORD017975 | ORD017976
+- Thời gian (distinct=30, empty=0): 01/04/2026 | 02/04/2026 | 03/04/2026 | 04/04/2026
+- Mã KH (distinct=180, empty=657): KH0072 | KH0107 | KH0124 | KH0005
+- Khách hàng (distinct=181, empty=0): Khách lẻ | Triệu Tâm Thảo | Quách Đức Thảo | Bạch Phúc Mai
+- Tổng tiền hàng (distinct=1044, empty=0): 247,000 | 1,064,500 | 493,000 | 118,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1024, empty=0): 247,000 | 1,054,500 | 483,000 | 118,000
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đổi trả
+- Thời gian tạo (distinct=1601, empty=0): 2026-04-01 08:08:44 | 2026-04-01 09:16:50 | 2026-04-01 10:35:44 | 2026-04-01 10:37:10
+- Tổng sau giảm giá (distinct=1041, empty=0): 247,000 | 1,054,500 | 483,000 | 118,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::05.2026  rows=1601
+- Mã hóa đơn (distinct=1601, empty=0): ORD019575 | ORD019576 | ORD019577 | ORD019578
+- Thời gian (distinct=31, empty=0): 01/05/2026 | 02/05/2026 | 03/05/2026 | 04/05/2026
+- Mã KH (distinct=178, empty=612): KH0159 | KH0031 | KH0121 | KH0043
+- Khách hàng (distinct=179, empty=0): Phạm Sơn Ngân | Quách Bình Thắng | Khách lẻ | Phạm Trang Ngọc
+- Tổng tiền hàng (distinct=1056, empty=0): 1,040,500 | 318,500 | 702,000 | 174,000
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Khách đã trả (distinct=1040, empty=0): 1,030,500 | 308,500 | 692,000 | 174,000
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đổi trả
+- Thời gian tạo (distinct=1597, empty=0): 2026-05-01 07:05:21 | 2026-05-01 08:24:49 | 2026-05-01 08:28:11 | 2026-05-01 09:08:57
+- Tổng sau giảm giá (distinct=1055, empty=0): 1,030,500 | 308,500 | 692,000 | 174,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::06.2026  rows=1592
+- Mã hóa đơn (distinct=1592, empty=0): ORD021176 | ORD021177 | ORD021178 | ORD021179
+- Thời gian (distinct=30, empty=0): 01/06/2026 | 02/06/2026 | 03/06/2026 | 04/06/2026
+- Mã KH (distinct=178, empty=647): KH0014 | KH0143 | KH0167 | KH0032
+- Khách hàng (distinct=179, empty=0): Hồ Chi Dương | Nghiêm Bình Hằng | Quách Hoàng Thắng | Kiều Lan Bảo
+- Tổng tiền hàng (distinct=1114, empty=0): 755,000 | 22,000 | 373,000 | 285,000
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Khách đã trả (distinct=1100, empty=0): 745,000 | 22,000 | 363,000 | 285,000
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đổi trả
+- Thời gian tạo (distinct=1591, empty=0): 2026-06-01 10:03:40 | 2026-06-01 10:28:34 | 2026-06-01 10:36:02 | 2026-06-01 10:46:12
+- Tổng sau giảm giá (distinct=1116, empty=0): 745,000 | 22,000 | 363,000 | 285,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::07.2026  rows=1684
+- Mã hóa đơn (distinct=1684, empty=0): ORD022768 | ORD022769 | ORD022770 | ORD022771
+- Thời gian (distinct=31, empty=0): 01/07/2026 | 02/07/2026 | 03/07/2026 | 04/07/2026
+- Mã KH (distinct=180, empty=646): KH0120 | KH0164 | KH0139 | KH0112
+- Khách hàng (distinct=181, empty=0): Giang Nam Châu | Khách lẻ | Phan Minh Ngân | Châu Châu Anh
+- Tổng tiền hàng (distinct=1187, empty=0): 920,700 | 288,000 | 517,000 | 307,000
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Khách đã trả (distinct=1166, empty=0): 925,700 | 303,000 | 507,000 | 312,000
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đổi trả
+- Thời gian tạo (distinct=1684, empty=0): 2026-07-01 07:17:46 | 2026-07-01 08:09:50 | 2026-07-01 09:43:59 | 2026-07-01 09:57:17
+- Tổng sau giảm giá (distinct=1184, empty=0): 925,700 | 303,000 | 507,000 | 312,000
+- Còn nợ (distinct=1, empty=0): 0
+## DanhSachHoaDon.xlsx::08.2026  rows=1690
+- Mã hóa đơn (distinct=1690, empty=0): ORD024452 | ORD024453 | ORD024454 | ORD024455
+- Thời gian (distinct=31, empty=0): 01/08/2026 | 02/08/2026 | 03/08/2026 | 04/08/2026
+- Mã KH (distinct=180, empty=702): KH0151 | KH0064 | KH0154 | KH0068
+- Khách hàng (distinct=181, empty=0): Diệp Hiếu Mai | Trương Thắng Hằng | Khách lẻ | Đặng Quân Đức
+- Tổng tiền hàng (distinct=1199, empty=0): 845,500 | 393,000 | 310,000 | 465,500
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Khách đã trả (distinct=1183, empty=0): 835,500 | 383,000 | 300,000 | 455,500
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đổi trả
+- Thời gian tạo (distinct=1687, empty=0): 2026-08-01 08:48:14 | 2026-08-01 08:52:23 | 2026-08-01 09:25:28 | 2026-08-01 10:18:20
+- Tổng sau giảm giá (distinct=1202, empty=0): 835,500 | 383,000 | 300,000 | 455,500
+- Còn nợ (distinct=7, empty=0): 0 | 398,000 | 228,500 | 187,000
+## DanhSachHoaDon.xlsx::09.2026  rows=364
+- Mã hóa đơn (distinct=364, empty=0): ORD026142 | ORD026143 | ORD026144 | ORD026145
+- Thời gian (distinct=7, empty=0): 01/09/2026 | 02/09/2026 | 03/09/2026 | 04/09/2026
+- Mã KH (distinct=124, empty=142): KH0109 | KH0094 | KH0127 | KH0170
+- Khách hàng (distinct=125, empty=0): Khách lẻ | Chung Loan Thảo | Quách Hoa Thảo | Đào Cường Ngân
+- Tổng tiền hàng (distinct=328, empty=0): 1,879,000 | 93,500 | 418,000 | 1,032,000
+- Giảm giá (distinct=2, empty=0): 10,000 | 0
+- Khách đã trả (distinct=316, empty=0): 1,869,000 | 93,500 | 408,000 | 1,037,000
+- Trạng thái (distinct=4, empty=0): Thành công | Huỷ đơn | Đổi trả | Đang giao hàng
+- Thời gian tạo (distinct=363, empty=0): 2026-09-01 07:44:10 | 2026-09-01 08:23:12 | 2026-09-01 08:49:17 | 2026-09-01 10:22:59
+- Tổng sau giảm giá (distinct=328, empty=0): 1,869,000 | 93,500 | 408,000 | 1,037,000
+- Còn nợ (distinct=6, empty=0): 0 | 349,900 | 327,000 | 679,000
+## DanhSachHoaDonChiTiet.xlsx::Sheet1  rows=99650
+- Mã hóa đơn (distinct=26505, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Mã hàng (distinct=56, empty=0): SP0005 | SP0029 | SP0030 | SP0040
+- Tên hàng (distinct=96, empty=0): Gỏi xoài khô cá sặc | Mì xào hải sản | Bia Sài Gòn Lager chai | Lòng mề gà xào sa tế
+- Số lượng (distinct=10, empty=0): 1 | 3 | 10 | 2
+- Đơn giá (distinct=162, empty=0): 99,000 | 79,000 | 18,000 | 69,000
+- Giảm giá (distinct=52, empty=0): 0 | 10,000 | 4,000 | 40,000
+- Thành tiền (distinct=451, empty=0): 99,000 | 79,000 | 18,000 | 69,000
+- Số lượng quy đổi (distinct=12, empty=0): 1 | 3 | 10 | 2
+- STT (distinct=7, empty=0): 1 | 2 | 3 | 4
+## DanhSachHoaDonPhongBan.xlsx::Sheet1  rows=23880
+- Mã hóa đơn (distinct=23880, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000006
+- Phòng/Bàn (distinct=12, empty=0): B11 | B05 | B04 | B06
+- Khu vực (distinct=3, empty=0): sân | trong nhà | phòng lạnh
+- Số khách (distinct=8, empty=0): 3 | 1 | 5 | 4
+## DanhSachKhachHang.xlsx::Sheet1  rows=180
+- Sinh nhật (distinct=23, empty=157): 21/02/1987 | 22/07/1968 | 21/05/1985 | 13/10/1970
+- Người tạo (distinct=1, empty=0): admin
+- Mã khách hàng (distinct=180, empty=0): KH0001 | KH0002 | KH0003 | KH0004
+- Email (distinct=0, empty=180): 
+- Tên khách hàng (distinct=180, empty=0): Kiều Long Đức | Kiều Quân Hùng | Tạ Khánh Hoa | Đào Bích Huy
+- Điện thoại (distinct=180, empty=0): 0978608839 | 0908588993 | 0934635968 | 0792191083
+- Nhóm khách hàng (distinct=3, empty=0): lẻ | thân thiết | sỉ
+- Loại hình khách (distinct=1, empty=0): Cá nhân
+- Điểm hiện tại (distinct=1, empty=0): 0
+- CCCD (distinct=0, empty=180): 
+- Ghi chú KH (distinct=0, empty=180): 
+- Công ty (distinct=0, empty=180): 
+- Địa chỉ (distinct=180, empty=0): 21 Đinh Bộ Lĩnh | 375 Lê Đức Thọ | 178 Lê Quang Định | 448 Xô Viết Nghệ Tĩnh
+- Trạng thái (distinct=1, empty=0): Đang hoạt động
+- Giới tính (distinct=0, empty=180): 
+- MST (distinct=0, empty=180): 
+- Tổng điểm (distinct=1, empty=0): 0
+## DanhSachNhapHang.xlsx::Sheet1  rows=479
+- Mã nhập hàng (distinct=479, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- Thời gian (distinct=479, empty=0): 01/04/2025 | 11/04/2025 | 13/04/2025 | 15/04/2025
+- Mã NCC (distinct=5, empty=0): NCC003 | NCC002 | NCC001 | NCC005
+- Cần trả NCC (distinct=464, empty=0): 227,262,100 | 2,880,000 | 878,400 | 1,230,900
+- Trạng thái (distinct=1, empty=0): Đã nhập hàng
+- Ghi chú (distinct=1, empty=478): nhập đầu kỳ
+## DanhSachSanPham.xlsx::Sheet1  rows=56
+- Mã hàng (distinct=56, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Tồn nhỏ nhất (distinct=1, empty=0): 0
+- Loại hàng hóa (distinct=1, empty=0): Hàng hóa
+- Tồn lớn nhất (distinct=1, empty=0): 999999999
+- Tên hàng (distinct=56, empty=0): Rau muống xào tỏi | Bia Tiger lon | Cánh gà chiên nước mắm | Lẩu Thái tôm cá (nhỏ)
+- Nhóm hàng(3 Cấp) (distinct=11, empty=0): rau | bia | chiên xào | lẩu
+- Ghi chú (distinct=0, empty=56): 
+- Giá bán (distinct=38, empty=0): 52500 | 22000 | 83000 | 189000
+- Thương hiệu (distinct=0, empty=56): 
+- Mã HH Liên quan (distinct=0, empty=56): 
+- Mẫu ghi chú (distinct=0, empty=56): 
+- Mã barcode (distinct=22, empty=34): 8930336293963 | 8935932682203 | 8938715416149 | 8936069133798
+- Vị trí (distinct=0, empty=56): 
+- Thuộc tính (distinct=0, empty=56): 
+- Hình ảnh (distinct=0, empty=56): 
+- ĐVT (distinct=9, empty=0): đĩa | lon | nồi | phần
+- Mô tả chi tiết (distinct=0, empty=56): 
+- Trọng lượng (distinct=0, empty=56): 
+- Thời gian tạo (distinct=55, empty=0): 2024-01-27 00:00:00 | 2025-02-10 00:00:00 | 2023-05-09 00:00:00 | 2024-08-29 00:00:00

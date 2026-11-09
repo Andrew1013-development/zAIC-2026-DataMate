@@ -1,0 +1,334 @@
+# Dữ liệu dev_004
+
+Sổ bán hàng ghi tay chuyển sang Excel, mỗi tháng một sheet.
+
+## File
+- `SoBanHang.xlsx` (xlsx)
+- `DanhMuc.xlsx` (xlsx)
+- `TonKho.xlsx` (xlsx)
+- `SoGiaoHang.xlsx` (xlsx)
+- `SoHanNo.xlsx` (xlsx)
+- `SoNhapHang.xlsx` (xlsx)
+- `BangGia.xlsx` (xlsx)
+
+## Cột trong `SoBanHang.xlsx`
+- **Khách hàng (tên)**: tên khách (Khách lẻ nếu không lưu)
+- **Giờ**: giờ đặt đơn (dòng trả hàng: lúc trả)
+- **Thời gian**: ngày bán
+- **Ma don**: mã đơn
+- **SL bán**: số lượng
+- **dvt**: đơn vị tính
+- **Hàng bán**: tên hàng
+- **Trạng thái xử lý**: trạng thái đơn
+- **Giá 1 đv**: đơn giá
+- **Amount**: thành tiền sau giảm
+- **Tổng phiếu**: tổng tiền của cả phiếu
+
+## Cột trong `DanhMuc.xlsx`
+- **Hàng**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)
+- **Hệ số**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn
+- **ĐV gốc**: đơn vị cơ bản
+- **Loại ĐV**: đơn vị lớn (thùng, hộp, tấn...)
+
+## Cột trong `TonKho.xlsx`
+- **Tồn cuối**: tồn kho (đơn vị cơ bản)
+- **ĐV gốc**: đơn vị cơ bản
+- **Tên sản phẩm**: tên hàng
+
+## Cột trong `SoGiaoHang.xlsx`
+- **Số lượng giao**: số lượng đã đổi ra đơn vị cơ bản
+- **Biển số xe**: biển số xe
+- **Lượt giao**: đợt giao (1, 2, 3)
+- **Số đơn**: mã đơn
+- **Thời gian giao**: ngày giao
+- **Hàng hóa**: tên hàng
+- **Lái xe**: tài xế
+- **ĐV gốc**: đơn vị cơ bản
+
+## Cột trong `SoHanNo.xlsx`
+- **Mã đơn hàng**: mã đơn
+- **Kỳ hạn**: số ngày được nợ
+- **Ngày phải trả**: hạn thanh toán
+
+## Cột trong `SoNhapHang.xlsx`
+- **Product**: tên hàng
+- **ĐVT**: đơn vị nhập
+- **Số phiếu**: mã phiếu nhập
+- **Ghi chú**: ghi chú
+- **Nhà cung cấp**: nhà cung cấp
+- **Thành tiền**: tiền nhập của cả dòng
+- **Giá nhập**: giá nhập một đơn vị (theo đơn vị nhập của dòng)
+- **Ngày nhập**: ngày nhập
+- **SL nhập**: số lượng nhập
+
+## Cột trong `BangGia.xlsx`
+- **Giá cũ**: giá trước lần đổi (trống ở dòng đầu mỗi mặt hàng)
+- **Ngày áp dụng**: ngày bắt đầu áp dụng giá
+- **Giá mới**: giá bán áp dụng từ ngày đó (đơn vị cơ bản)
+- **Diễn giải**: tên hàng
+
+## Quy ước
+- Dữ liệu có đến hết 10/06/2026.
+- **Trả hàng**: hàng trả ghi số lượng âm, cùng mã đơn với đơn đã bán: đơn có dòng số lượng âm là đơn có trả hàng.
+- **Tồn kho**: **Tồn cuối** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản.
+- **Hạn thanh toán**: chỉ đơn bán nợ có hạn. **Ngày phải trả** là ngày khách phải trả hết đơn; **Kỳ hạn** là số ngày được nợ, tính từ ngày đặt.
+- **Giao hàng**: đơn không huỷ có ít nhất một mặt hàng nhóm cát đá, gạch, sắt thép, xi măng thì được giao tận nơi mọi mặt hàng của đơn, 1–3 đợt (**Lượt giao**); đơn khác khách tự chở, không có trong sổ giao; đơn đặt mấy ngày cuối dữ liệu có thể chưa giao. **Số lượng giao** tính theo đơn vị cơ bản.
+- **Nhập hàng**: **Giá nhập** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Thành tiền** là tiền nhập của cả dòng.
+- **Giá bán**: **Giá mới** (theo đơn vị cơ bản) áp dụng từ **Ngày áp dụng** đến trước lần đổi giá sau của cùng mặt hàng; dòng đầu mỗi mặt hàng là giá lúc bắt đầu dữ liệu (**Giá cũ** trống).
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhMuc.xlsx`.
+- **Hàng theo bó**: Ống PVC Bình Minh D32 cây 4m, Ống PVC Bình Minh D50 cây 4m, Ống PVC Bình Minh D90 cây 4m bán theo bó, 1 bó = 10 cây; khách lấy nguyên bó thì sổ ghi số bó.
+
+
+## BangGia.xlsx::Sheet1  rows=99
+- Giá cũ (distinct=37, empty=60): 105.000đ | 300.000đ | 115.000đ | 225k
+- Ngày áp dụng (distinct=41, empty=0): 1 thg 1 2025 | 23/07/2025 | 01/01/2025 | 22 thg 6 2025
+- Giá mới (distinct=87, empty=0): 105k | 110.000đ | 100k | 300.000đ
+- Diễn giải (distinct=60, empty=0): Xi măng Hà Tiên PCB40 bao 50kg | Xi măng INSEE Power-S bao 50kg | Cát xây tô | Cát bê tông
+## DanhMuc.xlsx::Sheet1  rows=14
+- Hàng (distinct=14, empty=0): Xi măng Hà Tiên PCB40 bao 50kg | Xi măng INSEE Power-S bao 50kg | Cát xây tô | Cát bê tông
+- Hệ số (distinct=5, empty=0): 20 | 4 | 1000 | 10
+- ĐV gốc (distinct=6, empty=0): bao | m3 | viên | cuộn
+- Loại ĐV (distinct=6, empty=0): tấn | xe 4m3 | thiên | cây
+## SoBanHang.xlsx::T01-2025  rows=1746
+- Khách hàng (tên) (distinct=184, empty=887): lẻ | Trịnh Minh Phương | Đàm Thảo Hoàng | kl
+- Giờ (distinct=823, empty=3): 2025-01-01 06:09:24 | 2025-01-01 06:32:46 | 2025-01-01 07:11:46 | 2025-01-01 07:57:24
+- Thời gian (distinct=123, empty=890): 1/1 | 1 thg 1 2025 | 01/01/2025 | 45658
+- Ma don (distinct=820, empty=890): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- SL bán (distinct=83, empty=3): 2 cái | 5 viên | 1 thùng | 2 cuộn
+- dvt (distinct=19, empty=3): cái | viên | thùng | cuộn
+- Hàng bán (distinct=76, empty=3): Bóng LED bulb Rạng Đông A60 9W | Gạch thẻ đặc 4x8x18 | Sơn Maxilite trong nhà 18L | Dây điện Cadivi VCmd 2x2.5 cuộn 100m
+- Trạng thái xử lý (distinct=8, empty=890): Đã hoàn thành | Hoàn thành | đã xong | Đã trả hàng
+- Giá 1 đv (distinct=171, empty=3): 45000 | 1.500đ | 750000 | 2760000
+- Amount (distinct=472, empty=2): 90k | 7500 | 750000 | 5tr520
+- Tổng phiếu (distinct=655, empty=890): 6367500 | 18000 | 100k | 621500
+## SoBanHang.xlsx::T02-2025  rows=1633
+- Khách hàng (tên) (distinct=173, empty=884): kl | Khách lẻ | lẻ | Hứa Trung Phúc
+- Giờ (distinct=726, empty=2): 2025-02-01 06:38:06 | 2025-02-01 06:40:44 | 2025-02-01 06:44:53 | 2025-02-01 06:58:07
+- Thời gian (distinct=111, empty=886): 1 thg 2 2025 | 45689 | 01/02/2025 | 1/2
+- Ma don (distinct=720, empty=886): ORD000821 | ORD000822 | ORD000823 | ORD000824
+- SL bán (distinct=90, empty=2): 3 m | 3 | 3 cây | 2 kg
+- dvt (distinct=19, empty=2): m | bình | cây | kg
+- Hàng bán (distinct=75, empty=2): Lưới B40 mạ kẽm khổ 1.5m | Nước khoáng Lavie 19L | Thép Pomina D12 cây 11.7m | Đinh 5 phân
+- Trạng thái xử lý (distinct=8, empty=886): Hoàn thành | Đã hoàn thành | đã xong | hàng trả về
+- Giá 1 đv (distinct=174, empty=2): 48000 | 65.000đ | 165000 | 20000
+- Amount (distinct=460, empty=1): 144.000đ | 195.000đ | 495000 | 40000
+- Tổng phiếu (distinct=579, empty=886): 834000 | 615.000đ | 300.000đ | 75500
+## SoBanHang.xlsx::T03-2025  rows=2090
+- Khách hàng (tên) (distinct=183, empty=1127): lẻ | kl | Tô Thắng Dũng | khách lẻ
+- Giờ (distinct=927, empty=2): 2025-03-01 06:16:49 | 2025-03-01 06:42:52 | 2025-03-01 07:55:34 | 2025-03-01 08:21:23
+- Thời gian (distinct=124, empty=1129): 1 thg 3 2025 | 1/3 | 45717 | 01/03/2025
+- Ma don (distinct=922, empty=1129): ORD001541 | ORD001542 | ORD001543 | ORD001544
+- SL bán (distinct=94, empty=2): 1 | 10 cây | 5 m | 10 m
+- dvt (distinct=19, empty=2): thùng | cây | kg | m
+- Hàng bán (distinct=75, empty=2): Sơn Maxilite trong nhà 18L | Thép hộp 40x80 dày 1.4mm cây 6m | Thép cuộn phi 8 Hòa Phát | Tôn lạnh Hoa Sen 0.4mm
+- Trạng thái xử lý (distinct=8, empty=1129): đã xong | Đã hoàn thành | Hoàn thành | Huỷ đơn
+- Giá 1 đv (distinct=179, empty=2): 750.000đ | 310.000đ | 15300 | 85000
+- Amount (distinct=515, empty=1): 750k | 3100000 | 15.300đ | 425.000đ
+- Tổng phiếu (distinct=742, empty=1129): 750k | 3,1tr | 15.300đ | 2555k
+## SoBanHang.xlsx::T04-2025  rows=2077
+- Khách hàng (tên) (distinct=186, empty=1134): lẻ | Giang Bảo Thảo | Tô Thắng Dũng | Tống Dương Huy
+- Giờ (distinct=901, empty=2): 2025-04-01 06:04:59 | 2025-04-01 06:28:46 | 2025-04-01 07:20:03 | 2025-04-01 07:23:56
+- Thời gian (distinct=120, empty=1136): 01/04/2025 | 1/4 | 45748 | 1 thg 4 2025
+- Ma don (distinct=897, empty=1136): ORD002461 | ORD002462 | ORD002463 | ORD002464
+- SL bán (distinct=93, empty=2): 1 | 2 | 1 bình | 1 cuộn
+- dvt (distinct=20, empty=2): bình | m3 | cây | cuộn
+- Hàng bán (distinct=75, empty=2): Nước tinh khiết Vihawa 20L | Cát bê tông | Gas Petrolimex 12kg | Thép Pomina D14 cây 11.7m
+- Trạng thái xử lý (distinct=8, empty=1136): Đã hoàn thành | đã xong | Hoàn thành | Huỷ đơn
+- Giá 1 đv (distinct=180, empty=2): 55k | 330.000đ | 520k | 236000
+- Amount (distinct=534, empty=1): 55.000đ | 660.000đ | 520k | 472000
+- Tổng phiếu (distinct=719, empty=1136): 55.000đ | 660.000đ | 4417k | 55000
+## SoBanHang.xlsx::T05-2025  rows=2168
+- Khách hàng (tên) (distinct=186, empty=1207): Tăng Châu Loan | Khách lẻ | lẻ | Tô Dũng Quang
+- Giờ (distinct=928, empty=2): 2025-05-01 06:20:53 | 2025-05-01 07:06:06 | 2025-05-01 07:15:41 | 2025-05-01 07:31:11
+- Thời gian (distinct=124, empty=1209): 1 thg 5 2025 | 45778 | 1/5 | 01/05/2025
+- Ma don (distinct=924, empty=1209): ORD003358 | ORD003359 | ORD003360 | ORD003361
+- SL bán (distinct=95, empty=2): 10 | 2 | 1 | 2 bình
+- dvt (distinct=19, empty=2): bao | bình | cây | gói
+- Hàng bán (distinct=75, empty=2): Xi măng Hà Tiên PCB40 bao 50kg | Nước kiềm Ion Life 19L | Ống PVC Bình Minh D90 cây 4m | Nước tinh khiết Vihawa 20L
+- Trạng thái xử lý (distinct=8, empty=1209): Đã hoàn thành | Hoàn thành | đã xong | Không giao được
+- Giá 1 đv (distinct=195, empty=2): 105.000đ | 75500 | 290000 | 55.000đ
+- Amount (distinct=551, empty=1): 1,05tr | 151.000đ | 290.000đ | 110.000đ
+- Tổng phiếu (distinct=760, empty=1209): 1050k | 800k | 1375000 | 3266600
+## SoBanHang.xlsx::T06-2025  rows=1838
+- Khách hàng (tên) (distinct=184, empty=966): Hà Quang Dương | Khách lẻ | Trần Loan Chi | Huỳnh Hồng Cường
+- Giờ (distinct=829, empty=2): 2025-06-01 12:44:45 | 2025-06-01 06:30:25 | 2025-06-01 06:47:49 | 2025-06-01 07:32:54
+- Thời gian (distinct=120, empty=968): 1/6 | 1 thg 6 2025 | 45809 | 01/06/2025
+- Ma don (distinct=830, empty=968): ORD004182 | ORD004281 | ORD004282 | ORD004283
+- SL bán (distinct=90, empty=2): -1 | 1 | 2 | 10 cây
+- dvt (distinct=20, empty=2): bình | cây | bao | m3
+- Hàng bán (distinct=76, empty=2): Nước tinh khiết Vihawa 20L | Thep Pomina D10 cay 11.7m | Ống PVC Bình Minh D50 cây 4m | Xi măng INSEE Power-S bao 50kg
+- Trạng thái xử lý (distinct=8, empty=968): hàng trả về | Đã hoàn thành | đã xong | Hoàn thành
+- Giá 1 đv (distinct=178, empty=2): 55.000đ | 121.000đ | 125k | 100.000đ
+- Amount (distinct=512, empty=1): -55000 | 121.000đ | 125.000đ | 200000
+- Tổng phiếu (distinct=685, empty=968): -55.000đ | 246.000đ | 200000 | 3tr650
+## SoBanHang.xlsx::T07-2025  rows=2078
+- Khách hàng (tên) (distinct=186, empty=1124): Hà Hoa Huy | Triệu Minh Khánh | Châu An An | Nguyễn Hồng Huy
+- Giờ (distinct=911, empty=3): 2025-07-01 06:06:10 | 2025-07-01 06:33:47 | 2025-07-01 06:44:40 | 2025-07-01 07:12:52
+- Thời gian (distinct=124, empty=1127): 01/07/2025 | 45839 | 1 thg 7 2025 | 1/7
+- Ma don (distinct=905, empty=1127): ORD005110 | ORD005111 | ORD005112 | ORD005113
+- SL bán (distinct=95, empty=3): 10 | 1 | 3 bình | 1 cuộn
+- dvt (distinct=19, empty=3): bao | cuộn | bình | viên
+- Hàng bán (distinct=76, empty=3): Xi măng Hà Tiên PCB40 bao 50kg | Dây điện Cadivi CV 2.5 cuộn 100m | Gas Saigon Petro 12kg | Băng keo điện Nano 20 yard
+- Trạng thái xử lý (distinct=7, empty=1127): Hoàn thành | đã xong | Đã hoàn thành | Huỷ đơn
+- Giá 1 đv (distinct=186, empty=3): 105.000đ | 1270k | 560.000đ | 9.000đ
+- Amount (distinct=539, empty=2): 1,05tr | 1270000 | 1680k | 9k
+- Tổng phiếu (distinct=742, empty=1127): 2320k | 1689k | 11.500đ | 4095000
+## SoBanHang.xlsx::T08-2025  rows=2039
+- Khách hàng (tên) (distinct=186, empty=1077): Vương Ngọc Huy | Cao Mai Hùng | Khách lẻ | khách lẻ
+- Giờ (distinct=907, empty=2): 2025-08-01 06:14:41 | 2025-08-01 07:00:06 | 2025-08-01 07:10:51 | 2025-08-01 07:12:46
+- Thời gian (distinct=123, empty=1079): 1/8 | 45870 | 01/08/2025 | 1 thg 8 2025
+- Ma don (distinct=901, empty=1079): ORD006015 | ORD006016 | ORD006017 | ORD006018
+- SL bán (distinct=93, empty=2): 1 m3 | 5 | 1 thùng | 1
+- dvt (distinct=20, empty=2): m3 | viên | thùng | bao
+- Hàng bán (distinct=76, empty=2): Cát san lấp | Ngói Đồng Nai 22 viên/m2 | Sơn Maxilite trong nhà 18L | Bột trét Jotun nội thất 40kg
+- Trạng thái xử lý (distinct=8, empty=1079): đã xong | Hoàn thành | Đã hoàn thành | Không giao được
+- Giá 1 đv (distinct=179, empty=2): 240000 | 12.500đ | 750000 | 300k
+- Amount (distinct=533, empty=1): 240000 | 62500 | 750k | 300000
+- Tổng phiếu (distinct=728, empty=1079): 240000 | 62.500đ | 750000 | 7380000
+## SoBanHang.xlsx::T09-2025  rows=1978
+- Khách hàng (tên) (distinct=184, empty=1094): Khách lẻ | Võ Đức Sơn | Triệu Minh Khánh | lẻ
+- Giờ (distinct=856, empty=2): 2025-09-01 06:21:23 | 2025-09-01 07:22:32 | 2025-09-01 07:37:09 | 2025-09-01 07:40:35
+- Thời gian (distinct=120, empty=1096): 1/9 | 1 thg 9 2025 | 01/09/2025 | 45901
+- Ma don (distinct=851, empty=1096): ORD006916 | ORD006917 | ORD006918 | ORD006919
+- SL bán (distinct=92, empty=2): 1 | 20 bao | 2 | 20 viên
+- dvt (distinct=19, empty=2): gói | bình | bao | cây
+- Hàng bán (distinct=75, empty=2): Keo chà ron Weber 1kg | Nước khoáng Lavie 19L | Bột trét Jotun nội thất 40kg | Ống luồn dây điện Sino SP D20 cây 2.92m
+- Trạng thái xử lý (distinct=8, empty=1096): đã xong | Hoàn thành | Đã hoàn thành | Huỷ đơn
+- Giá 1 đv (distinct=181, empty=2): 38.000đ | 65.000đ | 300k | 23000
+- Amount (distinct=540, empty=1): 38k | 65.000đ | 6tr | 23.000đ
+- Tổng phiếu (distinct=692, empty=1096): 6103000 | 623000 | 165.000đ | 997.500đ
+## SoBanHang.xlsx::T10-2025  rows=1953
+- Khách hàng (tên) (distinct=180, empty=1048): Nguyễn Hồng Huy | Cao Mai Hùng | khách lẻ | Nghiêm Duy Phúc
+- Giờ (distinct=865, empty=3): 2025-10-01 06:38:56 | 2025-10-01 06:42:57 | 2025-10-01 06:45:05 | 2025-10-01 07:44:01
+- Thời gian (distinct=123, empty=1051): 01/10/2025 | 1 thg 10 2025 | 1/10 | 45931
+- Ma don (distinct=862, empty=1051): ORD007767 | ORD007768 | ORD007769 | ORD007770
+- SL bán (distinct=86, empty=3): 1 cây | 1 bao | 2 | 1 cái
+- dvt (distinct=20, empty=3): cây | bao | cuộn 10m | cái
+- Hàng bán (distinct=75, empty=3): Thép hộp 40x80 dày 1.4mm cây 6m | Xi măng Hà Tiên PCB40 bao 50kg | Lưới B40 mạ kẽm khổ 1.5m | Bay thợ hồ Total 160mm
+- Trạng thái xử lý (distinct=9, empty=1051): Đã hoàn thành | Hoàn thành | đã xong | trả lại
+- Giá 1 đv (distinct=176, empty=3): 310000 | 110k | 480000 | 38.000đ
+- Amount (distinct=511, empty=2): 310k | 110000 | 960000 | 38.000đ
+- Tổng phiếu (distinct=697, empty=1051): 1tr380 | 3228000 | 425000 | 1750000
+## SoBanHang.xlsx::T11-2025  rows=1870
+- Khách hàng (tên) (distinct=182, empty=1007): Triệu Hồng Duy | Trần Loan Chi | khách lẻ | Đàm Thảo Hoàng
+- Giờ (distinct=833, empty=2): 2025-11-01 06:08:50 | 2025-11-01 06:27:36 | 2025-11-01 06:28:52 | 2025-11-01 06:28:59
+- Thời gian (distinct=118, empty=1009): 1/11 | 45962 | 01/11/2025 | 1 thg 11 2025
+- Ma don (distinct=827, empty=1009): ORD008628 | ORD008629 | ORD008630 | ORD008631
+- SL bán (distinct=92, empty=2): 2 | 1 | 2 thùng | 3 thùng
+- dvt (distinct=20, empty=2): thùng | cây | bình | cái
+- Hàng bán (distinct=75, empty=2): Gạch ốp tường Viglacera 30x60 thùng 8 vi | Ống luồn dây điện Sino SP D20 cây 2.92m | Sơn lót Jotun Jotashield chống kiềm 5L | Gạch lát nền Prime 60x60 thùng 4 viên
+- Trạng thái xử lý (distinct=9, empty=1009): Đã hoàn thành | Hoàn thành | đã xong | Không giao được
+- Giá 1 đv (distinct=184, empty=2): 280000 | 23000 | 756k | 300.000đ
+- Amount (distinct=543, empty=1): 560000 | 23k | 1512000 | 900000
+- Tổng phiếu (distinct=697, empty=1009): 560000 | 23.000đ | 5.406.500đ | 300.000đ
+## SoBanHang.xlsx::T12-2025  rows=2206
+- Khách hàng (tên) (distinct=189, empty=1236): Tống Hải Quang | Tăng An Quân | Châu Bình Quân | kl
+- Giờ (distinct=936, empty=3): 2025-12-01 06:56:22 | 2025-12-01 07:01:46 | 2025-12-01 07:05:57 | 2025-12-01 07:10:08
+- Thời gian (distinct=124, empty=1239): 01/12/2025 | 1 thg 12 2025 | 1/12 | 45992
+- Ma don (distinct=933, empty=1239): ORD009454 | ORD009455 | ORD009456 | ORD009457
+- SL bán (distinct=88, empty=3): 1 thùng | 2 | 1 cây | 1
+- dvt (distinct=19, empty=3): thùng | cây | m3 | cuộn
+- Hàng bán (distinct=75, empty=3): Gạch ốp tường Viglacera 30x60 thùng 8 vi | Gạch lát nền Prime 60x60 thùng 4 viên | Ống PVC Bình Minh D50 cây 4m | Cát xây tô
+- Trạng thái xử lý (distinct=8, empty=1239): Huỷ đơn | Hoàn thành | đã xong | Đã hoàn thành
+- Giá 1 đv (distinct=177, empty=3): 294000 | 300000 | 131000 | 315000
+- Amount (distinct=543, empty=2): 294000 | 600.000đ | 131.000đ | 315000
+- Tổng phiếu (distinct=771, empty=1239): 894k | 1206000 | 47.000đ | 674.500đ
+## SoBanHang.xlsx::T01-2026  rows=1963
+- Khách hàng (tên) (distinct=190, empty=1078): Đặng Thanh Hạnh | Triệu Minh Khánh | lẻ | Hà Thanh Phúc
+- Giờ (distinct=850, empty=3): 2026-01-01 06:22:08 | 2026-01-01 07:14:42 | 2026-01-01 07:29:18 | 2026-01-01 07:56:46
+- Thời gian (distinct=124, empty=1081): 46023 | 01/01/2026 | 1 thg 1 2026 | 1/1
+- Ma don (distinct=845, empty=1081): ORD010387 | ORD010388 | ORD010389 | ORD010390
+- SL bán (distinct=84, empty=3): 5 bao | 1 thùng | 1 | 10 cây
+- dvt (distinct=19, empty=3): bao | thùng | bình | cây
+- Hàng bán (distinct=74, empty=3): Xi măng INSEE Power-S bao 50kg | Chống thấm Kova CT-11A tường 20kg | Nước khoáng Lavie 19L | Thép hộp 40x80 dày 1.4mm cây 6m
+- Trạng thái xử lý (distinct=9, empty=1081): đã xong | Đã hoàn thành | Hoàn thành | Huỷ đơn
+- Giá 1 đv (distinct=175, empty=3): 100000 | 2150k | 65.000đ | 310.000đ
+- Amount (distinct=531, empty=2): 500.000đ | 2150k | 65000 | 3100000
+- Tổng phiếu (distinct=711, empty=1081): 500k | 2215000 | 4tr616 | 300000
+## SoBanHang.xlsx::T02-2026  rows=1274
+- Khách hàng (tên) (distinct=164, empty=694): Chung Hồng Dương | kl | Hà Quang Dương | Lưu Lan Chi
+- Giờ (distinct=560, empty=3): 2026-02-01 07:41:45 | 2026-02-01 08:25:16 | 2026-02-01 08:32:17 | 2026-02-01 08:40:31
+- Thời gian (distinct=107, empty=697): 1 thg 2 2026 | 46054 | 01/02/2026 | 1/2
+- Ma don (distinct=557, empty=697): ORD011232 | ORD011233 | ORD011234 | ORD011235
+- SL bán (distinct=78, empty=3): 1 | 1 kg | 2 | 3
+- dvt (distinct=19, empty=3): cuộn 10m | viên | kg | bao
+- Hàng bán (distinct=71, empty=3): Lưới B40 mạ kẽm khổ 1.5m | Gạch thẻ đặc 4x8x18 | Đinh 5 phân | Thép cuộn phi 6 Hòa Phát
+- Trạng thái xử lý (distinct=9, empty=697): đã xong | Đã hoàn thành | Hoàn thành | Không giao được
+- Giá 1 đv (distinct=167, empty=3): 480000 | 1.500đ | 20000 | 15500
+- Amount (distinct=468, empty=2): 480000 | 1.500đ | 20.000đ | 15500
+- Tổng phiếu (distinct=488, empty=697): 501.500đ | 117k | 2100k | 2.145.500đ
+## SoBanHang.xlsx::T03-2026  rows=1879
+- Khách hàng (tên) (distinct=185, empty=1004): Kiều Hùng Quân | Lâm Quân Đức | kl | Phạm Hồng Hùng
+- Giờ (distinct=846, empty=2): 2026-03-01 07:02:34 | 2026-03-01 07:15:16 | 2026-03-01 07:21:27 | 2026-03-01 07:27:12
+- Thời gian (distinct=124, empty=1006): 01/03/2026 | 46082 | 1 thg 3 2026 | 1/3
+- Ma don (distinct=841, empty=1006): ORD011788 | ORD011789 | ORD011790 | ORD011791
+- SL bán (distinct=95, empty=2): 1 | 2 bao | 2 thùng | 2 bình
+- dvt (distinct=19, empty=2): m | m2 | bao | thùng
+- Hàng bán (distinct=76, empty=2): Lưới B40 mạ kẽm khổ 1.5m | Bạt xanh cam khổ 4m | Bột trét Jotun nội thất 40kg | Sơn lót Jotun Jotashield chống kiềm 5L
+- Trạng thái xử lý (distinct=9, empty=1006): Hoàn thành | Đã hoàn thành | đã xong | hàng trả về
+- Giá 1 đv (distinct=178, empty=2): 48.000đ | 12k | 300.000đ | 756.000đ
+- Amount (distinct=529, empty=1): 48.000đ | 12000 | 600.000đ | 1512000
+- Tổng phiếu (distinct=704, empty=1006): 60000 | 2tr222 | 136500 | 1.300đ
+## SoBanHang.xlsx::T04-2026  rows=2014
+- Khách hàng (tên) (distinct=190, empty=1069): khách lẻ | Từ Thanh Long | Khách lẻ | Đoàn Minh Ngọc
+- Giờ (distinct=912, empty=3): 2026-04-01 06:20:28 | 2026-04-01 06:25:52 | 2026-04-01 06:45:24 | 2026-04-01 06:54:21
+- Thời gian (distinct=120, empty=1072): 1 thg 4 2026 | 46113 | 01/04/2026 | 1/4
+- Ma don (distinct=908, empty=1072): ORD012627 | ORD012628 | ORD012629 | ORD012630
+- SL bán (distinct=91, empty=3): 5 | 2 bình | 3 | 1
+- dvt (distinct=20, empty=3): bao | bình | cây | gói
+- Hàng bán (distinct=75, empty=3): Xi măng INSEE Power-S bao 50kg | Gas Petrolimex 12kg | Thép Pomina D12 cây 11.7m | Nước tinh khiết Vihawa 20L
+- Trạng thái xử lý (distinct=8, empty=1072): Đã hoàn thành | đã xong | Hoàn thành | Huỷ đơn
+- Giá 1 đv (distinct=180, empty=3): 100000 | 573500 | 165000 | 55000
+- Amount (distinct=548, empty=2): 500.000đ | 1tr147 | 495000 | 55.000đ
+- Tổng phiếu (distinct=750, empty=1072): 500.000đ | 1147k | 495k | 169.000đ
+## SoBanHang.xlsx::T05-2026  rows=1973
+- Khách hàng (tên) (distinct=177, empty=1075): Hoàng Cường Giang | lẻ | Khách lẻ | Vũ Hoàng Bảo
+- Giờ (distinct=855, empty=3): 2026-05-01 07:34:59 | 2026-05-01 07:43:37 | 2026-05-01 07:48:58 | 2026-05-01 07:54:30
+- Thời gian (distinct=124, empty=1078): 46143 | 01/05/2026 | 1 thg 5 2026 | 1/5
+- Ma don (distinct=849, empty=1078): ORD013534 | ORD013535 | ORD013536 | ORD013537
+- SL bán (distinct=88, empty=3): 3 | 3 viên | 1 | 2 m3
+- dvt (distinct=19, empty=3): m3 | viên | cuộn | bình
+- Hàng bán (distinct=76, empty=3): Đá mi bụi | Gạch ống 8x8x18 Tuynel | Dây điện Cadivi CV 1.5 cuộn 100m | Gas Saigon Petro 12kg
+- Trạng thái xử lý (distinct=8, empty=1078): Hoàn thành | Đã hoàn thành | đã xong | Huỷ đơn
+- Giá 1 đv (distinct=177, empty=3): 315.000đ | 1300 | 829.500đ | 315000
+- Amount (distinct=547, empty=2): 945000 | 3900 | 829.500đ | 630k
+- Tổng phiếu (distinct=727, empty=1078): 948900 | 2,2605tr | 1.300đ | 4.751.500đ
+## SoBanHang.xlsx::T06-2026  rows=696
+- Khách hàng (tên) (distinct=117, empty=382): Bạch Hoa Cường | lẻ | Giang Thảo Ngọc | Phan Minh Nhung
+- Giờ (distinct=302, empty=3): 2026-06-01 06:07:46 | 2026-06-01 07:08:44 | 2026-06-01 07:50:57 | 2026-06-01 07:59:08
+- Thời gian (distinct=40, empty=385): 46174 | 1 thg 6 2026 | 1/6 | 01/06/2026
+- Ma don (distinct=300, empty=385): ORD014383 | ORD014384 | ORD014385 | ORD014386
+- SL bán (distinct=74, empty=3): 3 | 1 bao | 1 cuộn | 1 bình
+- dvt (distinct=19, empty=3): viên | bao | cuộn | bình
+- Hàng bán (distinct=69, empty=3): Gạch ống 8x8x18 Tuynel | Xi măng Hà Tiên PCB40 bao 50kg | Băng keo điện Nano 20 yard | Gas Saigon Petro 12kg
+- Trạng thái xử lý (distinct=10, empty=385): đã xong | Đã hoàn thành | Hoàn thành | Không giao được
+- Giá 1 đv (distinct=152, empty=3): 1.300đ | 110.000đ | 9000 | 588000
+- Amount (distinct=340, empty=2): 3.900đ | 110k | 9000 | 588k
+- Tổng phiếu (distinct=279, empty=385): 113.900đ | 792000 | 300k | 8406000
+## SoGiaoHang.xlsx::Sheet1  rows=28398
+- Số lượng giao (distinct=49, empty=0): 2 | 5 | 1 | 10
+- Biển số xe (distinct=2, empty=0): 51D-479.21 | 51C-500.98
+- Lượt giao (distinct=3, empty=0): 1 | 2 | 3
+- Số đơn (distinct=9606, empty=0): ORD000001 | ORD000003 | ORD000004 | ORD000005
+- Thời gian giao (distinct=526, empty=0): 2025-01-02 00:00:00 | 2025-01-03 00:00:00 | 2025-01-01 00:00:00 | 2025-01-04 00:00:00
+- Hàng hóa (distinct=60, empty=0): Bóng LED bulb Rạng Đông A60 9W | Gạch thẻ đặc 4x8x18 | Sơn Maxilite trong nhà 18L | Dây điện Cadivi VCmd 2x2.5 cuộn 100m
+- Lái xe (distinct=2, empty=0): Huỳnh Đạt | Đào Trung
+- ĐV gốc (distinct=15, empty=0): cái | viên | thùng | cuộn
+## SoHanNo.xlsx::Sheet1  rows=2568
+- Mã đơn hàng (distinct=2568, empty=0): ORD000002 | ORD000013 | ORD000033 | ORD000042
+- Kỳ hạn (distinct=2, empty=0): 30 | 60
+- Ngày phải trả (distinct=530, empty=0): 2025-01-31 00:00:00 | 2025-03-02 00:00:00 | 2025-02-01 00:00:00 | 2025-03-03 00:00:00
+## SoNhapHang.xlsx::Sheet1  rows=1070
+- Product (distinct=60, empty=0): Xi măng Hà Tiên PCB40 bao 50kg | Xi măng INSEE Power-S bao 50kg | Cát xây tô | Cát bê tông
+- ĐVT (distinct=17, empty=0): tấn | xe 4m3 | thiên | thùng
+- Số phiếu (distinct=447, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- Ghi chú (distinct=1, empty=1010): nhập đầu kỳ
+- Nhà cung cấp (distinct=5, empty=0): Cty Triệu Hương | Cty Ngô Hương | Cty Nguyễn Hương | Cty Dương Huy
+- Thành tiền (distinct=922, empty=0): 18400k | 12tr460 | 36tr936 | 30456k
+- Giá nhập (distinct=551, empty=0): 1840k | 1tr780 | 972k | 1128k
+- Ngày nhập (distinct=447, empty=0): 1 thg 1 2025 | 10 thg 1 2025 | 11 thg 1 2025 | 12 thg 1 2025
+- SL nhập (distinct=115, empty=0): 10 | 7 | 38 | 27
+## TonKho.xlsx::Sheet1  rows=60
+- Tồn cuối (distinct=46, empty=0): 56 | 136 | 135 | 105
+- ĐV gốc (distinct=15, empty=0): bao | m3 | viên | thùng
+- Tên sản phẩm (distinct=60, empty=0): Xi măng Hà Tiên PCB40 bao 50kg | Xi măng INSEE Power-S bao 50kg | Cát xây tô | Cát bê tông

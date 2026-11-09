@@ -1,0 +1,504 @@
+# Dữ liệu biz_120
+
+File Excel xuất từ phần mềm bán hàng, mỗi danh sách một file (danh sách dài tách thành nhiều file, tên thêm đuôi _1, _2… hoặc đuôi năm _2025, _2026…), nối với nhau qua mã. Ngày dạng dd/mm/yyyy.
+
+File `DanhSachHoaDon.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm.
+
+## File
+- `DanhSachHoaDon.xlsx` (xlsx)
+- `DanhSachHoaDonChiTiet.xlsx` (xlsx)
+- `DanhSachSanPham.xlsx` (xlsx)
+- `DanhSachKhachHang.xlsx` (xlsx)
+- `BaoCaoTonKho.xlsx` (xlsx)
+- `DanhSachNhapHang.xlsx` (xlsx)
+- `DanhSachLoHang.xlsx` (xlsx)
+- `DanhSachHoaDonChiTietLo.xlsx` (xlsx)
+- `DanhSachThuoc.xlsx` (xlsx)
+- `DanhSachChiTietNhapHang.xlsx` (xlsx)
+
+## Cột trong `DanhSachHoaDon.xlsx`
+- **Mã hóa đơn**: mã đơn
+- **Thời gian**: ngày bán
+- **Mã KH**: mã khách (trống nếu khách lẻ)
+- **Khách hàng**: tên khách (Khách lẻ nếu không lưu)
+- **Tổng tiền hàng**: tổng tiền hàng của đơn (cộng thành tiền các dòng), trước giảm giá của đơn
+- **Giảm giá**: giảm giá
+- **Khách đã trả**: đã thanh toán
+- **Trạng thái**: trạng thái đơn
+- **Thời gian tạo**: thời điểm đặt đơn (ngày giờ)
+- **Còn nợ**: còn nợ
+- **Kênh bán**: kênh bán
+- **Ghi chú**: cột trống, không có dữ liệu
+
+## Cột trong `DanhSachHoaDonChiTiet.xlsx`
+- **Mã hóa đơn**: mã đơn
+- **Mã hàng**: mã hàng
+- **Tên hàng**: tên hàng
+- **Số lượng**: số lượng
+- **Đơn giá**: đơn giá
+- **Giảm giá**: giảm giá
+- **Thành tiền**: thành tiền sau giảm
+- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản
+
+## Cột trong `DanhSachSanPham.xlsx`
+- **Mã hàng**: mã hàng
+- **Tên hàng**: tên
+- **Nhóm hàng(3 Cấp)**: nhóm hàng
+- **Giá bán**: giá bán hiện tại
+- **ĐVT**: đơn vị cơ bản
+- **Giá vốn**: giá vốn
+- **Thời gian tạo**: ngày tạo mặt hàng trên phần mềm
+
+## Cột trong `DanhSachKhachHang.xlsx`
+- **Mã khách hàng**: mã khách
+- **Tên khách hàng**: tên
+- **Điện thoại**: số điện thoại
+- **Địa chỉ**: địa chỉ
+
+## Cột trong `BaoCaoTonKho.xlsx`
+- **Mã hàng**: mã hàng
+- **Tên hàng**: tên hàng
+- **ĐVT**: đơn vị cơ bản
+- **Tồn cuối kỳ**: tồn kho (đơn vị cơ bản)
+
+## Cột trong `DanhSachNhapHang.xlsx`
+- **Mã nhập hàng**: mã phiếu nhập
+- **Thời gian**: ngày nhập
+- **Mã NCC**: mã nhà cung cấp
+- **Cần trả NCC**: tổng tiền phiếu nhập
+- **Trạng thái**: trạng thái phiếu nhập
+- **Ghi chú**: ghi chú
+
+## Cột trong `DanhSachLoHang.xlsx`
+- **Mã nhập hàng**: mã phiếu nhập
+- **Mã hàng**: mã hàng
+- **Lô**: số lô
+- **Hạn sử dụng**: hạn sử dụng
+- **Số lượng (ĐVT cơ bản)**: số lượng nhập (đơn vị cơ bản)
+
+## Cột trong `DanhSachHoaDonChiTietLo.xlsx`
+- **Mã hóa đơn**: mã đơn
+- **STT**: số thứ tự dòng trong đơn
+- **Lô**: số lô
+- **Số lượng (ĐVT cơ bản)**: số lượng bán lấy từ lô (đơn vị cơ bản)
+- **Số lượng trả (ĐVT cơ bản)**: số lượng khách trả lại (đơn vị cơ bản); lớn hơn 0: đơn đó có trả hàng
+
+## Cột trong `DanhSachThuoc.xlsx`
+- **Mã hàng**: mã hàng
+- **Hoạt chất**: hoạt chất (trống với thực phẩm chức năng, vật tư)
+- **Thuốc kê đơn**: thuốc kê đơn
+
+## Cột trong `DanhSachChiTietNhapHang.xlsx`
+- **Mã nhập hàng**: mã phiếu nhập
+- **STT**: số thứ tự dòng trong phiếu nhập
+- **Mã hàng**: mã hàng
+- **ĐVT**: đơn vị tính
+- **Số lượng**: số lượng
+- **Đơn giá**: giá nhập một đơn vị (theo đơn vị nhập của dòng)
+- **Lô**: số lô
+- **Hạn sử dụng**: hạn sử dụng
+
+## Quy ước
+- Dữ liệu có đến hết 12/06/2026.
+- **Còn nợ**: **Còn nợ** là số khách còn nợ của đơn, tính đến hết ngày cuối dữ liệu.
+- **Tồn kho**: **Tồn cuối kỳ** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản.
+- **Lô, hạn dùng**: mỗi dòng nhập là một lô, số lô không trùng. Một dòng bán có thể lấy từ nhiều lô. Hàng khách trả về lại lô đã bán.
+- **Nhập hàng**: **Đơn giá** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Cần trả NCC** là tổng tiền của cả phiếu nhập.
+- **Thuốc**: **Thuốc kê đơn** đúng (TRUE/1) là thuốc kê đơn. Hoạt chất ghi không kèm hàm lượng (hàm lượng ở tên hàng); nhiều chất nối bằng " + ".
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:
+  - Panadol Extra hộp 15 vỉ x 12 viên: 1 vỉ = 12 viên
+  - Panadol Extra hộp 15 vỉ x 12 viên: 1 hộp = 180 viên
+  - Hapacol 250 hộp 24 gói: 1 hộp = 24 gói
+  - Panadol 500mg hộp 10 vỉ x 12 viên: 1 vỉ = 12 viên
+  - Panadol 500mg hộp 10 vỉ x 12 viên: 1 hộp = 120 viên
+  - Tiffy Dey hộp 25 vỉ x 4 viên: 1 vỉ = 4 viên
+  - Tiffy Dey hộp 25 vỉ x 4 viên: 1 hộp = 100 viên
+  - Berberin 100mg Mekophar chai 100 viên: 1 chai = 100 viên
+  - Oresol 245 DHG hộp 20 gói: 1 hộp = 20 gói
+  - Amoxicillin 500mg Domesco hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Amoxicillin 500mg Domesco hộp 10 vỉ x 10 viên: 1 hộp = 100 viên
+  - Salonpas cao dán hộp 24 gói x 10 miếng: 1 hộp = 24 gói
+  - Decolgen Forte hộp 30 vỉ x 4 viên: 1 vỉ = 4 viên
+  - Decolgen Forte hộp 30 vỉ x 4 viên: 1 hộp = 120 viên
+  - Khẩu trang y tế 4 lớp Khánh An hộp 50 cái: 1 hộp = 50 cái
+  - Smecta hộp 30 gói: 1 hộp = 30 gói
+  - Efferalgan 500mg viên sủi hộp 4 vỉ x 4 viên: 1 vỉ = 4 viên
+  - Efferalgan 500mg viên sủi hộp 4 vỉ x 4 viên: 1 hộp = 16 viên
+  - Phosphalugel hộp 26 gói: 1 hộp = 26 gói
+  - Strepsils Cool hộp 2 vỉ x 12 viên: 1 vỉ = 12 viên
+  - Strepsils Cool hộp 2 vỉ x 12 viên: 1 hộp = 24 viên
+  - Clorpheniramin 4mg DHG hộp 10 vỉ x 20 viên: 1 hộp = 10 vỉ
+  - Yumangel hộp 20 gói: 1 hộp = 20 gói
+  - Cefuroxim 500mg Vidipha hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Cefuroxim 500mg Vidipha hộp 10 vỉ x 10 viên: 1 hộp = 100 viên
+  - Băng cá nhân Urgo Transparent hộp 100 miếng: 1 hộp = 100 miếng
+  - Hapacol 150 hộp 24 gói: 1 hộp = 24 gói
+  - Eugica hộp 10 vỉ x 10 viên nang: 1 vỉ = 10 viên
+  - Eugica hộp 10 vỉ x 10 viên nang: 1 hộp = 100 viên
+  - UPSA-C 1g viên sủi tuýp 10 viên: 1 tuýp = 10 viên
+  - Lorastad 10mg Stella hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Lorastad 10mg Stella hộp 10 vỉ x 10 viên: 1 hộp = 100 viên
+  - Cetirizin 10mg Domesco hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Cetirizin 10mg Domesco hộp 10 vỉ x 10 viên: 1 hộp = 100 viên
+  - Amlodipin 5mg Domesco hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Amlodipin 5mg Domesco hộp 3 vỉ x 10 viên: 1 hộp = 30 viên
+  - Panadol Cảm Cúm hộp 15 vỉ x 12 viên: 1 vỉ = 12 viên
+  - Panadol Cảm Cúm hộp 15 vỉ x 12 viên: 1 hộp = 180 viên
+  - Alaxan hộp 25 vỉ x 4 viên: 1 vỉ = 4 viên
+  - Alaxan hộp 25 vỉ x 4 viên: 1 hộp = 100 viên
+  - Gofen 400 hộp 5 vỉ x 10 viên nang: 1 vỉ = 10 viên
+  - Gofen 400 hộp 5 vỉ x 10 viên nang: 1 hộp = 50 viên
+  - Acemuc Kids 200mg hộp 30 gói: 1 hộp = 30 gói
+  - Gaviscon hộp 24 gói x 10ml: 1 hộp = 24 gói
+  - Enterogermina 2 tỷ/5ml hộp 20 ống: 1 hộp = 20 ống
+  - Omeprazol 20mg DHG hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Omeprazol 20mg DHG hộp 3 vỉ x 10 viên: 1 hộp = 30 viên
+  - Vitamin C 500mg Quapharco hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Vitamin C 500mg Quapharco hộp 10 vỉ x 10 viên: 1 hộp = 100 viên
+  - Efticol 0,9% lốc 10 lọ x 10ml: 1 lốc = 10 lọ
+  - Magne-B6 Corbière hộp 5 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Magne-B6 Corbière hộp 5 vỉ x 10 viên: 1 hộp = 50 viên
+  - Loperamid 2mg Domesco hộp 5 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Loperamid 2mg Domesco hộp 5 vỉ x 10 viên: 1 hộp = 50 viên
+  - Metformin Stella 500mg hộp 6 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Metformin Stella 500mg hộp 6 vỉ x 10 viên: 1 hộp = 60 viên
+  - Clarityne 10mg hộp 1 vỉ x 10 viên: 1 hộp = 10 viên
+  - Zyrtec 10mg hộp 1 vỉ x 10 viên: 1 hộp = 10 viên
+  - Telfast HD 180mg hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Telfast HD 180mg hộp 3 vỉ x 10 viên: 1 hộp = 30 viên
+  - Hagifen 400mg DHG hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Hagifen 400mg DHG hộp 10 vỉ x 10 viên: 1 hộp = 100 viên
+  - Enervon hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Enervon hộp 10 vỉ x 10 viên: 1 hộp = 100 viên
+  - Savi Losartan 50mg hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Savi Losartan 50mg hộp 3 vỉ x 10 viên: 1 hộp = 30 viên
+  - Air-X 80mg viên nhai hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Air-X 80mg viên nhai hộp 10 vỉ x 10 viên: 1 hộp = 100 viên
+  - Biosubtyl-II hộp 25 gói: 1 hộp = 25 gói
+  - Berocca Performance viên sủi tuýp 10 viên: 1 tuýp = 10 viên
+  - Prednisolon 5mg Boston chai 500 viên: 1 chai = 500 viên
+  - Bio-acimin Gold men vi sinh hộp 30 gói: 1 hộp = 30 gói
+  - Boganic Traphaco hộp 5 vỉ x 20 viên: 1 vỉ = 20 viên
+  - Boganic Traphaco hộp 5 vỉ x 20 viên: 1 hộp = 100 viên
+  - Calcium Corbière Extra 10ml hộp 30 ống: 1 hộp = 30 ống
+  - Bisolvon 8mg hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên
+  - Bisolvon 8mg hộp 3 vỉ x 10 viên: 1 hộp = 30 viên
+  - Augmentin 625mg hộp 2 vỉ x 7 viên: 1 vỉ = 7 viên
+  - Augmentin 625mg hộp 2 vỉ x 7 viên: 1 hộp = 14 viên
+  - Enat 400 hộp 3 vỉ x 10 viên nang: 1 vỉ = 10 viên
+  - Enat 400 hộp 3 vỉ x 10 viên nang: 1 hộp = 30 viên
+  - Kẹo ngậm Bổ phế Nam Hà Candy hộp 10 vỉ x 8 viên: 1 vỉ = 8 viên
+  - Kẹo ngậm Bổ phế Nam Hà Candy hộp 10 vỉ x 8 viên: 1 hộp = 80 viên
+
+
+## BaoCaoTonKho.xlsx::Sheet1  rows=80
+- Mã hàng (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Tên hàng (distinct=80, empty=0): PANADOL EXTRA HỘP 15 VỈ X 12 VIÊN | Hapacol 250 hộp 24 gói | Panadol 500mg hộp 10 vỉ x 12 viên | Tiffy Dey hộp 25 vỉ x 4 viên
+- ĐVT (distinct=10, empty=0): viên | gói | chai | cái
+- Tồn cuối kỳ (distinct=62, empty=0): 392 | 0 | 105 | 153
+## DanhSachChiTietNhapHang.xlsx::Sheet1  rows=3866
+- Mã nhập hàng (distinct=526, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- STT (distinct=80, empty=0): 1 | 2 | 3 | 4
+- Mã hàng (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- ĐVT (distinct=8, empty=0): hộp | chai | tuýp | lốc
+- Số lượng (distinct=91, empty=0): 2 | 10 | 3 | 239
+- Đơn giá (distinct=220, empty=0): 198,000 | 38,400 | 96,000 | 90,000
+- Lô (distinct=3866, empty=0): T2501293 | E2501838 | B2501356 | X2501879
+- Hạn sử dụng (distinct=1312, empty=0): 2025-04-17 00:00:00 | 2025-03-17 00:00:00 | 2027-06-16 00:00:00 | 2026-06-10 00:00:00
+## DanhSachHoaDon.xlsx::01.2025  rows=2584
+- Mã hóa đơn (distinct=2584, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Thời gian (distinct=31, empty=0): 01/01/2025 | 02/01/2025 | 03/01/2025 | 04/01/2025
+- Mã KH (distinct=349, empty=1019): KH0344 | KH0040 | KH0002 | KH0041
+- Khách hàng (distinct=350, empty=0): Khách lẻ | Mai Minh Dũng | Phạm Dương Hà | Ngô Hùng Nhung
+- Tổng tiền hàng (distinct=1085, empty=0): 12,900 | 114,000 | 1,600 | 73,200
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1107, empty=0): 12,900 | 114,000 | 1,600 | 73,200
+- Trạng thái (distinct=3, empty=0): ok | trả hàng | hủy đơn
+- Thời gian tạo (distinct=2583, empty=0): 2025-01-01 07:05:17 | 2025-01-01 07:22:22 | 2025-01-01 07:22:49 | 2025-01-01 07:45:47
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | phone | zalo_oa
+- Ghi chú (distinct=0, empty=2584): 
+## DanhSachHoaDon.xlsx::02.2025  rows=2459
+- Mã hóa đơn (distinct=2459, empty=0): ORD002585 | ORD002586 | ORD002587 | ORD002588
+- Thời gian (distinct=28, empty=0): 01/02/2025 | 02/02/2025 | 03/02/2025 | 04/02/2025
+- Mã KH (distinct=344, empty=982): KH0008 | KH0131 | KH0323 | KH0052
+- Khách hàng (distinct=345, empty=0): Thái Minh Giang | Đỗ Thanh An | Khách lẻ | Nguyễn Dương Giang
+- Tổng tiền hàng (distinct=1067, empty=0): 122,500 | 5,600 | 101,800 | 1,500
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1081, empty=0): 122,500 | 5,600 | 101,800 | 1,500
+- Trạng thái (distinct=3, empty=0): ok | trả hàng | hủy đơn
+- Thời gian tạo (distinct=2457, empty=0): 2025-02-01 06:43:23 | 2025-02-01 07:01:06 | 2025-02-01 07:08:58 | 2025-02-01 07:11:25
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | phone | zalo_oa
+- Ghi chú (distinct=0, empty=2459): 
+## DanhSachHoaDon.xlsx::03.2025  rows=2760
+- Mã hóa đơn (distinct=2760, empty=0): ORD005044 | ORD005045 | ORD005046 | ORD005047
+- Thời gian (distinct=31, empty=0): 01/03/2025 | 02/03/2025 | 03/03/2025 | 04/03/2025
+- Mã KH (distinct=348, empty=1095): KH0055 | KH0259 | KH0098 | KH0249
+- Khách hàng (distinct=349, empty=0): Khách lẻ | Thái An Châu | Triệu Quang Sơn | Lưu Hoàng Châu
+- Tổng tiền hàng (distinct=1139, empty=0): 110,000 | 8,000 | 36,000 | 21,200
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1153, empty=0): 110,000 | 8,000 | 36,000 | 36,200
+- Trạng thái (distinct=3, empty=0): ok | hủy đơn | trả hàng
+- Thời gian tạo (distinct=2759, empty=0): 2025-03-01 06:20:12 | 2025-03-01 07:07:39 | 2025-03-01 07:09:27 | 2025-03-01 07:12:38
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | phone | zalo_oa
+- Ghi chú (distinct=0, empty=2760): 
+## DanhSachHoaDon.xlsx::04.2025  rows=2577
+- Mã hóa đơn (distinct=2577, empty=0): ORD007804 | ORD007805 | ORD007806 | ORD007807
+- Thời gian (distinct=30, empty=0): 01/04/2025 | 02/04/2025 | 03/04/2025 | 04/04/2025
+- Mã KH (distinct=344, empty=1079): KH0305 | KH0187 | KH0284 | KH0090
+- Khách hàng (distinct=345, empty=0): Khách lẻ | Đoàn Phong Hương | Ngô An Hà | Ông Linh Dũng
+- Tổng tiền hàng (distinct=1136, empty=0): 4,800 | 110,000 | 1,104,500 | 1,200
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1145, empty=0): 0 | 110,000 | 1,094,500 | 1,200
+- Trạng thái (distinct=3, empty=0): hủy đơn | ok | trả hàng
+- Thời gian tạo (distinct=2575, empty=0): 2025-04-01 06:20:10 | 2025-04-01 06:31:48 | 2025-04-01 07:05:38 | 2025-04-01 07:19:38
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | zalo_oa | phone
+- Ghi chú (distinct=0, empty=2577): 
+## DanhSachHoaDon.xlsx::05.2025  rows=2698
+- Mã hóa đơn (distinct=2698, empty=0): ORD010381 | ORD010382 | ORD010383 | ORD010384
+- Thời gian (distinct=31, empty=0): 01/05/2025 | 02/05/2025 | 03/05/2025 | 04/05/2025
+- Mã KH (distinct=347, empty=1091): KH0295 | KH0270 | KH0049 | KH0102
+- Khách hàng (distinct=348, empty=0): Khách lẻ | Tống Bình Ngọc | Cao Hoàng Ngọc | Bùi Quân Huy
+- Tổng tiền hàng (distinct=1157, empty=0): 2,100 | 49,300 | 122,000 | 108,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1178, empty=0): 2,100 | 49,300 | 122,000 | 108,000
+- Trạng thái (distinct=3, empty=0): ok | trả hàng | hủy đơn
+- Thời gian tạo (distinct=2694, empty=0): 2025-05-01 06:25:14 | 2025-05-01 07:04:40 | 2025-05-01 07:09:06 | 2025-05-01 07:09:13
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | phone | zalo_oa
+- Ghi chú (distinct=0, empty=2698): 
+## DanhSachHoaDon.xlsx::06.2025  rows=2653
+- Mã hóa đơn (distinct=2653, empty=0): ORD013079 | ORD013080 | ORD013081 | ORD013082
+- Thời gian (distinct=30, empty=0): 01/06/2025 | 02/06/2025 | 03/06/2025 | 04/06/2025
+- Mã KH (distinct=346, empty=1122): KH0337 | KH0186 | KH0285 | KH0242
+- Khách hàng (distinct=347, empty=0): Khách lẻ | La Sơn Lan | Đoàn Châu Minh | Mai Bảo Thu
+- Tổng tiền hàng (distinct=1110, empty=0): 27,800 | 2,600 | 65,000 | 20,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1122, empty=0): 42,800 | 17,600 | 65,000 | 20,000
+- Trạng thái (distinct=3, empty=0): ok | trả hàng | hủy đơn
+- Thời gian tạo (distinct=2651, empty=0): 2025-06-01 06:47:45 | 2025-06-01 07:00:03 | 2025-06-01 07:36:38 | 2025-06-01 07:36:49
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): phone | zalo_oa | store
+- Ghi chú (distinct=0, empty=2653): 
+## DanhSachHoaDon.xlsx::07.2025  rows=2783
+- Mã hóa đơn (distinct=2783, empty=0): ORD015732 | ORD015733 | ORD015734 | ORD015735
+- Thời gian (distinct=31, empty=0): 01/07/2025 | 02/07/2025 | 03/07/2025 | 04/07/2025
+- Mã KH (distinct=347, empty=1040): KH0307 | KH0261 | KH0002 | KH0055
+- Khách hàng (distinct=348, empty=0): Khách lẻ | Mai Hiếu Thu | Tống Hùng Khoa | Ngô Hùng Nhung
+- Tổng tiền hàng (distinct=1172, empty=0): 3,900 | 240,500 | 43,500 | 900
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1197, empty=0): 3,900 | 240,500 | 58,500 | 900
+- Trạng thái (distinct=6, empty=0): ok | trả hàng | hủy đơn | Thành công
+- Thời gian tạo (distinct=2779, empty=0): 2025-07-01 06:23:36 | 2025-07-01 06:28:16 | 2025-07-01 07:06:13 | 2025-07-01 07:06:47
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | phone | zalo_oa
+- Ghi chú (distinct=0, empty=2783): 
+## DanhSachHoaDon.xlsx::08.2025  rows=2709
+- Mã hóa đơn (distinct=2709, empty=0): ORD018515 | ORD018516 | ORD018517 | ORD018518
+- Thời gian (distinct=31, empty=0): 01/08/2025 | 02/08/2025 | 03/08/2025 | 04/08/2025
+- Mã KH (distinct=349, empty=1050): KH0067 | KH0110 | KH0018 | KH0074
+- Khách hàng (distinct=350, empty=0): Diệp Duy Hải | Thân Quân Hà | Kiều Hùng Lan | Lâm Phong Phúc
+- Tổng tiền hàng (distinct=1187, empty=0): 16,000 | 76,800 | 3,300 | 99,600
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1208, empty=0): 16,000 | 76,800 | 3,300 | 114,600
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đã trả hàng
+- Thời gian tạo (distinct=2706, empty=0): 2025-08-01 06:27:21 | 2025-08-01 06:38:04 | 2025-08-01 07:27:44 | 2025-08-01 07:35:15
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | zalo_oa | phone
+- Ghi chú (distinct=0, empty=2709): 
+## DanhSachHoaDon.xlsx::09.2025  rows=2797
+- Mã hóa đơn (distinct=2797, empty=0): ORD021224 | ORD021225 | ORD021226 | ORD021227
+- Thời gian (distinct=30, empty=0): 01/09/2025 | 02/09/2025 | 03/09/2025 | 04/09/2025
+- Mã KH (distinct=347, empty=1147): KH0042 | KH0164 | KH0286 | KH0313
+- Khách hàng (distinct=348, empty=0): Trần Tâm Ngân | Khách lẻ | Đoàn Ngọc Thanh | La Thảo An
+- Tổng tiền hàng (distinct=1159, empty=0): 152,000 | 5,800 | 1,200 | 48,200
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1164, empty=0): 152,000 | 5,800 | 1,200 | 48,200
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đã trả hàng
+- Thời gian tạo (distinct=2795, empty=0): 2025-09-01 06:26:39 | 2025-09-01 06:58:51 | 2025-09-01 07:18:27 | 2025-09-01 07:24:25
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | zalo_oa | phone
+- Ghi chú (distinct=0, empty=2797): 
+## DanhSachHoaDon.xlsx::10.2025  rows=2785
+- Mã hóa đơn (distinct=2785, empty=0): ORD024021 | ORD024022 | ORD024023 | ORD024024
+- Thời gian (distinct=31, empty=0): 01/10/2025 | 02/10/2025 | 03/10/2025 | 04/10/2025
+- Mã KH (distinct=346, empty=1095): KH0078 | KH0277 | KH0312 | KH0086
+- Khách hàng (distinct=347, empty=0): Khách lẻ | Giang Phong Trung | Đàm Hà Duy | Ông Dương Khánh
+- Tổng tiền hàng (distinct=1199, empty=0): 3,000 | 4,500 | 164,300 | 21,200
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1240, empty=0): 3,000 | 4,500 | 164,300 | 21,200
+- Trạng thái (distinct=3, empty=0): Thành công | Đã trả hàng | Huỷ đơn
+- Thời gian tạo (distinct=2784, empty=0): 2025-10-01 06:29:22 | 2025-10-01 07:14:23 | 2025-10-01 07:20:47 | 2025-10-01 07:30:44
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | phone | zalo_oa
+- Ghi chú (distinct=0, empty=2785): 
+## DanhSachHoaDon.xlsx::11.2025  rows=2820
+- Mã hóa đơn (distinct=2820, empty=0): ORD026806 | ORD026807 | ORD026808 | ORD026809
+- Thời gian (distinct=30, empty=0): 01/11/2025 | 02/11/2025 | 03/11/2025 | 04/11/2025
+- Mã KH (distinct=348, empty=1155): KH0348 | KH0171 | KH0325 | KH0009
+- Khách hàng (distinct=349, empty=0): Dương Ngọc Bình | Lương Thu Đức | Khách lẻ | Diệp Giang Nam
+- Tổng tiền hàng (distinct=1159, empty=0): 99,000 | 60,000 | 13,000 | 153,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1192, empty=0): 99,000 | 60,000 | 13,000 | 153,000
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đã trả hàng
+- Thời gian tạo (distinct=2819, empty=0): 2025-11-01 06:18:50 | 2025-11-01 06:20:37 | 2025-11-01 06:37:35 | 2025-11-01 06:43:16
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | zalo_oa | phone
+- Ghi chú (distinct=0, empty=2820): 
+## DanhSachHoaDon.xlsx::12.2025  rows=2884
+- Mã hóa đơn (distinct=2884, empty=0): ORD029626 | ORD029627 | ORD029628 | ORD029629
+- Thời gian (distinct=31, empty=0): 01/12/2025 | 02/12/2025 | 03/12/2025 | 04/12/2025
+- Mã KH (distinct=346, empty=1188): KH0231 | KH0023 | KH0291 | KH0204
+- Khách hàng (distinct=347, empty=0): Đào Nam Huy | Châu Hương Khoa | Đoàn Khoa Đạt | Khách lẻ
+- Tổng tiền hàng (distinct=1176, empty=0): 2,100 | 10,500 | 18,000 | 112,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1213, empty=0): 2,100 | 10,500 | 18,000 | 112,000
+- Trạng thái (distinct=3, empty=0): Thành công | Đã trả hàng | Huỷ đơn
+- Thời gian tạo (distinct=2883, empty=0): 2025-12-01 06:21:50 | 2025-12-01 06:45:11 | 2025-12-01 07:03:58 | 2025-12-01 07:11:03
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | zalo_oa | phone
+- Ghi chú (distinct=0, empty=2884): 
+## DanhSachHoaDon.xlsx::01.2026  rows=3003
+- Mã hóa đơn (distinct=3003, empty=0): ORD032510 | ORD032511 | ORD032512 | ORD032513
+- Thời gian (distinct=31, empty=0): 01/01/2026 | 02/01/2026 | 03/01/2026 | 04/01/2026
+- Mã KH (distinct=349, empty=1227): KH0016 | KH0109 | KH0206 | KH0312
+- Khách hàng (distinct=350, empty=0): Khách lẻ | Ông Bình Nam | Doãn Dương Cường | Lê Thắng Ngọc
+- Tổng tiền hàng (distinct=1236, empty=0): 87,000 | 16,000 | 151,700 | 7,400
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1255, empty=0): 87,000 | 16,000 | 151,700 | 7,400
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đã trả hàng
+- Thời gian tạo (distinct=3003, empty=0): 2026-01-01 06:00:00 | 2026-01-01 06:01:24 | 2026-01-01 06:58:42 | 2026-01-01 07:35:58
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | zalo_oa | phone
+- Ghi chú (distinct=0, empty=3003): 
+## DanhSachHoaDon.xlsx::02.2026  rows=2817
+- Mã hóa đơn (distinct=2817, empty=0): ORD035513 | ORD035514 | ORD035515 | ORD035516
+- Thời gian (distinct=28, empty=0): 01/02/2026 | 02/02/2026 | 03/02/2026 | 04/02/2026
+- Mã KH (distinct=348, empty=1107): KH0225 | KH0230 | KH0005 | KH0250
+- Khách hàng (distinct=349, empty=0): Khách lẻ | Phan Hà Lan | Đinh Ngọc Minh | Hà Bích Huy
+- Tổng tiền hàng (distinct=1220, empty=0): 16,800 | 11,000 | 122,800 | 130,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1243, empty=0): 16,800 | 11,000 | 0 | 130,000
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đã trả hàng
+- Thời gian tạo (distinct=2811, empty=0): 2026-02-01 07:03:42 | 2026-02-01 07:07:46 | 2026-02-01 07:15:43 | 2026-02-01 07:19:16
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | zalo_oa | phone
+- Ghi chú (distinct=0, empty=2817): 
+## DanhSachHoaDon.xlsx::03.2026  rows=3001
+- Mã hóa đơn (distinct=3001, empty=0): ORD038330 | ORD038331 | ORD038332 | ORD038333
+- Thời gian (distinct=31, empty=0): 01/03/2026 | 02/03/2026 | 03/03/2026 | 04/03/2026
+- Mã KH (distinct=349, empty=1193): KH0115 | KH0240 | KH0074 | KH0150
+- Khách hàng (distinct=350, empty=0): Tô Hoa Ngân | Hoàng Linh Bảo | Lâm Phong Phúc | Phan Sơn Bình
+- Tổng tiền hàng (distinct=1235, empty=0): 28,000 | 178,000 | 8,900 | 6,600
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1257, empty=0): 28,000 | 178,000 | 8,900 | 6,600
+- Trạng thái (distinct=3, empty=0): Thành công | Đã trả hàng | Huỷ đơn
+- Thời gian tạo (distinct=3001, empty=0): 2026-03-01 06:33:02 | 2026-03-01 06:37:21 | 2026-03-01 06:43:29 | 2026-03-01 06:53:37
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | phone | zalo_oa
+- Ghi chú (distinct=0, empty=3001): 
+## DanhSachHoaDon.xlsx::04.2026  rows=2909
+- Mã hóa đơn (distinct=2909, empty=0): ORD041331 | ORD041332 | ORD041333 | ORD041334
+- Thời gian (distinct=30, empty=0): 01/04/2026 | 02/04/2026 | 03/04/2026 | 04/04/2026
+- Mã KH (distinct=348, empty=1193): KH0209 | KH0328 | KH0303 | KH0129
+- Khách hàng (distinct=349, empty=0): Hà Hải Dương | Đào Hiếu Duy | Đinh Long Thanh | Khách lẻ
+- Tổng tiền hàng (distinct=1222, empty=0): 17,500 | 5,400 | 4,100 | 21,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1235, empty=0): 17,500 | 5,400 | 4,100 | 21,000
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đã trả hàng
+- Thời gian tạo (distinct=2906, empty=0): 2026-04-01 06:05:19 | 2026-04-01 06:41:47 | 2026-04-01 07:04:14 | 2026-04-01 07:07:32
+- Còn nợ (distinct=1, empty=0): 0
+- Kênh bán (distinct=3, empty=0): store | zalo_oa | phone
+- Ghi chú (distinct=0, empty=2909): 
+## DanhSachHoaDon.xlsx::05.2026  rows=3054
+- Mã hóa đơn (distinct=3054, empty=0): ORD044240 | ORD044241 | ORD044242 | ORD044243
+- Thời gian (distinct=31, empty=0): 01/05/2026 | 02/05/2026 | 03/05/2026 | 04/05/2026
+- Mã KH (distinct=350, empty=1225): KH0043 | KH0202 | KH0200 | KH0109
+- Khách hàng (distinct=351, empty=0): Trần Long Dương | Doãn Long Quang | Ngô Bình Hà | Doãn Dương Cường
+- Tổng tiền hàng (distinct=1275, empty=0): 4,200 | 11,200 | 8,300 | 132,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=1275, empty=0): 4,200 | 11,200 | 8,300 | 132,000
+- Trạng thái (distinct=3, empty=0): Thành công | Huỷ đơn | Đã trả hàng
+- Thời gian tạo (distinct=3049, empty=0): 2026-05-01 06:05:13 | 2026-05-01 06:18:01 | 2026-05-01 06:25:26 | 2026-05-01 06:34:51
+- Còn nợ (distinct=17, empty=0): 0 | 56,334 | 68,500 | 18,334
+- Kênh bán (distinct=3, empty=0): store | zalo_oa | phone
+- Ghi chú (distinct=0, empty=3054): 
+## DanhSachHoaDon.xlsx::06.2026  rows=1096
+- Mã hóa đơn (distinct=1096, empty=0): ORD047294 | ORD047295 | ORD047296 | ORD047297
+- Thời gian (distinct=12, empty=0): 01/06/2026 | 02/06/2026 | 03/06/2026 | 04/06/2026
+- Mã KH (distinct=313, empty=409): KH0248 | KH0054 | KH0275 | KH0095
+- Khách hàng (distinct=314, empty=0): Khách lẻ | Doãn Quân Huy | Lê Hải Hà | Doãn Trung Long
+- Tổng tiền hàng (distinct=622, empty=0): 94,500 | 1,400 | 522,000 | 70,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Khách đã trả (distinct=628, empty=0): 94,500 | 1,400 | 512,000 | 85,000
+- Trạng thái (distinct=4, empty=0): Thành công | Đã trả hàng | Huỷ đơn | Đang xử lý
+- Thời gian tạo (distinct=1095, empty=0): 2026-06-01 06:43:05 | 2026-06-01 07:06:14 | 2026-06-01 07:11:42 | 2026-06-01 07:20:45
+- Còn nợ (distinct=34, empty=0): 0 | 800 | 80,867 | 534
+- Kênh bán (distinct=3, empty=0): store | zalo_oa | phone
+- Ghi chú (distinct=0, empty=1096): 
+## DanhSachHoaDonChiTiet.xlsx::Sheet1  rows=90706
+- Mã hóa đơn (distinct=48389, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Mã hàng (distinct=80, empty=0): SP0070 | SP0039 | SP0066 | SP0040
+- Tên hàng (distinct=162, empty=0): Bisolvon 8mg hộp 3 vỉ x 10 viên | Efticol 0,9% lốc 10 lọ x 10ml | Boganic Traphaco hộp 5 vỉ x 20 viên | Siro ho Bổ phế Nam Hà Chỉ Khái Lộ chai 1
+- Số lượng (distinct=10, empty=0): 1 | 4 | 2 | 6
+- Đơn giá (distinct=153, empty=0): 2,100 | 2,700 | 800 | 55,000
+- Giảm giá (distinct=51, empty=0): 0 | 6,000 | 13,000 | 2,000
+- Thành tiền (distinct=589, empty=0): 2,100 | 10,800 | 800 | 110,000
+- Số lượng quy đổi (distinct=42, empty=0): 1 | 4 | 2 | 6
+## DanhSachHoaDonChiTietLo.xlsx::Sheet1  rows=92759
+- Mã hóa đơn (distinct=47911, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- STT (distinct=4, empty=0): 1 | 2 | 3 | 4
+- Lô (distinct=3863, empty=0): O2501749 | M2501980 | T2501295 | Q2501901
+- Số lượng (ĐVT cơ bản) (distinct=197, empty=0): 1 | 4 | 2 | 6
+- Số lượng trả (ĐVT cơ bản) (distinct=32, empty=0): 0 | 4 | 1 | 2
+## DanhSachKhachHang.xlsx::Sheet1  rows=350
+- Mã khách hàng (distinct=350, empty=0): KH0001 | KH0002 | KH0003 | KH0004
+- Ghi chú (distinct=0, empty=350): 
+- Mã số thuế (distinct=13, empty=337): 0684273281 | 0770952289 | 0191061571 | 0514276031
+- Tên khách hàng (distinct=350, empty=0): Tăng Bình Huy | Ngô Hùng Nhung | Tăng Minh Anh | Triệu Phương Hiếu
+- Người tạo (distinct=1, empty=0): admin
+- CCCD (distinct=0, empty=350): 
+- Ngày sinh (distinct=72, empty=278): 15/02/2000 | 27/10/1969 | 11/08/1995 | 10/10/1990
+- E-mail (distinct=0, empty=350): 
+- Đối tượng KH (distinct=1, empty=0): Cá nhân
+- Tên công ty (distinct=0, empty=350): 
+- Điện thoại (distinct=350, empty=0): 0352658809 | 0794954090 | 0326798056 | 0977648252
+- Địa chỉ (distinct=346, empty=0): 285 Tên Lửa | 92 Trần Não | 262 Bình Long | 322 Âu Cơ
+## DanhSachLoHang.xlsx::Sheet1  rows=3866
+- Mã nhập hàng (distinct=526, empty=0): PN00121 | PN00134 | PN00381 | PN00410
+- Mã hàng (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Lô (distinct=3866, empty=0): A2505314 | A2505854 | A2601477 | A2602620
+- Hạn sử dụng (distinct=1312, empty=0): 14/05/2026 | 31/07/2025 | 25/03/2026 | 23/07/2026
+- Số lượng (ĐVT cơ bản) (distinct=94, empty=0): 360 | 216 | 240 | 300
+## DanhSachNhapHang.xlsx::Sheet1  rows=526
+- Mã nhập hàng (distinct=526, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- Thời gian (distinct=526, empty=0): 01/01/2025 | 02/01/2025 | 03/01/2025 | 05/01/2025
+- Mã NCC (distinct=5, empty=0): NCC002 | NCC004 | NCC001 | NCC003
+- Cần trả NCC (distinct=523, empty=0): 211,648,300 | 180,000 | 200,000 | 2,121,600
+- Trạng thái (distinct=1, empty=0): Đã nhập hàng
+- Ghi chú (distinct=1, empty=525): nhập đầu kỳ
+## DanhSachSanPham.xlsx::Sheet1  rows=80
+- Trọng lượng (distinct=0, empty=80): 
+- Mã hàng (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Định mức tồn tối thiểu (distinct=1, empty=0): 0
+- Tên hàng (distinct=80, empty=0): Panadol Extra hộp 15 vỉ x 12 viên | Hapacol 250 hộp 24 gói | Panadol 500mg hộp 10 vỉ x 12 viên | Tiffy Dey hộp 25 vỉ x 4 viên
+- Mô tả chi tiết (distinct=0, empty=80): 
+- Nhóm hàng(3 Cấp) (distinct=11, empty=0): giảm đau hạ sốt | ho cảm cúm | dùng ngoài | tiêu hoá
+- Mẫu ghi chú (distinct=0, empty=80): 
+- Định mức tồn tối đa (distinct=1, empty=0): 999999999
+- Được bán trực tiếp (distinct=1, empty=0): 1
+- Bảo hành (distinct=0, empty=80): 
+- Mã HH Liên quan (distinct=0, empty=80): 
+- Giá bán (distinct=61, empty=0): 1400 | 2000 | 1000 | 1200
+- Loại hàng hóa (distinct=1, empty=0): Hàng hóa
+- ĐVT (distinct=10, empty=0): viên | gói | chai | cái
+- Giá vốn (distinct=67, empty=0): 1012 | 1512 | 800 | 900
+- Hình ảnh (distinct=0, empty=80): 
+- Thời gian tạo (distinct=79, empty=0): 2024-11-29 00:00:00 | 2024-11-17 00:00:00 | 2024-04-01 00:00:00 | 2024-04-05 00:00:00
+## DanhSachThuoc.xlsx::Sheet1  rows=80
+- Mã hàng (distinct=80, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Hoạt chất (distinct=51, empty=17): Paracetamol + Cafein | Paracetamol | Paracetamol + Phenylephrin + Clorphenira | Natri clorid
+- Thuốc kê đơn (distinct=2, empty=0): False | True

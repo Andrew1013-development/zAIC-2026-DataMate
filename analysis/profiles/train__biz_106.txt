@@ -1,0 +1,131 @@
+# Dữ liệu biz_106
+
+File máy POS xuất ra.
+
+## File
+- `DanhSachHoaDon.xlsx` (xlsx)
+- `DanhSachHoaDonChiTiet_1.xlsx` (xlsx)
+- `DanhSachHoaDonChiTiet_2.xlsx` (xlsx)
+- `DanhSachSanPham.xlsx` (xlsx)
+- `DanhSachKhachHang.xlsx` (xlsx)
+- `BaoCaoTonKho.xlsx` (xlsx)
+- `DanhSachNhapHang.xlsx` (xlsx)
+- `DanhSachChiTietNhapHang.xlsx` (xlsx)
+- `SoQuy.xlsx` (xlsx)
+- `DanhSachDonViTinh.xlsx` (xlsx)
+
+## Quy ước
+- Dữ liệu có đến hết 14/09/2026.
+- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **Giá trị** là số tiền trả lần đó; **Tổng sau giảm giá** là số khách phải trả cho cả đơn.
+- **Giá vốn**: **Giá vốn** là giá vốn một đơn vị bán.
+- **Tồn kho**: **Tồn cuối kỳ** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản.
+- **Nhập hàng**: **Đơn giá** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Cần trả NCC** là tổng tiền của cả phiếu nhập.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhSachDonViTinh.xlsx`.
+
+
+## BaoCaoTonKho.xlsx::Sheet1  rows=50
+- Mã hàng (distinct=50, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Tên hàng (distinct=50, empty=0): Cà phê đen (M) | Cà phê đen (L) | Cà phê sữa (M) | Cà phê sữa (L)
+- ĐVT (distinct=3, empty=0): ly | phần | cái
+- Tồn cuối kỳ (distinct=41, empty=0): 132 | 41 | 278 | 35
+## DanhSachChiTietNhapHang.xlsx::Sheet1  rows=1562
+- Mã nhập hàng (distinct=513, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- STT (distinct=50, empty=0): 1 | 2 | 3 | 4
+- Mã hàng (distinct=50, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- ĐVT (distinct=3, empty=0): ly | phần | hộp
+- Số lượng (distinct=115, empty=0): 237 | 119 | 296 | 148
+- Đơn giá (distinct=76, empty=0): 7,100 | 8,200 | 8,900 | 10,000
+## DanhSachDonViTinh.xlsx::Sheet1  rows=2
+- Mã hàng (distinct=2, empty=0): SP0049 | SP0050
+- ĐVT (distinct=1, empty=0): hộp
+- Quy đổi (distinct=1, empty=0): 6
+- Giá bán (distinct=2, empty=0): 222000 | 270000
+## DanhSachHoaDon.xlsx::Sheet1  rows=78847
+- Mã hóa đơn (distinct=78847, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Thời gian (distinct=1182, empty=0): 01/02/2025 | 45689 | 45690 | 02/02/2025
+- Mã KH (distinct=240, empty=31660): KH0043 | KH0091 | KH0008 | KH0067
+- Khách hàng (distinct=311, empty=0): Triệu Hằng Hiếu | Doãn Dũng Thanh | Khách lẻ | Đàm Bảo Bảo
+- Tổng tiền hàng (distinct=538, empty=0): 90,000 | 55,000 | 132,000 | 66,000
+- Giảm giá (distinct=2, empty=0): 0 | 10,000
+- Tổng sau giảm giá (distinct=537, empty=0): 90,000 | 55,000 | 132,000 | 66,000
+- Khách đã trả (distinct=546, empty=0): 90,000 | 55,000 | 132,000 | 0
+- Phương thức thanh toán (distinct=5, empty=0): Tiền mặt | Chuyển khoản | Ví điện tử | Thu hộ (COD)
+- Trạng thái (distinct=7, empty=0): xong | hủy đơn | trả lại | Hoàn thành
+- Thời gian tạo (distinct=78750, empty=0): 2025-02-01 06:03:42 | 2025-02-01 06:38:13 | 2025-02-01 06:42:18 | 2025-02-01 07:22:19
+- Ghi chú (distinct=0, empty=78847): 
+## DanhSachHoaDonChiTiet_1.xlsx::Sheet1  rows=100000
+- Mã hóa đơn (distinct=60892, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- STT (distinct=3, empty=0): 1 | 2 | 3
+- Mã hàng (distinct=50, empty=0): SP0026 | SP0038 | SP0030 | SP0013
+- Tên hàng (distinct=62, empty=0): Hồng trà sữa (L) | Nước ép cam (L) | Matcha latte (L) | Cappuccino (M)
+- Đơn vị tính (distinct=4, empty=0): ly | phần | cái | hộp
+- Số lượng (distinct=3, empty=0): 1 | 3 | 2
+- Đơn giá (distinct=33, empty=0): 45,000 | 55,000 | 42,000 | 48,000
+- Giảm giá (distinct=12, empty=0): 0 | 1,000 | 2,000 | 5,000
+- Thành tiền (distinct=122, empty=0): 45,000 | 55,000 | 42,000 | 48,000
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 3 | 2 | 6
+- Giá vốn (distinct=626, empty=0): 13,000 | 16,000 | 17,000 | 14,000
+## DanhSachHoaDonChiTiet_2.xlsx::Sheet1  rows=29416
+- Mã hóa đơn (distinct=17955, empty=0): ORD060893 | ORD060894 | ORD060895 | ORD060896
+- STT (distinct=3, empty=0): 1 | 2 | 3
+- Mã hàng (distinct=50, empty=0): SP0005 | SP0033 | SP0037 | SP0009
+- Tên hàng (distinct=62, empty=0): Bạc xỉu (M) | Sinh tố bơ (M) | Nước ép cam (M) | Espresso (single)
+- Đơn vị tính (distinct=4, empty=0): ly | phần | cái | hộp
+- Số lượng (distinct=3, empty=0): 3 | 1 | 2
+- Đơn giá (distinct=30, empty=0): 33,500 | 47,000 | 39,000 | 35,000
+- Giảm giá (distinct=11, empty=0): 0 | 2,000 | 3,000 | 4,000
+- Thành tiền (distinct=108, empty=0): 100,500 | 47,000 | 39,000 | 35,000
+- Số lượng quy đổi (distinct=4, empty=0): 3 | 1 | 2 | 6
+- Giá vốn (distinct=253, empty=0): 9,110 | 16,000 | 13,000 | 9,151
+## DanhSachKhachHang.xlsx::Sheet1  rows=240
+- Email (distinct=0, empty=240): 
+- Mã khách hàng (distinct=240, empty=0): KH0001 | KH0002 | KH0003 | KH0004
+- Trạng thái (distinct=1, empty=0): Đang hoạt động
+- Tên công ty (distinct=0, empty=240): 
+- Ngày sinh (distinct=45, empty=195): 24/11/1984 | 08/02/1994 | 29/03/1997 | 12/10/1989
+- Tổng điểm (distinct=1, empty=0): 0
+- Điểm tích lũy (distinct=1, empty=0): 0
+- Ghi chú (distinct=0, empty=240): 
+- Số CMND/CCCD (distinct=0, empty=240): 
+- Tên khách hàng (distinct=240, empty=0): Nguyễn Phương An | Đào Dương Giang - 0912 365 003 | Thân Trang Hồng | Đặng Hương Huy
+- Mã số thuế (distinct=15, empty=225): 0759812817 | 0716642483 | 0726974332 | 0691241048
+- Người tạo (distinct=1, empty=0): admin
+- Điện thoại (distinct=240, empty=0): 0932426380 | 0912365003 | 0702804243 | 0354903738
+- Loại hình khách (distinct=1, empty=0): Cá nhân
+## DanhSachNhapHang.xlsx::Sheet1  rows=513
+- Mã nhập hàng (distinct=513, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- Thời gian (distinct=513, empty=0): 01/02/2025 | 19/02/2025 | 20/02/2025 | 21/02/2025
+- Mã NCC (distinct=5, empty=0): NCC005 | NCC004 | NCC001 | NCC003
+- Cần trả NCC (distinct=489, empty=0): 56,356,700 | 1,105,000 | 972,000 | 4,151,000
+- Trạng thái (distinct=1, empty=0): Đã nhập hàng
+- Ghi chú (distinct=1, empty=512): nhập đầu kỳ
+## DanhSachSanPham.xlsx::Sheet1  rows=50
+- Hình ảnh (url1,url2...) (distinct=0, empty=50): 
+- Vị trí kệ (distinct=0, empty=50): 
+- Ghi chú (distinct=0, empty=50): 
+- Được bán trực tiếp (distinct=1, empty=0): 1
+- Nhóm hàng(3 Cấp) (distinct=9, empty=0): cà phê | trà | trà sữa | sinh tố
+- Mã barcode (distinct=42, empty=8): 8937889784207 | 8932826184317 | 8933390411380 | 8934644084503
+- Mã hàng (distinct=50, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Thương hiệu (distinct=0, empty=50): 
+- Tồn lớn nhất (distinct=1, empty=0): 999999999
+- Tên hàng (distinct=50, empty=0): Cà phê đen (M) | Cà phê đen (L) | Cà phê sữa (M) | Cà phê sữa (L)
+- Mã HH Liên quan (distinct=0, empty=50): 
+- Thuộc tính (distinct=0, empty=50): 
+- Giá bán (distinct=27, empty=0): 27500 | 31000 | 29000 | 35000
+- Mô tả sản phẩm (distinct=0, empty=50): 
+- Loại hàng hóa (distinct=1, empty=0): Hàng hóa
+- Giá vốn (distinct=42, empty=0): 6742 | 9150 | 8958 | 10060
+- ĐVT (distinct=3, empty=0): ly | phần | cái
+- Bảo hành (distinct=0, empty=50): 
+- Đang kinh doanh (distinct=1, empty=0): True
+- Trọng lượng (distinct=0, empty=50): 
+- Mẫu ghi chú (distinct=0, empty=50): 
+- Định mức tồn tối thiểu (distinct=1, empty=0): 0
+- Thời gian tạo (distinct=48, empty=0): 2023-06-09 00:00:00 | 2023-06-13 00:00:00 | 2024-07-20 00:00:00 | 2024-02-18 00:00:00
+## SoQuy.xlsx::Sheet1  rows=78673
+- Mã phiếu (distinct=78673, empty=0): PAY000001 | PAY000002 | PAY000003 | PAY000004
+- Thời gian (distinct=78576, empty=0): 2025-02-01 06:03:42 | 2025-02-01 06:38:13 | 2025-02-01 06:42:18 | 2025-02-01 07:32:08
+- Mã hóa đơn (distinct=77334, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000005
+- Phương thức thanh toán (distinct=4, empty=0): Tiền mặt | Chuyển khoản | Ví điện tử | Thu hộ (COD)
+- Giá trị (distinct=762, empty=0): 90.000đ | 55.000đ | 132.000đ | 66.000đ

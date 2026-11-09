@@ -1,0 +1,244 @@
+# Dữ liệu dev_014
+
+Cửa hàng điện thoại gửi các sổ tự ghi trên Excel (mục File): sổ bán hàng (sheet `Ghi tắt` và mỗi tháng một sheet) và các sổ phụ: sổ thu máy cũ một file; sổ nợ, sổ góp, sổ bảo hành chung một file, mỗi sổ một sheet. Các sổ nối với nhau qua số thứ tự đơn trong sổ bán, IMEI và tên, số điện thoại của khách.
+
+## File
+- `SoBanHang.xlsx` (xlsx)
+- `ThuMayCu.xlsx` (xlsx)
+- `SoNo.xlsx` (xlsx)
+
+## Quy ước
+- Dữ liệu có đến hết 30/09/2026.
+- **Đơn**: các dòng cùng **STT** là một đơn; khách, bớt, khách trả, ghi chú của đơn lặp lại ở mọi dòng của đơn.
+- **Đơn khách trả lại**: **Ghi chú** của đơn ghi khách trả lại.
+- **Tiền khách trả**: **Khách trả** là số tiền khách trả cho cả đơn (không phải của dòng), đã bớt và đã trừ tiền thu máy cũ; ô bớt, thu máy cũ để trống là không có khoản đó.
+- **Ghi tắt, loại hàng**: sheet `Ghi tắt` cho tên đầy đủ và loại hàng (máy mới, máy cũ, phụ kiện) của từng cách ghi tắt. Máy có IMEI (**IMEI**), phụ kiện không.
+- **Thu máy cũ**: sổ thu máy cũ ghi máy khách đưa, giá thu (**Giá thu**) trừ vào tiền đơn có số thứ tự **Trừ vào (STT sổ bán)** ở sổ bán; **Khách trả** ở sổ bán đã trừ khoản này.
+- **Sổ nợ**: chỉ đơn khách còn nợ sau lúc mua, trừ đơn trả góp (ở sổ góp). Dòng đầu mỗi đơn ghi ngày mua, khách, **Nợ** là số còn nợ sau khi trả lúc mua. Các lần khách trả sau đó ghi ở **Đã trả**, **Ngày trả**: lần đầu ngay ở dòng đầu đơn, mỗi lần sau một dòng riêng. **Ghi chú** ghi số thứ tự đơn ở sổ bán. Đơn ghi nợ vẫn ghi đủ ở sổ bán, **Khách trả** là tiền cả đơn.
+- **Sổ góp**: mỗi đơn trả góp có dòng đầu ghi ngày mua, số thứ tự đơn ở sổ bán, khách, máy, **Giá** là tiền cả đơn, **Trả trước** là tiền trả lúc mua, còn lại chia đều **Số kỳ** kỳ, mỗi kỳ **Góp/tháng**. Kỳ thứ nhất có hạn vào ngày **Hạn góp (ngày)** của tháng ngay sau tháng mua, hạn kỳ sau là cùng ngày tháng kế tiếp. Mỗi lần khách góp ghi **Ngày góp**, **Đã góp**: lần đầu ở dòng đầu đơn, mỗi lần sau một dòng có **STT**. Đơn trả góp vẫn ghi đủ giá ở sổ bán.
+- **Sổ bảo hành**: mỗi lần khách mang máy tới bảo hành một dòng (**Ngày nhận**), máy nhận theo **IMEI**; một máy có thể tới nhiều lần. **Máy** ghi dòng máy (không ghi dung lượng, màu; máy mới và máy cũ cùng dòng ghi như nhau). Bảo hành không thu tiền, không phải đơn bán.
+
+
+## SoBanHang.xlsx::Ghi tắt  rows=59
+- Ghi tắt (distinct=59, empty=0): Cáp C | Cáp C-L | Sạc 20W | Sạc 25W SS
+- Tên hàng (distinct=59, empty=0): Cáp Type-C 1m | Cáp Type-C sang Lightning 1m | Củ sạc nhanh 20W Type-C | Củ sạc nhanh 25W Samsung
+- Loại (distinct=3, empty=0): phụ kiện | máy mới | máy cũ
+## SoBanHang.xlsx::T7-2025  rows=636
+- Ngày (distinct=64, empty=0): 45839 | 01/07/2025 | 02/07/2025 | 45840
+- STT (distinct=377, empty=2): 1 | 2 | 3 | 4
+- Khách (distinct=360, empty=2): Triệu Linh An 0327988481 | Triệu Linh An - 0327 988 481 | Bùi Khoa Hoàng 0701076413 | lẻ
+- Hàng (distinct=107, empty=2): IP16 128 đen | Ốp lưng silicon iPhone | Ốp trong | CL 9D
+- IMEI (distinct=124, empty=510): 358841973775088 | 353277390076765 | 355349917716898 | 351152494366390
+- SL (distinct=2, empty=2): 1 | 2
+- Giá (distinct=129, empty=2): 19tr990 | 120k | 80.000đ | 100k
+- Thành tiền (distinct=151, empty=1): 19.990.000đ | 120000 | 80000 | 100.000đ
+- Bớt (distinct=42, empty=220): 10000 | 10.000đ | 70000 | 90.000đ
+- Khách trả (distinct=343, empty=2): 20.100.000đ | 20,1tr | 80.000đ | 540.000đ
+- Ghi chú (distinct=1, empty=633): trả lại hàng
+## SoBanHang.xlsx::T8-2025  rows=717
+- Ngày (distinct=64, empty=0): 45870 | 01/08/2025 | 02/08/2025 | 45871
+- STT (distinct=436, empty=2): 378 | 379 | 380 | 381
+- Khách (distinct=430, empty=2): Trần Hương Mai (0908995064) | Trần Hương Mai 0908995064 | Kiều Hoa Hồng (0919703447) | Kiều Hoa Hồng - 0919 703 447
+- Hàng (distinct=117, empty=2): Miếng dán lưng PPF | Sạc 20W | Ốp lưng silicon iPhone | IP15 128 xanh
+- IMEI (distinct=160, empty=556): 352628764420750 | 351607067512621 | 351980130176322 | 352715616872625
+- SL (distinct=2, empty=2): 1 | 2
+- Giá (distinct=146, empty=2): 70000 | 250k | 120000 | 16490k
+- Thành tiền (distinct=166, empty=1): 70000 | 500000 | 120000 | 16490000
+- Bớt (distinct=39, empty=242): 10.000đ | 10000 | 110000 | 110.000đ
+- Khách trả (distinct=356, empty=2): 560000 | 16,5tr | 16500000 | 580000
+- Ghi chú (distinct=2, empty=711): khách mang trả | trả lại hàng
+## SoBanHang.xlsx::T9-2025  rows=625
+- Ngày (distinct=63, empty=0): 01/09/2025 | 45901 | 45902 | 02/09/2025
+- STT (distinct=394, empty=3): 814 | 815 | 816 | 817
+- Khách (distinct=358, empty=3): lẻ | Tống Bích Hoa (0906849000) | Tống Bích Hoa - 0906 849 000 | Quách Hoa Hải (0986031932)
+- Hàng (distinct=103, empty=3): Thẻ nhớ microSD 64GB | IP13 128 trắng | Kính cường lực chống nhìn trộm | Pin DP 10k
+- IMEI (distinct=112, empty=511): 357704596492997 | 356640571021768 | 357752217188544 | 355661853844058
+- SL (distinct=2, empty=3): 1 | 2
+- Giá (distinct=122, empty=3): 160000 | 11.990.000đ | 180k | 390000
+- Thành tiền (distinct=146, empty=2): 160000 | 11990000 | 180.000đ | 390k
+- Bớt (distinct=38, empty=219): 10000 | 10.000đ | 50000 | 50k
+- Khách trả (distinct=308, empty=3): 160000 | 12160000 | 12160k | 380k
+- Ghi chú (distinct=3, empty=617): khách trả lại | trả lại hàng | khách mang trả
+## SoBanHang.xlsx::T10-2025  rows=629
+- Ngày (distinct=65, empty=0): 01/10/2025 | 45931 | 02/10/2025 | 45932
+- STT (distinct=398, empty=3): 1208 | 1209 | 1210 | 1211
+- Khách (distinct=369, empty=3): Phùng Lan Trung (0989358811) | Phùng Lan Trung - 0989 358 811 | Đàm Minh Ngân 0328612829 | Tô Lan Trang 0916250622
+- Hàng (distinct=105, empty=3): CL 9D | ỐP SILICON IP | Sạc 20W | Tai nghe dây
+- IMEI (distinct=124, empty=501): 355742122379454 | 357345548528601 | 352814198341651 | 350226079837529
+- SL (distinct=2, empty=3): 1 | 2
+- Giá (distinct=129, empty=3): 100000 | 120.000đ | 250000 | 90000
+- Thành tiền (distinct=155, empty=2): 100000 | 120.000đ | 250.000đ | 90.000đ
+- Bớt (distinct=36, empty=244): 10000 | 10.000đ | 39500 | 80.000đ
+- Khách trả (distinct=310, empty=3): 220.000đ | 250.000đ | 90000 | 430000
+- Ghi chú (distinct=3, empty=623): khách mang trả | trả lại hàng | khách trả lại
+## SoBanHang.xlsx::T11-2025  rows=692
+- Ngày (distinct=63, empty=0): 45962 | 01/11/2025 | 02/11/2025 | 45963
+- STT (distinct=437, empty=3): 1606 | 1607 | 1608 | 1609
+- Khách (distinct=402, empty=3): kl | Khách lẻ | Nghiêm Hạnh Hằng - 0796 308 488 | Nghiêm Hạnh Hằng (0796308488)
+- Hàng (distinct=110, empty=3): Kính cường lực 9D | Cáp C | Dây đeo điện thoại | Ốp silicon IP
+- IMEI (distinct=134, empty=557): 356926131791150 | 356166355020537 | 350686248157184 | 356449975117176
+- SL (distinct=2, empty=3): 2 | 1
+- Giá (distinct=130, empty=3): 100.000đ | 90k | 40000 | 120k
+- Thành tiền (distinct=152, empty=2): 200000 | 90.000đ | 40000 | 120000
+- Bớt (distinct=45, empty=280): 20000 | 20.000đ | 10.000đ | 10000
+- Khách trả (distinct=331, empty=3): 200.000đ | 90.000đ | 40.000đ | 2800000
+- Ghi chú (distinct=3, empty=678): khách trả lại | khách mang trả | trả lại hàng
+## SoBanHang.xlsx::T12-2025  rows=683
+- Ngày (distinct=65, empty=0): 01/12/2025 | 45992 | 02/12/2025 | 45993
+- STT (distinct=419, empty=3): 2043 | 2044 | 2045 | 2046
+- Khách (distinct=415, empty=3): Dương Sơn Anh (0325258544) | Huỳnh Ngọc Quang (0796035871) | kl | Đàm Quang Hà - 0797 816 713
+- Hàng (distinct=114, empty=3): IP16PM 256 đen | IPXSM 64 cũ | Sạc 25W SS | Đế sạc không dây MagSafe
+- IMEI (distinct=129, empty=551): 352269387291755 / 352276232122457 | 357831936960100 | 351235675283300 / 359116793558298 | 354555428108927
+- SL (distinct=2, empty=3): 2 | 1
+- Giá (distinct=133, empty=3): 30tr990 | 3tr900 | 290.000đ | 550.000đ
+- Thành tiền (distinct=154, empty=2): 61tr980 | 3tr900 | 290.000đ | 550000
+- Bớt (distinct=39, empty=264): 80.000đ | 10000 | 10.000đ | 90000
+- Khách trả (distinct=350, empty=3): 61900k | 4tr180 | 660.000đ | 660k
+- Ghi chú (distinct=3, empty=676): khách mang trả | trả lại hàng | khách trả lại
+## SoBanHang.xlsx::T1-2026  rows=716
+- Ngày (distinct=64, empty=0): 01/01/2026 | 46023 | 46024 | 02/01/2026
+- STT (distinct=437, empty=2): 2462 | 2463 | 2464 | 2465
+- Khách (distinct=433, empty=2): lẻ | khách lẻ | Huỳnh Ngọc Thu (0916169216) | Trịnh Hương Thảo 0700993812
+- Hàng (distinct=113, empty=2): Dán PPF | Pin DP 20k | CL 9D | Sạc 20W
+- IMEI (distinct=144, empty=570): 351352535953111 | 354244403286343 | 352758968066271 / 358169159290403 | 350313451680626
+- SL (distinct=2, empty=2): 1 | 2
+- Giá (distinct=138, empty=2): 70k | 590000 | 100.000đ | 250.000đ
+- Thành tiền (distinct=160, empty=1): 70.000đ | 590.000đ | 100.000đ | 250.000đ
+- Bớt (distinct=47, empty=264): 10k | 10.000đ | 10000 | 100.000đ
+- Khách trả (distinct=364, empty=2): 70.000đ | 680k | 680.000đ | 250.000đ
+- Ghi chú (distinct=2, empty=710): khách trả lại | trả lại hàng
+## SoBanHang.xlsx::T2-2026  rows=845
+- Ngày (distinct=59, empty=0): 01/02/2026 | 46054 | 46055 | 02/02/2026
+- STT (distinct=516, empty=3): 2899 | 2900 | 2901 | 2902
+- Khách (distinct=462, empty=3): kl | lẻ | Trần Hương Mai 0908995064 | Huỳnh Nam Cường - 0796 571 544
+- Hàng (distinct=112, empty=3): Dây đeo | Dán PPF | CL 9D | Tai nghe dây
+- IMEI (distinct=162, empty=681): 357163925989332 | 359008669032849 | 358069124502520 | 353768251726951
+- SL (distinct=2, empty=3): 1 | 2
+- Giá (distinct=144, empty=3): 40.000đ | 70000 | 100.000đ | 90000
+- Thành tiền (distinct=175, empty=2): 40000 | 70.000đ | 100.000đ | 90.000đ
+- Bớt (distinct=44, empty=321): 13k | 13000 | 10k | 10000
+- Khách trả (distinct=406, empty=3): 40.000đ | 70000 | 100000 | 257.000đ
+- Ghi chú (distinct=3, empty=828): khách mang trả | khách trả lại | trả lại hàng
+## SoBanHang.xlsx::T3-2026  rows=636
+- Ngày (distinct=65, empty=0): 46082 | 01/03/2026 | 02/03/2026 | 46083
+- STT (distinct=401, empty=3): 3415 | 3416 | 3417 | 3418
+- Khách (distinct=397, empty=3): Khách lẻ | Tạ An Đức (0989713791) | khách lẻ | Hà Ngân Phong (0904415683)
+- Hàng (distinct=116, empty=3): Cáp Type-C sang Lightning 1m | IP15 128 xanh | ỐP SILICON IP | CL chống nhìn trộm
+- IMEI (distinct=138, empty=497): 357194060663630 | 357068159852264 | 354394752339696 | 357028709120638
+- SL (distinct=2, empty=3): 2 | 1
+- Giá (distinct=138, empty=3): 157.500đ | 16.490.000đ | 120k | 180.000đ
+- Thành tiền (distinct=159, empty=2): 315000 | 16490000 | 240000 | 180.000đ
+- Bớt (distinct=43, empty=228): 10000 | 10k | 10.000đ | 90.000đ
+- Khách trả (distinct=336, empty=3): 305.000đ | 16720000 | 250k | 250.000đ
+- Ghi chú (distinct=3, empty=631): khách mang trả | khách trả lại | trả lại hàng
+## SoBanHang.xlsx::T4-2026  rows=640
+- Ngày (distinct=63, empty=0): 46113 | 01/04/2026 | 46114 | 02/04/2026
+- STT (distinct=393, empty=3): 3816 | 3817 | 3818 | 3819
+- Khách (distinct=366, empty=3): Trịnh Thắng Hoa - 0323 725 649 | Khách lẻ | Đoàn Phúc Hiếu 0917760104 | Đoàn Phúc Hiếu - 0917 760 104
+- Hàng (distinct=106, empty=3): Sạc MagSafe | Tai nghe dây | Sạc 20W | Tai nghe BT
+- IMEI (distinct=123, empty=513): 351033283985683 / 354960536824102 | 351303518095032 | 355044155411829 | 351349982124923
+- SL (distinct=2, empty=3): 1 | 2
+- Giá (distinct=125, empty=3): 550.000đ | 90.000đ | 250000 | 450.000đ
+- Thành tiền (distinct=149, empty=2): 550.000đ | 90.000đ | 250000 | 450.000đ
+- Bớt (distinct=45, empty=230): 10k | 10000 | 10.000đ | 25.000đ
+- Khách trả (distinct=328, empty=3): 540k | 90000 | 690000 | 690.000đ
+- Ghi chú (distinct=2, empty=637): trả lại hàng | khách mang trả
+## SoBanHang.xlsx::T5-2026  rows=736
+- Ngày (distinct=64, empty=0): 46143 | 01/05/2026 | 46144 | 02/05/2026
+- STT (distinct=444, empty=2): 4209 | 4210 | 4211 | 4212
+- Khách (distinct=428, empty=2): Nguyễn Thắng Châu - 0938 835 539 | Diệp Hải Phương - 0322 942 195 | Diệp Hải Phương (0322942195) | khách lẻ
+- Hàng (distinct=108, empty=2): IP12 64 CŨ | Ốp chống sốc SS | Mi14T 256 xám | Ốp silicon IP
+- IMEI (distinct=148, empty=583): 358117143254530 | 359946479709587 | 350399258827270 / 356030632547482 | 350854098694496
+- SL (distinct=2, empty=2): 1 | 2
+- Giá (distinct=139, empty=2): 6300000 | 150.000đ | 12.990.000đ | 120.000đ
+- Thành tiền (distinct=171, empty=1): 6.300.000đ | 150k | 12,99tr | 120.000đ
+- Bớt (distinct=50, empty=245): 10.000đ | 60.000đ | 60k | 70.000đ
+- Khách trả (distinct=397, empty=2): 3090k | 13.200.000đ | 13,2tr | 100000
+- Ghi chú (distinct=2, empty=730): trả lại hàng | khách trả lại
+## SoBanHang.xlsx::T6-2026  rows=651
+- Ngày (distinct=62, empty=0): 01/06/2026 | 46174 | 46175 | 02/06/2026
+- STT (distinct=400, empty=2): 4653 | 4654 | 4655 | 4656
+- Khách (distinct=397, empty=2): kl | Lương Khánh Nam (0791683655) | La Sơn Hoa - 0359 697 991 | lẻ
+- Hàng (distinct=105, empty=2): CL chống nhìn trộm | Ốp lưng silicon iPhone | Pin DP 10k | Sạc 25W SS
+- IMEI (distinct=132, empty=517): 350625059561233 | 355468451614648 | 358475437271317 | 351569852524080
+- SL (distinct=2, empty=2): 1 | 2
+- Giá (distinct=130, empty=2): 180k | 120.000đ | 390k | 290.000đ
+- Thành tiền (distinct=159, empty=1): 180000 | 120000 | 390.000đ | 290k
+- Bớt (distinct=48, empty=237): 10.000đ | 10000 | 10k | 6000
+- Khách trả (distinct=366, empty=2): 180.000đ | 120k | 380000 | 530k
+- Ghi chú (distinct=3, empty=639): khách mang trả | khách trả lại | trả lại hàng
+## SoBanHang.xlsx::T7-2026  rows=736
+- Ngày (distinct=65, empty=0): 01/07/2026 | 46204 | 46205 | 02/07/2026
+- STT (distinct=452, empty=3): 5053 | 5054 | 5055 | 5056
+- Khách (distinct=423, empty=3): Hà Linh Nhung 0797032377 | Khách lẻ | Lý An Dũng (0320831773) | Lý An Dũng - 0320 831 773
+- Hàng (distinct=116, empty=3): CL 9D | Sạc MagSafe | Cáp C | Samsung Galaxy S24 FE 128GB Xanh Dương
+- IMEI (distinct=151, empty=581): 355215139778620 | 351237768801915 | 356962827873572 | 358620681597947
+- SL (distinct=2, empty=3): 1 | 2
+- Giá (distinct=143, empty=3): 105.000đ | 550.000đ | 90.000đ | 12490000
+- Thành tiền (distinct=174, empty=2): 105000 | 1,1tr | 90.000đ | 12490k
+- Bớt (distinct=71, empty=257): 5000 | 10.000đ | 90.000đ | 90k
+- Khách trả (distinct=413, empty=3): 100k | 1tr090 | 195.000đ | 10300000
+- Ghi chú (distinct=2, empty=734): khách trả lại | trả lại hàng
+## SoBanHang.xlsx::T8-2026  rows=683
+- Ngày (distinct=64, empty=0): 01/08/2026 | 46235 | 02/08/2026 | 46236
+- STT (distinct=409, empty=2): 5505 | 5506 | 5507 | 5508
+- Khách (distinct=415, empty=2): Cao Đạt Hải - 0352 309 029 | Cao Đạt Hải 0352309029 | Đinh Duy Hoàng 0709742617 | lẻ
+- Hàng (distinct=107, empty=2): Cáp C | CL 9D | Ốp  lưng chống sốc Samsung | Dán PPF
+- IMEI (distinct=125, empty=556): 352421452951876 | 351466060102447 / 355031812588289 | 355745738522151 | 350268130394660
+- SL (distinct=2, empty=2): 1 | 2
+- Giá (distinct=132, empty=2): 90.000đ | 105000 | 150.000đ | 70.000đ
+- Thành tiền (distinct=154, empty=1): 90000 | 105000 | 150.000đ | 70.000đ
+- Bớt (distinct=60, empty=238): 10000 | 10.000đ | 39500 | 10k
+- Khách trả (distinct=357, empty=2): 335k | 70k | 380000 | 3,1tr
+- Ghi chú (distinct=3, empty=675): khách mang trả | khách trả lại | trả lại hàng
+## SoBanHang.xlsx::T9-2026  rows=696
+- Ngày (distinct=63, empty=0): 46266 | 01/09/2026 | 02/09/2026 | 46267
+- STT (distinct=421, empty=3): 5914 | 5915 | 5916 | 5917
+- Khách (distinct=409, empty=3): Trịnh Hải Ngọc (0354728959) | Bùi Đạt Tâm - 0905 123 498 | Doãn Đạt Hằng - 0911 803 238 | Doãn Đạt Hằng (0911803238)
+- Hàng (distinct=106, empty=3): CL 9D | Cáp C | Ốp silicon IP | Sạc 20W
+- IMEI (distinct=150, empty=541): 358916122320752 | 350651723909459 | 355247500529050 | 352149462264903
+- SL (distinct=2, empty=3): 1 | 2
+- Giá (distinct=137, empty=3): 105000 | 90.000đ | 105.000đ | 120k
+- Thành tiền (distinct=169, empty=2): 105000 | 90000 | 120k | 250.000đ
+- Bớt (distinct=50, empty=251): 26k | 26.000đ | 10.000đ | 10000
+- Khách trả (distinct=390, empty=3): 105000 | 90k | 225000 | 225.000đ
+- Ghi chú (distinct=1, empty=695): trả lại hàng
+## SoNo.xlsx::Sổ nợ  rows=337
+- Ngày (distinct=153, empty=169): 02/07/2025 | 45841 | 45844 | 08/07/2025
+- Khách (distinct=159, empty=169): Quách Cường Lan | Giang Quân An | Đoàn Châu Quân | Vương An Loan
+- SĐT (distinct=159, empty=169): 0909377857 | 0359938682 | 0795956685 | 0977852266
+- Nợ (distinct=150, empty=169): 270k | 240.000đ | 28.970.000đ | 1744k
+- Đã trả (distinct=206, empty=4): 270k | 80k | 80.000đ | 9.656.666đ
+- Ngày trả (distinct=274, empty=4): 30/07/2025 | 17/07/2025 | 45863 | 02/08/2025
+- Ghi chú (distinct=168, empty=0): STT 26 | STT 34 | STT 70 | STT 103
+## SoNo.xlsx::Trả góp  rows=1155
+- Ngày (distinct=208, empty=920): 45841 | 04/07/2025 | 45850 | 45851
+- STT (distinct=235, empty=0): 33 | 54 | 158 | 171
+- Khách (distinct=206, empty=920): Đinh Mai Hoa | Hồ Hạnh Hồng | Đỗ Trang Linh | Phan Hiếu An
+- SĐT (distinct=205, empty=920): 0988028309 | 0986043312 | 0937827586 | 0790435227
+- Máy (distinct=67, empty=920): iPhone 16 128GB Đen | Xiaomi Redmi 14C 128GB Xanh | Samsung Galaxy A36 5G 128GB Tím | Xiaomi Redmi Note 14 256GB Xanh
+- Giá (distinct=223, empty=920): 19.980.000đ | 3,9tr | 7.770.000đ | 6,78tr
+- Trả trước (distinct=223, empty=920): 4,38tr | 1200k | 4,17tr | 3180k
+- Số kỳ (distinct=4, empty=920): 6 | 3 | 9 | 12
+- Góp/tháng (distinct=83, empty=920): 2.600.000đ | 900k | 1.200.000đ | 600.000đ
+- Hạn góp (ngày) (distinct=28, empty=920): 3 | 4 | 12 | 13
+- Ngày góp (distinct=573, empty=17): 05/08/2025 | 03/09/2025 | 45937 | 05/11/2025
+- Đã góp (distinct=117, empty=17): 2,6tr | 2.600.000đ | 900.000đ | 1.200.000đ
+## SoNo.xlsx::Bảo hành  rows=192
+- Ngày nhận (distinct=167, empty=0): 45860 | 11/08/2025 | 45882 | 26/08/2025
+- Khách (distinct=157, empty=0): Phan Trung Hoàng | Thân Bình Hiếu | Hoàng Hùng Hoàng | Phạm Hằng Huy
+- SĐT (distinct=157, empty=0): 0703695348 | 0324923706 | 0327519549 | 0702584679
+- Máy (distinct=38, empty=0): Xiaomi Redmi Note 14 | iPhone 15 | iPhone 13 Pro Max | iPhone 16 Pro
+- IMEI (distinct=172, empty=0): 353862268796170 | 356354004843729 | 358208076832937 | 353504251861674
+- Ngày mua (distinct=168, empty=0): 03/07/2025 | 03/08/2025 | 06/08/2025 | 04/08/2025
+- Lỗi (distinct=9, empty=0): màn hình sọc | pin tụt nhanh | không nhận sạc | treo logo
+- Xử lý (distinct=4, empty=0): thay linh kiện | đổi máy khác | sửa tại tiệm | gửi hãng
+## ThuMayCu.xlsx::Sheet1  rows=300
+- Ngày (distinct=249, empty=0): 45841 | 04/07/2025 | 05/07/2025 | 45844
+- Khách (distinct=256, empty=0): Trần Phương Hồng | Triệu Linh An | Bùi Châu Ngọc | Kiều Hằng Khoa
+- SĐT (distinct=256, empty=0): 0973495724 | 0327988481 | 0791558407 | 0983609358
+- Máy thu (distinct=14, empty=0): Samsung Galaxy A32 | Samsung Galaxy S21 | iPhone 11 64GB | Samsung Galaxy S22 Ultra
+- Tình trạng (distinct=7, empty=0): trầy nhẹ | bể kính lưng | đẹp 99% | màn ám
+- IMEI (distinct=300, empty=0): 354987866187974 | 357656628792010 | 359403787348310 | 353813372359843
+- Giá thu (distinct=129, empty=0): 1.200.000đ | 3000k | 3.000.000đ | 9200k
+- Trừ vào (STT sổ bán) (distinct=300, empty=0): 30 | 53 | 63 | 77

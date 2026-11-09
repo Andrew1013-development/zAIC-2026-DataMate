@@ -1,0 +1,127 @@
+# Dữ liệu dev_012
+
+Sổ sửa xe chủ tiệm tự ghi trên Excel, mỗi tháng một sheet: mỗi dòng một lượt xe vào sửa (một phiếu), không ghi mã phiếu, không ghi tên khách. Ô Làm gì ghi mọi việc của phiếu. Tiền là tổng cả phiếu, không ghi tiền từng việc. File DanhSachTho.xlsx ghi họ tên, phần trăm hoa hồng các thợ; sổ ghi thợ theo tên gọi. Phiếu ghi chú bảo hành, Tiền 0: xe quay lại bảo hành việc của một phiếu trước, tiệm không thu tiền.
+
+## File
+- `SoSuaXe.xlsx` (xlsx)
+- `DanhSachTho.xlsx` (xlsx)
+
+## Cột trong `SoSuaXe.xlsx`
+- **Ngày**: ngày sửa
+- **Xe**: dòng xe và biển số ghi chung một ô
+- **Làm gì**: các việc đã làm cho xe, nhiều việc ghi chung một ô
+- **Thợ**: thợ làm phiếu, ghi tên gọi
+- **Tiền**: tổng tiền cả phiếu
+- **Ghi chú**: ghi chú
+
+## Cột trong `DanhSachTho.xlsx`
+- **Họ tên**: họ tên thợ
+- **Ngày vào làm**: ngày vào làm
+- **Hoa hồng (%)**: phần trăm hoa hồng của thợ, tính trên tổng Tiền các phiếu thợ làm trong tháng
+
+## Quy ước
+- Dữ liệu có đến hết 31/08/2026.
+
+
+## DanhSachTho.xlsx::Sheet1  rows=4
+- Họ tên (distinct=4, empty=0): Hà Loan Đạt | Lương Chi Đức | Đoàn Bảo Phúc | Đàm Lan An
+- Ngày vào làm (distinct=4, empty=0): 2023-05-29 00:00:00 | 2024-09-19 00:00:00 | 2024-08-04 00:00:00 | 2023-10-03 00:00:00
+- Hoa hồng (%) (distinct=4, empty=0): 32 | 25 | 28 | 33
+## SoSuaXe.xlsx::T7-2025  rows=403
+- Ngày (distinct=93, empty=0): 01/07/2025 | 1 thg 7 2025 | 2 thg 7 2025 | 45840
+- Xe (distinct=386, empty=2): future 59B6-219.16 | wave alpha 50K2-994.07 | Vario 50F1-334.29 | Ex 59E1-603.87
+- Làm gì (distinct=305, empty=2): vệ sinh nồi | bdtq + vs nồi | bộ nhông xích + thay nước mát | bugi
+- Thợ (distinct=12, empty=2): A.Đức | Đức | a Đức | a Phúc
+- Tiền (distinct=167, empty=2): 120000 | 270.000đ | 440000 | 65.000đ
+- Ghi chú (distinct=12, empty=370): hẹn chiều lấy | thay thêm nếu cần | khách chờ lấy liền | kiểm tra lại tuần sau
+## SoSuaXe.xlsx::T8-2025  rows=451
+- Ngày (distinct=93, empty=0): 45870 | 1 thg 8 2025 | 01/08/2025 | 2 thg 8 2025
+- Xe (distinct=436, empty=1): grande 51L3-168.55 | airblade 50F5-227.38 | Future 61N3-574.63 | LEAD 61X4-678.10
+- Làm gì (distinct=332, empty=1): thay bugi + bdtq + nhớt hãng | dây cu roa + nhớt láp + nhớt Honda | Shell 1L + thay nhớt Motul | bố trước, Shell 1L
+- Thợ (distinct=12, empty=1): a Đạt | A.Đạt | Đạt | a Đức
+- Tiền (distinct=168, empty=1): 310.000đ | 405.000đ | 415000 | 220.000đ
+- Ghi chú (distinct=12, empty=414): xe để lại qua đêm | bảo hành, phiếu 20/7 | kiểm tra lại tuần sau | bảo hành, phiếu 23/7
+## SoSuaXe.xlsx::T9-2025  rows=387
+- Ngày (distinct=91, empty=0): 01/09/2025 | 1 thg 9 2025 | 45901 | 02/09/2025
+- Xe (distinct=370, empty=1): sirius 51M2-125.32 | vision 72L7-223.37 | Exciter 60T2-479.52 | Grande 61H2-326.44
+- Làm gì (distinct=292, empty=1): thay nhớt + vá xe | vá ruột + bố trước + bố sau | vs nồi + thay vỏ | bdtq
+- Thợ (distinct=12, empty=1): a An | A.An | An | Đạt
+- Tiền (distinct=159, empty=1): 120.000đ | 175.000đ | 456000 | 150.000đ
+- Ghi chú (distinct=12, empty=352): kiểm tra lại tuần sau | bảo hành, phiếu 21/8 | khách chờ lấy liền | đã gọi khách
+## SoSuaXe.xlsx::T10-2025  rows=445
+- Ngày (distinct=95, empty=0): 01/10/2025 | 45931 | 1 thg 10 2025 | 2 thg 10 2025
+- Xe (distinct=419, empty=2): LEAD 61H7-440.84 | Alpha 54T8-428.71 | AB 54P3-820.93 | Alpha 59N7-354.93
+- Làm gì (distinct=332, empty=2): nhớt Honda, thay nhớt Castrol | thay vỏ + bdtq | thay bugi, bố sau | bình GS + nhớt Motul ga
+- Thợ (distinct=12, empty=2): Đức | A.Đức | a Đức | a Phúc
+- Tiền (distinct=179, empty=2): 215.000đ | 486.000đ | 135.000đ | 585.000đ
+- Ghi chú (distinct=14, empty=411): khách chờ lấy liền | bảo hành | bảo hành, phiếu 28/9 | xe để lại qua đêm
+## SoSuaXe.xlsx::T11-2025  rows=436
+- Ngày (distinct=90, empty=0): 1 thg 11 2025 | 45962 | 01/11/2025 | 45963
+- Xe (distinct=418, empty=1): AB 51U2-574.02 | Alpha 61N1-806.33 | Vision 110 59N7-633.33 | AB 59M2-699.49
+- Làm gì (distinct=329, empty=1): bố thắng trước, vá xe | đèn pha, vá ruột | bình + vá xe | BD, nhớt hộp số
+- Thợ (distinct=12, empty=1): Đạt | a Đạt | A.Đạt | Đức
+- Tiền (distinct=186, empty=1): 105.000đ | 80000 | 475000 | 180.000đ
+- Ghi chú (distinct=10, empty=409): xe để lại qua đêm | kiểm tra lại tuần sau | thay thêm nếu cần | khách chờ lấy liền
+## SoSuaXe.xlsx::T12-2025  rows=398
+- Ngày (distinct=93, empty=0): 01/12/2025 | 1 thg 12 2025 | 45992 | 02/12/2025
+- Xe (distinct=385, empty=1): Wave RSX 59N7-534.01 | exciter 51X2-652.38 | Alpha 50S2-338.65 | SH mode 61N1-751.73
+- Làm gì (distinct=278, empty=1): bố thắng trước | bdtq | nhớt, Motul | rửa xe, nhớt hãng, bdtq, vá xe
+- Thợ (distinct=12, empty=1): a Phúc | Phúc | A.Phúc | An
+- Tiền (distinct=193, empty=1): 80.000đ | 150000 | 230.000đ | 300.000đ
+- Ghi chú (distinct=12, empty=361): xe để lại qua đêm | bảo hành | thay thêm nếu cần | bảo hành, phiếu 18/11
+## SoSuaXe.xlsx::T1-2026  rows=422
+- Ngày (distinct=93, empty=0): 46023 | 01/01/2026 | 1 thg 1 2026 | 46024
+- Xe (distinct=408, empty=1): Wave α 51S3-559.01 | LEAD 54G6-426.07 | RSX 72C8-233.86 | AB 50G1-417.07
+- Làm gì (distinct=316, empty=1): thay vỏ | rửa kim phun, vá | BD + sửa điện + nhớt | thay nhớt Castrol, lọc gió
+- Thợ (distinct=12, empty=1): A.Đức | Đức | a Đức | a Phúc
+- Tiền (distinct=240, empty=1): 336.000đ | 176.000đ | 490.000đ | 214500
+- Ghi chú (distinct=9, empty=390): đã gọi khách | bảo hành | bảo hành, phiếu 24/12 | bảo hành, phiếu 2/1
+## SoSuaXe.xlsx::T2-2026  rows=471
+- Ngày (distinct=83, empty=0): 1 thg 2 2026 | 46054 | 01/02/2026 | 02/02/2026
+- Xe (distinct=450, empty=1): sirius 61B2-515.41 | Sirius 59N3-928.90 | Wave RSX 51L1-358.05 | Winner 50D6-883.65
+- Làm gì (distinct=334, empty=1): nhớt | làm điện | nhớt hãng | Motul + bdtq
+- Thợ (distinct=12, empty=1): A.Đạt | Đạt | a Đạt | A.Đức
+- Tiền (distinct=254, empty=1): 95000 | 80000 | 95.000đ | 292500
+- Ghi chú (distinct=11, empty=431): thay thêm nếu cần | hẹn chiều lấy | bảo hành | đã gọi khách
+## SoSuaXe.xlsx::T3-2026  rows=459
+- Ngày (distinct=94, empty=0): 1 thg 3 2026 | 01/03/2026 | 46082 | 46083
+- Xe (distinct=439, empty=1): Sirius FI 60S4-802.46 | wave alpha 59C9-434.79 | sirius 72X6-109.34 | AB 59P8-676.80
+- Làm gì (distinct=296, empty=1): bảo dưỡng, bu gi | nhớt | vỏ xe + bảo dưỡng + bố trước + thay lọc  | Motul + thay ruột
+- Thợ (distinct=12, empty=1): Đạt | A.Đạt | a Đức | A.Đức
+- Tiền (distinct=221, empty=1): 295.500đ | 95.000đ | 676.000đ | 219.000đ
+- Ghi chú (distinct=12, empty=422): đã gọi khách | bảo hành | kiểm tra lại tuần sau | hẹn chiều lấy
+## SoSuaXe.xlsx::T4-2026  rows=404
+- Ngày (distinct=91, empty=0): 01/04/2026 | 1 thg 4 2026 | 46113 | 2 thg 4 2026
+- Xe (distinct=389, empty=2): LEAD 59G4-721.13 | Wave α 50G1-441.69 | vision 54V8-379.04 | Alpha 59N7-650.66
+- Làm gì (distinct=264, empty=2): curoa | nhớt Castrol Power1, thay nhớt, nhớt Mot | BD + nước làm mát + nhớt Castrol Power1  | vỏ Casumina + bố trước
+- Thợ (distinct=12, empty=2): a An | An | A.An | a Đạt
+- Tiền (distinct=217, empty=2): 280.000đ | 350.000đ | 410.500đ | 416.000đ
+- Ghi chú (distinct=13, empty=366): hẹn chiều lấy | bảo hành | kiểm tra lại tuần sau | khách chờ lấy liền
+## SoSuaXe.xlsx::T5-2026  rows=455
+- Ngày (distinct=94, empty=0): 01/05/2026 | 1 thg 5 2026 | 46143 | 2 thg 5 2026
+- Xe (distinct=439, empty=1): Air Blade 50C5-913.97 | Wave Alpha 50F5-847.70 | wave alpha 54B3-967.91 | Future 60F5-624.79
+- Làm gì (distinct=336, empty=1): đèn pha | láp, vệ sinh nồi | ruột xe | nhớt hộp số
+- Thợ (distinct=12, empty=1): A.Đức | Đức | Phúc | a Phúc
+- Tiền (distinct=256, empty=1): 58000 | 156.000đ | 84.000đ | 30.000đ
+- Ghi chú (distinct=13, empty=407): thay thêm nếu cần | xe để lại qua đêm | hẹn chiều lấy | đã gọi khách
+## SoSuaXe.xlsx::T6-2026  rows=448
+- Ngày (distinct=91, empty=0): 46174 | 01/06/2026 | 1 thg 6 2026 | 46175
+- Xe (distinct=428, empty=1): janus 59C2-382.22 | lead 50V8-550.07 | Future 125 59L9-714.43 | Air Blade 72F8-886.70
+- Làm gì (distinct=315, empty=1): làm nồi | vá, má phanh trước, rửa | vs nồi | rửa + má phanh trước + Shell 1L + vá
+- Thợ (distinct=12, empty=1): a Đạt | Đạt | A.Đạt | a Đức
+- Tiền (distinct=230, empty=1): 126000 | 136000 | 283.000đ | 200.000đ
+- Ghi chú (distinct=14, empty=413): bảo hành, phiếu 24/5 | bảo hành | đã gọi khách | bảo hành, phiếu 27/5
+## SoSuaXe.xlsx::T7-2026  rows=441
+- Ngày (distinct=93, empty=0): 01/07/2026 | 46204 | 1 thg 7 2026 | 02/07/2026
+- Xe (distinct=426, empty=2): Vision 59X5-435.74 | grande 61H2-326.44 | Ex 59X6-248.83 | Ex 51M8-504.38
+- Làm gì (distinct=326, empty=2): láp | bảo dưỡng + nhớt Castrol | thay bóng đèn, BD, vá xe | láp + Castrol
+- Thợ (distinct=12, empty=2): a Phúc | A.Phúc | Phúc | a An
+- Tiền (distinct=256, empty=2): 30.000đ | 285.500đ | 249500 | 180.000đ
+- Ghi chú (distinct=12, empty=411): kiểm tra lại tuần sau | xe để lại qua đêm | khách chờ lấy liền | thay thêm nếu cần
+## SoSuaXe.xlsx::T8-2026  rows=458
+- Ngày (distinct=94, empty=0): 1 thg 8 2026 | 01/08/2026 | 46235 | 2 thg 8 2026
+- Xe (distinct=431, empty=1): Vision 110 72B9-225.05 | Lead 61F2-542.23 | future 59P6-377.22 | Ex 50K3-228.80
+- Làm gì (distinct=319, empty=1): làm nồi, rửa, má phanh sau | bu gi | bdtq | má phanh trước
+- Thợ (distinct=12, empty=1): Đức | a Đức | A.Đức | a Phúc
+- Tiền (distinct=242, empty=1): 226.000đ | 65000 | 165.500đ | 80.000đ
+- Ghi chú (distinct=10, empty=421): thay thêm nếu cần | hẹn chiều lấy | khách chờ lấy liền | xe để lại qua đêm

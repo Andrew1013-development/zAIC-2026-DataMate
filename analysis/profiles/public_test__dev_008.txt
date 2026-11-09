@@ -1,0 +1,210 @@
+# Dữ liệu dev_008
+
+File xuất từ phần mềm bán hàng, 3 danh sách: chi tiết hoá đơn (mỗi dòng một mặt hàng trong đơn; thông tin đơn, khách lặp lại ở mọi dòng của đơn), danh mục hàng kèm tồn kho, chi tiết nhập hàng (thông tin phiếu nhập lặp lại ở mọi dòng của phiếu). Các file nối với nhau qua mã hàng.
+
+## File
+- `ChiTietHoaDon_1.xlsx` (xlsx)
+- `ChiTietHoaDon_2.xlsx` (xlsx)
+- `DanhMucHang.xlsx` (xlsx)
+- `ChiTietNhapHang.xlsx` (xlsx)
+
+## Cột trong `ChiTietHoaDon_1.xlsx`
+- **Bill**: mã đơn
+- **Trạng thái HĐĐT**: cột trống, không có dữ liệu
+- **Mã người mua**: mã khách (trống nếu khách lẻ)
+- **Bàn**: bàn
+- **Đơn vị (tính)**: đơn vị tính
+- **Phi ship**: phí giao hàng của cả đơn (lặp lại ở mọi dòng của đơn)
+- **Thành tiền**: thành tiền sau giảm
+- **Giảm (đ)**: tiền giảm của cả dòng
+- **Giờ bán**: thời điểm đặt đơn (ngày giờ)
+- **Tổng tiền hàng**: tổng tiền hàng của cả đơn, trước giảm giá của đơn (lặp lại ở mọi dòng của đơn)
+- **Addr**: địa chỉ
+- **Giới tính**: cột trống, không có dữ liệu
+- **Giảm giá HĐ**: giảm giá của cả đơn (lặp lại ở mọi dòng của đơn)
+- **Nhóm hàng**: nhóm hàng
+- **Khách**: tên khách (Khách lẻ nếu không lưu)
+- **Số dòng**: số thứ tự dòng trong đơn
+- **Tên hàng**: tên hàng
+- **Nhóm khách hàng**: nhóm khách
+- **Số ĐT**: số điện thoại
+- **SL lẻ**: số lượng đã đổi ra đơn vị cơ bản
+- **TT đơn**: trạng thái đơn
+- **SLg**: số lượng
+- **Note**: ghi chú của đơn (lặp lại ở mọi dòng của đơn): đơn ghi nợ thì ghi khách đã đưa / còn thiếu bao nhiêu
+- **Ngày xuất**: ngày bán
+- **Nhân viên bán**: mã nhân viên bán
+- **Tong tien**: khách cần trả cho cả đơn (lặp lại ở mọi dòng của đơn)
+- **Kênh bán**: kênh bán
+- **Đơn giá (đ)**: đơn giá
+- **Ma hang**: mã hàng
+- **Thanh toán bằng**: hình thức thanh toán của đơn: cash tiền mặt, transfer chuyển khoản, ewallet ví điện tử, cod giao hàng thu tiền, debt ghi nợ
+- **Số khách**: số khách của đơn
+- **Khu vực**: khu vực của bàn
+
+## Cột trong `ChiTietHoaDon_2.xlsx`
+- **Bill**: mã đơn
+- **Trạng thái HĐĐT**: cột trống, không có dữ liệu
+- **Mã người mua**: mã khách (trống nếu khách lẻ)
+- **Bàn**: bàn
+- **Đơn vị (tính)**: đơn vị tính
+- **Phi ship**: phí giao hàng của cả đơn (lặp lại ở mọi dòng của đơn)
+- **Thành tiền**: thành tiền sau giảm
+- **Giảm (đ)**: tiền giảm của cả dòng
+- **Giờ bán**: thời điểm đặt đơn (ngày giờ)
+- **Tổng tiền hàng**: tổng tiền hàng của cả đơn, trước giảm giá của đơn (lặp lại ở mọi dòng của đơn)
+- **Addr**: địa chỉ
+- **Giới tính**: cột trống, không có dữ liệu
+- **Giảm giá HĐ**: giảm giá của cả đơn (lặp lại ở mọi dòng của đơn)
+- **Nhóm hàng**: nhóm hàng
+- **Khách**: tên khách (Khách lẻ nếu không lưu)
+- **Số dòng**: số thứ tự dòng trong đơn
+- **Tên hàng**: tên hàng
+- **Nhóm khách hàng**: nhóm khách
+- **Số ĐT**: số điện thoại
+- **SL lẻ**: số lượng đã đổi ra đơn vị cơ bản
+- **TT đơn**: trạng thái đơn
+- **SLg**: số lượng
+- **Note**: ghi chú của đơn (lặp lại ở mọi dòng của đơn): đơn ghi nợ thì ghi khách đã đưa / còn thiếu bao nhiêu
+- **Ngày xuất**: ngày bán
+- **Nhân viên bán**: mã nhân viên bán
+- **Tong tien**: khách cần trả cho cả đơn (lặp lại ở mọi dòng của đơn)
+- **Kênh bán**: kênh bán
+- **Đơn giá (đ)**: đơn giá
+- **Ma hang**: mã hàng
+- **Thanh toán bằng**: hình thức thanh toán của đơn: cash tiền mặt, transfer chuyển khoản, ewallet ví điện tử, cod giao hàng thu tiền, debt ghi nợ
+- **Số khách**: số khách của đơn
+- **Khu vực**: khu vực của bàn
+
+## Cột trong `DanhMucHang.xlsx`
+- **Hàng**: tên hàng
+- **Đang kinh doanh**: còn kinh doanh (True/False)
+- **Mã sản phẩm bán**: mã hàng
+- **DVT**: đơn vị cơ bản
+- **Tồn thực**: tồn kho (đơn vị cơ bản)
+- **Loại hàng**: nhóm hàng
+- **Giá vốn**: giá vốn
+- **Giá hiện tại**: giá bán hiện tại
+
+## Cột trong `ChiTietNhapHang.xlsx`
+- **Giá nhập**: giá nhập một đơn vị (theo đơn vị nhập của dòng)
+- **Mã NCC**: mã nhà cung cấp
+- **Trạng thái phiếu**: trạng thái phiếu nhập
+- **Ngày nhập**: ngày nhập
+- **STT**: số thứ tự dòng trong phiếu nhập
+- **Mã phiếu nhập**: mã phiếu nhập
+- **Tổng tiền phiếu**: tổng tiền phiếu nhập
+- **Lưu ý**: ghi chú
+- **Tên mặt hàng**: tên hàng
+- **Mã vạch**: mã hàng
+- **Thành tiền**: tiền nhập của cả dòng
+- **SL nhập**: số lượng nhập
+- **ĐVT nhập**: đơn vị nhập
+
+## Quy ước
+- Dữ liệu có đến hết 22/07/2026.
+- **Còn nợ**: ghi chú nợ ở **Note** là tình trạng của đơn tính đến hết ngày cuối dữ liệu.
+- **Tồn kho**: **Tồn thực** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản.
+- **Bàn**: đơn ăn tại quán có đúng một bàn (**Bàn**), kể cả đơn huỷ; đơn giao đi không có bàn. **Số khách** là số khách của đơn; một bàn có nhiều đơn trong ngày.
+- **Phí phục vụ**: đơn ngồi phòng lạnh (không huỷ, không ghi nợ) có thêm dòng hàng "Phí phục vụ": phí phục vụ phòng lạnh của đơn, tính theo tiền món, đã ghi sẵn thành tiền.
+- **Nhập hàng**: **Giá nhập** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Thành tiền** là tiền nhập của cả dòng; **Tổng tiền phiếu** là tổng tiền của cả phiếu nhập.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:
+  - Bia Tiger lon: 1 thùng = 24 lon
+  - Bia Sài Gòn Special lon: 1 thùng = 24 lon
+  - Coca-Cola lon: 1 thùng = 24 lon
+  - Bia Tiger Bạc lon: 1 thùng = 24 lon
+  - Nước suối: 1 thùng = 24 chai
+  - Bia Heineken lon: 1 thùng = 24 lon
+  - Bia Sài Gòn Lager chai: 1 két = 20 chai
+  - 7Up lon: 1 thùng = 24 lon
+
+
+## ChiTietHoaDon_1.xlsx::Sheet1  rows=100000
+- Bill (distinct=26195, empty=393): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Trạng thái HĐĐT (distinct=0, empty=100000): 
+- Mã người mua (distinct=210, empty=40379): KH0022 | KH0038 | KH0057 | KH0078
+- Bàn (distinct=41, empty=10295): Bàn 12 | B15 | B7 | B06
+- Đơn vị (tính) (distinct=11, empty=393): đĩa | lon | phần | nồi
+- Phi ship (distinct=2, empty=393): 15000 | 0
+- Thành tiền (distinct=813, empty=0): 198000 | 44000 | 290000 | 89000
+- Giảm (đ) (distinct=45, empty=393): 0 | 10000 | 4000 | 6000
+- Giờ bán (distinct=26161, empty=393): 2025-01-01 07:49:04 | 2025-01-01 08:18:59 | 2025-01-01 09:16:22 | 2025-01-01 10:04:47
+- Tổng tiền hàng (distinct=4755, empty=393): 532.000đ | 158.000đ | 445.000đ | 996.000đ
+- Addr (distinct=208, empty=40379): 93 Nguyễn Thị Minh Khai | 316 Tân Kỳ Tân Quý | 59 Tỉnh Lộ 10 | 58 Nguyễn Văn Linh
+- Giới tính (distinct=0, empty=100000): 
+- Giảm giá HĐ (distinct=2, empty=393): 10.000đ | 0đ
+- Nhóm hàng (distinct=11, empty=393): nướng | bia | hải sản | chiên xào
+- Khách (distinct=1624, empty=0): Tăng Hương Thu 0914430525 | Tăng Hương Thu | Tăng Hương Thu - 0914 430 525 | Đoàn Thu Thảo
+- Số dòng (distinct=7, empty=393): 1 | 2 | 3 | 4
+- Tên hàng (distinct=102, empty=393): Vú heo nướng sa tế | Bia Tiger lon | Tôm sốt Thái | Bao tử xào cải chua
+- Nhóm khách hàng (distinct=3, empty=40379): lẻ | thân thiết | sỉ
+- Số ĐT (distinct=210, empty=40379): 0914430525 | 0980004652 | 0914189096 | 0980009988
+- SL lẻ (distinct=12, empty=393): 2 | 1 | 3 | 4
+- TT đơn (distinct=8, empty=393): đã xong | khách hủy | Thành công | đã lấy
+- SLg (distinct=68, empty=393): 2 đĩa | 2 | 1 đĩa | 1
+- Note (distinct=94, empty=99445): nợ 79k, khách ck đủ rồi | nợ 611 nghìn, khách ck đủ rồi | nợ, đã trả đủ | ghi nợ 867k, đã trả đủ
+- Ngày xuất (distinct=382, empty=393): 01/01/2025 | 02/01/2025 | 03/01/2025 | 04/01/2025
+- Nhân viên bán (distinct=5, empty=393): NV003 | NV004 | NV005 | NV001
+- Tong tien (distinct=4742, empty=393): 537.000đ | 158.000đ | 450.000đ | 986.000đ
+- Kênh bán (distinct=3, empty=393): zalo_oa | store | phone
+- Đơn giá (đ) (distinct=168, empty=393): 99000 | 22000 | 145000 | 89000
+- Ma hang (distinct=61, empty=393): SP0033 | SP0002 | SP0039 | SP0047
+- Thanh toán bằng (distinct=5, empty=393): cod | transfer | ewallet | cash
+- Số khách (distinct=8, empty=10295): 3 | 8 | 5 | 2
+- Khu vực (distinct=3, empty=10295): sân | phòng lạnh | trong nhà
+## ChiTietHoaDon_2.xlsx::Sheet1  rows=53326
+- Bill (distinct=13959, empty=194): ORD026196 | ORD026197 | ORD026198 | ORD026199
+- Trạng thái HĐĐT (distinct=0, empty=53326): 
+- Mã người mua (distinct=210, empty=21453): KH0139 | KH0049 | KH0105 | KH0058
+- Bàn (distinct=41, empty=5306): Bàn 16 | B08 | B6 | B13
+- Đơn vị (tính) (distinct=11, empty=194): tô | chai | đĩa | lần
+- Phi ship (distinct=2, empty=194): 0 | 15000
+- Thành tiền (distinct=578, empty=0): 109000 | 19000 | 93500 | 312000
+- Giảm (đ) (distinct=48, empty=194): 0 | 9000 | 6000 | 2000
+- Giờ bán (distinct=13942, empty=194): 2026-01-17 14:37:58 | 2026-01-17 14:39:21 | 2026-01-17 14:41:57 | 2026-01-17 15:04:10
+- Tổng tiền hàng (distinct=3483, empty=194): 716.500đ | 1.095.200đ | 309.500đ | 595.500đ
+- Addr (distinct=208, empty=21453): 208 Lê Quang Định | 88 Lê Trọng Tấn | 165 Phan Đình Phùng | 99 Mai Chí Thọ
+- Giới tính (distinct=0, empty=53326): 
+- Giảm giá HĐ (distinct=2, empty=194): 10.000đ | 0đ
+- Nhóm hàng (distinct=11, empty=194): cơm mì cháo | bia | khai vị | nướng
+- Khách (distinct=1435, empty=0): Thái Khoa Phúc | Thái Khoa Phúc - 0973 285 098 | Doãn Khoa Hoàng - 0935 153 566 | Doãn Khoa Hoàng
+- Số dòng (distinct=7, empty=194): 1 | 2 | 3 | 4
+- Tên hàng (distinct=102, empty=194): Canh chua cá lóc | BIA SÀI GÒN LAGER CHAI | Chân gà ngâm sả tắc | Tôm nướng mọi
+- Nhóm khách hàng (distinct=3, empty=21453): lẻ | sỉ | thân thiết
+- Số ĐT (distinct=210, empty=21453): 0973285098 | 0935153566 | 0706783944 | 0982837579
+- SL lẻ (distinct=12, empty=194): 1 | 3 | 10 | 2
+- TT đơn (distinct=10, empty=194): đã lấy | đã xong | Thành công | hủy đơn
+- SLg (distinct=66, empty=194): 1 tô | 1 | 3 | 10
+- Note (distinct=55, empty=52990): ghi nợ 168k, đã trả đủ | ghi nợ 181 nghìn, đã trả đủ | ghi nợ 318 nghìn, đã trả đủ | ghi sổ, khách trả hết rồi
+- Ngày xuất (distinct=187, empty=194): 17/01/2026 | 18/01/2026 | 19/01/2026 | 20/01/2026
+- Nhân viên bán (distinct=5, empty=194): NV005 | NV001 | NV002 | NV003
+- Tong tien (distinct=3464, empty=194): 706.500đ | 1.085.200đ | 299.500đ | 600.500đ
+- Kênh bán (distinct=3, empty=194): store | phone | zalo_oa
+- Đơn giá (đ) (distinct=149, empty=194): 109000 | 19000 | 93500 | 104000
+- Ma hang (distinct=61, empty=194): SP0016 | SP0030 | SP0037 | SP0023
+- Thanh toán bằng (distinct=5, empty=194): cash | cod | transfer | ewallet
+- Số khách (distinct=8, empty=5306): 6 | 2 | 3 | 7
+- Khu vực (distinct=3, empty=5306): phòng lạnh | trong nhà | sân
+## ChiTietNhapHang.xlsx::Sheet1  rows=1836
+- Giá nhập (distinct=128, empty=0): 16.000đ | 360.000đ | 31.000đ | 75.000đ
+- Mã NCC (distinct=5, empty=0): NCC004 | NCC002 | NCC003 | NCC001
+- Trạng thái phiếu (distinct=1, empty=0): Đã nhập hàng
+- Ngày nhập (distinct=879, empty=0): 01/01/2025 | 1 thg 1 2025 | 09/01/2025 | 9 thg 1 2025
+- STT (distinct=60, empty=0): 1 | 2 | 3 | 4
+- Mã phiếu nhập (distinct=528, empty=0): PN00001 | PN00002 | PN00003 | PN00004
+- Tổng tiền phiếu (distinct=1040, empty=0): 294.770.300đ | 294,7703tr | 5tr280 | 5.280.000đ
+- Lưu ý (distinct=1, empty=1776): nhập đầu kỳ
+- Tên mặt hàng (distinct=60, empty=0): Rau muống xào tỏi | Bia Tiger lon | Cánh gà chiên nước mắm | Lẩu Thái tôm cá (nhỏ)
+- Mã vạch (distinct=60, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Thành tiền (distinct=1242, empty=0): 4,544tr | 4,32tr | 7.905.000đ | 19.125.000đ
+- SL nhập (distinct=137, empty=0): 284 | 12 | 255 | 227
+- ĐVT nhập (distinct=8, empty=0): đĩa | thùng | nồi | phần
+## DanhMucHang.xlsx::Sheet1  rows=61
+- Hàng (distinct=61, empty=0): Rau muống xào tỏi | Bia Tiger lon | Cánh gà chiên nước mắm | Lẩu Thái tôm cá (nhỏ)
+- Đang kinh doanh (distinct=1, empty=0): True
+- Mã sản phẩm bán (distinct=61, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- DVT (distinct=9, empty=0): đĩa | lon | nồi | phần
+- Tồn thực (distinct=51, empty=1): 279 | 199 | 85 | 78
+- Loại hàng (distinct=11, empty=0): rau | bia | chiên xào | lẩu
+- Giá vốn (distinct=57, empty=0): 16 076 | 16 000 | 30 921 | 78 981
+- Giá hiện tại (distinct=37, empty=0): 50 000 | 22 000 | 83 000 | 189 000

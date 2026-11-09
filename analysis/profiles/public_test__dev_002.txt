@@ -1,0 +1,208 @@
+# Dữ liệu dev_002
+
+File Excel xuất từ phần mềm bán hàng. File đơn hàng mỗi dòng một sản phẩm, thông tin đơn lặp lại ở mọi dòng của đơn; file này không có mã sản phẩm, nối với các danh sách sản phẩm qua tên sản phẩm. Ngày dạng dd/mm/yyyy.
+
+Dữ liệu bán hàng xuất theo tháng, mỗi tháng một file (tách theo tháng, không theo năm): từ `BanHang_T1_2025.xlsx` đến `BanHang_T5_2026.xlsx` (17 file), các tháng cùng cột; mỗi file có sheet `DonHang_ChiTiet`.
+
+## File
+- `BanHang_T<tháng>_<năm>.xlsx` (xlsx)
+- `DanhSachQuyDoi.xlsx` (xlsx)
+
+## Cột trong `BanHang_T<tháng>_<năm>.xlsx`, sheet `DonHang_ChiTiet`
+- **Mã đơn hàng**: mã đơn
+- **Ngày đặt hàng**: ngày bán
+- **Trạng thái đơn hàng**: trạng thái đơn
+- **Tên khách hàng**: tên khách (Khách lẻ nếu không lưu)
+- **Tên sản phẩm**: tên hàng
+- **Số lượng sản phẩm**: số lượng
+- **Giá sản phẩm**: đơn giá
+- **Tổng tiền**: thành tiền sau giảm
+- **Đơn vị tính**: đơn vị tính
+
+## Cột trong `DanhSachQuyDoi.xlsx`
+- **Tên sản phẩm**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)
+- **Đơn vị quy đổi**: đơn vị lớn (thùng, hộp, tấn...)
+- **Tỉ lệ quy đổi**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn
+- **Đơn vị cơ bản**: đơn vị cơ bản
+
+## Quy ước
+- Dữ liệu có đến hết 24/05/2026.
+- **Topping**: topping có thể ghi chung ô với món ở cột **Tên sản phẩm**, nối bằng " + ", tên topping không kèm chữ "Topping"; số đứng trước tên topping là số phần (không ghi số là 1 phần), tiền topping ghi trong ngoặc và đã cộng vào **Tổng tiền** của dòng đó. Số lượng, giá và đơn vị của dòng là của món.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhSachQuyDoi.xlsx`.
+
+
+## BanHang_T10_2025.xlsx::DonHang_ChiTiet  rows=5305
+- Mã đơn hàng (distinct=3303, empty=32): ORD029551 | ORD029552 | ORD029553 | ORD029554
+- Ngày đặt hàng (distinct=63, empty=32): 01/10/2025 | 2025-10-01 00:00:00 | 2025-10-02 00:00:00 | 02/10/2025
+- Trạng thái đơn hàng (distinct=4, empty=32): Đã hoàn thành | Đã hoàn hàng | Đã hủy | Trạng thái đơn hàng
+- Tên khách hàng (distinct=247, empty=0): lẻ | Trần Phương Hương | Đỗ Hằng Phúc | Mai Bích Giang
+- Tên sản phẩm (distinct=144, empty=32): Cà phê đen (M) | Bánh tiramisu | Cà phê sữa (M) | Trà sữa trân châu (M)
+- Số lượng sản phẩm (distinct=14, empty=32): 1 ly | 2 | 1 | 2 phần
+- Giá sản phẩm (distinct=54, empty=32): 25,000 | 45,000 | 29,000 | 42000
+- Tổng tiền (distinct=271, empty=0): 25000 | 90000 | 29k | 42000
+- Đơn vị tính (distinct=5, empty=32): ly | cái | phần | Đơn vị tính
+## BanHang_T11_2025.xlsx::DonHang_ChiTiet  rows=5040
+- Mã đơn hàng (distinct=3123, empty=31): ORD032853 | ORD032854 | ORD032855 | ORD032856
+- Ngày đặt hàng (distinct=61, empty=31): 01/11/2025 | 2025-11-01 00:00:00 | Ngày đặt hàng | 02/11/2025
+- Trạng thái đơn hàng (distinct=4, empty=31): Đã hoàn thành | Đã hủy | Trạng thái đơn hàng | Đã hoàn hàng
+- Tên khách hàng (distinct=246, empty=0): kl | lẻ | Doãn Loan Duy | Tạ Hạnh Hiếu
+- Tên sản phẩm (distinct=136, empty=31): Trà chanh (L) | Cà phê sữa (L) | Cà phê sữa (M) | Trà sữa trân châu (M)
+- Số lượng sản phẩm (distinct=13, empty=31): 1 ly | 1 | 2 | 1 cái
+- Giá sản phẩm (distinct=48, empty=31): 31,000 | 35000 | 29,000 | 42,000
+- Tổng tiền (distinct=267, empty=0): 31000 | 35000 | 29k | 42k
+- Đơn vị tính (distinct=5, empty=31): ly | cái | phần | Đơn vị tính
+## BanHang_T12_2025.xlsx::DonHang_ChiTiet  rows=5182
+- Mã đơn hàng (distinct=3210, empty=32): ORD035975 | ORD035976 | ORD035977 | ORD035978
+- Ngày đặt hàng (distinct=63, empty=32): 01/12/2025 | 2025-12-01 00:00:00 | Ngày đặt hàng | 02/12/2025
+- Trạng thái đơn hàng (distinct=4, empty=32): Đã hoàn thành | Đã hủy | Trạng thái đơn hàng | Đã hoàn hàng
+- Tên khách hàng (distinct=247, empty=0): Lưu Đức Huy | Giang Phong Quân | Lê Giang Bích | khách lẻ
+- Tên sản phẩm (distinct=132, empty=32): Trà chanh (L) | Trà sữa trân châu (L) | Cà phê sữa (L) | Trà sữa ô long (L)
+- Số lượng sản phẩm (distinct=14, empty=32): 1 ly | 3 | 1 | 2
+- Giá sản phẩm (distinct=50, empty=32): 31,000 | 31000 | 50500 | 35,000
+- Tổng tiền (distinct=260, empty=0): 31000 | 93000 | 50500 | 35k
+- Đơn vị tính (distinct=5, empty=32): ly | phần | cái | Đơn vị tính
+## BanHang_T1_2025.xlsx::DonHang_ChiTiet  rows=4921
+- Mã đơn hàng (distinct=3070, empty=32): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Ngày đặt hàng (distinct=63, empty=32): 01/01/2025 | 2025-01-01 00:00:00 | 02/01/2025 | 2025-01-02 00:00:00
+- Trạng thái đơn hàng (distinct=4, empty=32): Đã hoàn thành | Đã hủy | Đã hoàn hàng | Trạng thái đơn hàng
+- Tên khách hàng (distinct=247, empty=0): khách lẻ | Khách lẻ | Vũ Châu Hùng | Tạ Trung Linh
+- Tên sản phẩm (distinct=131, empty=32): Trà chanh (M) | Topping Pudding trứng | Nước ép dưa hấu (M) | Cà phê sữa (M)
+- Số lượng sản phẩm (distinct=14, empty=32): 1 | 3 ly | 2 ly | 1 ly
+- Giá sản phẩm (distinct=41, empty=32): 25000 | 10,000 | 35,000 | 29000
+- Tổng tiền (distinct=231, empty=0): 25000 | 10.000đ | 105k | 58.000đ
+- Đơn vị tính (distinct=5, empty=32): ly | phần | cái | Đơn vị tính
+## BanHang_T1_2026.xlsx::DonHang_ChiTiet  rows=5085
+- Mã đơn hàng (distinct=3189, empty=32): ORD039184 | ORD039185 | ORD039186 | ORD039187
+- Ngày đặt hàng (distinct=63, empty=32): 01/01/2026 | 2026-01-01 00:00:00 | 02/01/2026 | 2026-01-02 00:00:00
+- Trạng thái đơn hàng (distinct=4, empty=32): Đã hoàn thành | Đã hủy | Trạng thái đơn hàng | Đã hoàn hàng
+- Tên khách hàng (distinct=247, empty=0): khách lẻ | Vũ Châu Hùng | kl | Lý Nam Hải
+- Tên sản phẩm (distinct=135, empty=32): Đá xay cookie (M) | Cà phê đen (M) | Trà vải (M) | Soda chanh dây (M)
+- Số lượng sản phẩm (distinct=14, empty=32): 1 ly | 2 ly | 1 cái | 1
+- Giá sản phẩm (distinct=49, empty=32): 55000 | 25,000 | 39000 | 35000
+- Tổng tiền (distinct=252, empty=0): 55k | 25.000đ | 39000 | 35k
+- Đơn vị tính (distinct=5, empty=32): ly | cái | phần | hộp
+## BanHang_T2_2025.xlsx::DonHang_ChiTiet  rows=4590
+- Mã đơn hàng (distinct=2879, empty=29): ORD003070 | ORD003071 | ORD003072 | ORD003073
+- Ngày đặt hàng (distinct=57, empty=29): 01/02/2025 | 2025-02-01 00:00:00 | 2025-02-02 00:00:00 | 02/02/2025
+- Trạng thái đơn hàng (distinct=4, empty=29): Đã hoàn thành | Trạng thái đơn hàng | Đã hủy | Đã hoàn hàng
+- Tên khách hàng (distinct=244, empty=0): Khách lẻ | Lý Linh Quang | Thân Long Bích | lẻ
+- Tên sản phẩm (distinct=126, empty=29): Latte (L) | Cà phê sữa (L) | Sinh tố bơ (L) | Trà vải (M)
+- Số lượng sản phẩm (distinct=13, empty=29): 1 ly | 1 | 3 ly | 3
+- Giá sản phẩm (distinct=45, empty=29): 51,000 | 35,000 | 51000 | 39000
+- Tổng tiền (distinct=235, empty=0): 51.000đ | 35000 | 51k | 39.000đ
+- Đơn vị tính (distinct=5, empty=29): ly | cái | phần | Đơn vị tính
+## BanHang_T2_2026.xlsx::DonHang_ChiTiet  rows=3644
+- Mã đơn hàng (distinct=2275, empty=29): ORD042372 | ORD042373 | ORD042374 | ORD042375
+- Ngày đặt hàng (distinct=57, empty=29): 01/02/2026 | 2026-02-01 00:00:00 | 02/02/2026 | 2026-02-02 00:00:00
+- Trạng thái đơn hàng (distinct=4, empty=29): Đã hoàn thành | Đã hủy | Trạng thái đơn hàng | Đã hoàn hàng
+- Tên khách hàng (distinct=242, empty=0): Hoàng Mai Lan | Đỗ Hằng Phúc | Khách lẻ | Mai Bích Giang
+- Tên sản phẩm (distinct=120, empty=29): Trà sữa trân châu (M) | Cà phê đen (M) | Trà sữa ô long (M) | Trà chanh (M)
+- Số lượng sản phẩm (distinct=14, empty=29): 1 | 2 ly | 1 ly | 2
+- Giá sản phẩm (distinct=50, empty=29): 42,000 | 25000 | 45000 | 26000
+- Tổng tiền (distinct=238, empty=0): 42.000đ | 50k | 45000 | 26000
+- Đơn vị tính (distinct=5, empty=29): ly | phần | cái | hộp
+## BanHang_T3_2025.xlsx::DonHang_ChiTiet  rows=5649
+- Mã đơn hàng (distinct=3551, empty=32): ORD005948 | ORD005949 | ORD005950 | ORD005951
+- Ngày đặt hàng (distinct=63, empty=32): 01/03/2025 | 2025-03-01 00:00:00 | Ngày đặt hàng | 02/03/2025
+- Trạng thái đơn hàng (distinct=4, empty=32): Đã hoàn thành | Đã hủy | Trạng thái đơn hàng | Đã hoàn hàng
+- Tên khách hàng (distinct=247, empty=0): Vũ Châu Hùng | lẻ | Quách Khánh Phương | Hoàng Quang Minh
+- Tên sản phẩm (distinct=128, empty=32): Latte (M) | Trà sữa trân châu (L) | Cà phê đen (M) | Topping Thạch cà phê
+- Số lượng sản phẩm (distinct=13, empty=32): 1 | 2 | 1 ly | 2 ly
+- Giá sản phẩm (distinct=45, empty=32): 45000 | 50,500 | 25000 | 50500
+- Tổng tiền (distinct=239, empty=0): 45k | 101.000đ | 25000 | 50.500đ
+- Đơn vị tính (distinct=5, empty=32): ly | phần | cái | Đơn vị tính
+## BanHang_T3_2026.xlsx::DonHang_ChiTiet  rows=5006
+- Mã đơn hàng (distinct=3127, empty=32): ORD044646 | ORD044647 | ORD044648 | ORD044649
+- Ngày đặt hàng (distinct=63, empty=32): 2026-03-01 00:00:00 | 01/03/2026 | Ngày đặt hàng | 2026-03-02 00:00:00
+- Trạng thái đơn hàng (distinct=4, empty=32): Đã hoàn thành | Đã hủy | Đã hoàn hàng | Trạng thái đơn hàng
+- Tên khách hàng (distinct=247, empty=0): Khách lẻ | Phạm Châu Thu | lẻ | Doãn Duy Phương
+- Tên sản phẩm (distinct=136, empty=32): Bạc xỉu (L) | Sinh tố bơ (L) | Trà sữa trân châu (M) | Topping Trân châu đen
+- Số lượng sản phẩm (distinct=13, empty=32): 1 ly | 1 | 2 | 3 ly
+- Giá sản phẩm (distinct=47, empty=32): 38000 | 53500 | 42,000 | 7000
+- Tổng tiền (distinct=259, empty=0): 38.000đ | 53.500đ | 42.000đ | 14.000đ
+- Đơn vị tính (distinct=4, empty=32): ly | phần | cái | Đơn vị tính
+## BanHang_T4_2025.xlsx::DonHang_ChiTiet  rows=5366
+- Mã đơn hàng (distinct=3377, empty=31): ORD009498 | ORD009499 | ORD009500 | ORD009501
+- Ngày đặt hàng (distinct=61, empty=31): 2025-04-01 00:00:00 | 01/04/2025 | Ngày đặt hàng | 02/04/2025
+- Trạng thái đơn hàng (distinct=4, empty=31): Đã hoàn thành | Đã hủy | Trạng thái đơn hàng | Đã hoàn hàng
+- Tên khách hàng (distinct=246, empty=0): Vũ Hằng An | Dương Hương Cường | Giang Hoàng Trung | Mai Bích Giang
+- Tên sản phẩm (distinct=134, empty=31): Trà đào cam sả (M) | Nước ép cam (L) | Trà sữa trân châu (M) | Cold brew (M)
+- Số lượng sản phẩm (distinct=14, empty=31): 1 ly | 1 | 2 | 3 ly
+- Giá sản phẩm (distinct=46, empty=31): 39000 | 45000 | 42000 | 42,000
+- Tổng tiền (distinct=246, empty=0): 39000 | 45k | 42000 | 42.000đ
+- Đơn vị tính (distinct=5, empty=31): ly | cái | phần | Đơn vị tính
+## BanHang_T4_2026.xlsx::DonHang_ChiTiet  rows=4798
+- Mã đơn hàng (distinct=2970, empty=31): ORD047772 | ORD047773 | ORD047774 | ORD047775
+- Ngày đặt hàng (distinct=61, empty=31): 01/04/2026 | 2026-04-01 00:00:00 | 02/04/2026 | 2026-04-02 00:00:00
+- Trạng thái đơn hàng (distinct=4, empty=31): Đã hoàn thành | Đã hoàn hàng | Đã hủy | Trạng thái đơn hàng
+- Tên khách hàng (distinct=246, empty=0): kl | Đàm Thanh Bình | Bạch Hương Nhung | lẻ
+- Tên sản phẩm (distinct=133, empty=31): Cà phê sữa (M) | Trà đào cam sả (M) | Cold brew (L) | Sữa tươi trân châu đường đen (M)
+- Số lượng sản phẩm (distinct=13, empty=31): 1 | 1 ly | 2 ly | 1 phần
+- Giá sản phẩm (distinct=48, empty=31): 29000 | 39,000 | 51,000 | 45,000
+- Tổng tiền (distinct=250, empty=0): 29.000đ | 39000 | 51000 | 45.000đ
+- Đơn vị tính (distinct=5, empty=31): ly | phần | cái | Đơn vị tính
+## BanHang_T5_2025.xlsx::DonHang_ChiTiet  rows=5631
+- Mã đơn hàng (distinct=3538, empty=32): ORD012874 | ORD012875 | ORD012876 | ORD012877
+- Ngày đặt hàng (distinct=63, empty=32): 01/05/2025 | 2025-05-01 00:00:00 | 02/05/2025 | 2025-05-02 00:00:00
+- Trạng thái đơn hàng (distinct=4, empty=32): Đã hoàn thành | Đã hủy | Đã hoàn hàng | Trạng thái đơn hàng
+- Tên khách hàng (distinct=247, empty=0): Vũ Trang Dương | Vũ Bích Phong | kl | Chung An Châu
+- Tên sản phẩm (distinct=146, empty=32): Bánh tiramisu | Cà phê muối (M) | Cà phê đen (M) | Trà vải (M)
+- Số lượng sản phẩm (distinct=14, empty=32): 1 cái | 1 ly | 2 ly | 1
+- Giá sản phẩm (distinct=52, empty=32): 45,000 | 37,000 | 25,000 | 39000
+- Tổng tiền (distinct=260, empty=0): 45.000đ | 37k | 50k | 39k
+- Đơn vị tính (distinct=5, empty=32): cái | ly | phần | Đơn vị tính
+## BanHang_T5_2026.xlsx::DonHang_ChiTiet  rows=3882
+- Mã đơn hàng (distinct=2425, empty=25): ORD050741 | ORD050742 | ORD050743 | ORD050744
+- Ngày đặt hàng (distinct=49, empty=25): 01/05/2026 | 2026-05-01 00:00:00 | 02/05/2026 | 2026-05-02 00:00:00
+- Trạng thái đơn hàng (distinct=5, empty=25): Đã hoàn thành | Đã hoàn hàng | Đã hủy | Trạng thái đơn hàng
+- Tên khách hàng (distinct=240, empty=0): khách lẻ | Từ Tâm Hương | Phùng Trung Hải | Cao Bình Quân
+- Tên sản phẩm (distinct=128, empty=25): Topping Thạch cà phê | Bánh croissant | Trà đào cam sả (M) | Cà phê đen (M)
+- Số lượng sản phẩm (distinct=14, empty=25): 1 phần | 1 | 1 ly | 2 ly
+- Giá sản phẩm (distinct=54, empty=25): 7,000 | 35000 | 39000 | 25000
+- Tổng tiền (distinct=259, empty=0): 7000 | 35k | 39000 | 25.000đ
+- Đơn vị tính (distinct=5, empty=25): phần | cái | ly | Đơn vị tính
+## BanHang_T6_2025.xlsx::DonHang_ChiTiet  rows=5198
+- Mã đơn hàng (distinct=3272, empty=31): ORD016411 | ORD016412 | ORD016413 | ORD016414
+- Ngày đặt hàng (distinct=61, empty=31): 2025-06-01 00:00:00 | 01/06/2025 | 2025-06-02 00:00:00 | 02/06/2025
+- Trạng thái đơn hàng (distinct=4, empty=31): Đã hoàn thành | Đã hủy | Đã hoàn hàng | Trạng thái đơn hàng
+- Tên khách hàng (distinct=246, empty=0): khách lẻ | Chung Bích Minh | Đào Hoàng Quang | Diệp Hồng Hải
+- Tên sản phẩm (distinct=135, empty=31): Cà phê đen (L) | Cà phê sữa (L) | Trà đào cam sả (L) | Cà phê đen (M)
+- Số lượng sản phẩm (distinct=14, empty=31): 1 ly | 2 ly | 1 | 2
+- Giá sản phẩm (distinct=50, empty=31): 31,000 | 35,000 | 45,000 | 25000
+- Tổng tiền (distinct=247, empty=0): 31.000đ | 35000 | 90.000đ | 25k
+- Đơn vị tính (distinct=5, empty=31): ly | phần | cái | Đơn vị tính
+## BanHang_T7_2025.xlsx::DonHang_ChiTiet  rows=5309
+- Mã đơn hàng (distinct=3298, empty=32): ORD019682 | ORD019683 | ORD019684 | ORD019685
+- Ngày đặt hàng (distinct=63, empty=32): 2025-07-01 00:00:00 | 01/07/2025 | 02/07/2025 | 2025-07-02 00:00:00
+- Trạng thái đơn hàng (distinct=4, empty=32): Đã hoàn thành | Đã hủy | Trạng thái đơn hàng | Đã hoàn hàng
+- Tên khách hàng (distinct=247, empty=0): lẻ | Khách lẻ | kl | Quách Khánh Phương
+- Tên sản phẩm (distinct=146, empty=32): Cà phê đen (M) | Hồng trà sữa (L) | Cold  brew (L) | Cold brew (M)
+- Số lượng sản phẩm (distinct=13, empty=32): 1 | 1 ly | 2 ly | 1 phần
+- Giá sản phẩm (distinct=51, empty=32): 25000 | 45,000 | 51000 | 47000
+- Tổng tiền (distinct=263, empty=0): 25k | 45000 | 51k | 47k
+- Đơn vị tính (distinct=5, empty=32): ly | phần | cái | Đơn vị tính
+## BanHang_T8_2025.xlsx::DonHang_ChiTiet  rows=5436
+- Mã đơn hàng (distinct=3412, empty=32): ORD022979 | ORD022980 | ORD022981 | ORD022982
+- Ngày đặt hàng (distinct=63, empty=32): 2025-08-01 00:00:00 | 01/08/2025 | Ngày đặt hàng | 02/08/2025
+- Trạng thái đơn hàng (distinct=4, empty=32): Đã hoàn thành | Đã hủy | Trạng thái đơn hàng | Đã hoàn hàng
+- Tên khách hàng (distinct=247, empty=0): Khách lẻ | lẻ | Đinh Huy Giang | Tạ Quân Thảo
+- Tên sản phẩm (distinct=144, empty=32): Hồng trà sữa (L) | Bạc Xỉu (m) | Cà phê đen (M) | Nước ép dưa hấu (M)
+- Số lượng sản phẩm (distinct=14, empty=32): 1 ly | 2 ly | 1 | 2
+- Giá sản phẩm (distinct=53, empty=32): 45000 | 32000 | 25,000 | 35,000
+- Tổng tiền (distinct=263, empty=0): 45.000đ | 64000 | 25k | 35000
+- Đơn vị tính (distinct=5, empty=32): ly | phần | cái | Đơn vị tính
+## BanHang_T9_2025.xlsx::DonHang_ChiTiet  rows=5050
+- Mã đơn hàng (distinct=3162, empty=31): ORD026390 | ORD026391 | ORD026392 | ORD026393
+- Ngày đặt hàng (distinct=61, empty=31): 01/09/2025 | 2025-09-01 00:00:00 | 02/09/2025 | 2025-09-02 00:00:00
+- Trạng thái đơn hàng (distinct=4, empty=31): Đã hoàn thành | Đã hủy | Trạng thái đơn hàng | Đã hoàn hàng
+- Tên khách hàng (distinct=246, empty=0): Đỗ Chi Hằng | Tạ Tâm Hạnh | Bạch Hương Nhung | Khách lẻ
+- Tên sản phẩm (distinct=130, empty=31): Topping Kem cheese | Cappuccino (L) | Cà phê sữa (M) | Trà đào cam sả (L)
+- Số lượng sản phẩm (distinct=14, empty=31): 1 | 2 | 2 ly | 1 ly
+- Giá sản phẩm (distinct=50, empty=31): 12000 | 51,000 | 29000 | 45,000
+- Tổng tiền (distinct=252, empty=0): 12.000đ | 102000 | 58k | 45.000đ
+- Đơn vị tính (distinct=5, empty=31): phần | ly | cái | Đơn vị tính
+## DanhSachQuyDoi.xlsx::Sheet1  rows=2
+- Tên sản phẩm (distinct=2, empty=0): Bánh croissant | Bánh tiramisu
+- Đơn vị quy đổi (distinct=1, empty=0): hộp
+- Tỉ lệ quy đổi (distinct=1, empty=0): 6
+- Đơn vị cơ bản (distinct=1, empty=0): cái

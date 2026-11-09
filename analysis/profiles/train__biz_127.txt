@@ -1,0 +1,126 @@
+# Dữ liệu biz_127
+
+Dữ liệu bán hàng của tiệm, gồm vài file nối với nhau qua mã.
+
+## File
+- `don_hang.csv` (csv)
+- `chi_tiet_don.csv` (csv)
+- `san_pham.csv` (csv)
+- `khach_hang.csv` (csv)
+- `thanh_toan.csv` (csv)
+
+## Cột trong `don_hang.csv`
+- **Còn nợ**: còn nợ
+- **Diễn giải**: cột trống, không có dữ liệu
+- **Tổng đơn**: tổng tiền đơn
+- **Loại bán**: kênh bán
+- **Ngày**: ngày bán
+- **Mã chứng từ**: mã đơn
+- **Customer ID**: mã khách (trống nếu khách lẻ)
+- **Khách trả**: đã thanh toán
+- **Trả bằng**: hình thức thanh toán của đơn: cash tiền mặt, transfer chuyển khoản, ewallet ví điện tử, cod giao hàng thu tiền, debt ghi nợ
+- **Tình trạng**: trạng thái đơn
+
+## Cột trong `chi_tiet_don.csv`
+- **Mã đơn hàng**: mã đơn
+- **SoLuong**: số lượng
+- **No.**: số thứ tự dòng trong đơn
+- **DVT**: đơn vị tính
+- **Amount**: thành tiền sau giảm
+- **Số lượng lẻ**: số lượng đã đổi ra đơn vị cơ bản
+- **Mã mặt hàng**: mã hàng
+- **Đơn giá (đ)**: đơn giá
+
+## Cột trong `san_pham.csv`
+- **Giá niêm yết**: giá bán hiện tại
+- **Danh mục**: nhóm hàng
+- **Mã sản phẩm bán**: mã hàng
+- **Tên SP**: tên
+- **Đơn vị cơ bản**: đơn vị cơ bản
+
+## Cột trong `khach_hang.csv`
+- **Di động**: số điện thoại
+- **Mã KH**: mã khách
+- **Khách hàng (tên)**: tên
+
+## Cột trong `thanh_toan.csv`
+- **Số CT**: mã đơn
+- **Ngày thu**: thời điểm thu
+- **Mã GD**: mã phiếu thu
+- **Giá trị**: số tiền
+- **HTTT**: hình thức thanh toán
+
+## Quy ước
+- Dữ liệu có đến hết 28/07/2026.
+- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **Giá trị** là số tiền trả lần đó; **Tổng đơn** là số khách phải trả cho cả đơn.
+- **Phí phục vụ**: đơn ngồi phòng lạnh (không huỷ, không ghi nợ) có thêm dòng hàng "Phí phục vụ": phí phục vụ phòng lạnh của đơn, tính theo tiền món, đã ghi sẵn thành tiền.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:
+  - Bia Tiger lon: 1 thùng = 24 lon
+  - Bia Sài Gòn Special lon: 1 thùng = 24 lon
+  - Coca-Cola lon: 1 thùng = 24 lon
+  - Bia Tiger Bạc lon: 1 thùng = 24 lon
+  - Nước suối: 1 thùng = 24 chai
+  - Bia Heineken lon: 1 thùng = 24 lon
+  - Bia Sài Gòn Lager chai: 1 két = 20 chai
+  - 7Up lon: 1 thùng = 24 lon
+
+
+## chi_tiet_don.csv  rows=131192
+- Mã đơn hàng (distinct=33874, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- SoLuong (distinct=10, empty=0): 1 | 2 | 10 | 4
+- No. (distinct=7, empty=0): 1 | 2 | 3 | 4
+- DVT (distinct=11, empty=0): phần | nồi | đĩa | tô
+- Amount (distinct=452, empty=0): 10.000đ | 189.000đ | 69.000đ | 199.000đ
+- Số lượng lẻ (distinct=12, empty=0): 1 | 2 | 10 | 4
+- Mã mặt hàng (distinct=61, empty=0): SP0011 | SP0004 | SP0007 | SP0055
+- Đơn giá (đ) (distinct=180, empty=0): 10000 | 189000 | 69000 | 199000
+## don_hang.csv  rows=33874
+- Còn nợ (distinct=15, empty=0): 0 | 168000 | 132667 | 632000
+- Diễn giải (distinct=0, empty=33874): 
+- Tổng đơn (distinct=3351, empty=0): 457000 | 347000 | 1617000 | 406000
+- Loại bán (distinct=3, empty=0): store | phone | zalo_oa
+- Ngày (distinct=515, empty=0): 2025-03-01 | 2025-03-02 | 2025-03-03 | 2025-03-04
+- Mã chứng từ (distinct=33874, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Customer ID (distinct=200, empty=13431): KH0169 | KH0167 | KH0157 | KH0200
+- Khách trả (distinct=3337, empty=0): 457000 | 347000 | 1617000 | 406000
+- Trả bằng (distinct=5, empty=0): cash | transfer | cod | ewallet
+- Tình trạng (distinct=4, empty=0): completed | cancelled | returned | shipping
+## khach_hang.csv  rows=200
+- CCCD (distinct=0, empty=200): 
+- Tên công ty (distinct=0, empty=200): 
+- Di động (distinct=200, empty=0): 0912852391 | 0354919024 | 0323083991 | 0323512426
+- Email (distinct=0, empty=200): 
+- Sinh nhật (distinct=45, empty=155): 28/04/1998 | 11/12/1974 | 03/10/1981 | 20/12/1987
+- Người tạo (distinct=1, empty=0): admin
+- Tổng điểm (distinct=1, empty=0): 0
+- Loại hình khách (distinct=1, empty=0): Cá nhân
+- Mã KH (distinct=200, empty=0): KH0001 | KH0002 | KH0003 | KH0004
+- Khách hàng (tên) (distinct=200, empty=0): Hoàng Nhung Hương | Bùi Ngọc Huy | Kiều Trang Dũng | Trương Sơn An
+- Điểm hiện tại (distinct=1, empty=0): 0
+- MST (distinct=3, empty=197): 0379528487 | 0537094146 | 0328522962
+- Trạng thái (distinct=1, empty=0): Đang hoạt động
+- Ghi chú (distinct=0, empty=200): 
+## san_pham.csv  rows=61
+- Trọng lượng (distinct=0, empty=61): 
+- Giá niêm yết (distinct=41, empty=0): 52500 | 22000 | 79000 | 189000
+- Mô tả chi tiết (distinct=0, empty=61): 
+- Danh mục (distinct=11, empty=0): rau | bia | chiên xào | lẩu
+- Ghi chú (distinct=0, empty=61): 
+- Mã sản phẩm bán (distinct=61, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Tên SP (distinct=61, empty=0): Rau muống xào tỏi | Bia Tiger lon | Cánh gà chiên nước mắm | Lẩu Thái tôm cá (nhỏ)
+- Mẫu ghi chú (distinct=0, empty=61): 
+- Mã barcode (distinct=16, empty=45): 8935659370070 | 8933194956674 | 8932088797522 | 8936588393833
+- Loại hàng hóa (distinct=1, empty=0): Hàng hóa
+- Tồn lớn nhất (distinct=1, empty=0): 999999999
+- Thương hiệu (distinct=0, empty=61): 
+- Thuộc tính (distinct=0, empty=61): 
+- Hình ảnh (url1,url2...) (distinct=0, empty=61): 
+- Đơn vị cơ bản (distinct=9, empty=0): đĩa | lon | nồi | phần
+- Được bán trực tiếp (distinct=1, empty=0): 1
+- Mã HH Liên quan (distinct=0, empty=61): 
+## thanh_toan.csv  rows=33473
+- Số CT (distinct=33201, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Ngày thu (distinct=33446, empty=0): 2025-03-01 07:15:59 | 2025-03-01 07:22:30 | 2025-03-01 07:42:10 | 2025-03-01 07:43:01
+- Mã GD (distinct=33473, empty=0): PAY000001 | PAY000002 | PAY000003 | PAY000004
+- Giá trị (distinct=3431, empty=0): 457000 | 347000 | 1617000 | 406000
+- HTTT (distinct=4, empty=0): cash | transfer | ewallet | cod

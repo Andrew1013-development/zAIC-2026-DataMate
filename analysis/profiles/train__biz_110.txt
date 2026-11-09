@@ -1,0 +1,31 @@
+# Dữ liệu biz_110
+
+Danh sách hoá đơn, một file CSV: mỗi dòng một đơn hàng (hoá đơn), không có chi tiết mặt hàng trong đơn.
+
+## File
+- `danh_sach_hoa_don.csv` (csv)
+
+## Cột trong `danh_sach_hoa_don.csv`
+- **Tien hang**: tiền hàng của đơn: cộng thành tiền các mặt hàng, trước giảm giá của đơn, chưa gồm phí giao
+- **TongTien**: số khách phải trả cho cả đơn (đã tính giảm giá của đơn và phí giao)
+- **Mã bill**: mã đơn
+- **Bên mua**: tên khách (Khách lẻ nếu không lưu)
+- **Ngày giao dịch**: ngày bán
+- **Status**: trạng thái đơn
+- **Da tra**: đã thanh toán
+- **Chưa trả**: số khách còn nợ của đơn (đơn huỷ: 0)
+
+## Quy ước
+- Dữ liệu có đến hết 03/07/2026.
+- **Còn nợ**: **Chưa trả** là số khách còn nợ của đơn, tính đến hết ngày cuối dữ liệu.
+
+
+## danh_sach_hoa_don.csv  rows=29317
+- Tien hang (distinct=875, empty=0): 35,000 | 81,000 | 80,000 | 64,000
+- TongTien (distinct=874, empty=0): 35,000 | 81,000 | 80,000 | 64,000
+- Mã bill (distinct=28888, empty=429): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Bên mua (distinct=583, empty=0): Khách lẻ | Mai Khoa Bình | kl | khách lẻ
+- Ngày giao dịch (distinct=429, empty=429): 01/05/2025 | 02/05/2025 | 03/05/2025 | 04/05/2025
+- Status (distinct=4, empty=429): Hoàn thành | Hoàn trả | khách hủy | Chờ giao
+- Da tra (distinct=876, empty=0): 35,000 | 81,000 | 80,000 | 64,000
+- Chưa trả (distinct=26, empty=0): 0 | 27,333 | 54,000 | 53,500

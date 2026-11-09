@@ -1,0 +1,48 @@
+# Dữ liệu biz_114
+
+Một file phẳng, mỗi dòng một bản ghi (một dòng hàng trong đơn).
+
+## File
+- `ban_hang.csv` (csv)
+
+## Cột trong `ban_hang.csv`
+- **Giá bán lẻ**: đơn giá
+- **Đơn vị tính**: đơn vị tính
+- **Mã GD**: mã đơn
+- **Quy ra ĐV lẻ**: số lượng đã đổi ra đơn vị cơ bản
+- **Sluong**: số lượng
+- **Sản phẩm**: tên hàng
+- **Tổng**: thành tiền sau giảm
+- **Tên khách**: tên khách (Khách lẻ nếu không lưu)
+- **Ngày**: ngày bán
+- **trang_thai**: trạng thái đơn
+
+## Quy ước
+- Dữ liệu có đến hết 21/06/2026.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:
+  - Xi măng Hà Tiên PCB40 bao 50kg: 1 tấn = 20 bao
+  - Xi măng INSEE Power-S bao 50kg: 1 tấn = 20 bao
+  - Cát xây tô: 1 xe 4m3 = 4 m3
+  - Cát bê tông: 1 xe 4m3 = 4 m3
+  - Cát san lấp: 1 xe 4m3 = 4 m3
+  - Đá 1x2: 1 xe 4m3 = 4 m3
+  - Đá 4x6: 1 xe 4m3 = 4 m3
+  - Đá mi bụi: 1 xe 4m3 = 4 m3
+  - Gạch ống 8x8x18 Tuynel: 1 thiên = 1000 viên
+  - Gạch thẻ đặc 4x8x18: 1 thiên = 1000 viên
+  - Băng keo điện Nano 20 yard: 1 cây = 10 cuộn
+  - Lưới B40 mạ kẽm khổ 1.5m: 1 cuộn 10m = 10 m
+  - Ngói Đồng Nai 22 viên/m2: 1 thiên = 1000 viên
+
+
+## ban_hang.csv  rows=26119
+- Giá bán lẻ (distinct=166, empty=0): 1270000 | 1,200,000 | 300,000 | 560000
+- Đơn vị tính (distinct=18, empty=0): cuộn | xe 4m3 | thùng | bình
+- Mã GD (distinct=11875, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Quy ra ĐV lẻ (distinct=25, empty=0): 2 | 8 | 1 | 3
+- Sluong (distinct=111, empty=0): 2 | 2 xe 4m3 | 1 thùng | 1
+- Sản phẩm (distinct=60, empty=0): Dây điện Cadivi CV 2.5 cuộn 100m | Đá mi bụi | Gạch lát nền Prime 60x60 thùng 4 viên | Gas Saigon Petro 12kg
+- Tổng (distinct=842, empty=0): 2540000 | 2,400,000 | 300,000 | 560000
+- Tên khách (distinct=124, empty=0): Tăng Chi Trang | Khách lẻ | Lương Hà Bảo | Bạch Phong Sơn
+- Ngày (distinct=537, empty=0): 01/01/2025 | 02/01/2025 | 03/01/2025 | 04/01/2025
+- trang_thai (distinct=4, empty=0): đã lấy | Đã hủy đơn | Trả hàng | Đang giao

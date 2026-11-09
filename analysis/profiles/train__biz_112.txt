@@ -1,0 +1,225 @@
+# Dữ liệu biz_112
+
+File Excel xuất từ phần mềm bán hàng. Sổ chi tiết bán hàng: mỗi dòng một dòng hàng, thông tin đơn lặp lại ở mọi dòng.
+
+File `So_chi_tiet_ban_hang_1.xlsx`, `So_chi_tiet_ban_hang_2026.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm.
+
+## File
+- `So_chi_tiet_ban_hang_1.xlsx` (xlsx)
+- `So_chi_tiet_ban_hang_2026.xlsx` (xlsx)
+- `Danh sách hàng hóa.xlsx` (xlsx)
+
+## Cột trong `So_chi_tiet_ban_hang_1.xlsx`
+- **Ngày**: ngày bán
+- **Mã đơn hàng**: mã đơn
+- **Tên hàng hóa**: tên hàng
+- **Đơn vị tính**: đơn vị tính
+- **Số lượng**: số lượng
+- **Đơn giá**: đơn giá
+- **Thành tiền**: thành tiền sau giảm
+- **Trạng thái**: trạng thái đơn
+- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản
+
+## Cột trong `So_chi_tiet_ban_hang_2026.xlsx`
+- **Ngày**: ngày bán
+- **Mã đơn hàng**: mã đơn
+- **Tên hàng hóa**: tên hàng
+- **Đơn vị tính**: đơn vị tính
+- **Số lượng**: số lượng
+- **Đơn giá**: đơn giá
+- **Thành tiền**: thành tiền sau giảm
+- **Trạng thái**: trạng thái đơn
+- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản
+
+## Cột trong `Danh sách hàng hóa.xlsx`
+- **Mã hàng hóa**: mã hàng
+- **Tên hàng hóa**: tên
+- **Nhóm hàng hóa**: nhóm hàng
+- **Đơn vị tính**: đơn vị cơ bản
+- **Giá bán**: giá bán hiện tại
+- **Giá vốn**: giá vốn
+
+## Quy ước
+- Dữ liệu có đến hết 31/07/2026.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:
+  - Bánh croissant: 1 hộp = 6 cái
+  - Bánh tiramisu: 1 hộp = 6 cái
+
+
+## Danh sách hàng hóa.xlsx::Sheet1  rows=50
+- Mã hàng hóa (distinct=50, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Mã vạch EAN (distinct=10, empty=40): 8937049426541 | 8937914879250 | 8937305657313 | 8937406362499
+- Tồn nhỏ nhất (distinct=1, empty=0): 0
+- Trọng lượng (distinct=0, empty=50): 
+- Ghi chú (distinct=0, empty=50): 
+- Loại hàng hóa (distinct=1, empty=0): Hàng hóa
+- Mã HH Liên quan (distinct=0, empty=50): 
+- Mô tả sản phẩm (distinct=0, empty=50): 
+- Bảo hành (distinct=0, empty=50): 
+- Tên hàng hóa (distinct=50, empty=0): Cà phê đen (M) | Cà phê đen (L) | Cà phê sữa (M) | Cà phê sữa (L)
+- Vị trí (distinct=0, empty=50): 
+- Nhóm hàng hóa (distinct=9, empty=0): cà phê | trà | trà sữa | sinh tố
+- Đơn vị tính (distinct=3, empty=0): ly | phần | cái
+- Giá bán (distinct=25, empty=0): 25,000.0000 | 32,500.0000 | 29,000.0000 | 35,000.0000
+- Tồn lớn nhất (distinct=1, empty=0): 999999999
+- Giá vốn (distinct=36, empty=0): 6,719.0000 | 8,930.0000 | 8,301.0000 | 10,068.0000
+## So_chi_tiet_ban_hang_1.xlsx::T04_2025  rows=6523
+- Ngày (distinct=30, empty=0): 01/04/2025 | 02/04/2025 | 03/04/2025 | 04/04/2025
+- Mã đơn hàng (distinct=4068, empty=0): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Tên hàng hóa (distinct=60, empty=0): Trà đào cam sả (L) | Cà phê đen (M) | Cà phê muối (M) | Matcha latte (M)
+- Đơn vị tính (distinct=4, empty=0): ly | phần | cái | hộp
+- Số lượng (distinct=13, empty=0): 1 ly | 1 | 2 | 1 phần
+- Đơn giá (distinct=21, empty=0): 45,000.0000 | 25,000.0000 | 35,000.0000 | 49,000.0000
+- Thành tiền (distinct=76, empty=0): 45,000.0000 | 25,000.0000 | 35,000.0000 | 49,000.0000
+- Trạng thái (distinct=3, empty=0): xong | cancel | trả hàng
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T05_2025  rows=6902
+- Ngày (distinct=31, empty=0): 01/05/2025 | 02/05/2025 | 03/05/2025 | 04/05/2025
+- Mã đơn hàng (distinct=4303, empty=0): ORD004069 | ORD004070 | ORD004071 | ORD004072
+- Tên hàng hóa (distinct=60, empty=0): Topping Pudding trứng | Sữa tươi trân châu đường đen (L) | Nước ép dưa hấu (L) | Bạc xỉu (L)
+- Đơn vị tính (distinct=3, empty=0): phần | ly | cái
+- Số lượng (distinct=12, empty=0): 1 phần | 3 ly | 1 | 1 ly
+- Đơn giá (distinct=21, empty=0): 10,000.0000 | 51,000.0000 | 41,000.0000 | 38,000.0000
+- Thành tiền (distinct=77, empty=0): 10,000.0000 | 153,000.0000 | 41,000.0000 | 38,000.0000
+- Trạng thái (distinct=3, empty=0): xong | cancel | trả hàng
+- Số lượng quy đổi (distinct=3, empty=0): 1 | 3 | 2
+## So_chi_tiet_ban_hang_1.xlsx::T06_2025  rows=6883
+- Ngày (distinct=30, empty=0): 01/06/2025 | 02/06/2025 | 03/06/2025 | 04/06/2025
+- Mã đơn hàng (distinct=4314, empty=0): ORD008372 | ORD008373 | ORD008374 | ORD008375
+- Tên hàng hóa (distinct=60, empty=0): Trà sữa trân châu (M) | Cà phê đen (M) | Hồng trà sữa (M) | Trà vải (L)
+- Đơn vị tính (distinct=4, empty=0): ly | phần | cái | hộp
+- Số lượng (distinct=13, empty=0): 2 ly | 1 | 2 | 1 ly
+- Đơn giá (distinct=22, empty=0): 46,000.0000 | 25,000.0000 | 39,000.0000 | 45,000.0000
+- Thành tiền (distinct=81, empty=0): 92,000.0000 | 25,000.0000 | 39,000.0000 | 90,000.0000
+- Trạng thái (distinct=3, empty=0): xong | cancel | trả hàng
+- Số lượng quy đổi (distinct=4, empty=0): 2 | 1 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T07_2025  rows=6892
+- Ngày (distinct=31, empty=0): 01/07/2025 | 02/07/2025 | 03/07/2025 | 04/07/2025
+- Mã đơn hàng (distinct=4328, empty=0): ORD012686 | ORD012687 | ORD012688 | ORD012689
+- Tên hàng hóa (distinct=60, empty=0): Sữa tươi trân châu đường đen (M) | Nước ép cam (L) | Hồng trà sữa (M) | Cold brew (M)
+- Đơn vị tính (distinct=4, empty=0): ly | phần | cái | hộp
+- Số lượng (distinct=12, empty=0): 1 | 1 ly | 2 ly | 2
+- Đơn giá (distinct=22, empty=0): 45,000.0000 | 39,000.0000 | 46,000.0000 | 47,000.0000
+- Thành tiền (distinct=78, empty=0): 45,000.0000 | 39,000.0000 | 46,000.0000 | 47,000.0000
+- Trạng thái (distinct=3, empty=0): xong | cancel | trả hàng
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T08_2025  rows=7419
+- Ngày (distinct=31, empty=0): 01/08/2025 | 02/08/2025 | 03/08/2025 | 04/08/2025
+- Mã đơn hàng (distinct=4653, empty=0): ORD017014 | ORD017015 | ORD017016 | ORD017017
+- Tên hàng hóa (distinct=60, empty=0): Bạc xỉu (M) | Cà phê sữa (L) | Cà phê đen (M) | Topping Kem cheese
+- Đơn vị tính (distinct=4, empty=0): ly | phần | cái | hộp
+- Số lượng (distinct=13, empty=0): 1 | 2 | 3 | 2 ly
+- Đơn giá (distinct=24, empty=0): 32,000.0000 | 35,000.0000 | 25,000.0000 | 12,000.0000
+- Thành tiền (distinct=85, empty=0): 30,000.0000 | 35,000.0000 | 50,000.0000 | 36,000.0000
+- Trạng thái (distinct=3, empty=0): xong | cancel | trả hàng
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T09_2025  rows=6953
+- Ngày (distinct=30, empty=0): 01/09/2025 | 02/09/2025 | 03/09/2025 | 04/09/2025
+- Mã đơn hàng (distinct=4323, empty=0): ORD021667 | ORD021668 | ORD021669 | ORD021670
+- Tên hàng hóa (distinct=60, empty=0): Cold brew (L) | Cappuccino (M) | Matcha latte (L) | Bạc xỉu (M)
+- Đơn vị tính (distinct=4, empty=0): ly | cái | phần | hộp
+- Số lượng (distinct=13, empty=0): 1 | 1 ly | 2 ly | 2
+- Đơn giá (distinct=25, empty=0): 51,000.0000 | 45,000.0000 | 55,000.0000 | 32,000.0000
+- Thành tiền (distinct=93, empty=0): 51,000.0000 | 45,000.0000 | 55,000.0000 | 64,000.0000
+- Trạng thái (distinct=3, empty=0): xong | cancel | trả hàng
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T10_2025  rows=7162
+- Ngày (distinct=31, empty=0): 01/10/2025 | 02/10/2025 | 03/10/2025 | 04/10/2025
+- Mã đơn hàng (distinct=4444, empty=0): ORD025990 | ORD025991 | ORD025992 | ORD025993
+- Tên hàng hóa (distinct=60, empty=0): Hồng trà sữa (M) | Trà vải (M) | Sữa tươi trân châu đường đen (L) | Đá xay cookie (L)
+- Đơn vị tính (distinct=4, empty=0): ly | cái | phần | hộp
+- Số lượng (distinct=12, empty=0): 1 ly | 2 ly | 1 | 2
+- Đơn giá (distinct=25, empty=0): 39,000.0000 | 51,000.0000 | 64,000.0000 | 25,000.0000
+- Thành tiền (distinct=86, empty=0): 39,000.0000 | 102,000.0000 | 64,000.0000 | 25,000.0000
+- Trạng thái (distinct=3, empty=0): xong | cancel | trả hàng
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T11_2025  rows=7156
+- Ngày (distinct=30, empty=0): 01/11/2025 | 02/11/2025 | 03/11/2025 | 04/11/2025
+- Mã đơn hàng (distinct=4526, empty=0): ORD030434 | ORD030435 | ORD030436 | ORD030437
+- Tên hàng hóa (distinct=60, empty=0): Nước ép cam (M) | Trà sữa ô long (M) | Cà phê sữa (M) | Cà phê đen (M)
+- Đơn vị tính (distinct=4, empty=0): ly | phần | cái | hộp
+- Số lượng (distinct=13, empty=0): 1 | 2 ly | 3 ly | 1 ly
+- Đơn giá (distinct=28, empty=0): 39,000.0000 | 45,000.0000 | 29,000.0000 | 25,000.0000
+- Thành tiền (distinct=93, empty=0): 39,000.0000 | 45,000.0000 | 29,000.0000 | 25,000.0000
+- Trạng thái (distinct=3, empty=0): xong | cancel | trả hàng
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T12_2025  rows=7240
+- Ngày (distinct=31, empty=0): 01/12/2025 | 02/12/2025 | 03/12/2025 | 04/12/2025
+- Mã đơn hàng (distinct=4536, empty=0): ORD034960 | ORD034961 | ORD034962 | ORD034963
+- Tên hàng hóa (distinct=60, empty=0): Trà sữa trân châu (M) | Cà phê đen (M) | Bạc xỉu (M) | Cappuccino (M)
+- Đơn vị tính (distinct=4, empty=0): ly | cái | phần | hộp
+- Số lượng (distinct=13, empty=0): 1 ly | 1 | 2 ly | 1 cái
+- Đơn giá (distinct=25, empty=0): 48,500.0000 | 25,000.0000 | 33,500.0000 | 45,000.0000
+- Thành tiền (distinct=89, empty=0): 48,500.0000 | 25,000.0000 | 33,500.0000 | 45,000.0000
+- Trạng thái (distinct=3, empty=0): xong | cancel | trả hàng
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T01_2026  rows=7478
+- Ngày (distinct=31, empty=0): 01/01/2026 | 02/01/2026 | 03/01/2026 | 04/01/2026
+- Mã đơn hàng (distinct=4616, empty=0): ORD039496 | ORD039497 | ORD039498 | ORD039499
+- Tên hàng hóa (distinct=60, empty=0): Soda chanh dây (L) | Đá xay cookie (M) | Espresso (single) | Cà phê muối (M)
+- Đơn vị tính (distinct=4, empty=0): ly | phần | cái | hộp
+- Số lượng (distinct=13, empty=0): 1 ly | 2 | 1 | 2 ly
+- Đơn giá (distinct=26, empty=0): 41,000.0000 | 55,000.0000 | 35,000.0000 | 37,000.0000
+- Thành tiền (distinct=91, empty=0): 41,000.0000 | 110,000.0000 | 35,000.0000 | 37,000.0000
+- Trạng thái (distinct=5, empty=0): xong | cancel | Đã hoàn thành | Đã hủy đơn
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T02_2026  rows=5267
+- Ngày (distinct=28, empty=0): 01/02/2026 | 02/02/2026 | 03/02/2026 | 04/02/2026
+- Mã đơn hàng (distinct=3295, empty=0): ORD044112 | ORD044113 | ORD044114 | ORD044115
+- Tên hàng hóa (distinct=60, empty=0): Trà đào cam sả (M) | Cà phê đen (L) | Sữa tươi trân châu đường đen (M) | Bạc xỉu (M)
+- Đơn vị tính (distinct=4, empty=0): ly | phần | cái | hộp
+- Số lượng (distinct=13, empty=0): 1 ly | 1 | 2 ly | 1 cái
+- Đơn giá (distinct=26, empty=0): 39,000.0000 | 32,500.0000 | 47,000.0000 | 33,500.0000
+- Thành tiền (distinct=89, empty=0): 39,000.0000 | 32,500.0000 | 47,000.0000 | 33,500.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy đơn | Hoàn trả
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T03_2026  rows=7593
+- Ngày (distinct=31, empty=0): 01/03/2026 | 02/03/2026 | 03/03/2026 | 04/03/2026
+- Mã đơn hàng (distinct=4706, empty=0): ORD047407 | ORD047408 | ORD047409 | ORD047410
+- Tên hàng hóa (distinct=60, empty=0): Cold brew (M) | Nước ép cam (M) | Sữa tươi trân châu đường đen (M) | Cappuccino (L)
+- Đơn vị tính (distinct=4, empty=0): ly | phần | cái | hộp
+- Số lượng (distinct=13, empty=0): 2 ly | 1 | 2 | 1 ly
+- Đơn giá (distinct=25, empty=0): 45,000.0000 | 41,000.0000 | 47,000.0000 | 51,000.0000
+- Thành tiền (distinct=87, empty=0): 90,000.0000 | 82,000.0000 | 47,000.0000 | 51,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy đơn | Hoàn trả
+- Số lượng quy đổi (distinct=4, empty=0): 2 | 1 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T04_2026  rows=7316
+- Ngày (distinct=30, empty=0): 01/04/2026 | 02/04/2026 | 03/04/2026 | 04/04/2026
+- Mã đơn hàng (distinct=4551, empty=0): ORD052113 | ORD052114 | ORD052115 | ORD052116
+- Tên hàng hóa (distinct=60, empty=0): Topping Trân châu đen | Cà phê muối (L) | Bánh croissant | Topping Thạch cà phê
+- Đơn vị tính (distinct=4, empty=0): phần | ly | cái | hộp
+- Số lượng (distinct=13, empty=0): 1 | 1 ly | 1 cái | 1 phần
+- Đơn giá (distinct=26, empty=0): 7,000.0000 | 43,000.0000 | 35,000.0000 | 51,000.0000
+- Thành tiền (distinct=92, empty=0): 7,000.0000 | 43,000.0000 | 35,000.0000 | 51,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy đơn | Hoàn trả
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_1.xlsx::T05_2026  rows=7802
+- Ngày (distinct=31, empty=0): 01/05/2026 | 02/05/2026 | 03/05/2026 | 04/05/2026
+- Mã đơn hàng (distinct=4878, empty=0): ORD056664 | ORD056665 | ORD056666 | ORD056667
+- Tên hàng hóa (distinct=60, empty=0): Trà chanh (M) | Bánh croissant | Topping Pudding trứng | Trà vải (L)
+- Đơn vị tính (distinct=4, empty=0): ly | cái | phần | hộp
+- Số lượng (distinct=13, empty=0): 1 | 1 cái | 1 ly | 1 phần
+- Đơn giá (distinct=27, empty=0): 25,000.0000 | 35,000.0000 | 10,000.0000 | 47,000.0000
+- Thành tiền (distinct=93, empty=0): 25,000.0000 | 35,000.0000 | 10,000.0000 | 47,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Đã hủy đơn | Hoàn trả
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_2026.xlsx::T06_2026  rows=7083
+- Ngày (distinct=30, empty=0): 01/06/2026 | 02/06/2026 | 03/06/2026 | 04/06/2026
+- Mã đơn hàng (distinct=4431, empty=0): ORD061542 | ORD061543 | ORD061544 | ORD061545
+- Tên hàng hóa (distinct=60, empty=0): Sinh tố xoài (L) | Trà sữa trân châu (M) | Bạc xỉu (M) | Sinh tố bơ (L)
+- Đơn vị tính (distinct=4, empty=0): ly | cái | phần | hộp
+- Số lượng (distinct=13, empty=0): 1 ly | 1 | 2 | 2 ly
+- Đơn giá (distinct=25, empty=0): 50,500.0000 | 48,500.0000 | 33,500.0000 | 51,000.0000
+- Thành tiền (distinct=87, empty=0): 50,500.0000 | 48,500.0000 | 33,500.0000 | 51,000.0000
+- Trạng thái (distinct=3, empty=0): Đã hoàn thành | Hoàn trả | Đã hủy đơn
+- Số lượng quy đổi (distinct=4, empty=0): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_2026.xlsx::T07_2026  rows=7656
+- Ngày (distinct=31, empty=0): 01/07/2026 | 02/07/2026 | 03/07/2026 | 04/07/2026
+- Mã đơn hàng (distinct=4806, empty=0): ORD065973 | ORD065974 | ORD065975 | ORD065976
+- Tên hàng hóa (distinct=60, empty=0): Cà phê sữa (M) | Đá xay cookie (M) | Cold brew (L) | Topping Thạch cà phê
+- Đơn vị tính (distinct=4, empty=0): ly | phần | cái | hộp
+- Số lượng (distinct=13, empty=0): 2 ly | 1 | 1 phần | 1 ly
+- Đơn giá (distinct=28, empty=0): 29,000.0000 | 55,000.0000 | 51,000.0000 | 7,000.0000
+- Thành tiền (distinct=98, empty=0): 58,000.0000 | 55,000.0000 | 51,000.0000 | 7,000.0000
+- Trạng thái (distinct=4, empty=0): Đã hoàn thành | Đã hủy đơn | Hoàn trả | Đang vận chuyển
+- Số lượng quy đổi (distinct=4, empty=0): 2 | 1 | 3 | 6

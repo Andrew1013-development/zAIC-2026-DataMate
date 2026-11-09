@@ -1,0 +1,89 @@
+# Dữ liệu biz_130
+
+File Excel xuất từ phần mềm bán hàng. Sổ chi tiết bán hàng: mỗi dòng một dòng hàng, thông tin đơn lặp lại ở mọi dòng.
+
+## File
+- `So_chi_tiet_ban_hang_1.xlsx` (xlsx)
+- `So_chi_tiet_ban_hang_2.xlsx` (xlsx)
+- `Danh sách hàng hóa.xlsx` (xlsx)
+
+## Cột trong `So_chi_tiet_ban_hang_1.xlsx`
+- **Ngày**: ngày bán
+- **Mã đơn hàng**: mã đơn
+- **Tên hàng hóa**: tên hàng
+- **Đơn vị tính**: đơn vị tính
+- **Số lượng**: số lượng
+- **Đơn giá**: đơn giá
+- **Thành tiền**: thành tiền sau giảm
+- **Trạng thái**: trạng thái đơn
+- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản
+
+## Cột trong `So_chi_tiet_ban_hang_2.xlsx`
+- **Ngày**: ngày bán
+- **Mã đơn hàng**: mã đơn
+- **Tên hàng hóa**: tên hàng
+- **Đơn vị tính**: đơn vị tính
+- **Số lượng**: số lượng
+- **Đơn giá**: đơn giá
+- **Thành tiền**: thành tiền sau giảm
+- **Trạng thái**: trạng thái đơn
+- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản
+
+## Cột trong `Danh sách hàng hóa.xlsx`
+- **Mã hàng hóa**: mã hàng
+- **Tên hàng hóa**: tên
+- **Nhóm hàng hóa**: nhóm hàng
+- **Đơn vị tính**: đơn vị cơ bản
+- **Giá vốn**: giá vốn
+
+## Quy ước
+- Dữ liệu có đến hết 29/08/2026.
+- **Phí phục vụ**: đơn ngồi phòng lạnh (không huỷ, không ghi nợ) có thêm dòng hàng "Phí phục vụ": phí phục vụ phòng lạnh của đơn, tính theo tiền món, đã ghi sẵn thành tiền.
+- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:
+  - Bia Tiger lon: 1 thùng = 24 lon
+  - Bia Sài Gòn Special lon: 1 thùng = 24 lon
+  - Coca-Cola lon: 1 thùng = 24 lon
+  - Bia Tiger Bạc lon: 1 thùng = 24 lon
+  - Nước suối: 1 thùng = 24 chai
+  - Bia Heineken lon: 1 thùng = 24 lon
+  - Bia Sài Gòn Lager chai: 1 két = 20 chai
+  - 7Up lon: 1 thùng = 24 lon
+
+
+## Danh sách hàng hóa.xlsx::Sheet1  rows=61
+- Mã hàng hóa (distinct=61, empty=0): SP0001 | SP0002 | SP0003 | SP0004
+- Mô tả sản phẩm (distinct=0, empty=61): 
+- Bảo hành (distinct=0, empty=61): 
+- Được bán trực tiếp (distinct=1, empty=0): 1
+- Loại hàng hóa (distinct=1, empty=0): Hàng hóa
+- Mã HH Liên quan (distinct=0, empty=61): 
+- Mẫu ghi chú (distinct=0, empty=61): 
+- Tên hàng hóa (distinct=61, empty=0): Rau muống xào tỏi | Bia Tiger lon | Cánh gà chiên nước mắm | Lẩu Thái tôm cá (nhỏ)
+- Nhóm hàng hóa (distinct=11, empty=0): rau | bia | chiên xào | lẩu
+- Thương hiệu (distinct=0, empty=61): 
+- Định mức tồn tối thiểu (distinct=1, empty=0): 0
+- Vị trí kệ (distinct=0, empty=61): 
+- Đơn vị tính (distinct=9, empty=0): đĩa | lon | nồi | phần
+- Định mức tồn tối đa (distinct=1, empty=0): 999999999
+- Ghi chú (distinct=0, empty=61): 
+- Giá vốn (distinct=60, empty=0): 15,995.0000 | 16,079.0000 | 30,050.0000 | 78,824.0000
+## So_chi_tiet_ban_hang_1.xlsx::Sheet1  rows=100000
+- Ngày (distinct=337, empty=347): 01/02/2025 | 02/02/2025 | 03/02/2025 | 04/02/2025
+- Mã đơn hàng (distinct=26603, empty=347): ORD000001 | ORD000002 | ORD000003 | ORD000004
+- Tên hàng hóa (distinct=408, empty=0): Bia Sài Gòn Special lon | Mì xào hải sản | Đậu hũ chiên giòn | Bia Heineken lon
+- Đơn vị tính (distinct=11, empty=347): lon | đĩa | nồi | phần
+- Số lượng (distinct=66, empty=347): 1 | 2 đĩa | 1 lon | 1 đĩa
+- Đơn giá (distinct=160, empty=347): 19,000.0000 | 79,000.0000 | 49,000.0000 | 30,000.0000
+- Thành tiền (distinct=793, empty=0): 19,000.0000 | 158,000.0000 | 49,000.0000 | 30,000.0000
+- Trạng thái (distinct=3, empty=347): Đã hoàn thành | Đã hủy | Đã trả hàng
+- Số lượng quy đổi (distinct=12, empty=347): 1 | 2 | 3 | 6
+## So_chi_tiet_ban_hang_2.xlsx::Sheet1  rows=72530
+- Ngày (distinct=239, empty=247): 03/01/2026 | 04/01/2026 | 05/01/2026 | 06/01/2026
+- Mã đơn hàng (distinct=19276, empty=247): ORD026603 | ORD026604 | ORD026605 | ORD026606
+- Tên hàng hóa (distinct=308, empty=0): Trà đá | Bia Tiger lon | Cơm chiên hải sản | Cải thìa xào tỏi
+- Đơn vị tính (distinct=11, empty=247): ly | lon | đĩa | phần
+- Số lượng (distinct=67, empty=247): 1 | 1 đĩa | 6 | 1 chai
+- Đơn giá (distinct=157, empty=247): 5,000.0000 | 24,000.0000 | 79,000.0000 | 55,000.0000
+- Thành tiền (distinct=677, empty=0): 5,000.0000 | 24,000.0000 | 79,000.0000 | 55,000.0000
+- Trạng thái (distinct=4, empty=247): Đã hoàn thành | Đã hủy | Đã trả hàng | Đang giao hàng
+- Số lượng quy đổi (distinct=12, empty=247): 1 | 6 | 2 | 3
